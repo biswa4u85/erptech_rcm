@@ -1,6 +1,6 @@
 app_name = "rcm_pro"
 app_title = "Rcm Pro"
-app_publisher = "erptechin"
+app_publisher = "erptech"
 app_description = "Rcm Pro"
 app_email = "erptechin@gmail.com"
 app_license = "mit"
@@ -11,7 +11,7 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/rcm_pro/css/rcm_pro.css"
-# app_include_js = "/assets/rcm_pro/js/rcm_pro.js"
+app_include_js = "/assets/rcm_pro/js/rcm_pro.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/rcm_pro/css/rcm_pro.css"
@@ -219,3 +219,7 @@ app_license = "mit"
 # auth_hooks = [
 #	"rcm_pro.auth.validate"
 # ]
+
+override_whitelisted_methods = {
+	"frappe.desk.desktop.get_workspace_sidebar_items": "rcm_pro.api.get_workspace_sidebar_items"
+}
