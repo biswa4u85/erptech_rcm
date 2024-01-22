@@ -26,7 +26,7 @@ $(document).ready(async function () {
         
         <div class="sidebar-item-container">
           <div class="desk-sidebar-item standard-sidebar-item">
-            <a href="/app/plants" class="item-anchor block-click">
+            <a href="/app/rcm-plants" class="item-anchor block-click">
               <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
               <span class="sidebar-item-label">Plants<span>
             </a>
@@ -136,69 +136,6 @@ $(document).ready(async function () {
           </a>
         </div>
       </div>
-
-      <div class="sidebar-item-container">
-        <div class="desk-sidebar-item standard-sidebar-item">
-          <a href="/app/payment-reconciliation" class="item-anchor block-click">
-            <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-            <span class="sidebar-item-label">Payment Reconciliation<span>
-          </a>
-        </div>
-      </div>
-
-      <div class="sidebar-item-container">
-        <div class="desk-sidebar-item standard-sidebar-item">
-          <a href="/app/query-report/Accounts Receivable" class="item-anchor block-click">
-            <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-            <span class="sidebar-item-label">Accounts Receivable<span>
-          </a>
-        </div>
-      </div>
-
-      <div class="sidebar-item-container">
-        <div class="desk-sidebar-item standard-sidebar-item">
-          <a href="/app/query-report/Accounts Receivable Summary" class="item-anchor block-click">
-            <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-            <span class="sidebar-item-label">Accounts Receivable Summary<span>
-          </a>
-        </div>
-      </div>
-
-      <div class="sidebar-item-container">
-        <div class="desk-sidebar-item standard-sidebar-item">
-          <a href="/app/query-report/Sales Register" class="item-anchor block-click">
-            <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-            <span class="sidebar-item-label">Sales Register<span>
-          </a>
-        </div>
-      </div>
-
-      <div class="sidebar-item-container">
-      <div class="desk-sidebar-item standard-sidebar-item">
-        <a href="/app/query-report/Item-wise Sales Register" class="item-anchor block-click">
-          <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-          <span class="sidebar-item-label">Item-wise Sales Register<span>
-        </a>
-      </div>
-    </div>
-
-    <div class="sidebar-item-container">
-    <div class="desk-sidebar-item standard-sidebar-item">
-      <a href="/app/query-report/Sales Order Analysis" class="item-anchor block-click">
-        <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-        <span class="sidebar-item-label">Sales Order Analysis<span>
-      </a>
-    </div>
-  </div>
-
-  <div class="sidebar-item-container">
-  <div class="desk-sidebar-item standard-sidebar-item">
-    <a href="/app/query-report/Delivered Items To Be Billed" class="item-anchor block-click">
-      <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-      <span class="sidebar-item-label">Delivered Items To Be Billed<span>
-    </a>
-  </div>
-</div>
 
 
       </div>
