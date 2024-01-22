@@ -17,7 +17,7 @@ $(document).ready(async function () {
       <div class="desk-sidebar-item standard-sidebar-item collapseButton" data-target="section1">
         <a href="#" class="item-anchor block-click">
           <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-accounting"></use></svg></span>
-          <span class="sidebar-item-label">Accounting Masters<span>
+          <span class="sidebar-item-label">All Masters<span>
           <span class="sidebar-item-icon"><svg class="icon icon-xs"><use href="#es-line-down"></use></svg></span>
         </a>
       </div>
@@ -26,75 +26,13 @@ $(document).ready(async function () {
         
         <div class="sidebar-item-container">
           <div class="desk-sidebar-item standard-sidebar-item">
-            <a href="/app/company" class="item-anchor block-click">
+            <a href="/app/plants" class="item-anchor block-click">
               <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-              <span class="sidebar-item-label">Company<span>
+              <span class="sidebar-item-label">Plants<span>
             </a>
           </div>
         </div>
 
-        <div class="sidebar-item-container">
-          <div class="desk-sidebar-item standard-sidebar-item">
-            <a href="/app/account" class="item-anchor block-click">
-              <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-              <span class="sidebar-item-label">Chart of Accounts<span>
-            </a>
-          </div>
-        </div>
-
-        <div class="sidebar-item-container">
-          <div class="desk-sidebar-item standard-sidebar-item">
-            <a href="/app/accounts-settings" class="item-anchor block-click">
-              <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-              <span class="sidebar-item-label">Accounts Settings<span>
-            </a>
-          </div>
-        </div>
-
-        <div class="sidebar-item-container">
-          <div class="desk-sidebar-item standard-sidebar-item">
-            <a href="/app/fiscal-year" class="item-anchor block-click">
-              <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-              <span class="sidebar-item-label">Fiscal Year<span>
-            </a>
-          </div>
-        </div>
-
-        <div class="sidebar-item-container">
-          <div class="desk-sidebar-item standard-sidebar-item">
-            <a href="/app/accounting-dimension" class="item-anchor block-click">
-              <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-              <span class="sidebar-item-label">Accounting Dimension<span>
-            </a>
-          </div>
-        </div>
-
-        <div class="sidebar-item-container">
-          <div class="desk-sidebar-item standard-sidebar-item">
-            <a href="/app/finance-book" class="item-anchor block-click">
-              <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-              <span class="sidebar-item-label">Finance Book<span>
-            </a>
-          </div>
-        </div>
-
-        <div class="sidebar-item-container">
-          <div class="desk-sidebar-item standard-sidebar-item">
-            <a href="/app/accounting-period" class="item-anchor block-click">
-              <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-              <span class="sidebar-item-label">Accounting Period<span>
-            </a>
-          </div>
-        </div>
-
-        <div class="sidebar-item-container">
-          <div class="desk-sidebar-item standard-sidebar-item">
-            <a href="/app/payment-term" class="item-anchor block-click">
-              <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-              <span class="sidebar-item-label">Payment Term<span>
-            </a>
-          </div>
-        </div>
 
       </div>
     </div>
@@ -104,7 +42,7 @@ $(document).ready(async function () {
       <div class="desk-sidebar-item standard-sidebar-item collapseButton"  data-target="section2">
         <a href="#" class="item-anchor block-click">
           <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-accounting"></use></svg></span>
-          <span class="sidebar-item-label">General Ledger<span>
+          <span class="sidebar-item-label">Sales<span>
           <span class="sidebar-item-icon"><svg class="icon icon-xs"><use href="#es-line-down"></use></svg></span>
         </a>
       </div>
@@ -113,45 +51,36 @@ $(document).ready(async function () {
        
         <div class="sidebar-item-container">
           <div class="desk-sidebar-item standard-sidebar-item">
-            <a href="/app/journal-entry" class="item-anchor block-click">
+            <a href="/app/customer" class="item-anchor block-click">
               <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-              <span class="sidebar-item-label">Journal Entry<span>
+              <span class="sidebar-item-label">Customers<span>
             </a>
           </div>
         </div>
 
         <div class="sidebar-item-container">
           <div class="desk-sidebar-item standard-sidebar-item">
-            <a href="/app/journal-entry-template" class="item-anchor block-click">
+            <a href="/app/quotation" class="item-anchor block-click">
               <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-              <span class="sidebar-item-label">Journal Entry Template<span>
+              <span class="sidebar-item-label">Quotations<span>
             </a>
           </div>
         </div>
 
         <div class="sidebar-item-container">
           <div class="desk-sidebar-item standard-sidebar-item">
-            <a href="/app/query-report/General Ledger" class="item-anchor block-click">
+            <a href="/app/sales-order" class="item-anchor block-click">
               <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-              <span class="sidebar-item-label">General Ledger<span>
+              <span class="sidebar-item-label">Sales Order<span>
             </a>
           </div>
         </div>
 
         <div class="sidebar-item-container">
           <div class="desk-sidebar-item standard-sidebar-item">
-            <a href="/app/query-report/Customer Ledger Summary" class="item-anchor block-click">
+            <a href="/app/Scheduling" class="item-anchor block-click">
               <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-              <span class="sidebar-item-label">Customer Ledger Summary<span>
-            </a>
-          </div>
-        </div>
-
-        <div class="sidebar-item-container">
-          <div class="desk-sidebar-item standard-sidebar-item">
-            <a href="/app/query-report/Supplier Ledger Summary" class="item-anchor block-click">
-              <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-              <span class="sidebar-item-label">Supplier Ledger Summary<span>
+              <span class="sidebar-item-label">Scheduling<span>
             </a>
           </div>
         </div>
@@ -165,7 +94,7 @@ $(document).ready(async function () {
       <div class="desk-sidebar-item standard-sidebar-item collapseButton"  data-target="section3">
         <a href="#" class="item-anchor block-click">
           <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-accounting"></use></svg></span>
-          <span class="sidebar-item-label">Accounts Receivable<span>
+          <span class="sidebar-item-label">Custom<span>
           <span class="sidebar-item-icon"><svg class="icon icon-xs"><use href="#es-line-down"></use></svg></span>
         </a>
       </div>
@@ -174,36 +103,36 @@ $(document).ready(async function () {
 
         <div class="sidebar-item-container">
           <div class="desk-sidebar-item standard-sidebar-item">
-            <a href="/app/sales-invoice" class="item-anchor block-click">
+            <a href="/app/rcm-customer" class="item-anchor block-click">
               <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-              <span class="sidebar-item-label">Sales Invoice<span>
+              <span class="sidebar-item-label">Customers<span>
             </a>
           </div>
         </div>
 
         <div class="sidebar-item-container">
           <div class="desk-sidebar-item standard-sidebar-item">
-            <a href="/app/customer" class="item-anchor block-click">
+            <a href="/app/rcm-quotation" class="item-anchor block-click">
               <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-              <span class="sidebar-item-label">Customer<span>
+              <span class="sidebar-item-label">Quotations<span>
             </a>
           </div>
         </div>
 
         <div class="sidebar-item-container">
           <div class="desk-sidebar-item standard-sidebar-item">
-            <a href="/app/payment-entry" class="item-anchor block-click">
+            <a href="/app/rcm-order" class="item-anchor block-click">
               <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-              <span class="sidebar-item-label">Payment Entry<span>
+              <span class="sidebar-item-label">Orders<span>
             </a>
           </div>
         </div>
 
         <div class="sidebar-item-container">
         <div class="desk-sidebar-item standard-sidebar-item">
-          <a href="/app/payment-request" class="item-anchor block-click">
+          <a href="/app/rcm-Scheduling" class="item-anchor block-click">
             <span class="sidebar-item-icon"><svg class="icon icon-md"><use href="#icon-primitive-dot"></use></svg></span>
-            <span class="sidebar-item-label">Payment Request<span>
+            <span class="sidebar-item-label">Scheduling<span>
           </a>
         </div>
       </div>

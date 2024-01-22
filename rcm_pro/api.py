@@ -48,3 +48,30 @@ def get_workspace_sidebar_items():
 			pass
 
 	return {"pages": pages, "has_access": True}
+
+
+def create_new_sales_order(order, method):
+	if order.get("available_po") == 1:	
+		sales_order = frappe.new_doc("Rcm Order")
+		sales_order.title= order.get("name")
+		sales_order.plant = order.get("plant")
+		sales_order.customer_primary_address= order.get("customer_primary_address")
+		sales_order.po_date= order.get("po_date")
+		sales_order.valid_till= order.get("valid_till")
+		sales_order.credit_date= order.get("credit_date")
+		sales_order.po_number= order.get("po_number")
+		sales_order.marketing_person= order.get("marketing_person")
+
+		for item in order.get("items"):
+			grade, quantity, rate = frappe.db.get_value(item.doctype, item.get("name"), ['grade', 'quantity','rate'])
+			print(grade)
+			sales_order.append("items", {
+			'grade': grade,
+			'quantity': quantity,
+			'rate': rate,
+		})
+
+		print(sales_order)
+		sales_order.insert()
+		# sales_order.save()
+		pass

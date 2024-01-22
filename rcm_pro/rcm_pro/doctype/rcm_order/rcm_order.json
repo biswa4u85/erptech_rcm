@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-01-22 18:09:28.569954",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enter_quotation_detail_tab",
+  "enter_quotation_detail_section",
+  "column_break_fwdc",
+  "naming_series",
+  "plant",
+  "title",
+  "customer_primary_address",
+  "po_date",
+  "valid_till",
+  "credit_date",
+  "po_number",
+  "marketing_person",
+  "tax_group",
+  "column_break_lbef",
+  "items",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "enter_quotation_detail_tab",
+   "fieldtype": "Tab Break",
+   "label": "ENTER QUOTATION DETAIL"
+  },
+  {
+   "fieldname": "enter_quotation_detail_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_fwdc",
+   "fieldtype": "Column Break",
+   "label": "ENTER PURCHASE ORDER DETAIL"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "CUSTOMER",
+   "options": "Rcm Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_primary_address",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "SITE ADDRESS",
+   "options": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_lbef",
+   "fieldtype": "Column Break",
+   "label": "ENTER ITEM DETAIL"
+  },
+  {
+   "fieldname": "plant",
+   "fieldtype": "Link",
+   "label": "PLANT",
+   "options": "Rcm Plants"
+  },
+  {
+   "fieldname": "po_date",
+   "fieldtype": "Date",
+   "label": "PO DATE",
+   "reqd": 1
+  },
+  {
+   "fieldname": "valid_till",
+   "fieldtype": "Date",
+   "label": "VALID TILL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "credit_date",
+   "fieldtype": "Date",
+   "label": "CREDIT DATE"
+  },
+  {
+   "fieldname": "po_number",
+   "fieldtype": "Int",
+   "label": "PO NUMBER",
+   "reqd": 1
+  },
+  {
+   "fieldname": "marketing_person",
+   "fieldtype": "Link",
+   "label": "MARKETING PERSON",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tax_group",
+   "fieldtype": "Data",
+   "label": "TAX GROUP"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "ITEMS",
+   "options": "Rcm Items"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "SAL-ORD-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rcm Order",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-23 02:49:23.404927",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Rcm Order",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title"
+}
