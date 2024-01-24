@@ -10,7 +10,7 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/rcm_pro/css/rcm_pro.css"
+app_include_css = "/assets/rcm_pro/css/rcm_pro.css"
 app_include_js = "/assets/rcm_pro/js/rcm_pro.js"
 
 # include js, css files in header of web template
