@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-23 17:53:10.513804",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "finyear_entry_section",
+  "fin_year",
+  "code",
+  "startdate",
+  "enddate",
+  "status",
+  "entry_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "finyear_entry_section",
+   "fieldtype": "Section Break",
+   "label": "FinYear Entry"
+  },
+  {
+   "fieldname": "fin_year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fin year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "startdate",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "StartDate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "enddate",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "EndDate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Link",
+   "label": "Status",
+   "options": "Prop Master"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Link",
+   "label": "Entry By",
+   "options": "User Master"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-23 17:56:31.186096",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "FinYear Master",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

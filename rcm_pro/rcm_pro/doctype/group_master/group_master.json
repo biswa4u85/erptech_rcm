@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-23 17:57:40.145939",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "group_master_entry_section",
+  "group_name",
+  "allias",
+  "parent_group",
+  "group_nature",
+  "is_subledger",
+  "display_seq",
+  "remarks",
+  "status",
+  "entry_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "group_master_entry_section",
+   "fieldtype": "Section Break",
+   "label": "Group Master Entry"
+  },
+  {
+   "fieldname": "group_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Group Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "allias",
+   "fieldtype": "Data",
+   "label": "Allias"
+  },
+  {
+   "fieldname": "parent_group",
+   "fieldtype": "Data",
+   "label": "Parent Group"
+  },
+  {
+   "fieldname": "group_nature",
+   "fieldtype": "Data",
+   "label": "Group Nature"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_subledger",
+   "fieldtype": "Check",
+   "label": "Is SubLedger"
+  },
+  {
+   "fieldname": "display_seq",
+   "fieldtype": "Int",
+   "label": "Display Seq"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Link",
+   "label": "Status",
+   "options": "Prop Master"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Link",
+   "label": "Entry By",
+   "options": "User Master"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-23 21:12:47.536747",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Group Master",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "group_name"
+}

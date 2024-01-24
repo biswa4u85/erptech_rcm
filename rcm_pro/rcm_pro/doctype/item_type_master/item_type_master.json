@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-23 17:21:44.857048",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "item_type_master_section",
+  "item_type_code",
+  "item_type_name",
+  "status",
+  "entry_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_type_master_section",
+   "fieldtype": "Section Break",
+   "label": "Item Type Entry"
+  },
+  {
+   "fieldname": "item_type_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Type Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_type_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Type Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Link",
+   "label": "Status",
+   "options": "Prop Master"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Link",
+   "label": "Entry By",
+   "options": "User Master"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-23 17:46:29.845458",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Item Type Master",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

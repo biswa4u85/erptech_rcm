@@ -1,0 +1,393 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-01-23 18:08:43.862010",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customervendor_entry_section",
+  "gst_no",
+  "ledger_name",
+  "column_break_wlmj",
+  "group_name",
+  "allias",
+  "column_break_auib",
+  "ledger_code",
+  "use_in_taxclass",
+  "billing_address_section",
+  "address",
+  "address2",
+  "state",
+  "country",
+  "column_break_vvif",
+  "address1",
+  "city",
+  "pin",
+  "contact_details_section",
+  "contactperson",
+  "mobile",
+  "email_id",
+  "column_break_erej",
+  "user_name",
+  "password",
+  "creditbankgst_details_section",
+  "payment_term",
+  "creditlimit",
+  "name1",
+  "panno",
+  "aadhar_no",
+  "column_break_urbz",
+  "bank_name",
+  "ac_holder_name",
+  "ac_no",
+  "ifc_code",
+  "remarks",
+  "column_break_psxh",
+  "gst_statecode",
+  "gst_suptyp",
+  "gst_date",
+  "section_break_fvpr",
+  "marketing_user",
+  "entry_by",
+  "column_break_znps",
+  "status",
+  "auth_by",
+  "tab_break_lhbn",
+  "crdr_section",
+  "branch_name",
+  "column_break_bqvu",
+  "date",
+  "column_break_zoii",
+  "cr",
+  "column_break_kocr",
+  "dr",
+  "column_break_ieho",
+  "active"
+ ],
+ "fields": [
+  {
+   "fieldname": "customervendor_entry_section",
+   "fieldtype": "Section Break",
+   "label": "Customer/Vendor Entry"
+  },
+  {
+   "fieldname": "gst_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "GST_No"
+  },
+  {
+   "fieldname": "ledger_code",
+   "fieldtype": "Data",
+   "label": "Ledger Code"
+  },
+  {
+   "fieldname": "group_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Group Name",
+   "options": "Group Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ledger_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Ledger Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wlmj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "allias",
+   "fieldtype": "Data",
+   "label": "Allias"
+  },
+  {
+   "fieldname": "column_break_auib",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "use_in_taxclass",
+   "fieldtype": "Check",
+   "label": "Use In TaxClass"
+  },
+  {
+   "fieldname": "billing_address_section",
+   "fieldtype": "Section Break",
+   "label": "Billing Address"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address2",
+   "fieldtype": "Data",
+   "label": "Address2"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "column_break_vvif",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address1",
+   "fieldtype": "Data",
+   "label": "Address1"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "pin",
+   "fieldtype": "Data",
+   "label": "Pin"
+  },
+  {
+   "fieldname": "contact_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Details"
+  },
+  {
+   "fieldname": "contactperson",
+   "fieldtype": "Data",
+   "label": "ContactPerson"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "column_break_erej",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "user_name",
+   "fieldtype": "Data",
+   "label": "User Name"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password"
+  },
+  {
+   "fieldname": "creditbankgst_details_section",
+   "fieldtype": "Section Break",
+   "label": "Credit,Bank,GST Details"
+  },
+  {
+   "fieldname": "payment_term",
+   "fieldtype": "Data",
+   "label": "Payment Term"
+  },
+  {
+   "fieldname": "creditlimit",
+   "fieldtype": "Int",
+   "label": "CreditLimit"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "panno",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PANNO"
+  },
+  {
+   "fieldname": "aadhar_no",
+   "fieldtype": "Data",
+   "label": "Aadhar No"
+  },
+  {
+   "fieldname": "column_break_urbz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fieldname": "ac_holder_name",
+   "fieldtype": "Data",
+   "label": "A/C Holder Name"
+  },
+  {
+   "fieldname": "ac_no",
+   "fieldtype": "Data",
+   "label": "A/C No"
+  },
+  {
+   "fieldname": "ifc_code",
+   "fieldtype": "Data",
+   "label": "IFC Code"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_psxh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gst_statecode",
+   "fieldtype": "Select",
+   "label": "GST StateCode"
+  },
+  {
+   "fieldname": "gst_suptyp",
+   "fieldtype": "Data",
+   "label": "GST SupTyp"
+  },
+  {
+   "fieldname": "gst_date",
+   "fieldtype": "Data",
+   "label": "GST Date"
+  },
+  {
+   "fieldname": "section_break_fvpr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "marketing_user",
+   "fieldtype": "Data",
+   "label": "Marketing User"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Entry By",
+   "options": "User Master"
+  },
+  {
+   "fieldname": "column_break_znps",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nDe Active"
+  },
+  {
+   "fieldname": "auth_by",
+   "fieldtype": "Link",
+   "label": "Auth By",
+   "options": "User Master"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID"
+  },
+  {
+   "fieldname": "tab_break_lhbn",
+   "fieldtype": "Tab Break"
+  },
+  {
+   "fieldname": "crdr_section",
+   "fieldtype": "Section Break",
+   "label": "Cr./Dr."
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Link",
+   "label": "Branch Name",
+   "options": "Branch Master"
+  },
+  {
+   "fieldname": "column_break_bqvu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_zoii",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cr",
+   "fieldtype": "Data",
+   "label": "CR"
+  },
+  {
+   "fieldname": "column_break_kocr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dr",
+   "fieldtype": "Data",
+   "label": "DR"
+  },
+  {
+   "fieldname": "column_break_ieho",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-23 21:47:44.040192",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Ledger Master",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "ledger_name"
+}

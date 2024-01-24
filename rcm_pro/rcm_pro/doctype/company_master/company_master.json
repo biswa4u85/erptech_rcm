@@ -1,0 +1,274 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-01-23 13:07:14.501874",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company_entry_section",
+  "company_name",
+  "state",
+  "gst_no",
+  "gst_statecode",
+  "tinno",
+  "cst",
+  "servicetaxno",
+  "tanno",
+  "range",
+  "commisioner",
+  "ieccode",
+  "address",
+  "fullbank",
+  "description",
+  "certifydescription",
+  "col1",
+  "status",
+  "attachment",
+  "column_break_oixh",
+  "shortcode",
+  "currencycode",
+  "panno",
+  "gst_date",
+  "tindt",
+  "cstdt",
+  "ssino",
+  "eccno",
+  "division",
+  "jurisdiction",
+  "authperson",
+  "bank",
+  "breifbank",
+  "taxdescription",
+  "declaration",
+  "registerkey",
+  "entry_by"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "company_entry_section",
+   "fieldtype": "Section Break",
+   "label": "Company Entry"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "gst_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "GST_No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gst_statecode",
+   "fieldtype": "Select",
+   "label": "GST_StateCode",
+   "options": "---Select State Code--\n01-JAMMU AND KASHMIR\n02-HIMACHAL PRADESH\n03-PUNJAB\n04-CHANDIGARH\n05-UTTARAKHAND\n06-HARYANA\n07-DELHI\n08-RAJASTHAN\n09-UTTAR PRADESH\n10-BIHAR\n11-SIKKIM\n12-ARUNACHAL PRADESH\n13-NAGALAND\n14-MANIPUR\n15-MIZORAM\n16-TRIPURA\n17-MEGHALAYA\n18-ASSAM\n19-WEST BENGAL\n20-JHARKHAND\n21-ODISHA\n22-CHATTISGARH\n23-MADHYA PRADESH\n24-GUJARAT\n26*-DADRA AND NAGAR HAVELI AND DAMAN AND DIU (NEWLY MERGED UT)\n27-MAHARASHTRA\n28-ANDHRA PRADESH(BEFORE DIVISION)\n29-KARNATAKA\n30-GOA\n31-LAKSHADWEEP\n32-KERALA\n33-TAMIL NADU\n34-PUDUCHERRY\n35-ANDAMAN AND NICOBAR ISLANDS\n36-TELANGANA\n37-ANDHRA PRADESH (NEWLY ADDED)\n38-LADAKH (NEWLY ADDED)\n97-OTHER TERRITORY\n99-CENTRE JURISDICTION"
+  },
+  {
+   "fieldname": "tinno",
+   "fieldtype": "Data",
+   "label": "TINNo"
+  },
+  {
+   "fieldname": "cst",
+   "fieldtype": "Data",
+   "label": "CST"
+  },
+  {
+   "fieldname": "servicetaxno",
+   "fieldtype": "Data",
+   "label": "ServiceTaxNo"
+  },
+  {
+   "fieldname": "tanno",
+   "fieldtype": "Data",
+   "label": "TANNO"
+  },
+  {
+   "fieldname": "range",
+   "fieldtype": "Data",
+   "label": "Range"
+  },
+  {
+   "fieldname": "commisioner",
+   "fieldtype": "Data",
+   "label": "Commisioner"
+  },
+  {
+   "fieldname": "ieccode",
+   "fieldtype": "Data",
+   "label": "IECCode"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "fullbank",
+   "fieldtype": "Small Text",
+   "label": "FullBank"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "certifydescription",
+   "fieldtype": "Small Text",
+   "label": "CertifyDescription"
+  },
+  {
+   "fieldname": "col1",
+   "fieldtype": "Data",
+   "label": "Col1"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "column_break_oixh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shortcode",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ShortCode",
+   "reqd": 1
+  },
+  {
+   "fieldname": "currencycode",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "CurrencyCode",
+   "options": "INR",
+   "reqd": 1
+  },
+  {
+   "fieldname": "panno",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PANNO",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gst_date",
+   "fieldtype": "Date",
+   "label": "GST_Date"
+  },
+  {
+   "fieldname": "tindt",
+   "fieldtype": "Data",
+   "label": "TINDT"
+  },
+  {
+   "fieldname": "cstdt",
+   "fieldtype": "Data",
+   "label": "CSTDT"
+  },
+  {
+   "fieldname": "ssino",
+   "fieldtype": "Data",
+   "label": "SSINO"
+  },
+  {
+   "fieldname": "eccno",
+   "fieldtype": "Data",
+   "label": "ECCNo"
+  },
+  {
+   "fieldname": "division",
+   "fieldtype": "Data",
+   "label": "Division"
+  },
+  {
+   "fieldname": "jurisdiction",
+   "fieldtype": "Data",
+   "label": "Jurisdiction"
+  },
+  {
+   "fieldname": "authperson",
+   "fieldtype": "Data",
+   "label": "AuthPerson"
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Data",
+   "label": "Bank"
+  },
+  {
+   "fieldname": "breifbank",
+   "fieldtype": "Data",
+   "label": "BreifBank"
+  },
+  {
+   "fieldname": "taxdescription",
+   "fieldtype": "Data",
+   "label": "TaxDescription"
+  },
+  {
+   "fieldname": "declaration",
+   "fieldtype": "Data",
+   "label": "Declaration"
+  },
+  {
+   "fieldname": "registerkey",
+   "fieldtype": "Data",
+   "label": "RegisterKey"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Data",
+   "label": "Entry By"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company Name",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-23 22:08:47.749233",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Company Master",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "company_name"
+}

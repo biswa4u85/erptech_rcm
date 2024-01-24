@@ -1,0 +1,204 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-23 14:28:21.322515",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "role_master_section",
+  "rolename",
+  "status",
+  "user_name",
+  "form_role_details_section",
+  "modulename",
+  "column_break_tkvn",
+  "form_name",
+  "column_break_pnnw",
+  "add",
+  "column_break_djat",
+  "edit",
+  "column_break_qusv",
+  "del",
+  "column_break_odqv",
+  "auth",
+  "column_break_hcfp",
+  "unauth",
+  "column_break_gmpo",
+  "listexport",
+  "column_break_xyem",
+  "listpdf",
+  "column_break_teqn",
+  "docpdf",
+  "column_break_kdmd",
+  "docexport",
+  "column_break_rnrn",
+  "display"
+ ],
+ "fields": [
+  {
+   "fieldname": "role_master_section",
+   "fieldtype": "Section Break",
+   "label": "Role Master"
+  },
+  {
+   "fieldname": "rolename",
+   "fieldtype": "Data",
+   "label": "RoleName"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Link",
+   "label": "Status",
+   "options": "Prop Master"
+  },
+  {
+   "fieldname": "user_name",
+   "fieldtype": "Data",
+   "label": "User Name"
+  },
+  {
+   "fieldname": "form_role_details_section",
+   "fieldtype": "Section Break",
+   "label": "Form Role Details"
+  },
+  {
+   "fieldname": "modulename",
+   "fieldtype": "Data",
+   "label": "ModuleName"
+  },
+  {
+   "fieldname": "column_break_tkvn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "form_name",
+   "fieldtype": "Link",
+   "label": "Form Name",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "column_break_pnnw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "add",
+   "fieldtype": "Check",
+   "label": "Add"
+  },
+  {
+   "fieldname": "column_break_djat",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "edit",
+   "fieldtype": "Check",
+   "label": "Edit"
+  },
+  {
+   "fieldname": "column_break_qusv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "del",
+   "fieldtype": "Check",
+   "label": "Del"
+  },
+  {
+   "fieldname": "column_break_odqv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "auth",
+   "fieldtype": "Check",
+   "label": "Auth"
+  },
+  {
+   "fieldname": "column_break_hcfp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "unauth",
+   "fieldtype": "Check",
+   "label": "UnAuth"
+  },
+  {
+   "fieldname": "column_break_gmpo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "listexport",
+   "fieldtype": "Check",
+   "label": "ListExport"
+  },
+  {
+   "fieldname": "column_break_xyem",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "listpdf",
+   "fieldtype": "Check",
+   "label": "ListPDF"
+  },
+  {
+   "fieldname": "column_break_teqn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "docpdf",
+   "fieldtype": "Check",
+   "label": "DocPDF"
+  },
+  {
+   "fieldname": "column_break_kdmd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "docexport",
+   "fieldtype": "Check",
+   "label": "DocExport"
+  },
+  {
+   "fieldname": "column_break_rnrn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "display",
+   "fieldtype": "Check",
+   "label": "Display"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-23 14:47:27.720597",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Role Master",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

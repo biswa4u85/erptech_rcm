@@ -1,0 +1,184 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-01-23 12:52:56.290958",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sec1_section",
+  "branch",
+  "make",
+  "tare_weight",
+  "activedate",
+  "pucdate",
+  "fitnessdate",
+  "status",
+  "column_break_bpyj",
+  "vehicle_no",
+  "operateby",
+  "registrationno",
+  "insurancedate",
+  "emidate",
+  "permitdate",
+  "entry_by",
+  "column_break_rzjq",
+  "vehicle_type",
+  "contactno",
+  "purchasedate",
+  "rtodate",
+  "emicompleted_date",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "sec1_section",
+   "fieldtype": "Section Break",
+   "label": "Cost Center Entry"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch Master"
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Vehicle No"
+  },
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Vehicle Type",
+   "options": "Demo1\nDemo2"
+  },
+  {
+   "fieldname": "column_break_bpyj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rzjq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "make",
+   "fieldtype": "Data",
+   "label": "Make"
+  },
+  {
+   "fieldname": "operateby",
+   "fieldtype": "Data",
+   "label": "OperateBy"
+  },
+  {
+   "fieldname": "contactno",
+   "fieldtype": "Data",
+   "label": "ContactNo"
+  },
+  {
+   "fieldname": "tare_weight",
+   "fieldtype": "Data",
+   "label": "Tare Weight"
+  },
+  {
+   "fieldname": "activedate",
+   "fieldtype": "Date",
+   "label": "ActiveDate"
+  },
+  {
+   "fieldname": "pucdate",
+   "fieldtype": "Date",
+   "label": "PUCDate"
+  },
+  {
+   "fieldname": "fitnessdate",
+   "fieldtype": "Date",
+   "label": "FitnessDate"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nDe Active"
+  },
+  {
+   "fieldname": "registrationno",
+   "fieldtype": "Data",
+   "label": "RegistrationNo"
+  },
+  {
+   "fieldname": "insurancedate",
+   "fieldtype": "Date",
+   "label": "InsuranceDate"
+  },
+  {
+   "fieldname": "emidate",
+   "fieldtype": "Date",
+   "label": "EMIDate"
+  },
+  {
+   "fieldname": "permitdate",
+   "fieldtype": "Date",
+   "label": "PermitDate"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Link",
+   "label": "Entry By",
+   "options": "User Master"
+  },
+  {
+   "fieldname": "purchasedate",
+   "fieldtype": "Date",
+   "label": "PurchaseDate"
+  },
+  {
+   "fieldname": "rtodate",
+   "fieldtype": "Date",
+   "label": "RTODate"
+  },
+  {
+   "fieldname": "emicompleted_date",
+   "fieldtype": "Date",
+   "label": "EMICompleted Date"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-24 11:49:11.610854",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Cost Center Master",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "vehicle_no"
+}

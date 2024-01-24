@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-23 15:38:15.469995",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "uom_master_section",
+  "uom",
+  "quccode",
+  "cf",
+  "status",
+  "entry_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "uom_master_section",
+   "fieldtype": "Section Break",
+   "label": "UOM Entry"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "UOM",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quccode",
+   "fieldtype": "Data",
+   "label": "QUCCODE"
+  },
+  {
+   "fieldname": "cf",
+   "fieldtype": "Data",
+   "label": "CF"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Link",
+   "label": "Status",
+   "options": "Prop Master"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Link",
+   "label": "Entry By",
+   "options": "User Master"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-23 19:48:37.790873",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "UOM Master",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

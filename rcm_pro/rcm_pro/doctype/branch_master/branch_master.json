@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-23 12:59:49.225034",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "branch_master_section",
+  "branchname",
+  "company",
+  "gst_no",
+  "gst_date",
+  "address",
+  "description",
+  "certifydescription",
+  "plant",
+  "status",
+  "column_break_ugjv",
+  "shortname",
+  "currencycode",
+  "gst_statecode",
+  "bank",
+  "taxdescription",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "branch_master_section",
+   "fieldtype": "Section Break",
+   "label": "Branch Master"
+  },
+  {
+   "fieldname": "branchname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "BranchName",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ugjv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shortname",
+   "fieldtype": "Data",
+   "label": "ShortName"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company Name",
+   "options": "Company Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gst_no",
+   "fieldtype": "Data",
+   "label": "GST_No"
+  },
+  {
+   "fieldname": "gst_date",
+   "fieldtype": "Data",
+   "label": "GST_Date"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "certifydescription",
+   "fieldtype": "Data",
+   "label": "CertifyDescription"
+  },
+  {
+   "fieldname": "plant",
+   "fieldtype": "Date",
+   "label": "Plant"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Link",
+   "label": "Status",
+   "options": "Prop Master"
+  },
+  {
+   "fieldname": "currencycode",
+   "fieldtype": "Data",
+   "label": "CurrencyCode"
+  },
+  {
+   "fieldname": "gst_statecode",
+   "fieldtype": "Data",
+   "label": "GST_StateCode"
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Small Text",
+   "label": "Bank"
+  },
+  {
+   "fieldname": "taxdescription",
+   "fieldtype": "Data",
+   "label": "TaxDescription"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-23 22:03:45.808300",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Branch Master",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "branchname"
+}

@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-23 20:25:28.916113",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "pump_gang_master_entry_section",
+  "pumpgang_name",
+  "owner_name",
+  "joindate",
+  "remarks",
+  "column_break_gglc",
+  "leadername",
+  "party_name",
+  "staff",
+  "leavedate",
+  "status",
+  "entry_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "pump_gang_master_entry_section",
+   "fieldtype": "Section Break",
+   "label": "Pump Gang Master Entry"
+  },
+  {
+   "fieldname": "pumpgang_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PumpGang Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "owner_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Owner Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_gglc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "leadername",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "LeaderName",
+   "reqd": 1
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Link",
+   "label": "Party Name",
+   "options": "Ledger Master"
+  },
+  {
+   "fieldname": "joindate",
+   "fieldtype": "Data",
+   "label": "JoinDate"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "staff",
+   "fieldtype": "Data",
+   "label": "Staff"
+  },
+  {
+   "fieldname": "leavedate",
+   "fieldtype": "Data",
+   "label": "LeaveDate"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Link",
+   "label": "Status",
+   "options": "Prop Master"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Link",
+   "label": "Entry By",
+   "options": "User Master"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-23 20:33:06.081403",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Pump Gang Master",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
