@@ -31,7 +31,7 @@ $(document).ready(async function () {
       let li = $("<li>");
       let link = $("<a>")
         .text(item.title)
-        .attr("href", "/app/" + item.is_group == 0 ? item.path : "")
+        .attr("href", "/app/" + item.is_group == 1 ? "" : item.path)
         .click(function () {
           if (level > 1) {
             $(this).siblings("ul").toggleClass("hidden");
