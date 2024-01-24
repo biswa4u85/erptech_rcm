@@ -2,6 +2,7 @@ $(document).ready(async function () {
   let dataMenu = await frappe.db.get_list("Rcm Menu", {
     fields: ["name", "title", "parent_rcm_menu", "path", "is_group"],
     filters: {},
+    limit: 100,
   });
   let treeData = buildTree(dataMenu);
   renderTree(treeData, $(".desk-sidebar"));
@@ -18,8 +19,6 @@ $(document).ready(async function () {
 
     data.forEach(function (item) {
       if (item.parent_rcm_menu !== null) {
-        console.log("data 1", item.parent_rcm_menu);
-        console.log("data 2", lookup);
         lookup[item.parent_rcm_menu].children.push(item);
       } else {
         tree.push(item);
