@@ -1,13 +1,40 @@
+.hidden {
+  display: none;
+}
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-ul li {
-  margin: 5px;
+ul li li>ul {
+  margin-left: 10px;
 }
 
-ul li>ul {
-  margin-left: 10px;
+ul li a:hover {
+  text-decoration: none;
+}
+
+ul li li a {
+  background: none;
+  display: block;
+  padding: 7px;
+  border-radius: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+ul li li a::before {
+  content: '●';
+  color: #333;
+  font-size: 14px;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+ul li li a:hover {
+  background: #9bd1ff;
 }
