@@ -13,7 +13,7 @@ $(document).ready(async function () {
       item["children"] = [];
       lookup[item.name] = item;
     });
-    console.log('data', data)
+    console.log("data", data, lookup);
     data.forEach(function (item) {
       if (item.parent_rcm_menu !== null) {
         lookup[item.parent_rcm_menu].children.push(item);
