@@ -6,16 +6,17 @@ $(document).ready(async function () {
   let treeData = buildTree(dataMenu);
   renderTree(treeData, $(".desk-sidebar"));
 
-  async function buildTree(data) {
+  function buildTree(data) {
     let tree = [];
     let lookup = {};
-    await data.forEach(function (item) {
+    data.forEach(function (item) {
       item["children"] = [];
       lookup[item.name] = item;
     });
-    console.log("data", data, lookup);
     data.forEach(function (item) {
       if (item.parent_rcm_menu !== null) {
+        console.log("data", item.parent_rcm_menu);
+        console.log("data 1", lookup[item.parent_rcm_menu]);
         lookup[item.parent_rcm_menu].children.push(item);
       } else {
         tree.push(item);
