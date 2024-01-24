@@ -16,8 +16,10 @@ $(document).ready(async function () {
     data.forEach(function (item) {
       if (item.parent_rcm_menu !== null) {
         console.log("data", item.parent_rcm_menu);
-        console.log("data 1", lookup[item.parent_rcm_menu]);
-        lookup[item.parent_rcm_menu].children.push(item);
+        console.log("data 1", lookup);
+        if (lookup[item.parent_rcm_menu]) {
+          lookup[item.parent_rcm_menu].children.push(item);
+        }
       } else {
         tree.push(item);
       }
