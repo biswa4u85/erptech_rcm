@@ -10,8 +10,8 @@ $(document).ready(async function () {
     let tree = [];
     let lookup = {};
     data.forEach(function (item) {
+      item["children"] = [];
       lookup[item.name] = item;
-      item.children = [];
     });
     data.forEach(function (item) {
       if (item.parent_rcm_menu !== null) {
