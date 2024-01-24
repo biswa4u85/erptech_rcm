@@ -10,16 +10,17 @@ $(document).ready(async function () {
     let tree = [];
     let lookup = {};
     data.forEach(function (item) {
-      item["children"] = [];
       lookup[item.name] = item;
+      item["children"] = [];
     });
+    console.log("data", data);
+    console.log("lookup", lookup);
+
     data.forEach(function (item) {
       if (item.parent_rcm_menu !== null) {
-        console.log("data", item.parent_rcm_menu);
-        console.log("data 1", lookup);
-        if (lookup[item.parent_rcm_menu]) {
-          lookup[item.parent_rcm_menu].children.push(item);
-        }
+        console.log("data 1", item.parent_rcm_menu);
+        console.log("data 2", lookup);
+        lookup[item.parent_rcm_menu].children.push(item);
       } else {
         tree.push(item);
       }
