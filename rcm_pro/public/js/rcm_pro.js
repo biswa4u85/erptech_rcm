@@ -14,8 +14,6 @@ $(document).ready(async function () {
       lookup[item.name] = item;
       item["children"] = [];
     });
-    console.log("data", data);
-    console.log("lookup", lookup);
 
     data.forEach(function (item) {
       if (item.parent_rcm_menu !== null) {
