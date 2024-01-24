@@ -6,13 +6,14 @@ $(document).ready(async function () {
   let treeData = buildTree(dataMenu);
   renderTree(treeData, $(".desk-sidebar"));
 
-  function buildTree(data) {
+  async function buildTree(data) {
     let tree = [];
     let lookup = {};
-    data.forEach(function (item) {
+    await data.forEach(function (item) {
       item["children"] = [];
       lookup[item.name] = item;
     });
+    console.log('data', data)
     data.forEach(function (item) {
       if (item.parent_rcm_menu !== null) {
         lookup[item.parent_rcm_menu].children.push(item);
