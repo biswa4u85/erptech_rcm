@@ -14,14 +14,15 @@
   "description",
   "certifydescription",
   "plant",
-  "status",
   "column_break_ugjv",
   "shortname",
   "currencycode",
   "gst_statecode",
   "bank",
   "taxdescription",
-  "remarks"
+  "remarks",
+  "status",
+  "entry_by"
  ],
  "fields": [
   {
@@ -86,9 +87,9 @@
   {
    "default": "Active",
    "fieldname": "status",
-   "fieldtype": "Link",
+   "fieldtype": "Select",
    "label": "Status",
-   "options": "Prop Master"
+   "options": "Active\nDe Active"
   },
   {
    "fieldname": "currencycode",
@@ -114,11 +115,17 @@
    "fieldname": "remarks",
    "fieldtype": "Data",
    "label": "Remarks"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Link",
+   "label": "Entry By",
+   "options": "User Master"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-23 22:03:45.808300",
+ "modified": "2024-01-25 21:30:19.301809",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Branch Master",

@@ -6,7 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "job_site_address_entry_section",
-  "ledgername",
+  "ledger_name",
   "address",
   "address3",
   "state",
@@ -34,28 +34,22 @@
    "label": "Job Site Address Entry"
   },
   {
-   "fieldname": "ledgername",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "LedgerName",
-   "options": "Ledger Master",
-   "reqd": 1
-  },
-  {
    "fieldname": "address",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Address"
   },
   {
    "fieldname": "address3",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": " Address3"
   },
   {
    "fieldname": "state",
-   "fieldtype": "Data",
-   "label": " State"
+   "fieldtype": "Select",
+   "label": " State",
+   "options": "-Select State Name-\nAndhra Pradesh\nArunachal Pradesh\nAssam\nBihar\nChhattisgarh\nGoa\nGujarat\nHaryana\nHimachal Pradesh\nJharkhand\nKarnataka\nKerala\nMadhya Pradesh\nMaharashtra\nManipur\nMeghalaya\nMizoram\nNagaland\nOdisha\nPunjab\nRajasthan\nSikkim\nTamil Nadu\nTelangana\nTripura\nUttar Pradesh\nUttarakhand\nWest Bengal"
   },
   {
    "fieldname": "pin",
@@ -77,6 +71,7 @@
   {
    "fieldname": "address2",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Address2"
   },
   {
@@ -85,9 +80,11 @@
    "label": "City"
   },
   {
+   "default": "India",
    "fieldname": "country",
-   "fieldtype": "Data",
-   "label": "Country"
+   "fieldtype": "Select",
+   "label": "Country",
+   "options": "India"
   },
   {
    "fieldname": "column_break_ayqt",
@@ -110,7 +107,7 @@
   },
   {
    "fieldname": "km",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "KM"
@@ -125,10 +122,13 @@
    "fieldtype": "Section Break"
   },
   {
+   "default": "Active",
    "fieldname": "status",
-   "fieldtype": "Link",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Status",
-   "options": "Prop Master"
+   "options": "Active\nDe Active"
   },
   {
    "fieldname": "column_break_pkad",
@@ -137,13 +137,24 @@
   {
    "fieldname": "entry_by",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Entry By",
    "options": "User Master"
+  },
+  {
+   "fieldname": "ledger_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Ledger Name",
+   "options": "Ledger Master",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-24 20:15:21.038323",
+ "modified": "2024-01-25 22:21:09.554108",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Site Address Master",
@@ -167,5 +178,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "ledgername"
+ "title_field": "ledger_name"
 }

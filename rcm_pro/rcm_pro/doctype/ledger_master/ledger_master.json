@@ -39,17 +39,8 @@
   "ac_no",
   "ifc_code",
   "remarks",
-  "crdr_section",
-  "column_break_nuxs",
-  "branch_name",
-  "column_break_bqvu",
-  "date",
-  "column_break_zoii",
-  "cr",
-  "column_break_kocr",
-  "dr",
-  "column_break_ieho",
-  "active",
+  "section_break_jogs",
+  "table_ptrt",
   "section_break_fvpr",
   "marketing_user",
   "entry_by",
@@ -119,7 +110,7 @@
    "fieldname": "address",
    "fieldtype": "Link",
    "label": "Address",
-   "options": "Address"
+   "options": "Address Master"
   },
   {
    "fieldname": "contact_details_section",
@@ -279,64 +270,22 @@
    "label": "Email ID"
   },
   {
-   "fieldname": "crdr_section",
+   "fieldname": "column_break_ucwv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jogs",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "column_break_bqvu",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "date",
-   "fieldtype": "Date",
-   "label": "Date"
-  },
-  {
-   "fieldname": "column_break_zoii",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "cr",
-   "fieldtype": "Data",
-   "label": "CR"
-  },
-  {
-   "fieldname": "column_break_kocr",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "dr",
-   "fieldtype": "Data",
-   "label": "DR"
-  },
-  {
-   "fieldname": "column_break_ieho",
-   "fieldtype": "Column Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "active",
-   "fieldtype": "Check",
-   "label": "Active"
-  },
-  {
-   "fieldname": "column_break_nuxs",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "branch_name",
-   "fieldtype": "Link",
-   "label": "Branch Name",
-   "options": "Branch Master"
-  },
-  {
-   "fieldname": "column_break_ucwv",
-   "fieldtype": "Column Break"
+   "fieldname": "table_ptrt",
+   "fieldtype": "Table",
+   "options": "LedgerWiseCrDr"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-25 16:08:51.351695",
+ "modified": "2024-01-25 22:12:33.100546",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Ledger Master",

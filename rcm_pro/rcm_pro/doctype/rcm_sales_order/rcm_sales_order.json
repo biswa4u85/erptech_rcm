@@ -120,7 +120,8 @@
    "fieldname": "buyer_address",
    "fieldtype": "Link",
    "label": "Buyer Address",
-   "options": "Address"
+   "options": "Address Master",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_tcmy",
@@ -253,7 +254,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-25 16:24:46.310670",
+ "modified": "2024-01-25 22:35:36.593807",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Rcm Sales Order",

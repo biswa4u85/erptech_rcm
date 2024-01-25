@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-25 20:35:51.038515",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "address_entry_section",
+  "address",
+  "address_2",
+  "state",
+  "country",
+  "column_break_ipuu",
+  "address_1",
+  "city",
+  "pin"
+ ],
+ "fields": [
+  {
+   "fieldname": "address_entry_section",
+   "fieldtype": "Section Break",
+   "label": "Address Entry"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "address_2",
+   "fieldtype": "Data",
+   "label": "Address 2"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "column_break_ipuu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address_1",
+   "fieldtype": "Data",
+   "label": " Address 1"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "pin",
+   "fieldtype": "Data",
+   "label": "Pin"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-25 20:44:51.080740",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Address Master",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "address"
+}
