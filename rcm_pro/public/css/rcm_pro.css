@@ -1,5 +1,10 @@
+.sidebar-menu,
+.desk-sidebar,
 .hidden {
-  display: none;
+  display: none !important;
+}
+.form-sidebar{
+  display: block!important;
 }
 
 ul {
