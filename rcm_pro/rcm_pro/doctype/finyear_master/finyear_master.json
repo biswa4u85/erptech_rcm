@@ -1,17 +1,19 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "autoincrement",
  "creation": "2024-01-23 17:53:10.513804",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "finyear_entry_section",
   "fin_year",
-  "code",
-  "startdate",
-  "enddate",
   "status",
-  "entry_by"
+  "column_break_cyik",
+  "code",
+  "entry_by",
+  "column_break_zenc",
+  "start_date",
+  "end_date"
  ],
  "fields": [
   {
@@ -23,6 +25,7 @@
    "fieldname": "fin_year",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Fin year",
    "reqd": 1
   },
@@ -30,42 +33,56 @@
    "fieldname": "code",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Code",
-   "reqd": 1
-  },
-  {
-   "fieldname": "startdate",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "StartDate",
-   "reqd": 1
-  },
-  {
-   "fieldname": "enddate",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "EndDate",
    "reqd": 1
   },
   {
    "fieldname": "status",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Status",
    "options": "Prop Master"
   },
   {
    "fieldname": "entry_by",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Entry By",
    "options": "User Master"
+  },
+  {
+   "fieldname": "column_break_cyik",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zenc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-23 17:56:31.186096",
+ "modified": "2024-01-25 15:40:50.884295",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "FinYear Master",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {
@@ -81,7 +98,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "code"
 }

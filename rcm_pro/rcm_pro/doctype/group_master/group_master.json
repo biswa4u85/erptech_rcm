@@ -1,19 +1,20 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "autoincrement",
  "creation": "2024-01-23 17:57:40.145939",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "group_master_entry_section",
   "group_name",
-  "allias",
   "parent_group",
-  "group_nature",
   "is_subledger",
-  "display_seq",
   "remarks",
   "status",
+  "column_break_gpvz",
+  "allias",
+  "group_nature",
+  "display_seq",
   "entry_by"
  ],
  "fields": [
@@ -26,7 +27,9 @@
    "fieldname": "group_name",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Group Name",
+   "options": "Sundry Debtors\nSundry Creditors",
    "reqd": 1
   },
   {
@@ -36,13 +39,15 @@
   },
   {
    "fieldname": "parent_group",
-   "fieldtype": "Data",
-   "label": "Parent Group"
+   "fieldtype": "Select",
+   "label": "Parent Group",
+   "options": "--Select Parent Group--\nBank Accounts\nCapital Accounts\nCurrent Assets\nCurrent Liabilities\nCash In Hand\nDirect Expenses\nDirect Incomes\nDuties & Taxes\nFixed Assets\nIndirect Expenses\nIndirect Incomes"
   },
   {
    "fieldname": "group_nature",
-   "fieldtype": "Data",
-   "label": "Group Nature"
+   "fieldtype": "Select",
+   "label": "Group Nature",
+   "options": "--Select Group Nature--\nAssets\nExpenses\nIncome\nLiability\nPerson"
   },
   {
    "default": "0",
@@ -61,24 +66,34 @@
    "label": "Remarks"
   },
   {
+   "default": "Active",
    "fieldname": "status",
-   "fieldtype": "Link",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Status",
-   "options": "Prop Master"
+   "options": "Active\nDe Active"
   },
   {
    "fieldname": "entry_by",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Entry By",
    "options": "User Master"
+  },
+  {
+   "fieldname": "column_break_gpvz",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-23 21:12:47.536747",
+ "modified": "2024-01-24 19:43:33.123384",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Group Master",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {

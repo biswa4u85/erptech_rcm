@@ -1,67 +1,60 @@
 {
  "actions": [],
  "autoname": "autoincrement",
- "creation": "2024-01-23 15:38:15.469995",
+ "creation": "2024-01-24 22:56:12.907851",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "uom_master_section",
-  "uom_name",
-  "quccode",
-  "cf",
+  "designation_master_section",
+  "designation_id",
   "status",
+  "column_break_ugqs",
+  "designation_name",
   "entry_by"
  ],
  "fields": [
   {
-   "fieldname": "uom_master_section",
+   "fieldname": "designation_master_section",
    "fieldtype": "Section Break",
-   "label": "UOM Entry"
+   "label": "Designation Master"
   },
   {
-   "fieldname": "quccode",
+   "fieldname": "designation_id",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "QUCCODE"
-  },
-  {
-   "fieldname": "cf",
-   "fieldtype": "Data",
-   "label": "CF"
+   "label": "Designation ID"
   },
   {
    "default": "Active",
    "fieldname": "status",
    "fieldtype": "Select",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Status",
-   "options": "Active\nDe Active"
+   "options": "Active\nDe Active",
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_ugqs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "designation_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Designation Name",
+   "reqd": 1
   },
   {
    "fieldname": "entry_by",
    "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Entry By",
    "options": "User Master"
-  },
-  {
-   "fieldname": "uom_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "UOM Name",
-   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-24 19:07:28.094954",
+ "modified": "2024-01-24 23:00:37.236988",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
- "name": "UOM Master",
+ "name": "Designation Master",
  "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
@@ -82,5 +75,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "uom_name"
+ "title_field": "designation_name"
 }

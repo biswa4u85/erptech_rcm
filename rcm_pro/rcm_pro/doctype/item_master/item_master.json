@@ -1,28 +1,26 @@
 {
  "actions": [],
- "allow_rename": 1,
- "creation": "2024-01-22 17:25:18.261456",
- "default_view": "List",
+ "autoname": "autoincrement",
+ "creation": "2024-01-24 17:56:26.554366",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "item_master_section",
-  "grade",
+  "item_no",
   "item_type",
   "hsn_code",
   "part_code",
-  "tallyname",
+  "tally_name",
   "status",
-  "column_break_biio",
-  "quantity",
+  "column_break_wzak",
+  "item_name",
   "item_group",
   "taxtype",
   "uom",
   "description",
   "entry_by",
-  "column_break_lkik",
-  "rate",
+  "column_break_kzfv",
+  "short_name",
   "for_sale",
   "non_stock",
   "sr_no_req",
@@ -32,46 +30,24 @@
  ],
  "fields": [
   {
-   "fieldname": "grade",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "ItemNo",
-   "options": "Rcm Grades",
-   "reqd": 1
-  },
-  {
-   "fieldname": "quantity",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Item Name",
-   "reqd": 1
-  },
-  {
-   "fieldname": "rate",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Short Name",
-   "reqd": 1
-  },
-  {
    "fieldname": "item_master_section",
    "fieldtype": "Section Break",
-   "label": "Item Entry"
+   "label": "Item Master"
   },
   {
-   "fieldname": "column_break_biio",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_lkik",
-   "fieldtype": "Column Break"
+   "fieldname": "item_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Item No"
   },
   {
    "fieldname": "item_type",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Item Type",
-   "options": "Item Type Master",
-   "reqd": 1
+   "options": "Item Type Master"
   },
   {
    "fieldname": "hsn_code",
@@ -84,16 +60,34 @@
    "label": "Part Code"
   },
   {
-   "fieldname": "tallyname",
+   "fieldname": "tally_name",
    "fieldtype": "Data",
-   "label": "TallyName"
+   "label": "Tally Name"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nAe Active"
+  },
+  {
+   "fieldname": "column_break_wzak",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "reqd": 1
   },
   {
    "fieldname": "item_group",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Item Group",
-   "options": "Item Group Master",
-   "reqd": 1
+   "options": "Item Group Master"
   },
   {
    "fieldname": "taxtype",
@@ -102,14 +96,30 @@
   },
   {
    "fieldname": "uom",
-   "fieldtype": "Link",
-   "label": "UOM",
-   "options": "UOM Master"
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "UOM"
   },
   {
    "fieldname": "description",
    "fieldtype": "Data",
    "label": "Description"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Link",
+   "label": "Entry By",
+   "options": "User Master"
+  },
+  {
+   "fieldname": "column_break_kzfv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "short_name",
+   "fieldtype": "Data",
+   "label": "Short Name"
   },
   {
    "default": "0",
@@ -145,30 +155,33 @@
    "fieldname": "remarks",
    "fieldtype": "Small Text",
    "label": "Remarks"
-  },
-  {
-   "fieldname": "status",
-   "fieldtype": "Link",
-   "label": "Status",
-   "options": "Prop Master"
-  },
-  {
-   "fieldname": "entry_by",
-   "fieldtype": "Link",
-   "label": "Entry By",
-   "options": "User Master"
   }
  ],
  "index_web_pages_for_search": 1,
- "istable": 1,
  "links": [],
- "modified": "2024-01-23 17:43:43.350276",
+ "modified": "2024-01-24 20:46:05.922342",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Item Master",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
- "permissions": [],
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "item_name"
 }

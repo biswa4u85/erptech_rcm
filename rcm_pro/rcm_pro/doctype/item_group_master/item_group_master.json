@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "autoincrement",
  "creation": "2024-01-23 17:29:51.408836",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -22,13 +22,14 @@
    "fieldname": "item_group_code",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Item Group Code",
-   "reqd": 1
+   "in_standard_filter": 1,
+   "label": "Item Group Code"
   },
   {
    "fieldname": "item_group_name",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Item Group Name",
    "reqd": 1
   },
@@ -40,22 +41,27 @@
   {
    "fieldname": "status",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Status",
    "options": "Prop Master"
   },
   {
    "fieldname": "entry_by",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Entry By",
    "options": "User Master"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-23 17:33:55.075260",
+ "modified": "2024-01-24 18:49:57.199293",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Item Group Master",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {
@@ -71,7 +77,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "item_group_name"
 }

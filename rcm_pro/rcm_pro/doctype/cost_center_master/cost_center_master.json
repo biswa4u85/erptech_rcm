@@ -39,7 +39,8 @@
    "fieldname": "branch",
    "fieldtype": "Link",
    "label": "Branch",
-   "options": "Branch Master"
+   "options": "Branch Master",
+   "reqd": 1
   },
   {
    "fieldname": "vehicle_no",
@@ -47,7 +48,8 @@
    "in_global_search": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Vehicle No"
+   "label": "Vehicle No",
+   "reqd": 1
   },
   {
    "fieldname": "vehicle_type",
@@ -55,7 +57,8 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Vehicle Type",
-   "options": "Demo1\nDemo2"
+   "options": "--Select Vehicle Type--\nPlant\nPump\nTruck\nTM\nEicher\nLoader\nJCB\nDG",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_bpyj",
@@ -68,11 +71,15 @@
   {
    "fieldname": "make",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Make"
   },
   {
    "fieldname": "operateby",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "OperateBy"
   },
   {
@@ -156,7 +163,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-24 11:49:11.610854",
+ "modified": "2024-01-24 11:54:49.925841",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Cost Center Master",

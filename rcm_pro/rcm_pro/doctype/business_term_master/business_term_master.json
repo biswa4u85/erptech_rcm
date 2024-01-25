@@ -1,39 +1,51 @@
 {
  "actions": [],
  "autoname": "autoincrement",
- "creation": "2024-01-23 15:38:15.469995",
+ "creation": "2024-01-25 12:02:49.119331",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "uom_master_section",
-  "uom_name",
-  "quccode",
-  "cf",
+  "business_term_entry_section",
+  "btid",
+  "business_term",
+  "column_break_hqmv",
+  "term_head",
   "status",
   "entry_by"
  ],
  "fields": [
   {
-   "fieldname": "uom_master_section",
+   "fieldname": "business_term_entry_section",
    "fieldtype": "Section Break",
-   "label": "UOM Entry"
+   "label": "Business Term Entry"
   },
   {
-   "fieldname": "quccode",
+   "fieldname": "btid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "BTID"
+  },
+  {
+   "fieldname": "business_term",
+   "fieldtype": "Small Text",
+   "label": "Business Term"
+  },
+  {
+   "fieldname": "column_break_hqmv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "term_head",
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "QUCCODE"
-  },
-  {
-   "fieldname": "cf",
-   "fieldtype": "Data",
-   "label": "CF"
+   "label": "Term Head",
+   "reqd": 1
   },
   {
    "default": "Active",
    "fieldname": "status",
-   "fieldtype": "Select",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
@@ -46,22 +58,14 @@
    "in_standard_filter": 1,
    "label": "Entry By",
    "options": "User Master"
-  },
-  {
-   "fieldname": "uom_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "UOM Name",
-   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-24 19:07:28.094954",
+ "modified": "2024-01-25 12:07:11.269484",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
- "name": "UOM Master",
+ "name": "Business Term Master",
  "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
@@ -78,9 +82,8 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "uom_name"
+ "title_field": "term_head"
 }

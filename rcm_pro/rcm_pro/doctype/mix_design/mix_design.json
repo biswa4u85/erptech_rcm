@@ -1,0 +1,272 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-24 12:07:49.686508",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "mix_design_entry_section",
+  "gradeid",
+  "design_code",
+  "party_name",
+  "density",
+  "column_break_pqyl",
+  "branch_name",
+  "status",
+  "entry_by",
+  "mix_design_section",
+  "seqno",
+  "select_aeti",
+  "select_stkz",
+  "select_xayd",
+  "select_axzz",
+  "select_vhiy",
+  "select_uvfc",
+  "select_afyx",
+  "select_umxv",
+  "select_sqef",
+  "column_break_ajce",
+  "gate",
+  "select_qwph",
+  "select_rujx",
+  "select_rdiv",
+  "select_icgb",
+  "select_uipc",
+  "select_dsat",
+  "select_emrw",
+  "select_kpym",
+  "select_ulsq",
+  "column_break_ejvy",
+  "itemname",
+  "column_break_rxqb",
+  "grade_design"
+ ],
+ "fields": [
+  {
+   "fieldname": "gradeid",
+   "fieldtype": "Select",
+   "label": "GradeID",
+   "options": "--Select GradeID--\nM5\nM7.5\nM10\nM15\nM20\nM25\nM30\nM35\nM40\nM45\nM50\nM55\nM60"
+  },
+  {
+   "fieldname": "design_code",
+   "fieldtype": "Data",
+   "label": "Design Code"
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Link",
+   "label": "Party Name",
+   "options": "Ledger Master"
+  },
+  {
+   "fieldname": "density",
+   "fieldtype": "Int",
+   "label": "Density"
+  },
+  {
+   "fieldname": "column_break_pqyl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Link",
+   "label": "Branch Name",
+   "options": "Branch Master"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nDe Active"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Link",
+   "label": "Entry By",
+   "options": "User Master"
+  },
+  {
+   "fieldname": "mix_design_entry_section",
+   "fieldtype": "Section Break",
+   "label": "Mix Design Entry"
+  },
+  {
+   "fieldname": "mix_design_section",
+   "fieldtype": "Section Break",
+   "label": "Mix Design"
+  },
+  {
+   "default": "1",
+   "fieldname": "seqno",
+   "fieldtype": "Select",
+   "label": "SeqNo",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+  },
+  {
+   "fieldname": "column_break_ajce",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Gate1",
+   "fieldname": "gate",
+   "fieldtype": "Select",
+   "label": "Gate",
+   "options": "Gate1\nGate2\nGate3\nGate4\nGate5\nCEM1\nCEM2\nCEM3\nFlyAsh\nGGBS\nADMIX1\nADMIX2\nWATER1\nWATER2"
+  },
+  {
+   "fieldname": "column_break_ejvy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "ItemName",
+   "fieldname": "itemname",
+   "fieldtype": "Link",
+   "label": "ItemName",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "column_break_rxqb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Grade Design",
+   "fieldname": "grade_design",
+   "fieldtype": "Int",
+   "label": "Grade Design"
+  },
+  {
+   "default": "2",
+   "fieldname": "select_aeti",
+   "fieldtype": "Select",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+  },
+  {
+   "default": "3",
+   "fieldname": "select_stkz",
+   "fieldtype": "Select",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+  },
+  {
+   "default": "4",
+   "fieldname": "select_xayd",
+   "fieldtype": "Select",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+  },
+  {
+   "default": "5",
+   "fieldname": "select_axzz",
+   "fieldtype": "Select",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+  },
+  {
+   "default": "6",
+   "fieldname": "select_vhiy",
+   "fieldtype": "Select",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+  },
+  {
+   "default": "7",
+   "fieldname": "select_uvfc",
+   "fieldtype": "Select",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+  },
+  {
+   "default": "8",
+   "fieldname": "select_afyx",
+   "fieldtype": "Select",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+  },
+  {
+   "default": "9",
+   "fieldname": "select_umxv",
+   "fieldtype": "Select",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+  },
+  {
+   "default": "10",
+   "fieldname": "select_sqef",
+   "fieldtype": "Select",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+  },
+  {
+   "default": "Gate2",
+   "fieldname": "select_qwph",
+   "fieldtype": "Select",
+   "options": "Gate1\nGate2\nGate3\nGate4\nGate5\nCEM1\nCEM2\nCEM3\nFlyAsh\nGGBS\nADMIX1\nADMIX2\nWATER1\nWATER2"
+  },
+  {
+   "default": "Gate3",
+   "fieldname": "select_rujx",
+   "fieldtype": "Select",
+   "options": "Gate1\nGate2\nGate3\nGate4\nGate5\nCEM1\nCEM2\nCEM3\nFlyAsh\nGGBS\nADMIX1\nADMIX2\nWATER1\nWATER2"
+  },
+  {
+   "default": "Gate4",
+   "fieldname": "select_rdiv",
+   "fieldtype": "Select",
+   "options": "Gate1\nGate2\nGate3\nGate4\nGate5\nCEM1\nCEM2\nCEM3\nFlyAsh\nGGBS\nADMIX1\nADMIX2\nWATER1\nWATER2"
+  },
+  {
+   "default": "Gate5",
+   "fieldname": "select_icgb",
+   "fieldtype": "Select",
+   "options": "Gate1\nGate2\nGate3\nGate4\nGate5\nCEM1\nCEM2\nCEM3\nFlyAsh\nGGBS\nADMIX1\nADMIX2\nWATER1\nWATER2"
+  },
+  {
+   "default": "CEM1",
+   "fieldname": "select_uipc",
+   "fieldtype": "Select",
+   "options": "Gate1\nGate2\nGate3\nGate4\nGate5\nCEM1\nCEM2\nCEM3\nFlyAsh\nGGBS\nADMIX1\nADMIX2\nWATER1\nWATER2"
+  },
+  {
+   "default": "CEM2",
+   "fieldname": "select_dsat",
+   "fieldtype": "Select",
+   "options": "Gate1\nGate2\nGate3\nGate4\nGate5\nCEM1\nCEM2\nCEM3\nFlyAsh\nGGBS\nADMIX1\nADMIX2\nWATER1\nWATER2"
+  },
+  {
+   "default": "CEM3",
+   "fieldname": "select_emrw",
+   "fieldtype": "Select",
+   "options": "Gate1\nGate2\nGate3\nGate4\nGate5\nCEM1\nCEM2\nCEM3\nFlyAsh\nGGBS\nADMIX1\nADMIX2\nWATER1\nWATER2"
+  },
+  {
+   "default": "Fly Ash",
+   "fieldname": "select_kpym",
+   "fieldtype": "Select",
+   "options": "Gate1\nGate2\nGate3\nGate4\nGate5\nCEM1\nCEM2\nCEM3\nFly Ash\nGGBS\nADMIX1\nADMIX2\nWATER1\nWATER2"
+  },
+  {
+   "default": "GGBS",
+   "fieldname": "select_ulsq",
+   "fieldtype": "Select",
+   "options": "Gate1\nGate2\nGate3\nGate4\nGate5\nCEM1\nCEM2\nCEM3\nFly Ash\nGGBS\nADMIX1\nADMIX2\nWATER1\nWATER2"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-24 13:37:13.036328",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Mix Design",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

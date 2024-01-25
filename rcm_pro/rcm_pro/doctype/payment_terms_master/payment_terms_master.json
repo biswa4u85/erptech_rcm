@@ -1,67 +1,63 @@
 {
  "actions": [],
  "autoname": "autoincrement",
- "creation": "2024-01-23 15:38:15.469995",
+ "creation": "2024-01-25 12:00:00.096159",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "uom_master_section",
-  "uom_name",
-  "quccode",
-  "cf",
+  "payment_entry_section",
+  "payment_term",
   "status",
+  "column_break_eqrd",
+  "days",
   "entry_by"
  ],
  "fields": [
   {
-   "fieldname": "uom_master_section",
+   "fieldname": "payment_entry_section",
    "fieldtype": "Section Break",
-   "label": "UOM Entry"
+   "label": "Payment Entry"
   },
   {
-   "fieldname": "quccode",
+   "fieldname": "payment_term",
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "QUCCODE"
-  },
-  {
-   "fieldname": "cf",
-   "fieldtype": "Data",
-   "label": "CF"
+   "label": "Payment Term",
+   "reqd": 1
   },
   {
    "default": "Active",
    "fieldname": "status",
    "fieldtype": "Select",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Status",
    "options": "Active\nDe Active"
   },
   {
-   "fieldname": "entry_by",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Entry By",
-   "options": "User Master"
+   "fieldname": "column_break_eqrd",
+   "fieldtype": "Column Break"
   },
   {
-   "fieldname": "uom_name",
+   "fieldname": "days",
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "UOM Name",
+   "label": "Days",
    "reqd": 1
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Link",
+   "label": "Entry By",
+   "options": "User Master"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-24 19:07:28.094954",
+ "modified": "2024-01-25 12:10:47.343260",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
- "name": "UOM Master",
+ "name": "Payment Terms Master",
  "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
@@ -82,5 +78,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "uom_name"
+ "title_field": "payment_term"
 }

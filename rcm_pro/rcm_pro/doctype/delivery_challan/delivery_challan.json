@@ -1,0 +1,319 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-01-24 15:49:36.817771",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "delivery_challan_entry_section",
+  "challanno",
+  "scheduleno",
+  "column_break_aprc",
+  "date",
+  "orderno",
+  "column_break_hamv",
+  "plant",
+  "branch",
+  "column_break_vdhp",
+  "type",
+  "serialno",
+  "section_break_qzby",
+  "party_name",
+  "grade_code",
+  "grade_name",
+  "column_break_spey",
+  "job_site_name",
+  "job_site_address",
+  "section_break_ecrc",
+  "qty",
+  "total_opening",
+  "grand_total_qty",
+  "column_break_isrc",
+  "batchno",
+  "percycle",
+  "dispatchtime",
+  "column_break_umvb",
+  "vehicle",
+  "driver",
+  "helper_name",
+  "column_break_afgk",
+  "lastkm",
+  "currkm",
+  "distance",
+  "column_break_rcsm",
+  "last_hrh",
+  "curr_hrh",
+  "hrs",
+  "section_break_rlnr",
+  "column_break_enkv",
+  "supervisor",
+  "column_break_uebk",
+  "mkt_by",
+  "column_break_jfoq",
+  "status",
+  "column_break_tqpy",
+  "entry_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "delivery_challan_entry_section",
+   "fieldtype": "Section Break",
+   "label": "Delivery Challan Entry"
+  },
+  {
+   "fieldname": "challanno",
+   "fieldtype": "Data",
+   "label": "ChallanNo"
+  },
+  {
+   "fieldname": "scheduleno",
+   "fieldtype": "Data",
+   "label": "ScheduleNo"
+  },
+  {
+   "fieldname": "column_break_aprc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "orderno",
+   "fieldtype": "Data",
+   "label": "OrderNo"
+  },
+  {
+   "fieldname": "column_break_hamv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "plant",
+   "fieldtype": "Data",
+   "label": "Plant"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Data",
+   "label": "Branch"
+  },
+  {
+   "fieldname": "column_break_vdhp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "Type"
+  },
+  {
+   "fieldname": "section_break_qzby",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Link",
+   "label": "Party Name",
+   "options": "Ledger Master"
+  },
+  {
+   "fieldname": "grade_code",
+   "fieldtype": "Data",
+   "label": "Grade Code"
+  },
+  {
+   "fieldname": "grade_name",
+   "fieldtype": "Data",
+   "label": "Grade Name"
+  },
+  {
+   "fieldname": "column_break_spey",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "job_site_name",
+   "fieldtype": "Data",
+   "label": "Job Site Name"
+  },
+  {
+   "fieldname": "job_site_address",
+   "fieldtype": "Small Text",
+   "label": "Job Site Address"
+  },
+  {
+   "fieldname": "section_break_ecrc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Int",
+   "label": "Qty",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_opening",
+   "fieldtype": "Data",
+   "label": "Total Opening"
+  },
+  {
+   "fieldname": "grand_total_qty",
+   "fieldtype": "Data",
+   "label": "Grand Total Qty"
+  },
+  {
+   "fieldname": "column_break_isrc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "batchno",
+   "fieldtype": "Data",
+   "label": "BatchNo"
+  },
+  {
+   "fieldname": "percycle",
+   "fieldtype": "Data",
+   "label": "PerCycle"
+  },
+  {
+   "fieldname": "dispatchtime",
+   "fieldtype": "Time",
+   "label": "DispatchTime"
+  },
+  {
+   "fieldname": "section_break_rlnr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Vehicle",
+   "options": "Cost Center Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Data",
+   "label": "Driver"
+  },
+  {
+   "fieldname": "helper_name",
+   "fieldtype": "Data",
+   "label": "Helper Name"
+  },
+  {
+   "fieldname": "lastkm",
+   "fieldtype": "Data",
+   "label": "Last.KM"
+  },
+  {
+   "fieldname": "currkm",
+   "fieldtype": "Data",
+   "label": "Curr.KM"
+  },
+  {
+   "fieldname": "distance",
+   "fieldtype": "Data",
+   "label": "Distance"
+  },
+  {
+   "fieldname": "column_break_afgk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rcsm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_hrh",
+   "fieldtype": "Data",
+   "label": "Last HRH"
+  },
+  {
+   "fieldname": "curr_hrh",
+   "fieldtype": "Data",
+   "label": "Curr. HRH"
+  },
+  {
+   "fieldname": "hrs",
+   "fieldtype": "Data",
+   "label": "HRS"
+  },
+  {
+   "fieldname": "column_break_umvb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_enkv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Data",
+   "label": "Supervisor"
+  },
+  {
+   "fieldname": "column_break_uebk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mkt_by",
+   "fieldtype": "Data",
+   "label": "Mkt. By"
+  },
+  {
+   "fieldname": "column_break_jfoq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nDe Active"
+  },
+  {
+   "fieldname": "column_break_tqpy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Link",
+   "label": "Entry By",
+   "options": "User Master"
+  },
+  {
+   "fieldname": "serialno",
+   "fieldtype": "Int",
+   "label": "SerialNo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-24 16:32:48.775310",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Delivery Challan",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "challanno"
+}

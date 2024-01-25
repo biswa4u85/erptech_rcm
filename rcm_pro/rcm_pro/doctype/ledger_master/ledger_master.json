@@ -14,15 +14,6 @@
   "column_break_auib",
   "ledger_code",
   "use_in_taxclass",
-  "billing_address_section",
-  "address",
-  "address2",
-  "state",
-  "country",
-  "column_break_vvif",
-  "address1",
-  "city",
-  "pin",
   "contact_details_section",
   "contactperson",
   "mobile",
@@ -30,30 +21,26 @@
   "column_break_erej",
   "user_name",
   "password",
-  "creditbankgst_details_section",
-  "payment_term",
-  "creditlimit",
+  "column_break_ucwv",
   "name1",
   "panno",
   "aadhar_no",
+  "billing_address_section",
+  "address",
+  "creditbankgst_details_section",
+  "payment_term",
+  "creditlimit",
+  "gst_statecode",
+  "gst_suptyp",
+  "gst_date",
   "column_break_urbz",
   "bank_name",
   "ac_holder_name",
   "ac_no",
   "ifc_code",
   "remarks",
-  "column_break_psxh",
-  "gst_statecode",
-  "gst_suptyp",
-  "gst_date",
-  "section_break_fvpr",
-  "marketing_user",
-  "entry_by",
-  "column_break_znps",
-  "status",
-  "auth_by",
-  "tab_break_lhbn",
   "crdr_section",
+  "column_break_nuxs",
   "branch_name",
   "column_break_bqvu",
   "date",
@@ -62,7 +49,13 @@
   "column_break_kocr",
   "dr",
   "column_break_ieho",
-  "active"
+  "active",
+  "section_break_fvpr",
+  "marketing_user",
+  "entry_by",
+  "column_break_znps",
+  "status",
+  "auth_by"
  ],
  "fields": [
   {
@@ -85,6 +78,7 @@
    "fieldname": "group_name",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Group Name",
    "options": "Group Master",
    "reqd": 1
@@ -93,6 +87,7 @@
    "fieldname": "ledger_name",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Ledger Name",
    "reqd": 1
   },
@@ -122,44 +117,9 @@
   },
   {
    "fieldname": "address",
-   "fieldtype": "Data",
-   "in_list_view": 1,
+   "fieldtype": "Link",
    "label": "Address",
-   "reqd": 1
-  },
-  {
-   "fieldname": "address2",
-   "fieldtype": "Data",
-   "label": "Address2"
-  },
-  {
-   "fieldname": "state",
-   "fieldtype": "Data",
-   "label": "State"
-  },
-  {
-   "fieldname": "country",
-   "fieldtype": "Data",
-   "label": "Country"
-  },
-  {
-   "fieldname": "column_break_vvif",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "address1",
-   "fieldtype": "Data",
-   "label": "Address1"
-  },
-  {
-   "fieldname": "city",
-   "fieldtype": "Data",
-   "label": "City"
-  },
-  {
-   "fieldname": "pin",
-   "fieldtype": "Data",
-   "label": "Pin"
+   "options": "Address"
   },
   {
    "fieldname": "contact_details_section",
@@ -169,11 +129,15 @@
   {
    "fieldname": "contactperson",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "ContactPerson"
   },
   {
    "fieldname": "mobile",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Mobile"
   },
   {
@@ -197,8 +161,11 @@
   },
   {
    "fieldname": "payment_term",
-   "fieldtype": "Data",
-   "label": "Payment Term"
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Payment Term",
+   "options": "Payment Terms Master"
   },
   {
    "fieldname": "creditlimit",
@@ -251,10 +218,6 @@
    "label": "Remarks"
   },
   {
-   "fieldname": "column_break_psxh",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "gst_statecode",
    "fieldtype": "Select",
    "label": "GST StateCode"
@@ -276,12 +239,15 @@
   {
    "fieldname": "marketing_user",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Marketing User"
   },
   {
    "fieldname": "entry_by",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Entry By",
    "options": "User Master"
   },
@@ -302,6 +268,8 @@
   {
    "fieldname": "auth_by",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Auth By",
    "options": "User Master"
   },
@@ -311,19 +279,8 @@
    "label": "Email ID"
   },
   {
-   "fieldname": "tab_break_lhbn",
-   "fieldtype": "Tab Break"
-  },
-  {
    "fieldname": "crdr_section",
-   "fieldtype": "Section Break",
-   "label": "Cr./Dr."
-  },
-  {
-   "fieldname": "branch_name",
-   "fieldtype": "Link",
-   "label": "Branch Name",
-   "options": "Branch Master"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "column_break_bqvu",
@@ -361,11 +318,25 @@
    "fieldname": "active",
    "fieldtype": "Check",
    "label": "Active"
+  },
+  {
+   "fieldname": "column_break_nuxs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Link",
+   "label": "Branch Name",
+   "options": "Branch Master"
+  },
+  {
+   "fieldname": "column_break_ucwv",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-23 21:47:44.040192",
+ "modified": "2024-01-25 16:08:51.351695",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Ledger Master",

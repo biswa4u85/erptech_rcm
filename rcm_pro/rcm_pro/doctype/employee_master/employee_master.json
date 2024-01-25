@@ -1,0 +1,445 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-01-25 11:14:31.007146",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_entry_section",
+  "emp_code",
+  "title",
+  "short_name",
+  "email_id",
+  "column_break_gufr",
+  "designation",
+  "first_name",
+  "gender",
+  "person_email_id",
+  "column_break_zjfj",
+  "department",
+  "middle_name",
+  "birth_date",
+  "mobile_no",
+  "column_break_ggjf",
+  "branch",
+  "last_name",
+  "join_date",
+  "phone_no",
+  "address_section",
+  "address",
+  "city",
+  "state",
+  "pin",
+  "country",
+  "column_break_jzil",
+  "address_2",
+  "city_2",
+  "state_2",
+  "pin_2",
+  "country_2",
+  "section_break_luiz",
+  "pan_no",
+  "pf_no",
+  "pf_date",
+  "salary_code",
+  "column_break_pesw",
+  "adhar_card_no",
+  "esi_no",
+  "esi_center",
+  "basic_amount",
+  "column_break_lbhe",
+  "pf",
+  "esi",
+  "prof_tax",
+  "remarks",
+  "ctc",
+  "column_break_ywtp",
+  "bank_name",
+  "bank_branch",
+  "ac_no",
+  "ifsc_code",
+  "section_break_bgnj",
+  "policy_name",
+  "nominee_name",
+  "status",
+  "column_break_cxsk",
+  "policy_number",
+  "nominee_relation",
+  "entry_by",
+  "column_break_lgwp",
+  "image",
+  "aadharcard",
+  "driving_lic"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_entry_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Entry"
+  },
+  {
+   "fieldname": "emp_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "EMP Code"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "short_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Short Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID"
+  },
+  {
+   "fieldname": "column_break_gufr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Designation",
+   "options": "Designation Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "--Select Gender--\nMale\nFemale\nOther"
+  },
+  {
+   "fieldname": "person_email_id",
+   "fieldtype": "Data",
+   "label": "Person Email ID"
+  },
+  {
+   "fieldname": "column_break_zjfj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Department",
+   "options": "--Select Department--\nAll\nAccounts\nPurchase\nSales\nStore\nProduction\nMarketing\nOperating",
+   "reqd": 1
+  },
+  {
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name"
+  },
+  {
+   "fieldname": "birth_date",
+   "fieldtype": "Data",
+   "label": "Birth Date"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No"
+  },
+  {
+   "fieldname": "column_break_ggjf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch Master"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "join_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Join Date"
+  },
+  {
+   "fieldname": "phone_no",
+   "fieldtype": "Date",
+   "label": "Phone No"
+  },
+  {
+   "fieldname": "address_section",
+   "fieldtype": "Section Break",
+   "label": "Address"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": " State"
+  },
+  {
+   "fieldname": "pin",
+   "fieldtype": "Data",
+   "label": "Pin"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "column_break_jzil",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address_2",
+   "fieldtype": "Data",
+   "label": "Address 2"
+  },
+  {
+   "fieldname": "city_2",
+   "fieldtype": "Data",
+   "label": "City 2"
+  },
+  {
+   "fieldname": "state_2",
+   "fieldtype": "Data",
+   "label": "State 2"
+  },
+  {
+   "fieldname": "pin_2",
+   "fieldtype": "Data",
+   "label": "Pin 2"
+  },
+  {
+   "fieldname": "country_2",
+   "fieldtype": "Data",
+   "label": " Country 2"
+  },
+  {
+   "fieldname": "section_break_luiz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pan_no",
+   "fieldtype": "Data",
+   "label": "PAN No"
+  },
+  {
+   "fieldname": "pf_no",
+   "fieldtype": "Data",
+   "label": "PF No"
+  },
+  {
+   "fieldname": "pf_date",
+   "fieldtype": "Data",
+   "label": "PF Date"
+  },
+  {
+   "fieldname": "salary_code",
+   "fieldtype": "Data",
+   "label": "Salary Code"
+  },
+  {
+   "fieldname": "column_break_pesw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "adhar_card_no",
+   "fieldtype": "Data",
+   "label": "Adhar Card No"
+  },
+  {
+   "fieldname": "esi_no",
+   "fieldtype": "Data",
+   "label": "ESI No"
+  },
+  {
+   "fieldname": "esi_center",
+   "fieldtype": "Data",
+   "label": "ESI Center"
+  },
+  {
+   "fieldname": "basic_amount",
+   "fieldtype": "Data",
+   "label": "Basic Amount"
+  },
+  {
+   "fieldname": "column_break_lbhe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "pf",
+   "fieldtype": "Check",
+   "label": "PF"
+  },
+  {
+   "default": "0",
+   "fieldname": "esi",
+   "fieldtype": "Check",
+   "label": "ESI"
+  },
+  {
+   "default": "0",
+   "fieldname": "prof_tax",
+   "fieldtype": "Check",
+   "label": "Prof Tax"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "ctc",
+   "fieldtype": "Data",
+   "label": "CTC"
+  },
+  {
+   "fieldname": "column_break_ywtp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fieldname": "bank_branch",
+   "fieldtype": "Data",
+   "label": "Bank Branch"
+  },
+  {
+   "fieldname": "ac_no",
+   "fieldtype": "Data",
+   "label": "A/c No"
+  },
+  {
+   "fieldname": "ifsc_code",
+   "fieldtype": "Data",
+   "label": "IFSC Code"
+  },
+  {
+   "fieldname": "section_break_bgnj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "policy_name",
+   "fieldtype": "Data",
+   "label": "Policy Name"
+  },
+  {
+   "fieldname": "nominee_name",
+   "fieldtype": "Data",
+   "label": "Nominee Name"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nDe Active"
+  },
+  {
+   "fieldname": "column_break_cxsk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "policy_number",
+   "fieldtype": "Data",
+   "label": "Policy Number"
+  },
+  {
+   "fieldname": "nominee_relation",
+   "fieldtype": "Data",
+   "label": "Nominee Relation"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Link",
+   "label": "Entry By",
+   "options": "User Master"
+  },
+  {
+   "fieldname": "column_break_lgwp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "aadharcard",
+   "fieldtype": "Attach",
+   "label": "AADHARCard"
+  },
+  {
+   "fieldname": "driving_lic",
+   "fieldtype": "Attach",
+   "label": "Driving Lic."
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-25 14:14:47.954919",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Employee Master",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "first_name"
+}

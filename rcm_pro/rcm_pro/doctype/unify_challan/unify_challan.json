@@ -1,0 +1,191 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-24 21:15:30.366664",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sales_abstract_section",
+  "abstract_no",
+  "column_break_ehxl",
+  "date",
+  "column_break_vsnu",
+  "branch",
+  "column_break_nudc",
+  "type",
+  "section_break_oort",
+  "party_name",
+  "column_break_ltqt",
+  "job_site",
+  "section_break_tuwm",
+  "order_no",
+  "from_date",
+  "column_break_iocd",
+  "po_no",
+  "to_date",
+  "column_break_vbcn",
+  "po_date",
+  "total_qty",
+  "column_break_dmum",
+  "invoice_no",
+  "get_challan",
+  "geninvoice"
+ ],
+ "fields": [
+  {
+   "fieldname": "sales_abstract_section",
+   "fieldtype": "Section Break",
+   "label": "Sales Abstract"
+  },
+  {
+   "fieldname": "abstract_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Abstract No"
+  },
+  {
+   "fieldname": "column_break_ehxl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_vsnu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch Master"
+  },
+  {
+   "fieldname": "column_break_nudc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "RMC",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "RMC"
+  },
+  {
+   "fieldname": "section_break_oort",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Party Name",
+   "options": "Ledger Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ltqt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "job_site",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Job Site",
+   "options": "Site Address Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_tuwm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "order_no",
+   "fieldtype": "Data",
+   "label": "Order No"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Data",
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_iocd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "po_no",
+   "fieldtype": "Data",
+   "label": "PO No"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vbcn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "po_date",
+   "fieldtype": "Date",
+   "label": "PO Date"
+  },
+  {
+   "fieldname": "total_qty",
+   "fieldtype": "Data",
+   "label": "Total Qty"
+  },
+  {
+   "fieldname": "column_break_dmum",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "invoice_no",
+   "fieldtype": "Data",
+   "label": "Invoice No"
+  },
+  {
+   "fieldname": "get_challan",
+   "fieldtype": "Button",
+   "label": "Get Challan"
+  },
+  {
+   "fieldname": "geninvoice",
+   "fieldtype": "Button",
+   "label": "Gen.Invoice"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-24 21:34:58.853703",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Unify Challan",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
