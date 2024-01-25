@@ -221,7 +221,7 @@ app_include_js = "/assets/rcm_pro/js/rcm_pro.js"
 # ]
 
 override_whitelisted_methods = {
-	"frappe.desk.desktop.get_workspace_sidebar_items": "rcm_pro.api.get_workspace_sidebar_items"
+	# "frappe.desk.desktop.get_workspace_sidebar_items": "rcm_pro.api.get_workspace_sidebar_items"
 }
 
 doc_events = {

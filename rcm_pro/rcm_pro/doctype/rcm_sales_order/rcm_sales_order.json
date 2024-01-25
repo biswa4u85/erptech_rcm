@@ -113,8 +113,7 @@
    "fieldname": "party_address",
    "fieldtype": "Link",
    "label": "Party Address",
-   "options": "Address",
-   "read_only": 1
+   "options": "Address"
   },
   {
    "fieldname": "buyer_address",
@@ -147,7 +146,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Tax Type"
+   "label": "Tax Type",
+   "read_only_depends_on": "order_no"
   },
   {
    "fieldname": "quotation_no",
@@ -254,7 +254,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
+<<<<<<< HEAD
  "modified": "2024-01-25 22:35:36.593807",
+=======
+ "modified": "2024-01-26 01:35:24.365366",
+>>>>>>> 5f7c99b102e725dfa556efeb8bc17bd64b46f0b8
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Rcm Sales Order",

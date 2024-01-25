@@ -5,7 +5,22 @@ $(document).ready(async function () {
     limit: 100,
   });
   let treeData = buildTree(dataMenu);
-  renderTree(treeData, $(".desk-sidebar"));
+
+  // Load Menu
+  let observer = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+      if ($(mutation.target).find(".list-sidebar").length > 0) {
+        $(".list-sidebar").empty();
+        renderTree(treeData, $(".list-sidebar"));
+      }
+      if ($(mutation.target).find(".form-sidebar.overlay-sidebar").length > 0) {
+        $(".form-sidebar").empty();
+        renderTree(treeData, $(".form-sidebar"));
+      }
+    });
+  });
+  let config = { childList: true, subtree: true };
+  observer.observe(document.body, config);
 
   function buildTree(data) {
     let tree = [];
@@ -26,12 +41,14 @@ $(document).ready(async function () {
   }
 
   function renderTree(treeData, container, level = 1) {
-    let ul = $("<ul>").attr({ class: level > 2 ? "hidden" : "" });
+    let ul = $("<ul>").attr({
+      class: (level > 2 ? "hidden " : "") + (level > 1 ? "customMenu " : ""),
+    });
     treeData.forEach(function (item) {
       let li = $("<li>");
       let link = $("<a>")
         .text(item.title)
-        .attr("href", "/app/" + item.is_group == 1 ? "" : item.path)
+        .attr("href", item.is_group == 1 ? "" : "/app/" + item.path)
         .click(function () {
           if (level > 1) {
             $(this).siblings("ul").toggleClass("hidden");
