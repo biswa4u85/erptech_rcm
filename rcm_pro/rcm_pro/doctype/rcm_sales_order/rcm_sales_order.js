@@ -3,19 +3,45 @@
 
 frappe.ui.form.on("Rcm Sales Order", {
   onload(frm) {
-    console.log("frm", frm);
-    // frm.set_df_property("order_no", "“read_only”", 1);
+    frm.set_query("job_site_name", function () {
+      return {
+        filters: {
+          ledger_name: "",
+        },
+      };
+    });
   },
-//   party_name: function (frm) {
-//     cur_frm.set_query("party_address", function () {
-//       return {
-//         filters: {
-//           ledger_name: frm.doc.party_name,
-//         },
-//       };
-//     });
-//   },
-  refresh(frm) {
-    console.log("frm", frm);
+  party_name: async function (frm) {
+    // Set Address
+    let address = await frappe.db.get_value(
+      "Ledger Master",
+      frm.doc.party_name,
+      "address"
+    );
+    if (address && address?.message)
+      frm.set_value("party_address", address?.message?.address);
+
+    // Set Buyer Name
+    frm.set_value("buyer_name", frm.doc.party_name);
+
+    // Set Job Sites
+    frm.set_value("job_site_name", null);
+    frm.set_query("job_site_name", function () {
+      return {
+        filters: {
+          ledger_name: frm.doc.party_name,
+        },
+      };
+    });
+  },
+  buyer_name: async function (frm) {
+    // Set Address
+    let address = await frappe.db.get_value(
+      "Ledger Master",
+      frm.doc.buyer_name,
+      "address"
+    );
+    if (address && address?.message)
+      frm.set_value("buyer_address", address?.message?.address);
   },
 });

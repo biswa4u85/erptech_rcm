@@ -1,281 +1,281 @@
 {
-    "actions": [],
-    "autoname": "autoincrement",
-    "creation": "2024-01-24 13:50:10.239356",
-    "doctype": "DocType",
-    "engine": "InnoDB",
-    "field_order": [
-     "sales_order_entry_section",
-     "order_no",
-     "tax_type",
-     "column_break_kajr",
-     "date",
-     "quotation_no",
-     "column_break_ehjp",
-     "branch_name",
-     "ref_no",
-     "column_break_myfq",
-     "company_name",
-     "ref_date",
-     "section_break_vdtw",
-     "party_name",
-     "party_address",
-     "column_break_iqpn",
-     "buyer_name",
-     "buyer_address",
-     "section_break_tcmy",
-     "job_site_name",
-     "delivery_address",
-     "remarks",
-     "entry_by",
-     "attachment",
-     "column_break_ssdw",
-     "payment_term",
-     "valid_date",
-     "currencycode",
-     "mkt_user",
-     "status",
-     "auth_by",
-     "order_items_tab",
-     "order_items_section",
-     "table_zqjd"
-    ],
-    "fields": [
-     {
-      "fieldname": "sales_order_entry_section",
-      "fieldtype": "Section Break",
-      "label": "Sales Order Entry"
-     },
-     {
-      "fieldname": "order_no",
-      "fieldtype": "Data",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Order No"
-     },
-     {
-      "fieldname": "column_break_kajr",
-      "fieldtype": "Column Break"
-     },
-     {
-      "fieldname": "date",
-      "fieldtype": "Date",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Date",
-      "reqd": 1
-     },
-     {
-      "fieldname": "column_break_ehjp",
-      "fieldtype": "Column Break"
-     },
-     {
-      "fieldname": "branch_name",
-      "fieldtype": "Link",
-      "label": "Branch Name",
-      "options": "Branch Master"
-     },
-     {
-      "fieldname": "column_break_myfq",
-      "fieldtype": "Column Break"
-     },
-     {
-      "fieldname": "company_name",
-      "fieldtype": "Link",
-      "label": "Company Name",
-      "options": "Company Master"
-     },
-     {
-      "fieldname": "section_break_vdtw",
-      "fieldtype": "Section Break"
-     },
-     {
-      "fieldname": "party_name",
-      "fieldtype": "Link",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Party Name",
-      "options": "Ledger Master",
-      "reqd": 1
-     },
-     {
-      "fieldname": "column_break_iqpn",
-      "fieldtype": "Column Break"
-     },
-     {
-      "fieldname": "buyer_name",
-      "fieldtype": "Link",
-      "label": "Buyer Name",
-      "options": "Ledger Master",
-      "reqd": 1
-     },
-     {
-      "fieldname": "party_address",
-      "fieldtype": "Link",
-      "label": "Party Address",
-      "options": "Address"
-     },
-     {
-      "fieldname": "buyer_address",
-      "fieldtype": "Link",
-      "label": "Buyer Address",
-      "options": "Address"
-     },
-     {
-      "fieldname": "section_break_tcmy",
-      "fieldtype": "Section Break"
-     },
-     {
-      "fieldname": "job_site_name",
-      "fieldtype": "Link",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Job Site Name",
-      "options": "Site Address Master",
-      "reqd": 1
-     },
-     {
-      "fieldname": "delivery_address",
-      "fieldtype": "Link",
-      "label": "Delivery Address",
-      "options": "Address"
-     },
-     {
-      "fieldname": "tax_type",
-      "fieldtype": "Data",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Tax Type",
-      "read_only_depends_on": "order_no"
-     },
-     {
-      "fieldname": "quotation_no",
-      "fieldtype": "Data",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Quotation No"
-     },
-     {
-      "fieldname": "ref_no",
-      "fieldtype": "Data",
-      "in_list_view": 1,
-      "label": "Ref No"
-     },
-     {
-      "fieldname": "ref_date",
-      "fieldtype": "Date",
-      "label": "Ref Date"
-     },
-     {
-      "fieldname": "column_break_ssdw",
-      "fieldtype": "Column Break"
-     },
-     {
-      "fieldname": "payment_term",
-      "fieldtype": "Data",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Payment Term"
-     },
-     {
-      "fieldname": "valid_date",
-      "fieldtype": "Date",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Valid Date",
-      "reqd": 1
-     },
-     {
-      "default": "1",
-      "fieldname": "currencycode",
-      "fieldtype": "Select",
-      "label": "CurrencyCode",
-      "options": "1"
-     },
-     {
-      "fieldname": "remarks",
-      "fieldtype": "Data",
-      "label": "Remarks"
-     },
-     {
-      "fieldname": "mkt_user",
-      "fieldtype": "Link",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Mkt User",
-      "options": "User Master"
-     },
-     {
-      "default": "Active",
-      "fieldname": "status",
-      "fieldtype": "Select",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Status",
-      "options": "Active\nDe Active"
-     },
-     {
-      "fieldname": "entry_by",
-      "fieldtype": "Link",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Entry By",
-      "options": "User Master"
-     },
-     {
-      "fieldname": "attachment",
-      "fieldtype": "Attach",
-      "label": "Attachment"
-     },
-     {
-      "fieldname": "auth_by",
-      "fieldtype": "Link",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Auth By",
-      "options": "User Master"
-     },
-     {
-      "fieldname": "order_items_tab",
-      "fieldtype": "Tab Break",
-      "label": "Order Items"
-     },
-     {
-      "fieldname": "order_items_section",
-      "fieldtype": "Section Break",
-      "label": "Order Items"
-     },
-     {
-      "fieldname": "table_zqjd",
-      "fieldtype": "Table",
-      "options": "Order Item"
-     }
-    ],
-    "index_web_pages_for_search": 1,
-    "links": [],
-    "modified": "2024-01-26 01:35:24.365366",
-    "modified_by": "Administrator",
-    "module": "Rcm Pro",
-    "name": "Rcm Sales Order",
-    "naming_rule": "Autoincrement",
-    "owner": "Administrator",
-    "permissions": [
-     {
-      "create": 1,
-      "delete": 1,
-      "email": 1,
-      "export": 1,
-      "print": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "share": 1,
-      "write": 1
-     }
-    ],
-    "show_title_field_in_link": 1,
-    "sort_field": "modified",
-    "sort_order": "DESC",
-    "states": [],
-    "title_field": "order_no"
-   }
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-01-24 13:50:10.239356",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sales_order_entry_section",
+  "order_no",
+  "tax_type",
+  "column_break_kajr",
+  "date",
+  "quotation_no",
+  "column_break_ehjp",
+  "branch_name",
+  "ref_no",
+  "column_break_myfq",
+  "company_name",
+  "ref_date",
+  "section_break_vdtw",
+  "party_name",
+  "party_address",
+  "column_break_iqpn",
+  "buyer_name",
+  "buyer_address",
+  "section_break_tcmy",
+  "job_site_name",
+  "delivery_address",
+  "remarks",
+  "entry_by",
+  "attachment",
+  "column_break_ssdw",
+  "payment_term",
+  "valid_date",
+  "currencycode",
+  "mkt_user",
+  "status",
+  "auth_by",
+  "order_items_tab",
+  "order_items_section",
+  "table_zqjd"
+ ],
+ "fields": [
+  {
+   "fieldname": "sales_order_entry_section",
+   "fieldtype": "Section Break",
+   "label": "Sales Order Entry"
+  },
+  {
+   "fieldname": "order_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Order No"
+  },
+  {
+   "fieldname": "column_break_kajr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ehjp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Link",
+   "label": "Branch Name",
+   "options": "Branch Master"
+  },
+  {
+   "fieldname": "column_break_myfq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "label": "Company Name",
+   "options": "Company Master"
+  },
+  {
+   "fieldname": "section_break_vdtw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Party Name",
+   "options": "Ledger Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_iqpn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "buyer_name",
+   "fieldtype": "Link",
+   "label": "Buyer Name",
+   "options": "Ledger Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "party_address",
+   "fieldtype": "Link",
+   "label": "Party Address",
+   "options": "Address Master"
+  },
+  {
+   "fieldname": "buyer_address",
+   "fieldtype": "Link",
+   "label": "Buyer Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "section_break_tcmy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "job_site_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Job Site Name",
+   "options": "Site Address Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "delivery_address",
+   "fieldtype": "Link",
+   "label": "Delivery Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "tax_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tax Type",
+   "read_only_depends_on": "order_no"
+  },
+  {
+   "fieldname": "quotation_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Quotation No"
+  },
+  {
+   "fieldname": "ref_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Ref No"
+  },
+  {
+   "fieldname": "ref_date",
+   "fieldtype": "Date",
+   "label": "Ref Date"
+  },
+  {
+   "fieldname": "column_break_ssdw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_term",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Payment Term"
+  },
+  {
+   "fieldname": "valid_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Valid Date",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "currencycode",
+   "fieldtype": "Select",
+   "label": "CurrencyCode",
+   "options": "1"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "mkt_user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mkt User",
+   "options": "User Master"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nDe Active"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Entry By",
+   "options": "User Master"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "auth_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Auth By",
+   "options": "User Master"
+  },
+  {
+   "fieldname": "order_items_tab",
+   "fieldtype": "Tab Break",
+   "label": "Order Items"
+  },
+  {
+   "fieldname": "order_items_section",
+   "fieldtype": "Section Break",
+   "label": "Order Items"
+  },
+  {
+   "fieldname": "table_zqjd",
+   "fieldtype": "Table",
+   "options": "Order Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-26 02:27:55.484409",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Rcm Sales Order",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "order_no"
+}

@@ -42,7 +42,7 @@ $(document).ready(async function () {
 
   function renderTree(treeData, container, level = 1) {
     let ul = $("<ul>").attr({
-      class: (level > 2 ? "hidden " : "") + (level > 1 ? "customMenu " : ""),
+      class: (level > 2 ? "hidden " : "") + (level == 1 ? "customMenu " : ""),
     });
     treeData.forEach(function (item) {
       let li = $("<li>");
