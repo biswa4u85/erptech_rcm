@@ -11,6 +11,12 @@ frappe.ui.form.on("Rcm Sales Order", {
       };
     });
   },
+  refresh: function (frm) {
+    let field1 = frm.get_field("party_address");
+    field1.$input.prop("readonly", true);
+    let field2 = frm.get_field("buyer_address");
+    field2.$input.prop("readonly", true);
+  },
   party_name: async function (frm) {
     // Set Address
     let address = await frappe.db.get_value(
