@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestUnifyChallan(FrappeTestCase):
+class TestVoucherMaster(FrappeTestCase):
 	pass

@@ -7,13 +7,12 @@
  "field_order": [
   "address_entry_section",
   "address",
-  "address_2",
-  "state",
-  "country",
-  "column_break_ipuu",
   "address_1",
+  "address_2",
   "city",
-  "pin"
+  "pin",
+  "state",
+  "country"
  ],
  "fields": [
   {
@@ -24,46 +23,49 @@
   {
    "fieldname": "address",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Address"
   },
   {
    "fieldname": "address_2",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Address 2"
   },
   {
    "fieldname": "state",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "State"
   },
   {
    "fieldname": "country",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Country"
-  },
-  {
-   "fieldname": "column_break_ipuu",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "address_1",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": " Address 1"
   },
   {
    "fieldname": "city",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "City"
   },
   {
    "fieldname": "pin",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Pin"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-25 20:44:51.080740",
+ "modified": "2024-01-26 16:29:49.310450",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Address Master",

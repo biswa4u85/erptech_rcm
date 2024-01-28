@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "creation": "2024-01-26 23:38:43.195616",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "challan_no",
+  "column_break_owtk",
+  "order_no",
+  "column_break_umsl",
+  "challan_date",
+  "column_break_vxhk",
+  "grade_name",
+  "column_break_pfhh",
+  "pump",
+  "column_break_mjjm",
+  "vehicle_no",
+  "column_break_bjrp",
+  "qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "challan_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Challan No"
+  },
+  {
+   "fieldname": "order_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Order No"
+  },
+  {
+   "fieldname": "challan_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Challan Date"
+  },
+  {
+   "fieldname": "grade_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Grade Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "pump",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Pump"
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vehicle No"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Qty"
+  },
+  {
+   "fieldname": "column_break_owtk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_umsl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vxhk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pfhh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mjjm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_bjrp",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-26 23:51:16.168258",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Abstract Get Challan",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

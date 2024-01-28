@@ -6,12 +6,10 @@
  "engine": "InnoDB",
  "field_order": [
   "business_term_entry_section",
-  "btid",
-  "business_term",
   "column_break_hqmv",
   "term_head",
-  "status",
-  "entry_by"
+  "column_break_ssdf",
+  "business_term"
  ],
  "fields": [
   {
@@ -20,14 +18,10 @@
    "label": "Business Term Entry"
   },
   {
-   "fieldname": "btid",
+   "fieldname": "business_term",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "BTID"
-  },
-  {
-   "fieldname": "business_term",
-   "fieldtype": "Small Text",
+   "in_standard_filter": 1,
    "label": "Business Term"
   },
   {
@@ -39,49 +33,24 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Term Head",
-   "reqd": 1
+   "label": "Term Head"
   },
   {
-   "default": "Active",
-   "fieldname": "status",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Status",
-   "options": "Active\nDe Active"
-  },
-  {
-   "fieldname": "entry_by",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Entry By",
-   "options": "User Master"
+   "fieldname": "column_break_ssdf",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
+ "istable": 1,
  "links": [],
- "modified": "2024-01-25 12:07:11.269484",
+ "modified": "2024-01-26 22:05:07.632944",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Business Term Master",
  "naming_rule": "Autoincrement",
  "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  }
- ],
+ "permissions": [],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

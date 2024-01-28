@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestMixDesign(FrappeTestCase):
+class TestAbstractGetChallan(FrappeTestCase):
 	pass

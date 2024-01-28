@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-28 23:10:24.524361",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tax_ac",
+  "column_break_sylt",
+  "title",
+  "column_break_lrxr",
+  "tax_per",
+  "column_break_rzgc",
+  "is_total",
+  "column_break_tanz",
+  "from",
+  "column_break_elve",
+  "to",
+  "column_break_shbl",
+  "tax_apply",
+  "column_break_kmfe",
+  "tax_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "tax_ac",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tax Ac",
+   "options": "Ledger Master"
+  },
+  {
+   "fieldname": "column_break_sylt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title"
+  },
+  {
+   "fieldname": "column_break_lrxr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tax_per",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tax Per"
+  },
+  {
+   "fieldname": "column_break_rzgc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_total",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Total"
+  },
+  {
+   "fieldname": "column_break_tanz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "From"
+  },
+  {
+   "fieldname": "column_break_elve",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "To"
+  },
+  {
+   "fieldname": "column_break_shbl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "tax_apply",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Tax Apply"
+  },
+  {
+   "fieldname": "column_break_kmfe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tax_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Tax Type",
+   "options": "Select\n0\n5\n12\n18\n28"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-28 23:20:02.182097",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Tax Class Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -96,10 +96,11 @@
   },
   {
    "fieldname": "uom",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "UOM"
+   "label": "UOM",
+   "options": "UOM Master"
   },
   {
    "fieldname": "description",
@@ -159,7 +160,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-24 20:46:05.922342",
+ "modified": "2024-01-27 02:09:51.218795",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Item Master",

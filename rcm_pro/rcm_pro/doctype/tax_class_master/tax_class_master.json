@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-28 23:16:48.463602",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tax_class_name",
+  "prefix",
+  "column_break_fqcy",
+  "tax_class_title",
+  "fin_year",
+  "section_break_xswi",
+  "table_rxnw",
+  "section_break_zaqu",
+  "voucher_type",
+  "column_break_zvki",
+  "ledger_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "tax_class_name",
+   "fieldtype": "Data",
+   "label": "Tax Class Name"
+  },
+  {
+   "fieldname": "prefix",
+   "fieldtype": "Data",
+   "label": "Prefix"
+  },
+  {
+   "fieldname": "column_break_fqcy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tax_class_title",
+   "fieldtype": "Data",
+   "label": "Tax Class Title"
+  },
+  {
+   "fieldname": "fin_year",
+   "fieldtype": "Data",
+   "label": "Fin Year"
+  },
+  {
+   "fieldname": "section_break_xswi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_rxnw",
+   "fieldtype": "Table",
+   "options": "Tax Class Child"
+  },
+  {
+   "fieldname": "section_break_zaqu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "voucher_type",
+   "fieldtype": "Link",
+   "label": "Voucher Type",
+   "options": "Voucher Type Master"
+  },
+  {
+   "fieldname": "column_break_zvki",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ledger_name",
+   "fieldtype": "Link",
+   "label": "Ledger Name",
+   "options": "Ledger Master"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-28 23:27:59.141425",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Tax Class Master",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

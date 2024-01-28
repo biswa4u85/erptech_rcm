@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class SiteAddressMaster(Document):
+class QuotationEntry(Document):
 	pass

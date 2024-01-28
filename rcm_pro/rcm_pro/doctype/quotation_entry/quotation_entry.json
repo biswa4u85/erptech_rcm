@@ -1,0 +1,263 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-01-26 20:33:08.679925",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "quotation_entry_section",
+  "quotation_no",
+  "inquiry_no",
+  "ref_no",
+  "column_break_uusa",
+  "date",
+  "valid_date",
+  "ref_date",
+  "column_break_tipg",
+  "type",
+  "contact_person",
+  "email_id",
+  "column_break_pbok",
+  "branch_name",
+  "mobile_no",
+  "payment_term",
+  "section_break_budn",
+  "party_name",
+  "address",
+  "column_break_pgad",
+  "job_site_name",
+  "job_site_address",
+  "section_break_qife",
+  "attachment",
+  "column_break_jjjv",
+  "mkt_by",
+  "column_break_wbvz",
+  "status",
+  "column_break_iowq",
+  "entry_by",
+  "column_break_ddvw",
+  "auth_by",
+  "quotation_item_tab",
+  "table_cvns",
+  "quotation_terms_tab",
+  "link_chnc"
+ ],
+ "fields": [
+  {
+   "fieldname": "quotation_entry_section",
+   "fieldtype": "Section Break",
+   "label": "Quotation Entry"
+  },
+  {
+   "fieldname": "quotation_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Quotation No"
+  },
+  {
+   "default": "7 Days",
+   "fieldname": "valid_date",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Valid date",
+   "options": "Select\n7 Days\n15 Days\n30 Days"
+  },
+  {
+   "fieldname": "column_break_uusa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "inquiry_no",
+   "fieldtype": "Data",
+   "label": "Inquiry No"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Link",
+   "label": "Branch Name",
+   "options": "Branch Master"
+  },
+  {
+   "fieldname": "ref_no",
+   "fieldtype": "Data",
+   "label": " Ref By"
+  },
+  {
+   "fieldname": "column_break_tipg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Quotation",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Quotation"
+  },
+  {
+   "fieldname": "ref_date",
+   "fieldtype": "Date",
+   "label": "Ref Date"
+  },
+  {
+   "fieldname": "section_break_budn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Party Name"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "column_break_pgad",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "job_site_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Job Site Name"
+  },
+  {
+   "fieldname": "job_site_address",
+   "fieldtype": "Data",
+   "label": "Job Site Address"
+  },
+  {
+   "fieldname": "section_break_qife",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Contact Person"
+  },
+  {
+   "fieldname": "mkt_by",
+   "fieldtype": "Link",
+   "label": "Mkt. By",
+   "options": "User Master"
+  },
+  {
+   "fieldname": "column_break_wbvz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nDe Active"
+  },
+  {
+   "fieldname": "column_break_iowq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Link",
+   "label": "Entry By",
+   "options": "User Master"
+  },
+  {
+   "fieldname": "column_break_ddvw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auth_by",
+   "fieldtype": "Link",
+   "label": "Auth By",
+   "options": "User Master"
+  },
+  {
+   "fieldname": "quotation_item_tab",
+   "fieldtype": "Tab Break",
+   "label": "Quotation Item"
+  },
+  {
+   "fieldname": "table_cvns",
+   "fieldtype": "Table",
+   "options": "Order Item"
+  },
+  {
+   "fieldname": "quotation_terms_tab",
+   "fieldtype": "Tab Break",
+   "label": "Quotation Terms"
+  },
+  {
+   "fieldname": "link_chnc",
+   "fieldtype": "Table",
+   "options": "Business Term Master"
+  },
+  {
+   "fieldname": "column_break_pbok",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_term",
+   "fieldtype": "Link",
+   "label": "Payment Term",
+   "options": "Payment Terms Master"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "column_break_jjjv",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-28 16:45:38.983777",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Quotation Entry",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "party_name"
+}

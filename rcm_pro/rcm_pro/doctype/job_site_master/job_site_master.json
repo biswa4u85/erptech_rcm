@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-01-23 20:44:57.311030",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "job_site_address_entry_section",
+  "ledger_name",
+  "site_name",
+  "address",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_site_address_entry_section",
+   "fieldtype": "Section Break",
+   "label": "Job Site Address Entry"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Address",
+   "options": "Address Master"
+  },
+  {
+   "fieldname": "site_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Site Name",
+   "reqd": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nDe Active"
+  },
+  {
+   "fieldname": "ledger_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Coustmor Name",
+   "options": "Ledger Master",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-29 00:02:40.818898",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Job Site Master",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "ledger_name"
+}

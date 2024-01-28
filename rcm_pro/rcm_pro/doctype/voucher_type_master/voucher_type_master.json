@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-01-27 00:14:50.689822",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "voucher_type_master_entry_section",
+  "voucher_type",
+  "voucher_name",
+  "parent_voucher_type_id",
+  "column_break_uqfs",
+  "type",
+  "short_name",
+  "voucher_page"
+ ],
+ "fields": [
+  {
+   "fieldname": "voucher_type_master_entry_section",
+   "fieldtype": "Section Break",
+   "label": "Voucher Type Master Entry"
+  },
+  {
+   "fieldname": "voucher_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Voucher Type",
+   "options": "Voucher Master"
+  },
+  {
+   "fieldname": "voucher_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Voucher Name"
+  },
+  {
+   "fieldname": "parent_voucher_type_id",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Parent Voucher Type ID",
+   "options": "Select\nSales\nPurchase"
+  },
+  {
+   "fieldname": "column_break_uqfs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Select\nFAS\nMKTG\nSTORE"
+  },
+  {
+   "fieldname": "short_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Short Name"
+  },
+  {
+   "fieldname": "voucher_page",
+   "fieldtype": "Data",
+   "label": "Voucher Page"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-28 22:56:05.124257",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Voucher Type Master",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "voucher_name"
+}

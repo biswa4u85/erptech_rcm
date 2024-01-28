@@ -10,12 +10,10 @@
   "parent_group",
   "is_subledger",
   "remarks",
-  "status",
   "column_break_gpvz",
   "allias",
   "group_nature",
-  "display_seq",
-  "entry_by"
+  "display_seq"
  ],
  "fields": [
   {
@@ -40,12 +38,14 @@
   {
    "fieldname": "parent_group",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Parent Group",
-   "options": "--Select Parent Group--\nBank Accounts\nCapital Accounts\nCurrent Assets\nCurrent Liabilities\nCash In Hand\nDirect Expenses\nDirect Incomes\nDuties & Taxes\nFixed Assets\nIndirect Expenses\nIndirect Incomes"
+   "options": "--Select Parent Group--\nBank Accounts\nCapital Accounts\nCurrent Assets\nCurrent Liabilities\nCash In Hand\nDirect Expenses\nDirect Incomes\nDuties & Taxes\nFixed Assets\nIndirect Expenses\nIndirect Incomes\nLoans (Liability)"
   },
   {
    "fieldname": "group_nature",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Group Nature",
    "options": "--Select Group Nature--\nAssets\nExpenses\nIncome\nLiability\nPerson"
   },
@@ -66,30 +66,13 @@
    "label": "Remarks"
   },
   {
-   "default": "Active",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Status",
-   "options": "Active\nDe Active"
-  },
-  {
-   "fieldname": "entry_by",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Entry By",
-   "options": "User Master"
-  },
-  {
    "fieldname": "column_break_gpvz",
    "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-24 19:43:33.123384",
+ "modified": "2024-01-28 23:43:39.365335",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Group Master",

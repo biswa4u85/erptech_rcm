@@ -6,46 +6,52 @@
  "engine": "InnoDB",
  "field_order": [
   "customervendor_entry_section",
-  "gst_no",
-  "ledger_name",
-  "column_break_wlmj",
-  "group_name",
-  "allias",
-  "column_break_auib",
   "ledger_code",
+  "gst_no",
+  "gst_statecode",
+  "gst_date",
+  "column_break_wlmj",
+  "ledger_name",
+  "allias",
+  "gst_nature",
+  "gst_suptyp",
+  "column_break_auib",
+  "group_name",
   "use_in_taxclass",
-  "contact_details_section",
-  "contactperson",
-  "mobile",
-  "email_id",
-  "column_break_erej",
-  "user_name",
-  "password",
-  "column_break_ucwv",
-  "name1",
-  "panno",
-  "aadhar_no",
-  "billing_address_section",
+  "pan_no",
+  "section_break_hmsv",
   "address",
-  "creditbankgst_details_section",
+  "contact_details_section",
+  "column_break_xczq",
   "payment_term",
   "creditlimit",
-  "gst_statecode",
-  "gst_suptyp",
-  "gst_date",
-  "column_break_urbz",
+  "column_break_jvhb",
+  "contactperson",
+  "aadhar_no",
+  "column_break_erej",
+  "mobile",
+  "email_id",
+  "column_break_zvyx",
+  "user_name",
+  "password",
+  "creditbankgst_details_section",
+  "column_break_rpca",
   "bank_name",
-  "ac_holder_name",
   "ac_no",
+  "column_break_urbz",
+  "ac_holder_name",
   "ifc_code",
-  "remarks",
   "section_break_jogs",
   "table_ptrt",
   "section_break_fvpr",
-  "marketing_user",
-  "entry_by",
+  "attachment",
   "column_break_znps",
   "status",
+  "column_break_zmhk",
+  "marketing_user",
+  "column_break_ouxa",
+  "entry_by",
+  "column_break_qcrq",
   "auth_by"
  ],
  "fields": [
@@ -102,17 +108,6 @@
    "label": "Use In TaxClass"
   },
   {
-   "fieldname": "billing_address_section",
-   "fieldtype": "Section Break",
-   "label": "Billing Address"
-  },
-  {
-   "fieldname": "address",
-   "fieldtype": "Link",
-   "label": "Address",
-   "options": "Address Master"
-  },
-  {
    "fieldname": "contact_details_section",
    "fieldtype": "Section Break",
    "label": "Contact Details"
@@ -148,7 +143,7 @@
   {
    "fieldname": "creditbankgst_details_section",
    "fieldtype": "Section Break",
-   "label": "Credit,Bank,GST Details"
+   "label": "Bank Details"
   },
   {
    "fieldname": "payment_term",
@@ -162,17 +157,6 @@
    "fieldname": "creditlimit",
    "fieldtype": "Int",
    "label": "CreditLimit"
-  },
-  {
-   "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name"
-  },
-  {
-   "fieldname": "panno",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "PANNO"
   },
   {
    "fieldname": "aadhar_no",
@@ -204,19 +188,16 @@
    "label": "IFC Code"
   },
   {
-   "fieldname": "remarks",
-   "fieldtype": "Data",
-   "label": "Remarks"
-  },
-  {
    "fieldname": "gst_statecode",
    "fieldtype": "Select",
-   "label": "GST StateCode"
+   "label": "GST State Code",
+   "options": "-Select-\n1-JAMMU AND KASHMIR\n2-HIMACHAL PRADESH\n3-PUNJAB\n4-CHANDIGARH\n5-UTTARAKHAND\n6-HARYANA\n7-DELHI\n8-RAJASTHAN\n9-UTTAR PRADESH\n10-BIHAR\n11-SIKKIM\n12-ARUNACHAL PRADESH\n13-NAGALAND\n14-MANIPUR\n15-MIZORAM\n16-TRIPURA\n17-MEGHALAYA\n18-ASSAM\n19-WEST BENGAL\n20-JHARKHAND\n21-ODISHA\n22-CHATTISGARH\n23-MADHYA PRADESH\n24-GUJARAT\n26*-DADRA AND NAGAR HAVELI AND DAMAN AND DIU (NEWLY MERGED UT)\n27-MAHARASHTRA\n28-ANDHRA PRADESH(BEFORE DIVISION)\n29-KARNATAKA\n30-GOA\n31-LAKSHADWEEP\n32-KERALA\n33-TAMIL NADU\n34-PUDUCHERRY\n35-ANDAMAN AND NICOBAR ISLANDS\n36-TELANGANA\n37-ANDHRA PRADESH (NEWLY ADDED)\n38-LADAKH (NEWLY ADDED)\n97-OTHER TERRITORY\n99-CENTRE JURISDICTION"
   },
   {
    "fieldname": "gst_suptyp",
-   "fieldtype": "Data",
-   "label": "GST SupTyp"
+   "fieldtype": "Select",
+   "label": "GST Suply Type",
+   "options": "-Select-\nNA\nGoods\nServices"
   },
   {
    "fieldname": "gst_date",
@@ -229,10 +210,11 @@
   },
   {
    "fieldname": "marketing_user",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Marketing User"
+   "label": "Mkt. By",
+   "options": "Employee Master"
   },
   {
    "fieldname": "entry_by",
@@ -250,7 +232,6 @@
    "default": "Active",
    "fieldname": "status",
    "fieldtype": "Select",
-   "in_global_search": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
@@ -270,10 +251,6 @@
    "label": "Email ID"
   },
   {
-   "fieldname": "column_break_ucwv",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "section_break_jogs",
    "fieldtype": "Section Break"
   },
@@ -281,11 +258,66 @@
    "fieldname": "table_ptrt",
    "fieldtype": "Table",
    "options": "LedgerWiseCrDr"
+  },
+  {
+   "fieldname": "column_break_zvyx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gst_nature",
+   "fieldtype": "Select",
+   "label": "GST Nature"
+  },
+  {
+   "fieldname": "column_break_xczq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rpca",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jvhb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pan_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PAN No"
+  },
+  {
+   "fieldname": "section_break_hmsv",
+   "fieldtype": "Section Break",
+   "label": "Billing Address"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address Master"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "column_break_zmhk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ouxa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qcrq",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-25 22:12:33.100546",
+ "modified": "2024-01-28 22:24:19.894627",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Ledger Master",

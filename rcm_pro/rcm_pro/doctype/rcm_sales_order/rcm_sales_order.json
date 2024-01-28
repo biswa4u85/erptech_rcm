@@ -8,40 +8,54 @@
   "sales_order_entry_section",
   "order_no",
   "tax_type",
+  "valid_date",
   "column_break_kajr",
   "date",
   "quotation_no",
+  "payment_term",
   "column_break_ehjp",
   "branch_name",
   "ref_no",
+  "currencycode",
   "column_break_myfq",
   "company_name",
   "ref_date",
-  "section_break_vdtw",
+  "section_break_kwiv",
   "party_name",
   "party_address",
-  "column_break_iqpn",
+  "column_break_uuqh",
   "buyer_name",
   "buyer_address",
   "section_break_tcmy",
   "job_site_name",
-  "delivery_address",
+  "site_address",
+  "column_break_rdjo",
   "remarks",
-  "entry_by",
+  "section_break_socr",
+  "sub_total_amount",
+  "column_break_efft",
+  "tax_amount",
+  "column_break_cgae",
+  "total_amount",
+  "section_break_gkxh",
   "attachment",
-  "column_break_ssdw",
-  "payment_term",
-  "valid_date",
-  "currencycode",
-  "mkt_user",
+  "column_break_rkhi",
   "status",
+  "column_break_opnn",
+  "mkt_user",
+  "column_break_lvue",
+  "entry_by",
+  "column_break_vfdy",
   "auth_by",
   "order_items_tab",
   "order_items_section",
-  "table_zqjd"
+  "table_zqjd",
+  "other_detail_tab",
+  "table_cdxj"
  ],
  "fields": [
   {
+   "columns": 11,
    "fieldname": "sales_order_entry_section",
    "fieldtype": "Section Break",
    "label": "Sales Order Entry"
@@ -86,10 +100,7 @@
    "options": "Company Master"
   },
   {
-   "fieldname": "section_break_vdtw",
-   "fieldtype": "Section Break"
-  },
-  {
+   "columns": 11,
    "fieldname": "party_name",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -97,10 +108,6 @@
    "label": "Party Name",
    "options": "Ledger Master",
    "reqd": 1
-  },
-  {
-   "fieldname": "column_break_iqpn",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "buyer_name",
@@ -113,32 +120,19 @@
    "fieldname": "party_address",
    "fieldtype": "Link",
    "label": "Party Address",
-   "options": "Address Master"
+   "options": "Address Master",
+   "read_only": 1
   },
   {
    "fieldname": "buyer_address",
    "fieldtype": "Link",
    "label": "Buyer Address",
-   "options": "Address Master"
+   "options": "Address Master",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_tcmy",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "job_site_name",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Job Site Name",
-   "options": "Site Address Master",
-   "reqd": 1
-  },
-  {
-   "fieldname": "delivery_address",
-   "fieldtype": "Link",
-   "label": "Delivery Address",
-   "options": "Address"
   },
   {
    "fieldname": "tax_type",
@@ -158,17 +152,12 @@
   {
    "fieldname": "ref_no",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Ref No"
   },
   {
    "fieldname": "ref_date",
    "fieldtype": "Date",
    "label": "Ref Date"
-  },
-  {
-   "fieldname": "column_break_ssdw",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "payment_term",
@@ -249,11 +238,95 @@
    "fieldname": "table_zqjd",
    "fieldtype": "Table",
    "options": "Order Item"
+  },
+  {
+   "fieldname": "section_break_gkxh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_rkhi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_opnn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kwiv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_uuqh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "site_address",
+   "fieldtype": "Link",
+   "label": "Site Address",
+   "options": "Address Master",
+   "read_only": 1
+  },
+  {
+   "fieldname": "job_site_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Job Site Name",
+   "options": "Job Site Master"
+  },
+  {
+   "fieldname": "column_break_rdjo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lvue",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vfdy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_socr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_efft",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tax_amount",
+   "fieldtype": "Data",
+   "label": "Tax Amount"
+  },
+  {
+   "fieldname": "column_break_cgae",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Data",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "sub_total_amount",
+   "fieldtype": "Data",
+   "label": "Sub Total Amount"
+  },
+  {
+   "fieldname": "other_detail_tab",
+   "fieldtype": "Tab Break",
+   "label": "Other Detail"
+  },
+  {
+   "fieldname": "table_cdxj",
+   "fieldtype": "Table",
+   "options": "Business Term Master"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-26 13:20:50.414741",
+ "modified": "2024-01-28 22:31:38.487361",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Rcm Sales Order",
@@ -277,5 +350,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "order_no"
+ "title_field": "party_name"
 }

@@ -1,0 +1,376 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-26 22:24:17.047567",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "invoice_entry_section",
+  "invoice_id",
+  "voucher_type",
+  "column_break_doqf",
+  "invoice_date",
+  "tax_class",
+  "column_break_gxar",
+  "issue_dt",
+  "branch_name",
+  "column_break_bkjr",
+  "removal_dt",
+  "company_name",
+  "column_break_hkmh",
+  "currency",
+  "sales_ledger",
+  "section_break_xwsn",
+  "party_name",
+  "address",
+  "party_gst_no",
+  "column_break_qgxo",
+  "buyer_name",
+  "buyer_address",
+  "buyer_gst_no",
+  "section_break_prjq",
+  "job_site_name",
+  "job_site_address",
+  "column_break_qyko",
+  "payment_term",
+  "pay_date",
+  "column_break_ypak",
+  "po_no",
+  "po_date",
+  "section_break_dsno",
+  "order_no",
+  "vehicle_no",
+  "column_break_srkm",
+  "schedule_no",
+  "way_bill_no",
+  "column_break_yhbp",
+  "challan_no",
+  "driver_name",
+  "column_break_nnpj",
+  "abstract_no",
+  "remarks",
+  "section_break_qjkc",
+  "column_break_tluy",
+  "attachment",
+  "column_break_eptd",
+  "status",
+  "column_break_boop",
+  "mkt_by",
+  "column_break_qpee",
+  "entry_by",
+  "column_break_sjlp",
+  "auth_by",
+  "invoice_item_tab",
+  "table_msqh",
+  "other_detail_tab",
+  "table_jiae"
+ ],
+ "fields": [
+  {
+   "fieldname": "invoice_entry_section",
+   "fieldtype": "Section Break",
+   "label": "Invoice Entry"
+  },
+  {
+   "fieldname": "invoice_id",
+   "fieldtype": "Data",
+   "label": "Invoice ID"
+  },
+  {
+   "fieldname": "voucher_type",
+   "fieldtype": "Data",
+   "label": "Voucher Type"
+  },
+  {
+   "fieldname": "column_break_doqf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "label": "Invoice Date"
+  },
+  {
+   "fieldname": "tax_class",
+   "fieldtype": "Data",
+   "label": "Tax Class"
+  },
+  {
+   "fieldname": "column_break_gxar",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "issue_dt",
+   "fieldtype": "Date",
+   "label": "Issue Dt"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Link",
+   "label": "Branch Name",
+   "options": "Branch Master"
+  },
+  {
+   "fieldname": "column_break_bkjr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "removal_dt",
+   "fieldtype": "Date",
+   "label": "Removal Dt"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "label": "Company Name",
+   "options": "Company Master"
+  },
+  {
+   "fieldname": "column_break_hkmh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "currency",
+   "fieldtype": "Select",
+   "label": "Currency",
+   "options": "1"
+  },
+  {
+   "fieldname": "sales_ledger",
+   "fieldtype": "Data",
+   "label": "Sales Ledger"
+  },
+  {
+   "fieldname": "section_break_xwsn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Data",
+   "label": "Party Name"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "party_gst_no",
+   "fieldtype": "Data",
+   "label": "Party GST_No"
+  },
+  {
+   "fieldname": "column_break_qgxo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "buyer_name",
+   "fieldtype": "Data",
+   "label": "Buyer Name"
+  },
+  {
+   "fieldname": "buyer_address",
+   "fieldtype": "Data",
+   "label": "Buyer Address"
+  },
+  {
+   "fieldname": "buyer_gst_no",
+   "fieldtype": "Data",
+   "label": "Buyer GST_No"
+  },
+  {
+   "fieldname": "section_break_prjq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "job_site_name",
+   "fieldtype": "Data",
+   "label": "Job Site Name"
+  },
+  {
+   "fieldname": "job_site_address",
+   "fieldtype": "Data",
+   "label": "Job Site Address"
+  },
+  {
+   "fieldname": "column_break_qyko",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_term",
+   "fieldtype": "Data",
+   "label": "Payment Term"
+  },
+  {
+   "fieldname": "pay_date",
+   "fieldtype": "Data",
+   "label": "Pay Date"
+  },
+  {
+   "fieldname": "column_break_ypak",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "po_no",
+   "fieldtype": "Data",
+   "label": "PO No"
+  },
+  {
+   "fieldname": "po_date",
+   "fieldtype": "Data",
+   "label": "PO Date"
+  },
+  {
+   "fieldname": "section_break_dsno",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "order_no",
+   "fieldtype": "Data",
+   "label": "Order No"
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Data",
+   "label": "Vehicle No"
+  },
+  {
+   "fieldname": "column_break_srkm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "schedule_no",
+   "fieldtype": "Data",
+   "label": "Schedule No"
+  },
+  {
+   "fieldname": "way_bill_no",
+   "fieldtype": "Data",
+   "label": "Way Bill No"
+  },
+  {
+   "fieldname": "column_break_yhbp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "challan_no",
+   "fieldtype": "Data",
+   "label": "Challan No"
+  },
+  {
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name"
+  },
+  {
+   "fieldname": "column_break_nnpj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "abstract_no",
+   "fieldtype": "Data",
+   "label": "Abstract No"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "section_break_qjkc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nDe Active"
+  },
+  {
+   "fieldname": "column_break_boop",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mkt_by",
+   "fieldtype": "Data",
+   "label": "Mkt. By"
+  },
+  {
+   "fieldname": "column_break_qpee",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Data",
+   "label": "Entry By"
+  },
+  {
+   "fieldname": "column_break_sjlp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auth_by",
+   "fieldtype": "Data",
+   "label": "Auth By"
+  },
+  {
+   "fieldname": "column_break_tluy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "column_break_eptd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "invoice_item_tab",
+   "fieldtype": "Tab Break",
+   "label": "Invoice Item"
+  },
+  {
+   "fieldname": "table_msqh",
+   "fieldtype": "Table",
+   "options": "Order Item"
+  },
+  {
+   "fieldname": "other_detail_tab",
+   "fieldtype": "Tab Break",
+   "label": "Other Detail"
+  },
+  {
+   "fieldname": "table_jiae",
+   "fieldtype": "Table",
+   "options": "Business Term Master"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-26 23:58:35.666628",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Sales Invoices",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -13,10 +13,6 @@ $(document).ready(async function () {
         $(".list-sidebar").empty();
         renderTree(treeData, $(".list-sidebar"));
       }
-      if ($(mutation.target).find(".form-sidebar.overlay-sidebar").length > 0) {
-        $(".form-sidebar").empty();
-        renderTree(treeData, $(".form-sidebar"));
-      }
     });
   });
   let config = { childList: true, subtree: true };

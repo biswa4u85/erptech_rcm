@@ -6,17 +6,17 @@
  "engine": "InnoDB",
  "field_order": [
   "delivery_challan_entry_section",
-  "challanno",
-  "scheduleno",
+  "challan_no",
+  "schedule_no",
   "column_break_aprc",
   "date",
-  "orderno",
+  "order_no",
   "column_break_hamv",
   "plant",
-  "branch",
+  "branch_name",
   "column_break_vdhp",
   "type",
-  "serialno",
+  "serial_no",
   "section_break_qzby",
   "party_name",
   "grade_code",
@@ -61,16 +61,6 @@
    "label": "Delivery Challan Entry"
   },
   {
-   "fieldname": "challanno",
-   "fieldtype": "Data",
-   "label": "ChallanNo"
-  },
-  {
-   "fieldname": "scheduleno",
-   "fieldtype": "Data",
-   "label": "ScheduleNo"
-  },
-  {
    "fieldname": "column_break_aprc",
    "fieldtype": "Column Break"
   },
@@ -80,11 +70,6 @@
    "label": "Date"
   },
   {
-   "fieldname": "orderno",
-   "fieldtype": "Data",
-   "label": "OrderNo"
-  },
-  {
    "fieldname": "column_break_hamv",
    "fieldtype": "Column Break"
   },
@@ -92,11 +77,6 @@
    "fieldname": "plant",
    "fieldtype": "Data",
    "label": "Plant"
-  },
-  {
-   "fieldname": "branch",
-   "fieldtype": "Data",
-   "label": "Branch"
   },
   {
    "fieldname": "column_break_vdhp",
@@ -133,13 +113,15 @@
   },
   {
    "fieldname": "job_site_name",
-   "fieldtype": "Data",
-   "label": "Job Site Name"
+   "fieldtype": "Link",
+   "label": "Job Site Name",
+   "options": "Job Site Master"
   },
   {
    "fieldname": "job_site_address",
-   "fieldtype": "Small Text",
-   "label": "Job Site Address"
+   "fieldtype": "Link",
+   "label": "Job Site Address",
+   "options": "Job Site Master"
   },
   {
    "fieldname": "section_break_ecrc",
@@ -284,14 +266,34 @@
    "options": "User Master"
   },
   {
-   "fieldname": "serialno",
+   "fieldname": "challan_no",
+   "fieldtype": "Data",
+   "label": "Challan No"
+  },
+  {
+   "fieldname": "schedule_no",
+   "fieldtype": "Data",
+   "label": "Schedule No"
+  },
+  {
+   "fieldname": "order_no",
+   "fieldtype": "Data",
+   "label": "Order No"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Data",
+   "label": "Branch Name"
+  },
+  {
+   "fieldname": "serial_no",
    "fieldtype": "Int",
-   "label": "SerialNo"
+   "label": "Serial No"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-24 16:32:48.775310",
+ "modified": "2024-01-27 11:31:59.394342",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Delivery Challan",
@@ -315,5 +317,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "challanno"
+ "title_field": "challan_no"
 }

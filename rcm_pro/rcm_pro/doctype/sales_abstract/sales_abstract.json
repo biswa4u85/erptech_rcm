@@ -17,25 +17,38 @@
   "party_name",
   "column_break_ltqt",
   "job_site",
-  "section_break_tuwm",
+  "column_break_ejcl",
   "order_no",
+  "section_break_tuwm",
   "from_date",
   "column_break_iocd",
-  "po_no",
   "to_date",
   "column_break_vbcn",
-  "po_date",
-  "total_qty",
-  "column_break_dmum",
-  "invoice_no",
   "get_challan",
-  "geninvoice"
+  "column_break_dmum",
+  "total_qty",
+  "column_break_kscz",
+  "gen_invoice",
+  "column_break_opzn",
+  "invoice_no",
+  "section_break_jtap",
+  "table_heqf",
+  "section_break_ogba",
+  "attachment",
+  "column_break_nsfm",
+  "status",
+  "column_break_xmqx",
+  "mkt_by",
+  "column_break_emhx",
+  "entry_by",
+  "column_break_fvnc",
+  "auth_by"
  ],
  "fields": [
   {
    "fieldname": "sales_abstract_section",
    "fieldtype": "Section Break",
-   "label": "Sales Abstract"
+   "label": "Sales Abstract Entry"
   },
   {
    "fieldname": "abstract_no",
@@ -60,7 +73,7 @@
   {
    "fieldname": "branch",
    "fieldtype": "Link",
-   "label": "Branch",
+   "label": "Branch Name",
    "options": "Branch Master"
   },
   {
@@ -97,7 +110,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Job Site",
-   "options": "Site Address Master",
+   "options": "Job Site Master",
    "reqd": 1
   },
   {
@@ -120,11 +133,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "po_no",
-   "fieldtype": "Data",
-   "label": "PO No"
-  },
-  {
    "fieldname": "to_date",
    "fieldtype": "Date",
    "label": "To Date",
@@ -133,11 +141,6 @@
   {
    "fieldname": "column_break_vbcn",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "po_date",
-   "fieldtype": "Date",
-   "label": "PO Date"
   },
   {
    "fieldname": "total_qty",
@@ -156,20 +159,90 @@
   {
    "fieldname": "get_challan",
    "fieldtype": "Button",
-   "label": "Get Challan"
+   "label": "Get. Challan"
   },
   {
-   "fieldname": "geninvoice",
+   "fieldname": "column_break_ejcl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kscz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gen_invoice",
    "fieldtype": "Button",
-   "label": "Gen.Invoice"
+   "label": "Gen. Invoice"
+  },
+  {
+   "fieldname": "column_break_opzn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ogba",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "column_break_nsfm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nDe Active"
+  },
+  {
+   "fieldname": "column_break_xmqx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mkt_by",
+   "fieldtype": "Date",
+   "label": "Mkt. By"
+  },
+  {
+   "fieldname": "column_break_emhx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Data",
+   "label": "Entry By",
+   "options": "User Master"
+  },
+  {
+   "fieldname": "column_break_fvnc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auth_by",
+   "fieldtype": "Data",
+   "label": "Auth By",
+   "options": "User Master"
+  },
+  {
+   "fieldname": "section_break_jtap",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_heqf",
+   "fieldtype": "Table",
+   "options": "Abstract Get Challan"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-24 21:34:58.853703",
+ "modified": "2024-01-26 23:48:51.825840",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
- "name": "Unify Challan",
+ "name": "Sales Abstract",
  "owner": "Administrator",
  "permissions": [
   {

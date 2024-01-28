@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class UnifyChallan(Document):
+class GradeMaster(Document):
 	pass

@@ -1,0 +1,546 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-01-24 12:07:49.686508",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "mix_design_entry_section",
+  "grade_name",
+  "party_name",
+  "column_break_pqyl",
+  "design_code",
+  "density",
+  "column_break_ybno",
+  "branch_name",
+  "a_density",
+  "section_break_erez",
+  "20mm",
+  "sand",
+  "sand2",
+  "10mm",
+  "agg5",
+  "agg6",
+  "cem1",
+  "cem2",
+  "cem3",
+  "cem4",
+  "cem5",
+  "wtr1",
+  "wtr2",
+  "wtr3",
+  "admix1",
+  "admix2",
+  "admix3",
+  "admix4",
+  "silica",
+  "column_break_xxca",
+  "gate1",
+  "gate2",
+  "gate3",
+  "gate4",
+  "gate5",
+  "gate6",
+  "cement1",
+  "cement2",
+  "cement3",
+  "cement4",
+  "cement5",
+  "water1",
+  "water2",
+  "water3",
+  "admixture1",
+  "admixture2",
+  "admixture3",
+  "admixture4",
+  "int_wity",
+  "column_break_iuqf",
+  "a_gate1",
+  "a_gate2",
+  "a_gate3",
+  "a_gate4",
+  "a_gate5",
+  "a_gate6",
+  "a_cement1",
+  "a_cement2",
+  "a_cement3",
+  "a_cement4",
+  "a_cement5",
+  "a_water1",
+  "a_water2",
+  "a_water3",
+  "a_admixture1",
+  "a_admixture2",
+  "a_admixture3",
+  "a_admixture4",
+  "int_syhb",
+  "section_break_xrpm",
+  "attachment",
+  "column_break_orxu",
+  "status",
+  "column_break_nauo",
+  "entry_by",
+  "column_break_swkd",
+  "auth_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "design_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Design Code"
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Party Name",
+   "options": "Ledger Master"
+  },
+  {
+   "fieldname": "density",
+   "fieldtype": "Data",
+   "label": "Density"
+  },
+  {
+   "fieldname": "column_break_pqyl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Link",
+   "label": "Branch Name",
+   "options": "Branch Master"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nDe Active"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Entry By",
+   "options": "User Master"
+  },
+  {
+   "fieldname": "mix_design_entry_section",
+   "fieldtype": "Section Break",
+   "label": "Mix Design Entry"
+  },
+  {
+   "fieldname": "section_break_erez",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Cem1",
+   "fieldname": "cem1",
+   "fieldtype": "Select",
+   "label": "Cem1",
+   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+  },
+  {
+   "default": "Cem2",
+   "fieldname": "cem2",
+   "fieldtype": "Select",
+   "label": "Cem2",
+   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+  },
+  {
+   "default": "Cem3",
+   "fieldname": "cem3",
+   "fieldtype": "Select",
+   "label": "Cem3",
+   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+  },
+  {
+   "default": "Cem4",
+   "fieldname": "cem4",
+   "fieldtype": "Select",
+   "label": "Cem4",
+   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+  },
+  {
+   "default": "Cem5",
+   "fieldname": "cem5",
+   "fieldtype": "Select",
+   "label": "Cem5",
+   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+  },
+  {
+   "default": "Wtr1",
+   "fieldname": "wtr1",
+   "fieldtype": "Select",
+   "label": "Wtr1",
+   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+  },
+  {
+   "default": "Wtr2",
+   "fieldname": "wtr2",
+   "fieldtype": "Select",
+   "label": "Wtr2",
+   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+  },
+  {
+   "default": "Wtr3",
+   "fieldname": "wtr3",
+   "fieldtype": "Select",
+   "label": "Wtr3",
+   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+  },
+  {
+   "default": "Admix1",
+   "fieldname": "admix1",
+   "fieldtype": "Select",
+   "label": "Admix1",
+   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+  },
+  {
+   "default": "Admix2",
+   "fieldname": "admix2",
+   "fieldtype": "Select",
+   "label": "Admix2",
+   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+  },
+  {
+   "default": "Admix3",
+   "fieldname": "admix3",
+   "fieldtype": "Select",
+   "label": "Admix3",
+   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+  },
+  {
+   "default": "Admix4",
+   "fieldname": "admix4",
+   "fieldtype": "Select",
+   "label": "Admix4",
+   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+  },
+  {
+   "default": "Silica",
+   "fieldname": "silica",
+   "fieldtype": "Select",
+   "label": "Silica",
+   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+  },
+  {
+   "default": "20MM",
+   "fieldname": "20mm",
+   "fieldtype": "Select",
+   "label": "20MM",
+   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+  },
+  {
+   "default": "SAND",
+   "fieldname": "sand",
+   "fieldtype": "Select",
+   "label": "SAND",
+   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+  },
+  {
+   "default": "10MM",
+   "fieldname": "10mm",
+   "fieldtype": "Select",
+   "label": "10MM",
+   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+  },
+  {
+   "default": "Agg5",
+   "fieldname": "agg5",
+   "fieldtype": "Select",
+   "label": "Agg5",
+   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+  },
+  {
+   "default": "Agg6",
+   "fieldname": "agg6",
+   "fieldtype": "Select",
+   "label": "Agg6",
+   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+  },
+  {
+   "fieldname": "column_break_xxca",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "SAND",
+   "fieldname": "sand2",
+   "fieldtype": "Select",
+   "label": "SAND",
+   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+  },
+  {
+   "fieldname": "gate1",
+   "fieldtype": "Int",
+   "label": "Gate1"
+  },
+  {
+   "fieldname": "gate2",
+   "fieldtype": "Int",
+   "label": "Gate2"
+  },
+  {
+   "fieldname": "gate3",
+   "fieldtype": "Int",
+   "label": "Gate3"
+  },
+  {
+   "fieldname": "gate4",
+   "fieldtype": "Int",
+   "label": "Gate4"
+  },
+  {
+   "fieldname": "gate5",
+   "fieldtype": "Int",
+   "label": "Gate5"
+  },
+  {
+   "fieldname": "gate6",
+   "fieldtype": "Int",
+   "label": "Gate6"
+  },
+  {
+   "fieldname": "cement1",
+   "fieldtype": "Int",
+   "label": "Cement1"
+  },
+  {
+   "fieldname": "cement2",
+   "fieldtype": "Int",
+   "label": "Cement2"
+  },
+  {
+   "fieldname": "cement3",
+   "fieldtype": "Int",
+   "label": "Cement3"
+  },
+  {
+   "fieldname": "cement4",
+   "fieldtype": "Int",
+   "label": "Cement4"
+  },
+  {
+   "fieldname": "cement5",
+   "fieldtype": "Int",
+   "label": "Cement5"
+  },
+  {
+   "fieldname": "water1",
+   "fieldtype": "Int",
+   "label": "Water1"
+  },
+  {
+   "fieldname": "water2",
+   "fieldtype": "Int",
+   "label": "Water2"
+  },
+  {
+   "fieldname": "water3",
+   "fieldtype": "Int",
+   "label": "Water3"
+  },
+  {
+   "fieldname": "admixture1",
+   "fieldtype": "Int",
+   "label": "Admixture1"
+  },
+  {
+   "fieldname": "admixture2",
+   "fieldtype": "Int",
+   "label": "Admixture2"
+  },
+  {
+   "fieldname": "admixture3",
+   "fieldtype": "Int",
+   "label": "Admixture3"
+  },
+  {
+   "fieldname": "admixture4",
+   "fieldtype": "Int",
+   "label": "Admixture4"
+  },
+  {
+   "fieldname": "int_wity",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "column_break_iuqf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "a_gate1",
+   "fieldtype": "Int",
+   "label": "A_Gate1"
+  },
+  {
+   "fieldname": "a_gate2",
+   "fieldtype": "Int",
+   "label": "A_Gate2"
+  },
+  {
+   "fieldname": "a_gate3",
+   "fieldtype": "Int",
+   "label": "A_Gate3"
+  },
+  {
+   "fieldname": "a_gate4",
+   "fieldtype": "Int",
+   "label": "A_Gate4"
+  },
+  {
+   "fieldname": "a_gate5",
+   "fieldtype": "Int",
+   "label": "A_Gate5"
+  },
+  {
+   "fieldname": "a_gate6",
+   "fieldtype": "Int",
+   "label": "A_Gate6"
+  },
+  {
+   "fieldname": "a_cement1",
+   "fieldtype": "Int",
+   "label": "A_Cement1"
+  },
+  {
+   "fieldname": "a_cement2",
+   "fieldtype": "Int",
+   "label": "A_Cement2"
+  },
+  {
+   "fieldname": "a_cement3",
+   "fieldtype": "Int",
+   "label": "A_Cement3"
+  },
+  {
+   "fieldname": "a_cement4",
+   "fieldtype": "Int",
+   "label": "A_Cement4"
+  },
+  {
+   "fieldname": "a_cement5",
+   "fieldtype": "Int",
+   "label": "A_Cement5"
+  },
+  {
+   "fieldname": "a_water1",
+   "fieldtype": "Int",
+   "label": "A_Water1"
+  },
+  {
+   "fieldname": "a_water2",
+   "fieldtype": "Int",
+   "label": "A_Water2"
+  },
+  {
+   "fieldname": "a_water3",
+   "fieldtype": "Int",
+   "label": "A_Water3"
+  },
+  {
+   "fieldname": "a_admixture1",
+   "fieldtype": "Int",
+   "label": "A_Admixture1"
+  },
+  {
+   "fieldname": "a_admixture2",
+   "fieldtype": "Int",
+   "label": "A_Admixture2"
+  },
+  {
+   "fieldname": "a_admixture3",
+   "fieldtype": "Int",
+   "label": "A_Admixture3"
+  },
+  {
+   "fieldname": "a_admixture4",
+   "fieldtype": "Int",
+   "label": "A_Admixture4"
+  },
+  {
+   "fieldname": "int_syhb",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "grade_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Grade Name",
+   "options": "Item Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ybno",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xrpm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "column_break_orxu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nauo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_swkd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auth_by",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Auth By"
+  },
+  {
+   "fieldname": "a_density",
+   "fieldtype": "Int",
+   "label": "A_Density"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-27 14:00:08.221609",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Grade Master",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "grade_name"
+}

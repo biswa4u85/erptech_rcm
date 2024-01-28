@@ -1,33 +1,41 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "autoincrement",
  "creation": "2024-01-24 15:37:21.882771",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "schedule_entry_section",
-  "scheduleno",
+  "schedule_no",
   "party_name",
-  "site_name",
+  "schedule_qty",
+  "pump",
   "column_break_aqpl",
   "date",
+  "site_name",
+  "rmc_rate",
+  "pumping_rate",
+  "column_break_brvj",
+  "branch_name",
   "order_no",
   "start_time",
-  "column_break_brvj",
-  "branch",
-  "challan_type",
-  "end_time",
-  "column_break_rars",
-  "pump",
-  "pump_staff",
   "pump_gang",
-  "section_break_sjxs",
-  "rate",
-  "invoice_rate",
-  "column_break_ooau",
-  "supervisor",
-  "mkt_by",
+  "column_break_rars",
+  "type",
+  "grade_name",
+  "end_time",
+  "challan_type",
+  "section_break_ncoc",
+  "attachment",
+  "column_break_gulr",
   "status",
+  "column_break_mbgt",
+  "mkt_by",
+  "column_break_yfay",
+  "supervisor",
+  "column_break_enju",
+  "auth_by",
+  "column_break_rufo",
   "entry_by"
  ],
  "fields": [
@@ -35,14 +43,6 @@
    "fieldname": "schedule_entry_section",
    "fieldtype": "Section Break",
    "label": "Schedule Entry"
-  },
-  {
-   "fieldname": "scheduleno",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "ScheduleNo",
-   "reqd": 1
   },
   {
    "fieldname": "party_name",
@@ -54,8 +54,10 @@
    "reqd": 1
   },
   {
+   "default": "0",
    "fieldname": "pump",
-   "fieldtype": "Link",
+   "fieldtype": "Check",
+   "in_list_view": 1,
    "label": "Pump",
    "options": "Cost Center Master"
   },
@@ -85,20 +87,9 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "branch",
-   "fieldtype": "Link",
-   "label": "Branch",
-   "options": "Branch Master"
-  },
-  {
    "fieldname": "end_time",
    "fieldtype": "Datetime",
    "label": "End Time"
-  },
-  {
-   "fieldname": "pump_staff",
-   "fieldtype": "Data",
-   "label": "Pump Staff"
   },
   {
    "fieldname": "column_break_rars",
@@ -108,64 +99,140 @@
    "default": "Delivery Note",
    "fieldname": "challan_type",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Challan Type",
    "options": "Delivery Note"
   },
   {
-   "fieldname": "section_break_sjxs",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "rate",
-   "fieldtype": "Data",
-   "label": "Rate"
-  },
-  {
-   "fieldname": "invoice_rate",
-   "fieldtype": "Data",
-   "label": "Invoice Rate"
-  },
-  {
-   "fieldname": "column_break_ooau",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "supervisor",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Supervisor"
   },
   {
    "fieldname": "mkt_by",
    "fieldtype": "Data",
-   "label": "MKT By"
+   "in_list_view": 1,
+   "label": "Mkt. By"
   },
   {
+   "default": "Active",
    "fieldname": "status",
    "fieldtype": "Data",
-   "label": "Status"
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nDe Active"
   },
   {
    "fieldname": "entry_by",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Entry By"
   },
   {
    "fieldname": "site_name",
-   "fieldtype": "Data",
-   "label": "Site Name"
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Site Name",
+   "options": "Job Site Master",
+   "reqd": 1
   },
   {
    "fieldname": "order_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Order No",
+   "options": "Rcm Sales Order"
+  },
+  {
+   "fieldname": "schedule_no",
    "fieldtype": "Data",
-   "label": "Order No"
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Schedule No"
+  },
+  {
+   "fieldname": "rmc_rate",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "RMC Rate",
+   "options": "Rcm Sales Order"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Link",
+   "label": "Branch Name",
+   "options": "Branch Master"
+  },
+  {
+   "fieldname": "pumping_rate",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Pumping Rate"
+  },
+  {
+   "fieldname": "section_break_ncoc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "column_break_gulr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mbgt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_yfay",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_enju",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auth_by",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Auth By"
+  },
+  {
+   "fieldname": "column_break_rufo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "schedule_qty",
+   "fieldtype": "Float",
+   "label": "Schedule Qty"
+  },
+  {
+   "default": "Schedule",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Schedule"
+  },
+  {
+   "fieldname": "grade_name",
+   "fieldtype": "Link",
+   "label": "Grade Name",
+   "options": "Grade Master"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-25 16:18:58.786279",
+ "modified": "2024-01-28 22:26:01.690439",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Schedule Master",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {
@@ -181,7 +248,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "party_name"
 }
