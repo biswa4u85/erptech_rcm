@@ -48,7 +48,6 @@
   "column_break_vfdy",
   "auth_by",
   "order_items_tab",
-  "order_items_section",
   "table_zqjd",
   "other_detail_tab",
   "table_cdxj"
@@ -120,15 +119,13 @@
    "fieldname": "party_address",
    "fieldtype": "Link",
    "label": "Party Address",
-   "options": "Address Master",
-   "read_only": 1
+   "options": "Address Master"
   },
   {
    "fieldname": "buyer_address",
    "fieldtype": "Link",
    "label": "Buyer Address",
-   "options": "Address Master",
-   "read_only": 1
+   "options": "Address Master"
   },
   {
    "fieldname": "section_break_tcmy",
@@ -230,11 +227,6 @@
    "label": "Order Items"
   },
   {
-   "fieldname": "order_items_section",
-   "fieldtype": "Section Break",
-   "label": "Order Items"
-  },
-  {
    "fieldname": "table_zqjd",
    "fieldtype": "Table",
    "options": "Order Item"
@@ -263,8 +255,7 @@
    "fieldname": "site_address",
    "fieldtype": "Link",
    "label": "Site Address",
-   "options": "Address Master",
-   "read_only": 1
+   "options": "Address Master"
   },
   {
    "fieldname": "job_site_name",
@@ -326,7 +317,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-28 22:31:38.487361",
+ "modified": "2024-01-29 01:08:47.446149",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Rcm Sales Order",
