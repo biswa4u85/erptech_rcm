@@ -62,20 +62,6 @@ frappe.ui.form.on("Rcm Sales Order", {
     if (address && address?.message)
       frm.set_value("site_address", address?.message?.address);
   },
-  grade_name: async function (frm, cdt, cdn) {
-    // var item = locals[cdt][cdn];
-    // console.log("sss ", item);
-    // item.selected_category = "C";
-    // refresh_field("D");
-    // Set Address
-    // let address = await frappe.db.get_value(
-    //   "Job Site Master",
-    //   frm.doc.job_site_name,
-    //   "address"
-    // );
-    // if (address && address?.message)
-    //   frm.set_value("site_address", address?.message?.address);
-  },
 });
 
 frappe.ui.form.on("Order Item", {
