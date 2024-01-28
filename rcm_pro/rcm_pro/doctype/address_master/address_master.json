@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "autoincrement",
  "creation": "2024-01-25 20:35:51.038515",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -24,7 +24,8 @@
    "fieldname": "address",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Address"
+   "label": "Address",
+   "reqd": 1
   },
   {
    "fieldname": "address_2",
@@ -34,15 +35,18 @@
   },
   {
    "fieldname": "state",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "State"
+   "label": "State",
+   "options": "Select\nAndhra Pradesh\nArunachal Pradesh\nAssam\nBihar\nChhattisgarh\nGoa\nGujarat\nHaryana\nHimachal Pradesh\nJharkhand\nKarnataka\nKerala\nMadhya Pradesh\nMaharashtra\nManipur\nMeghalaya\nMizoram\nNagaland\nOdisha\nPunjab\nRajasthan\nSikkim\nTamil Nadu\nTelangana\nTripura\nUttarakhand\nUttar Pradesh\nWest Bengal"
   },
   {
+   "default": "India",
    "fieldname": "country",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Country"
+   "label": "Country",
+   "options": "Select\nIndia"
   },
   {
    "fieldname": "address_1",
@@ -65,10 +69,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-26 16:29:49.310450",
+ "modified": "2024-01-29 00:19:15.105124",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Address Master",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {
