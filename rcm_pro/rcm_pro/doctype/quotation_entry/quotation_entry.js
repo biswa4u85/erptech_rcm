@@ -3,7 +3,7 @@
 
 frappe.ui.form.on("Quotation Entry", {
   onload(frm) {
-    frm.set_query("job_site_name", function () {
+    frm.set_query("site_name", function () {
       return {
         filters: {
           ledger_name: "",
@@ -24,7 +24,7 @@ frappe.ui.form.on("Quotation Entry", {
       frm.doc.party_name,
       "address"
     );
-    if (addressName && addressName?.message) {
+    if (addressName && addressName?.message?.address) {
       let address = await frappe.db.get_value(
         "Address Master",
         addressName?.message?.address,
@@ -41,8 +41,8 @@ frappe.ui.form.on("Quotation Entry", {
     }
 
     // Set Job Sites
-    frm.set_value("job_site_name", null);
-    frm.set_query("job_site_name", function () {
+    frm.set_value("site_name", null);
+    frm.set_query("site_name", function () {
       return {
         filters: {
           ledger_name: frm.doc.party_name,
@@ -50,14 +50,14 @@ frappe.ui.form.on("Quotation Entry", {
       };
     });
   },
-  job_site_name: async function (frm) {
+  site_name: async function (frm) {
     // Set Address
     let addressName = await frappe.db.get_value(
       "Job Site Master",
       frm.doc.party_name,
       "address"
     );
-    if (addressName && addressName?.message) {
+    if (addressName && addressName?.message?.address) {
       let address = await frappe.db.get_value(
         "Address Master",
         addressName?.message?.address,

@@ -6,28 +6,34 @@
  "engine": "InnoDB",
  "field_order": [
   "sec1_section",
-  "branch",
+  "vehicle_no",
   "make",
-  "tare_weight",
   "activedate",
   "pucdate",
   "fitnessdate",
-  "status",
+  "permitdate",
   "column_break_bpyj",
-  "vehicle_no",
-  "operateby",
+  "vehicle_type",
+  "tare_weight",
   "registrationno",
   "insurancedate",
   "emidate",
-  "permitdate",
-  "entry_by",
+  "emicompleted_date",
   "column_break_rzjq",
-  "vehicle_type",
+  "branch",
+  "operateby",
   "contactno",
   "purchasedate",
   "rtodate",
-  "emicompleted_date",
-  "remarks"
+  "remarks",
+  "section_break_xbuy",
+  "attach",
+  "column_break_bxft",
+  "attachment",
+  "column_break_fawr",
+  "status",
+  "column_break_zlxw",
+  "entry_by"
  ],
  "fields": [
   {
@@ -39,8 +45,7 @@
    "fieldname": "branch",
    "fieldtype": "Link",
    "label": "Branch",
-   "options": "Branch Master",
-   "reqd": 1
+   "options": "Branch Master"
   },
   {
    "fieldname": "vehicle_no",
@@ -157,13 +162,39 @@
   },
   {
    "fieldname": "remarks",
-   "fieldtype": "Small Text",
+   "fieldtype": "Data",
    "label": "Remarks"
+  },
+  {
+   "fieldname": "section_break_xbuy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "column_break_fawr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zlxw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach",
+   "fieldtype": "Attach Image",
+   "label": "Attach"
+  },
+  {
+   "fieldname": "column_break_bxft",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-24 11:54:49.925841",
+ "modified": "2024-01-29 02:50:45.086617",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Cost Center Master",

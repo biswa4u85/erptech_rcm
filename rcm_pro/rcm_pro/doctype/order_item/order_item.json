@@ -76,7 +76,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Tax",
-   "options": "-Select Tax-\n0\n5\n12\n18\n28"
+   "options": "\n0\n5\n12\n18\n28"
   },
   {
    "fieldname": "column_break_ekfn",
@@ -130,7 +130,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-01-28 23:15:58.674338",
+ "modified": "2024-01-29 13:03:03.203838",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Order Item",

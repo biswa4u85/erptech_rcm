@@ -25,7 +25,7 @@
   "party_name",
   "address",
   "column_break_pgad",
-  "job_site_name",
+  "site_name",
   "job_site_address",
   "section_break_qife",
   "attachment",
@@ -40,7 +40,9 @@
   "quotation_item_tab",
   "table_cvns",
   "quotation_terms_tab",
-  "link_chnc"
+  "link_chnc",
+  "section_break_xiia",
+  "text_editor_qjui"
  ],
  "fields": [
   {
@@ -68,6 +70,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "date",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -76,6 +79,7 @@
   {
    "fieldname": "inquiry_no",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Inquiry No"
   },
   {
@@ -87,6 +91,7 @@
   {
    "fieldname": "ref_no",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": " Ref By"
   },
   {
@@ -103,6 +108,7 @@
   {
    "fieldname": "ref_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Ref Date"
   },
   {
@@ -113,6 +119,7 @@
    "fieldname": "party_name",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Party Name",
    "options": "Ledger Master"
@@ -127,14 +134,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "job_site_name",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Job Site Name",
-   "options": "Job Site Master"
-  },
-  {
    "fieldname": "job_site_address",
    "fieldtype": "Small Text",
    "label": "Job Site Address"
@@ -146,6 +145,7 @@
   {
    "fieldname": "contact_person",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Contact Person"
   },
   {
@@ -161,6 +161,7 @@
   {
    "fieldname": "mobile_no",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Mobile No"
   },
   {
@@ -177,6 +178,7 @@
   {
    "fieldname": "email_id",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Email ID"
   },
   {
@@ -222,6 +224,7 @@
   {
    "fieldname": "payment_term",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Payment Term",
    "options": "Payment Terms Master"
   },
@@ -233,11 +236,28 @@
   {
    "fieldname": "column_break_jjjv",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xiia",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Payment Terms :\nPayment terms 15 Days with PDC.\nPayment should make by way of Draft/Cheque drawn on a scheduled bank in favour of \u201cBIHAR RMC\u201d Payable at Bangalore.\nInterest @ 24% per annum would be applicable if the payment exceeds the agreed upon terms.\nDelivery Terms :\n We would request you to give us a schedule of 3 to 4 day\u2019s concrete requirements in advance so as to enable smooth execution of the operation. We shall accommodate your valued orders on shorter notice also, subject to availability of the requested time /date.\nWe will not be able to supply during traffic restriction hours, Our responsibility is to dispatch the required qty of RMC to your site, Once the RMC reaches the site ,the pouring of RMC can be done at your advice.\nSince the Concrete is perishable item, any unutilized concrete, after truck has left from our premises would be chargeable.\nPumping charge : below 0.0 cum Rs. 0.0/-\nNote: For further Terms & Conditions kindly refer annexure (A) We do not owe any responsibility for damage to any equipment or Injury or any loss to human on this account. Our scope is limited to supply of RMC and rest responsibility lies with customer who had placed the order for the supply of RMC.\nNote: Any statutory changes above will be effected to the rate quoted. We assure you of our best service as always and looking forward to a long term association with you. Further clarification please feels free contact with the following number.",
+   "fieldname": "text_editor_qjui",
+   "fieldtype": "Text Editor"
+  },
+  {
+   "fieldname": "site_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Job Site Name",
+   "options": "Job Site Master"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-29 14:48:55.915763",
+ "modified": "2024-01-29 23:06:31.845566",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Quotation Entry",

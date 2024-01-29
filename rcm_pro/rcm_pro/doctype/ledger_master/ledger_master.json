@@ -84,6 +84,7 @@
    "fieldname": "ledger_name",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Ledger Name",
    "reqd": 1
@@ -317,7 +318,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-28 22:24:19.894627",
+ "modified": "2024-01-29 13:33:29.483456",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Ledger Master",

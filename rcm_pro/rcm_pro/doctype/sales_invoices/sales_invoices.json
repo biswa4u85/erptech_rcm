@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "autoincrement",
  "creation": "2024-01-26 22:24:17.047567",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -29,7 +29,7 @@
   "buyer_address",
   "buyer_gst_no",
   "section_break_prjq",
-  "job_site_name",
+  "site_name",
   "job_site_address",
   "column_break_qyko",
   "payment_term",
@@ -182,11 +182,6 @@
   {
    "fieldname": "section_break_prjq",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "job_site_name",
-   "fieldtype": "Data",
-   "label": "Job Site Name"
   },
   {
    "fieldname": "job_site_address",
@@ -347,14 +342,20 @@
    "fieldname": "table_jiae",
    "fieldtype": "Table",
    "options": "Business Term Master"
+  },
+  {
+   "fieldname": "site_name",
+   "fieldtype": "Data",
+   "label": "Job Site Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-26 23:58:35.666628",
+ "modified": "2024-01-29 23:07:42.672394",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Sales Invoices",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {
@@ -370,7 +371,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "party_name"
 }

@@ -27,7 +27,7 @@
   "buyer_name",
   "buyer_address",
   "section_break_tcmy",
-  "job_site_name",
+  "site_name",
   "site_address",
   "column_break_rdjo",
   "remarks",
@@ -71,6 +71,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "date",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -103,6 +104,7 @@
    "fieldname": "party_name",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Party Name",
    "options": "Ledger Master",
@@ -134,8 +136,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Tax Type",
-   "read_only_depends_on": "order_no"
+   "label": "Tax Type"
   },
   {
    "fieldname": "quotation_no",
@@ -227,7 +228,8 @@
   {
    "fieldname": "table_zqjd",
    "fieldtype": "Table",
-   "options": "Order Item"
+   "options": "Order Item",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_gkxh",
@@ -253,14 +255,6 @@
    "fieldname": "site_address",
    "fieldtype": "Small Text",
    "label": "Site Address"
-  },
-  {
-   "fieldname": "job_site_name",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Job Site Name",
-   "options": "Job Site Master"
   },
   {
    "fieldname": "column_break_rdjo",
@@ -310,11 +304,25 @@
    "fieldname": "table_cdxj",
    "fieldtype": "Table",
    "options": "Business Term Master"
+  },
+  {
+   "fieldname": "site_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Job Site Name",
+   "options": "Job Site Master",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-01-29 14:42:37.103241",
+ "links": [
+  {
+   "link_doctype": "Schedule Master",
+   "link_fieldname": "schedule_no"
+  }
+ ],
+ "modified": "2024-01-29 23:05:22.215143",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Rcm Sales Order",
@@ -338,5 +346,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "party_name"
+ "title_field": "order_no"
 }

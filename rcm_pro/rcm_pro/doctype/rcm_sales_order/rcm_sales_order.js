@@ -3,7 +3,7 @@
 
 frappe.ui.form.on("Rcm Sales Order", {
   onload(frm) {
-    frm.set_query("job_site_name", function () {
+    frm.set_query("site_name", function () {
       return {
         filters: {
           ledger_name: "",
@@ -26,7 +26,7 @@ frappe.ui.form.on("Rcm Sales Order", {
       frm.doc.party_name,
       "address"
     );
-    if (addressName && addressName?.message) {
+    if (addressName && addressName?.message?.address) {
       let address = await frappe.db.get_value(
         "Address Master",
         addressName?.message?.address,
@@ -46,9 +46,9 @@ frappe.ui.form.on("Rcm Sales Order", {
     frm.set_value("buyer_name", frm.doc.party_name);
 
     // Set Job Sites
-    frm.set_value("job_site_name", null);
+    frm.set_value("site_name", null);
     frm.set_value("site_address", null);
-    frm.set_query("job_site_name", function () {
+    frm.set_query("site_name", function () {
       return {
         filters: {
           ledger_name: frm.doc.party_name,
@@ -63,7 +63,7 @@ frappe.ui.form.on("Rcm Sales Order", {
       frm.doc.buyer_name,
       "address"
     );
-    if (addressName && addressName?.message) {
+    if (addressName && addressName?.message?.address) {
       let address = await frappe.db.get_value(
         "Address Master",
         addressName?.message?.address,
@@ -79,17 +79,17 @@ frappe.ui.form.on("Rcm Sales Order", {
       );
     }
   },
-  job_site_name: async function (frm) {
+  site_name: async function (frm) {
     // Set Address
-    let addressName2 = await frappe.db.get_value(
+    let addressName = await frappe.db.get_value(
       "Job Site Master",
-      frm.doc.job_site_name,
+      frm.doc.site_name,
       "address"
     );
-    if (addressName2 && addressName2?.message) {
+    if (addressName && addressName?.message?.address) {
       let address = await frappe.db.get_value(
         "Address Master",
-        addressName2?.message?.address,
+        addressName?.message?.address,
         ["address", "address_1", "address_2", "city", "state", "country", "pin"]
       );
       frm.set_value(

@@ -8,35 +8,30 @@
   "delivery_challan_entry_section",
   "challan_no",
   "schedule_no",
+  "grade_code",
   "column_break_aprc",
   "date",
   "order_no",
+  "grade_name",
   "column_break_hamv",
   "plant",
-  "branch_name",
+  "percycle",
   "column_break_vdhp",
   "type",
-  "serial_no",
+  "branch_name",
   "section_break_qzby",
-  "party_name",
-  "grade_code",
-  "grade_name",
-  "column_break_spey",
-  "job_site_name",
-  "job_site_address",
-  "section_break_ecrc",
   "qty",
-  "total_opening",
-  "grand_total_qty",
-  "column_break_isrc",
-  "batchno",
-  "percycle",
-  "dispatchtime",
-  "column_break_umvb",
   "vehicle",
+  "dispatchtime",
+  "column_break_qwzc",
+  "batchno",
   "driver",
   "helper_name",
-  "column_break_afgk",
+  "column_break_spey",
+  "party_name",
+  "site_name",
+  "job_site_address",
+  "section_break_ecrc",
   "lastkm",
   "currkm",
   "distance",
@@ -44,7 +39,12 @@
   "last_hrh",
   "curr_hrh",
   "hrs",
+  "column_break_isrc",
+  "serial_no",
+  "total_opening",
+  "grand_total_qty",
   "section_break_rlnr",
+  "attach_image",
   "column_break_enkv",
   "supervisor",
   "column_break_uebk",
@@ -67,6 +67,8 @@
   {
    "fieldname": "date",
    "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Date"
   },
   {
@@ -83,9 +85,11 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "Delivery Note",
    "fieldname": "type",
-   "fieldtype": "Data",
-   "label": "Type"
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Delivery Note"
   },
   {
    "fieldname": "section_break_qzby",
@@ -94,32 +98,36 @@
   {
    "fieldname": "party_name",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Party Name",
    "options": "Ledger Master"
   },
   {
    "fieldname": "grade_code",
-   "fieldtype": "Data",
-   "label": "Grade Code"
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Grade Code",
+   "options": "Grade Master"
   },
   {
    "fieldname": "grade_name",
-   "fieldtype": "Data",
-   "label": "Grade Name"
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Grade Name",
+   "options": "Schedule Master"
   },
   {
    "fieldname": "column_break_spey",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "job_site_name",
-   "fieldtype": "Link",
-   "label": "Job Site Name",
-   "options": "Job Site Master"
-  },
-  {
    "fieldname": "job_site_address",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Job Site Address",
    "options": "Job Site Master"
   },
@@ -130,17 +138,20 @@
   {
    "fieldname": "qty",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "Qty",
    "reqd": 1
   },
   {
    "fieldname": "total_opening",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Total Opening"
   },
   {
    "fieldname": "grand_total_qty",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Grand Total Qty"
   },
   {
@@ -150,6 +161,8 @@
   {
    "fieldname": "batchno",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "BatchNo"
   },
   {
@@ -160,6 +173,8 @@
   {
    "fieldname": "dispatchtime",
    "fieldtype": "Time",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "DispatchTime"
   },
   {
@@ -170,6 +185,7 @@
    "fieldname": "vehicle",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Vehicle",
    "options": "Cost Center Master",
    "reqd": 1
@@ -177,31 +193,33 @@
   {
    "fieldname": "driver",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Driver"
   },
   {
    "fieldname": "helper_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Helper Name"
   },
   {
    "fieldname": "lastkm",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Last.KM"
   },
   {
    "fieldname": "currkm",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Curr.KM"
   },
   {
    "fieldname": "distance",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Distance"
-  },
-  {
-   "fieldname": "column_break_afgk",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "column_break_rcsm",
@@ -210,21 +228,20 @@
   {
    "fieldname": "last_hrh",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Last HRH"
   },
   {
    "fieldname": "curr_hrh",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Curr. HRH"
   },
   {
    "fieldname": "hrs",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "HRS"
-  },
-  {
-   "fieldname": "column_break_umvb",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "column_break_enkv",
@@ -233,6 +250,8 @@
   {
    "fieldname": "supervisor",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Supervisor"
   },
   {
@@ -242,6 +261,8 @@
   {
    "fieldname": "mkt_by",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Mkt. By"
   },
   {
@@ -252,6 +273,7 @@
    "default": "Active",
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status",
    "options": "Active\nDe Active"
   },
@@ -262,23 +284,32 @@
   {
    "fieldname": "entry_by",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Entry By",
    "options": "User Master"
   },
   {
    "fieldname": "challan_no",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Challan No"
   },
   {
    "fieldname": "schedule_no",
-   "fieldtype": "Data",
-   "label": "Schedule No"
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Schedule No",
+   "options": "Schedule Master"
   },
   {
    "fieldname": "order_no",
-   "fieldtype": "Data",
-   "label": "Order No"
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Order No",
+   "options": "Rcm Sales Order"
   },
   {
    "fieldname": "branch_name",
@@ -288,12 +319,30 @@
   {
    "fieldname": "serial_no",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "Serial No"
+  },
+  {
+   "fieldname": "attach_image",
+   "fieldtype": "Attach Image",
+   "label": "Attach Image"
+  },
+  {
+   "fieldname": "column_break_qwzc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "site_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Job Site Name",
+   "options": "Job Site Master"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-27 11:31:59.394342",
+ "modified": "2024-01-29 23:08:03.094328",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Delivery Challan",
@@ -317,5 +366,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "challan_no"
+ "title_field": "party_name"
 }
