@@ -66,12 +66,10 @@ frappe.ui.form.on("Rcm Sales Order", {
 
 frappe.ui.form.on("Order Item", {
   refresh: function (frm) {
-    // let field1 = frm.get_field("party_address");
-    // field1.$input.prop("readonly", true);
-    // let field2 = frm.get_field("buyer_address");
-    // field2.$input.prop("readonly", true);
-    // let field3 = frm.get_field("site_address");
-    // field3.$input.prop("readonly", true);
+    let field1 = frm.get_field("for_rate");
+    field1.$input.prop("readonly", true);
+    let field2 = frm.get_field("amount");
+    field2.$input.prop("readonly", true);
   },
   grade_name: async function (frm, cdt, cdn) {
     let item = locals[cdt][cdn];
@@ -80,21 +78,26 @@ frappe.ui.form.on("Order Item", {
   },
   qty: async function (frm, cdt, cdn) {
     let item = locals[cdt][cdn];
-    console.log(item.tax)
-    item.for_rate = item.rate + item.tax;
-    item.amount = item.rate * item.qty;
+    item.for_rate =
+      item.rate && item.tax ? Number(item.rate) + Number(item.tax) : "";
+    item.amount =
+      item.rate && item.qty ? Number(item.rate) * Number(item.qty) : "";
     frm.refresh_field("table_zqjd");
   },
   rate: async function (frm, cdt, cdn) {
     let item = locals[cdt][cdn];
-    item.for_rate = item.rate + item.tax;
-    item.amount = item.rate * item.qty;
+    item.for_rate =
+      item.rate && item.tax ? Number(item.rate) + Number(item.tax) : "";
+    item.amount =
+      item.rate && item.qty ? Number(item.rate) * Number(item.qty) : "";
     frm.refresh_field("table_zqjd");
   },
   tax: async function (frm, cdt, cdn) {
     let item = locals[cdt][cdn];
-    item.for_rate = item.rate + item.tax;
-    item.amount = item.rate * item.qty;
+    item.for_rate =
+      item.rate && item.tax ? Number(item.rate) + Number(item.tax) : "";
+    item.amount =
+      item.rate && item.qty ? Number(item.rate) * Number(item.qty) : "";
     frm.refresh_field("table_zqjd");
   },
 });
