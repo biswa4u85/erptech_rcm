@@ -37,7 +37,8 @@
   "column_break_enju",
   "auth_by",
   "column_break_rufo",
-  "entry_by"
+  "entry_by",
+  "amended_from"
  ],
  "fields": [
   {
@@ -67,7 +68,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "default": "Today",
    "fieldname": "date",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -156,10 +156,9 @@
   },
   {
    "fieldname": "rmc_rate",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "RMC Rate",
-   "options": "Rcm Sales Order"
+   "label": "RMC Rate"
   },
   {
    "fieldname": "branch_name",
@@ -211,7 +210,7 @@
   },
   {
    "fieldname": "schedule_qty",
-   "fieldtype": "Float",
+   "fieldtype": "Int",
    "label": "Schedule Qty"
   },
   {
@@ -229,13 +228,22 @@
   },
   {
    "fieldname": "remaining_qty",
-   "fieldtype": "Float",
+   "fieldtype": "Int",
    "label": "Remaining Qty"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Schedule Master",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-29 13:50:44.184105",
+ "modified": "2024-01-30 00:05:59.332877",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Schedule Master",

@@ -29,7 +29,7 @@
   "helper_name",
   "column_break_spey",
   "party_name",
-  "job_site_name",
+  "site_name",
   "job_site_address",
   "section_break_ecrc",
   "lastkm",
@@ -122,14 +122,6 @@
   {
    "fieldname": "column_break_spey",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "job_site_name",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Job Site Name",
-   "options": "Job Site Master"
   },
   {
    "fieldname": "job_site_address",
@@ -338,11 +330,19 @@
   {
    "fieldname": "column_break_qwzc",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "site_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Job Site Name",
+   "options": "Job Site Master"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-29 13:16:55.884161",
+ "modified": "2024-01-29 23:08:03.094328",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Delivery Challan",

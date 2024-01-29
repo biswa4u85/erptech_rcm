@@ -62,14 +62,14 @@
   },
   {
    "fieldname": "pin",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "in_list_view": 1,
    "label": "Pin"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-29 00:19:15.105124",
+ "modified": "2024-01-29 15:52:27.708949",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Address Master",
