@@ -21,19 +21,33 @@ frappe.ui.form.on("Rcm Sales Order", {
   },
   party_name: async function (frm) {
     // Set Address
-    let address = await frappe.db.get_value(
+    let addressName = await frappe.db.get_value(
       "Ledger Master",
       frm.doc.party_name,
       "address"
     );
-    if (address && address?.message)
-      frm.set_value("party_address", address?.message?.address);
+    if (addressName && addressName?.message) {
+      let address = await frappe.db.get_value(
+        "Address Master",
+        addressName?.message?.address,
+        ["address", "address_1", "address_2", "city", "state", "country", "pin"]
+      );
+      frm.set_value(
+        "party_address",
+        `${address.message.address ?? ""} ${address.message.address_1 ?? ""} ${
+          address.message.address_2 ?? ""
+        } ${address.message.city ?? ""} ${address.message.state ?? ""} ${
+          address.message.country ?? ""
+        } ${address.message.pin ?? ""}`
+      );
+    }
 
     // Set Buyer Name
     frm.set_value("buyer_name", frm.doc.party_name);
 
     // Set Job Sites
     frm.set_value("job_site_name", null);
+    frm.set_value("site_address", null);
     frm.set_query("job_site_name", function () {
       return {
         filters: {
@@ -44,23 +58,49 @@ frappe.ui.form.on("Rcm Sales Order", {
   },
   buyer_name: async function (frm) {
     // Set Address
-    let address = await frappe.db.get_value(
+    let addressName = await frappe.db.get_value(
       "Ledger Master",
       frm.doc.buyer_name,
       "address"
     );
-    if (address && address?.message)
-      frm.set_value("buyer_address", address?.message?.address);
+    if (addressName && addressName?.message) {
+      let address = await frappe.db.get_value(
+        "Address Master",
+        addressName?.message?.address,
+        ["address", "address_1", "address_2", "city", "state", "country", "pin"]
+      );
+      frm.set_value(
+        "buyer_address",
+        `${address.message.address ?? ""} ${address.message.address_1 ?? ""} ${
+          address.message.address_2 ?? ""
+        } ${address.message.city ?? ""} ${address.message.state ?? ""} ${
+          address.message.country ?? ""
+        } ${address.message.pin ?? ""}`
+      );
+    }
   },
   job_site_name: async function (frm) {
     // Set Address
-    let address = await frappe.db.get_value(
+    let addressName2 = await frappe.db.get_value(
       "Job Site Master",
       frm.doc.job_site_name,
       "address"
     );
-    if (address && address?.message)
-      frm.set_value("site_address", address?.message?.address);
+    if (addressName2 && addressName2?.message) {
+      let address = await frappe.db.get_value(
+        "Address Master",
+        addressName2?.message?.address,
+        ["address", "address_1", "address_2", "city", "state", "country", "pin"]
+      );
+      frm.set_value(
+        "site_address",
+        `${address.message.address ?? ""} ${address.message.address_1 ?? ""} ${
+          address.message.address_2 ?? ""
+        } ${address.message.city ?? ""} ${address.message.state ?? ""} ${
+          address.message.country ?? ""
+        } ${address.message.pin ?? ""}`
+      );
+    }
   },
 });
 

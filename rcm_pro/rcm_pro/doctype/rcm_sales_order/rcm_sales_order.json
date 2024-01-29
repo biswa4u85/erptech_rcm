@@ -117,15 +117,13 @@
   },
   {
    "fieldname": "party_address",
-   "fieldtype": "Link",
-   "label": "Party Address",
-   "options": "Address Master"
+   "fieldtype": "Small Text",
+   "label": "Party Address"
   },
   {
    "fieldname": "buyer_address",
-   "fieldtype": "Link",
-   "label": "Buyer Address",
-   "options": "Address Master"
+   "fieldtype": "Small Text",
+   "label": "Buyer Address"
   },
   {
    "fieldname": "section_break_tcmy",
@@ -253,9 +251,8 @@
   },
   {
    "fieldname": "site_address",
-   "fieldtype": "Link",
-   "label": "Site Address",
-   "options": "Address Master"
+   "fieldtype": "Small Text",
+   "label": "Site Address"
   },
   {
    "fieldname": "job_site_name",
@@ -317,7 +314,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-29 01:08:47.446149",
+ "modified": "2024-01-29 14:42:37.103241",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Rcm Sales Order",
