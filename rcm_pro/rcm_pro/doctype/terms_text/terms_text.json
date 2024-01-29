@@ -1,0 +1,30 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-29 14:54:24.686214",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "text_editor_zqug"
+ ],
+ "fields": [
+  {
+   "fieldname": "text_editor_zqug",
+   "fieldtype": "Text Editor"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-29 15:02:34.669939",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Terms Text",
+ "owner": "Administrator",
+ "permissions": [],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "text_editor_zqug"
+}
