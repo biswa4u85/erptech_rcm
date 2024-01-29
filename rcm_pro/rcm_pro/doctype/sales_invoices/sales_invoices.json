@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "autoincrement",
  "creation": "2024-01-26 22:24:17.047567",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -351,10 +351,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-26 23:58:35.666628",
+ "modified": "2024-01-29 12:38:08.586194",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Sales Invoices",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {
@@ -370,7 +371,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "party_name"
 }
