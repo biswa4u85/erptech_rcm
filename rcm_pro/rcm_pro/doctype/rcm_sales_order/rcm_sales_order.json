@@ -50,6 +50,8 @@
   "order_items_tab",
   "table_zqjd",
   "other_detail_tab",
+  "table_mrdg",
+  "section_break_gfog",
   "table_cdxj"
  ],
  "fields": [
@@ -133,10 +135,11 @@
   },
   {
    "fieldname": "tax_type",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Tax Type"
+   "label": "Tax Type",
+   "options": "Tax Class Master"
   },
   {
    "fieldname": "quotation_no",
@@ -157,10 +160,11 @@
   },
   {
    "fieldname": "payment_term",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Payment Term"
+   "label": "Payment Term",
+   "options": "Payment Terms Master"
   },
   {
    "fieldname": "valid_date",
@@ -313,6 +317,15 @@
    "label": "Job Site Name",
    "options": "Job Site Master",
    "reqd": 1
+  },
+  {
+   "fieldname": "table_mrdg",
+   "fieldtype": "Table",
+   "options": "Tax Class Child"
+  },
+  {
+   "fieldname": "section_break_gfog",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -322,7 +335,7 @@
    "link_fieldname": "schedule_no"
   }
  ],
- "modified": "2024-01-29 23:05:22.215143",
+ "modified": "2024-01-31 14:04:20.650829",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Rcm Sales Order",
@@ -346,5 +359,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "order_no"
+ "title_field": "party_name"
 }

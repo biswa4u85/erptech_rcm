@@ -136,6 +136,7 @@
    "fieldname": "site_name",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Site Name",
    "options": "Job Site Master",
    "reqd": 1
@@ -211,6 +212,7 @@
   {
    "fieldname": "schedule_qty",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "Schedule Qty"
   },
   {
@@ -223,6 +225,8 @@
   {
    "fieldname": "grade_name",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Grade Name",
    "options": "Grade Master"
   },
@@ -243,7 +247,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-30 00:05:59.332877",
+ "modified": "2024-01-30 14:02:26.775986",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Schedule Master",

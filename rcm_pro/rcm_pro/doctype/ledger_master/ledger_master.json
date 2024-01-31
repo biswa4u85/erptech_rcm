@@ -18,6 +18,8 @@
   "column_break_auib",
   "group_name",
   "use_in_taxclass",
+  "tax_type",
+  "tax_per",
   "pan_no",
   "section_break_hmsv",
   "address",
@@ -314,11 +316,23 @@
   {
    "fieldname": "column_break_qcrq",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tax_type",
+   "fieldtype": "Select",
+   "label": "Tax Type",
+   "options": "Select\nOutput CSGT 2.5%\nOutput SGST 2.5%\nOutput IGST 5%\nOutput CSGT 6%\nOutput SGST 6%\nOutput IGST 12%\nOutput CSGT 9%\nOutput SGST 9%\nOutput IGST 18%\nOutput CSGT 14%\nOutput SGST 14%\nOutput IGST 28%\nInput CSGT 2.5%\nInput SGST 2.5%\nInput IGST 5%\nInput CSGT 6%\nInput SGST 6%\nInput IGST 12%\nInput  CSGT 9%\nInput SGST 9%\nInput IGST 18%\nInput CSGT 14%\nInput SGST 14%\nInput IGST 28%"
+  },
+  {
+   "fieldname": "tax_per",
+   "fieldtype": "Select",
+   "label": "Tax Per",
+   "options": "Select\n2.5\n5\n6\n12\n9\n18\n14\n28"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-29 13:33:29.483456",
+ "modified": "2024-01-30 13:27:26.804418",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Ledger Master",
