@@ -127,10 +127,11 @@
   },
   {
    "fieldname": "tax_type",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Tax Type"
+   "label": "Tax Type",
+   "options": "Tax Class Master"
   },
   {
    "fieldname": "quotation_no",
@@ -151,10 +152,11 @@
   },
   {
    "fieldname": "payment_term",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Payment Term"
+   "label": "Payment Term",
+   "options": "Payment Terms Master"
   },
   {
    "fieldname": "valid_date",

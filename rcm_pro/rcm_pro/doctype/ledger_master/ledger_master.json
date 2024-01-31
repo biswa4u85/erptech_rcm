@@ -19,6 +19,8 @@
   "column_break_auib",
   "group_name",
   "use_in_taxclass",
+  "tax_type",
+  "tax_per",
   "pan_no",
   "section_break_hmsv",
   "address",

@@ -7,13 +7,12 @@
  "field_order": [
   "finyear_entry_section",
   "fin_year",
-  "status",
+  "start_date",
   "column_break_cyik",
   "code",
-  "entry_by",
+  "end_date",
   "column_break_zenc",
-  "start_date",
-  "end_date"
+  "status"
  ],
  "fields": [
   {
@@ -26,7 +25,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Fin year",
+   "label": "Fin Year",
    "reqd": 1
   },
   {
@@ -38,20 +37,12 @@
    "reqd": 1
   },
   {
+   "default": "Active",
    "fieldname": "status",
-   "fieldtype": "Link",
+   "fieldtype": "Select",
    "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Status",
-   "options": "Prop Master"
-  },
-  {
-   "fieldname": "entry_by",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Entry By",
-   "options": "User Master"
+   "options": "Active\nDe Active"
   },
   {
    "fieldname": "column_break_cyik",
@@ -78,7 +69,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-25 15:40:50.884295",
+ "modified": "2024-01-30 13:53:10.098070",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "FinYear Master",
@@ -102,5 +93,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "code"
+ "title_field": "fin_year"
 }

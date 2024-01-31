@@ -136,6 +136,7 @@
    "fieldname": "site_name",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Site Name",
    "options": "Job Site Master",
    "reqd": 1
@@ -204,6 +205,7 @@
   {
    "fieldname": "schedule_qty",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "Schedule Qty"
   },
   {
@@ -216,6 +218,8 @@
   {
    "fieldname": "grade_name",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Grade Name",
    "options": "Grade Master"
   },
