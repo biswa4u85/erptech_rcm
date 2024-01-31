@@ -1,12 +1,12 @@
 {
  "actions": [],
- "autoname": "autoincrement",
+ "autoname": "naming_series:",
  "creation": "2024-01-24 17:56:26.554366",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "item_master_section",
-  "item_no",
+  "naming_series",
   "item_type",
   "hsn_code",
   "part_code",
@@ -33,13 +33,6 @@
    "fieldname": "item_master_section",
    "fieldtype": "Section Break",
    "label": "Item Master"
-  },
-  {
-   "fieldname": "item_no",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Item No"
   },
   {
    "fieldname": "item_type",
@@ -156,15 +149,25 @@
    "fieldname": "remarks",
    "fieldtype": "Small Text",
    "label": "Remarks"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "IT-ORD-.YYYY.-",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-27 02:09:51.218795",
+ "modified": "2024-01-30 11:27:50.263749",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Item Master",
- "naming_rule": "Autoincrement",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

@@ -1,12 +1,12 @@
 {
  "actions": [],
- "autoname": "autoincrement",
+ "autoname": "naming_series:",
  "creation": "2024-01-26 20:33:08.679925",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "quotation_entry_section",
-  "quotation_no",
+  "naming_series",
   "inquiry_no",
   "ref_no",
   "column_break_uusa",
@@ -42,20 +42,14 @@
   "quotation_item_tab",
   "table_cvns",
   "quotation_terms_tab",
-  "link_chnc"
+  "link_chnc",
+  "amended_from"
  ],
  "fields": [
   {
    "fieldname": "quotation_entry_section",
    "fieldtype": "Section Break",
    "label": "Quotation Entry"
-  },
-  {
-   "fieldname": "quotation_no",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Quotation No"
   },
   {
    "default": "7 Days",
@@ -253,15 +247,35 @@
    "in_standard_filter": 1,
    "label": "Job Site Name",
    "options": "Job Site Master"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Quotation Entry",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "SAL-QTN-.YYYY.-",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-01-29 17:16:35.713662",
+ "modified": "2024-01-30 11:00:50.598319",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Quotation Entry",
- "naming_rule": "Autoincrement",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

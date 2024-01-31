@@ -2,6 +2,11 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on("Rcm Sales Order", {
+  setup: function (frm) {
+    frm.custom_make_buttons = {
+      "Schedule Master": "Schedule Master",
+    };
+  },
   onload(frm) {
     frm.set_query("site_name", function () {
       return {
@@ -12,12 +17,14 @@ frappe.ui.form.on("Rcm Sales Order", {
     });
   },
   refresh: function (frm) {
-    let field1 = frm.get_field("party_address");
-    field1.$input.prop("readonly", true);
-    let field2 = frm.get_field("buyer_address");
-    field2.$input.prop("readonly", true);
-    let field3 = frm.get_field("site_address");
-    field3.$input.prop("readonly", true);
+    if (frm.doc.docstatus === 0) {
+      let field1 = frm.get_field("party_address");
+      field1.$input.prop("readonly", true);
+      let field2 = frm.get_field("buyer_address");
+      field2.$input.prop("readonly", true);
+      let field3 = frm.get_field("site_address");
+      field3.$input.prop("readonly", true);
+    }
   },
   party_name: async function (frm) {
     // Set Address

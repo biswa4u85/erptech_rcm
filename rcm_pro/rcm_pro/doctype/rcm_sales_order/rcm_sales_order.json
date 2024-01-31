@@ -1,12 +1,12 @@
 {
  "actions": [],
- "autoname": "autoincrement",
+ "autoname": "naming_series:",
  "creation": "2024-01-24 13:50:10.239356",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "sales_order_entry_section",
-  "order_no",
+  "naming_series",
   "tax_type",
   "valid_date",
   "column_break_kajr",
@@ -50,7 +50,8 @@
   "order_items_tab",
   "table_zqjd",
   "other_detail_tab",
-  "table_cdxj"
+  "table_cdxj",
+  "amended_from"
  ],
  "fields": [
   {
@@ -58,13 +59,6 @@
    "fieldname": "sales_order_entry_section",
    "fieldtype": "Section Break",
    "label": "Sales Order Entry"
-  },
-  {
-   "fieldname": "order_no",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Order No"
   },
   {
    "fieldname": "column_break_kajr",
@@ -228,6 +222,7 @@
   {
    "fieldname": "table_zqjd",
    "fieldtype": "Table",
+   "label": "Items",
    "options": "Order Item",
    "reqd": 1
   },
@@ -313,20 +308,35 @@
    "label": "Job Site Name",
    "options": "Job Site Master",
    "reqd": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "SAL-ORD-.YYYY.-",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rcm Sales Order",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [
-  {
-   "link_doctype": "Schedule Master",
-   "link_fieldname": "schedule_no"
-  }
- ],
- "modified": "2024-01-29 23:05:22.215143",
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-30 11:34:18.131283",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Rcm Sales Order",
- "naming_rule": "Autoincrement",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -346,5 +356,7 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "order_no"
+ "title_field": "naming_series",
+ "track_changes": 1,
+ "track_seen": 1
 }

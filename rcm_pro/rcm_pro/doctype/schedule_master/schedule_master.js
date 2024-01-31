@@ -3,23 +3,25 @@
 
 frappe.ui.form.on("Schedule Master", {
   refresh: function (frm) {
-    let field1 = frm.get_field("party_name");
-    field1.$input.prop("readonly", true);
-    let field2 = frm.get_field("site_name");
-    field2.$input.prop("readonly", true);
-    let field3 = frm.get_field("order_no");
-    field3.$input.prop("readonly", true);
-    let field4 = frm.get_field("grade_name");
-    field4.$input.prop("readonly", true);
-    let field5 = frm.get_field("remaining_qty");
-    field5.$input.prop("readonly", true);
-    const currentDate = new Date();
-    frm.set_value("date", currentDate);
+    if (frm.doc.docstatus === 0) {
+      let field1 = frm.get_field("party_name");
+      field1.$input.prop("readonly", true);
+      let field2 = frm.get_field("site_name");
+      field2.$input.prop("readonly", true);
+      let field3 = frm.get_field("order_no");
+      field3.$input.prop("readonly", true);
+      let field4 = frm.get_field("grade_name");
+      field4.$input.prop("readonly", true);
+      let field5 = frm.get_field("remaining_qty");
+      field5.$input.prop("readonly", true);
+      const currentDate = new Date();
+      frm.set_value("date", currentDate);
+    }
   },
   date: async function (frm) {
     // frm.set_value("party_name", null);
     let orders = await frappe.db.get_list("Rcm Sales Order", {
-      fields: ["name"],
+      fields: ["party_name"],
       filters: {
         valid_date: [">=", frm.doc.date],
       },
@@ -27,7 +29,7 @@ frappe.ui.form.on("Schedule Master", {
     });
     let field = frm.get_field("party_name");
     field.$input.prop("readonly", false);
-    let orderIds = orders.map((obj) => obj.name);
+    let orderIds = orders.map((obj) => obj.party_name);
     frm.set_query("party_name", function () {
       return {
         filters: {
@@ -39,7 +41,7 @@ frappe.ui.form.on("Schedule Master", {
   party_name: async function (frm) {
     frm.set_value("site_name", null);
     let orders = await frappe.db.get_list("Rcm Sales Order", {
-      fields: ["name"],
+      fields: ["party_name", "site_name"],
       filters: {
         valid_date: [">=", frm.doc.date],
         party_name: frm.doc.party_name,
@@ -48,12 +50,12 @@ frappe.ui.form.on("Schedule Master", {
     });
     let field = frm.get_field("site_name");
     field.$input.prop("readonly", false);
-    let orderIds = orders.map((obj) => obj.name);
+    let siteIds = orders.map((obj) => obj.site_name);
     frm.set_query("site_name", function () {
       return {
         filters: {
           ledger_name: frm.doc.party_name,
-          name: ["in", orderIds],
+          name: ["in", siteIds],
         },
       };
     });
@@ -67,7 +69,7 @@ frappe.ui.form.on("Schedule Master", {
         filters: {
           valid_date: [">=", frm.doc.date],
           party_name: frm.doc.party_name,
-          name: frm.doc.site_name,
+          site_name: frm.doc.site_name,
         },
       };
     });
@@ -114,8 +116,8 @@ frappe.ui.form.on("Schedule Master", {
       },
     });
   },
-  schedule_qty: function (frm) {
-    if (frm.doc.remaining_qty >= frm.doc.schedule_qty) {
+  validate: function (frm) {
+    if (frm.doc.remaining_qty < frm.doc.schedule_qty) {
       frappe.msgprint(__("You can not add more then remaining qty"));
       frappe.validated = false;
     }

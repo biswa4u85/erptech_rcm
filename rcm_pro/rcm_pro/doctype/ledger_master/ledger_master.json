@@ -1,12 +1,13 @@
 {
  "actions": [],
- "autoname": "autoincrement",
+ "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2024-01-23 18:08:43.862010",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "customervendor_entry_section",
-  "ledger_code",
+  "naming_series",
   "gst_no",
   "gst_statecode",
   "gst_date",
@@ -65,11 +66,6 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "GST_No"
-  },
-  {
-   "fieldname": "ledger_code",
-   "fieldtype": "Data",
-   "label": "Ledger Code"
   },
   {
    "fieldname": "group_name",
@@ -314,15 +310,24 @@
   {
    "fieldname": "column_break_qcrq",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "CUST-.YYYY.-",
+   "reqd": 1,
+   "set_only_once": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-29 13:33:29.483456",
+ "modified": "2024-01-30 11:01:50.456117",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Ledger Master",
- "naming_rule": "Autoincrement",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -338,9 +343,11 @@
    "write": 1
   }
  ],
+ "quick_entry": 1,
  "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "ledger_name"
+ "title_field": "ledger_name",
+ "track_changes": 1
 }

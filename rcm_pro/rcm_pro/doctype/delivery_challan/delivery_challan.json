@@ -1,12 +1,12 @@
 {
  "actions": [],
- "autoname": "autoincrement",
+ "autoname": "naming_series:",
  "creation": "2024-01-24 15:49:36.817771",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "delivery_challan_entry_section",
-  "challan_no",
+  "naming_series",
   "schedule_no",
   "grade_code",
   "column_break_aprc",
@@ -52,7 +52,8 @@
   "column_break_jfoq",
   "status",
   "column_break_tqpy",
-  "entry_by"
+  "entry_by",
+  "amended_from"
  ],
  "fields": [
   {
@@ -290,13 +291,6 @@
    "options": "User Master"
   },
   {
-   "fieldname": "challan_no",
-   "fieldtype": "Int",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Challan No"
-  },
-  {
    "fieldname": "schedule_no",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -338,15 +332,35 @@
    "in_standard_filter": 1,
    "label": "Job Site Name",
    "options": "Job Site Master"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Delivery Challan",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "CHA-ORD-.YYYY.-",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-01-29 23:08:03.094328",
+ "modified": "2024-01-30 11:15:38.657543",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Delivery Challan",
- "naming_rule": "Autoincrement",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -366,5 +380,7 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "party_name"
+ "title_field": "party_name",
+ "track_changes": 1,
+ "track_seen": 1
 }

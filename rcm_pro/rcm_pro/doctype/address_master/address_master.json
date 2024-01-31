@@ -24,7 +24,7 @@
    "fieldname": "address",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Address",
+   "label": "Address Title",
    "reqd": 1
   },
   {
@@ -69,7 +69,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-29 15:52:27.708949",
+ "modified": "2024-01-30 11:19:09.198358",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Address Master",

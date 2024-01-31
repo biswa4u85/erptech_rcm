@@ -1,12 +1,12 @@
 {
  "actions": [],
- "autoname": "autoincrement",
+ "autoname": "naming_series:",
  "creation": "2024-01-24 15:37:21.882771",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "schedule_entry_section",
-  "schedule_no",
+  "naming_series",
   "party_name",
   "schedule_qty",
   "remaining_qty",
@@ -148,13 +148,6 @@
    "options": "Rcm Sales Order"
   },
   {
-   "fieldname": "schedule_no",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Schedule No"
-  },
-  {
    "fieldname": "rmc_rate",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -239,15 +232,26 @@
    "options": "Schedule Master",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "SCH-ORD-.YYYY.-",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-01-30 00:05:59.332877",
+ "modified": "2024-01-30 11:12:43.821247",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Schedule Master",
- "naming_rule": "Autoincrement",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -267,5 +271,7 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "party_name"
+ "title_field": "party_name",
+ "track_changes": 1,
+ "track_seen": 1
 }
