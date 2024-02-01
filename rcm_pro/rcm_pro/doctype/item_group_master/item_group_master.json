@@ -9,8 +9,7 @@
   "item_group_code",
   "item_group_name",
   "parent_item_group",
-  "status",
-  "entry_by"
+  "status"
  ],
  "fields": [
   {
@@ -20,7 +19,7 @@
   },
   {
    "fieldname": "item_group_code",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Item Group Code"
@@ -39,25 +38,18 @@
    "label": "Parent Item Group"
   },
   {
+   "default": "Active",
    "fieldname": "status",
-   "fieldtype": "Link",
+   "fieldtype": "Select",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "Prop Master"
-  },
-  {
-   "fieldname": "entry_by",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Entry By",
-   "options": "User Master"
+   "options": "Active\nDe Active"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-24 18:49:57.199293",
+ "modified": "2024-01-31 19:53:44.089190",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Item Group Master",

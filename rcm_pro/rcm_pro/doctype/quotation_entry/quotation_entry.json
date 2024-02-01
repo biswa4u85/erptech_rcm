@@ -270,8 +270,13 @@
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2024-01-30 11:00:50.598319",
+ "links": [
+  {
+   "link_doctype": "Rcm Sales Order",
+   "link_fieldname": "naming_series"
+  }
+ ],
+ "modified": "2024-02-02 01:14:36.855419",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Quotation Entry",

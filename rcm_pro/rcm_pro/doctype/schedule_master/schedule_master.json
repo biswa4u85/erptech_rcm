@@ -250,8 +250,13 @@
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2024-01-30 11:12:43.821247",
+ "links": [
+  {
+   "link_doctype": "Delivery Challan",
+   "link_fieldname": "naming_series"
+  }
+ ],
+ "modified": "2024-02-02 01:18:51.480590",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Schedule Master",

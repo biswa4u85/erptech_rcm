@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "autoincrement",
  "creation": "2024-01-23 20:25:28.916113",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -15,8 +15,7 @@
   "party_name",
   "staff",
   "leavedate",
-  "status",
-  "entry_by"
+  "status"
  ],
  "fields": [
   {
@@ -76,24 +75,20 @@
    "label": "LeaveDate"
   },
   {
+   "default": "Active",
    "fieldname": "status",
-   "fieldtype": "Link",
+   "fieldtype": "Select",
    "label": "Status",
-   "options": "Prop Master"
-  },
-  {
-   "fieldname": "entry_by",
-   "fieldtype": "Link",
-   "label": "Entry By",
-   "options": "User Master"
+   "options": "Active\nDe Active"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-23 20:33:06.081403",
+ "modified": "2024-02-01 12:49:12.496201",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Pump Gang Master",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {
@@ -109,7 +104,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "pumpgang_name"
 }

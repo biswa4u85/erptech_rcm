@@ -51,7 +51,9 @@
   "table_zqjd",
   "other_detail_tab",
   "table_cdxj",
-  "amended_from"
+  "amended_from",
+  "section_break_bxjx",
+  "table_zsql"
  ],
  "fields": [
   {
@@ -329,12 +331,26 @@
    "options": "Rcm Sales Order",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "section_break_bxjx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_zsql",
+   "fieldtype": "Table",
+   "options": "Tax Class Child"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2024-01-30 11:34:18.131283",
+ "links": [
+  {
+   "link_doctype": "Schedule Master",
+   "link_fieldname": "naming_series"
+  }
+ ],
+ "modified": "2024-02-02 01:15:52.831085",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Rcm Sales Order",

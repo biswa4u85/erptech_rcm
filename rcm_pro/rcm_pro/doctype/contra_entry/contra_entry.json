@@ -1,0 +1,237 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-01 17:02:10.079739",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "series",
+  "ref_no",
+  "column_break_wbkr",
+  "date",
+  "ref_date",
+  "column_break_syfo",
+  "branch_name",
+  "voucher_type",
+  "column_break_aqul",
+  "company_name",
+  "currency_code",
+  "section_break_eaoy",
+  "table_qyko",
+  "section_break_qjzy",
+  "transaction_type",
+  "column_break_zcuv",
+  "instrument_no",
+  "column_break_rokq",
+  "instrument_date",
+  "column_break_lvub",
+  "bank_name",
+  "column_break_pggw",
+  "bank_date",
+  "section_break_sqde",
+  "narration",
+  "section_break_lrki",
+  "attachment",
+  "column_break_xhrd",
+  "image1",
+  "column_break_conr",
+  "status",
+  "column_break_qyzw",
+  "entry_by",
+  "column_break_hgnz",
+  "auth_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "CE-.YYYY.-"
+  },
+  {
+   "fieldname": "ref_no",
+   "fieldtype": "Data",
+   "label": "Ref No"
+  },
+  {
+   "fieldname": "column_break_wbkr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "ref_date",
+   "fieldtype": "Date",
+   "label": "Ref Date"
+  },
+  {
+   "fieldname": "column_break_syfo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Data",
+   "label": "Branch Name"
+  },
+  {
+   "fieldname": "voucher_type",
+   "fieldtype": "Select",
+   "label": "Voucher Type"
+  },
+  {
+   "fieldname": "column_break_aqul",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Company Name"
+  },
+  {
+   "default": "INR",
+   "fieldname": "currency_code",
+   "fieldtype": "Select",
+   "label": "Currency Code",
+   "options": "INR"
+  },
+  {
+   "fieldname": "section_break_qjzy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "label": "Transaction Type",
+   "options": "Select\nCheque\nNEFT\nRTGS\nUPI\nOther"
+  },
+  {
+   "fieldname": "column_break_zcuv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "instrument_no",
+   "fieldtype": "Data",
+   "label": "Instrument No"
+  },
+  {
+   "fieldname": "column_break_rokq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "instrument_date",
+   "fieldtype": "Date",
+   "label": "Instrument Date"
+  },
+  {
+   "fieldname": "column_break_lvub",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": " Bank Name"
+  },
+  {
+   "fieldname": "column_break_pggw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_date",
+   "fieldtype": "Date",
+   "label": "Bank Date"
+  },
+  {
+   "fieldname": "section_break_sqde",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "narration",
+   "fieldtype": "Data",
+   "label": "Narration"
+  },
+  {
+   "fieldname": "section_break_lrki",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "column_break_xhrd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image1",
+   "fieldtype": "Attach Image",
+   "label": "Image1"
+  },
+  {
+   "fieldname": "column_break_conr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nDe Active"
+  },
+  {
+   "fieldname": "column_break_qyzw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Data",
+   "label": "Entry By"
+  },
+  {
+   "fieldname": "column_break_hgnz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auth_by",
+   "fieldtype": "Data",
+   "label": "Auth By"
+  },
+  {
+   "fieldname": "section_break_eaoy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_qyko",
+   "fieldtype": "Table",
+   "options": "AC Transaction child"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-01 17:24:00.969833",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Contra Entry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

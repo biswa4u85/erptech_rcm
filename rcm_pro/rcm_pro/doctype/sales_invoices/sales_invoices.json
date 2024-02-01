@@ -6,7 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "invoice_entry_section",
-  "invoice_id",
+  "naming_series",
   "voucher_type",
   "column_break_doqf",
   "invoice_date",
@@ -70,11 +70,6 @@
    "fieldname": "invoice_entry_section",
    "fieldtype": "Section Break",
    "label": "Invoice Entry"
-  },
-  {
-   "fieldname": "invoice_id",
-   "fieldtype": "Data",
-   "label": "Invoice ID"
   },
   {
    "fieldname": "voucher_type",
@@ -347,11 +342,22 @@
    "fieldname": "site_name",
    "fieldtype": "Data",
    "label": "Job Site Name"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "options": "SAL-ORD-.YYYY.-",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-29 23:07:42.672394",
+ "modified": "2024-02-02 01:21:51.237028",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Sales Invoices",
