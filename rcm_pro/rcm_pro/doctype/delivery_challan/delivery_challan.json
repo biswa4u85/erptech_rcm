@@ -23,6 +23,7 @@
   "pump_gang_name",
   "section_break_qzby",
   "qty",
+  "remaining_qty",
   "vehicle",
   "dispatchtime",
   "column_break_qwzc",
@@ -32,7 +33,7 @@
   "column_break_spey",
   "party_name",
   "site_name",
-  "job_site_address",
+  "site_address",
   "section_break_ecrc",
   "lastkm",
   "currkm",
@@ -127,33 +128,25 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "job_site_address",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Job Site Address",
-   "options": "Job Site Master"
-  },
-  {
    "fieldname": "section_break_ecrc",
    "fieldtype": "Section Break"
   },
   {
    "fieldname": "qty",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "in_list_view": 1,
    "label": "Qty",
    "reqd": 1
   },
   {
    "fieldname": "total_opening",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "in_list_view": 1,
    "label": "Total Opening"
   },
   {
    "fieldname": "grand_total_qty",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "in_list_view": 1,
    "label": "Grand Total Qty"
   },
@@ -366,6 +359,18 @@
    "in_standard_filter": 1,
    "label": "Driver Name",
    "options": "Employee Master"
+  },
+  {
+   "fieldname": "remaining_qty",
+   "fieldtype": "Float",
+   "label": "Remaining Qty"
+  },
+  {
+   "fieldname": "site_address",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Site Address"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -376,7 +381,7 @@
    "link_fieldname": "naming_series"
   }
  ],
- "modified": "2024-02-02 01:22:17.632102",
+ "modified": "2024-02-02 21:45:45.159392",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Delivery Challan",

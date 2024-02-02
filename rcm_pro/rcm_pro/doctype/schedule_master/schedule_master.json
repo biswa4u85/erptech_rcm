@@ -249,14 +249,13 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [
   {
    "link_doctype": "Delivery Challan",
    "link_fieldname": "naming_series"
   }
  ],
- "modified": "2024-02-02 01:18:51.480590",
+ "modified": "2024-02-02 10:48:52.254973",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Schedule Master",
@@ -281,6 +280,5 @@
  "sort_order": "DESC",
  "states": [],
  "title_field": "party_name",
- "track_changes": 1,
- "track_seen": 1
+ "track_changes": 1
 }

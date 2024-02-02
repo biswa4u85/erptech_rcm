@@ -350,7 +350,7 @@
    "link_fieldname": "naming_series"
   }
  ],
- "modified": "2024-02-02 01:15:52.831085",
+ "modified": "2024-02-02 10:56:27.374229",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Rcm Sales Order",
@@ -374,7 +374,7 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "naming_series",
+ "title_field": "party_name",
  "track_changes": 1,
  "track_seen": 1
 }
