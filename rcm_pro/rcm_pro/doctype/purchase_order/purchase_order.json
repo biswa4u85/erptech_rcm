@@ -1,0 +1,311 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-02-01 12:58:58.335192",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ccyz",
+  "naming_series",
+  "voucher_type",
+  "column_break_latx",
+  "date",
+  "tax_type",
+  "column_break_ngah",
+  "branch_name",
+  "ref_no",
+  "column_break_gulh",
+  "company_name",
+  "ref_date",
+  "section_break_nrdr",
+  "vendor_name",
+  "address",
+  "vendor_gst_no",
+  "column_break_mpca",
+  "delivery_company_address",
+  "company_gst_no",
+  "section_break_mtzw",
+  "payment_term",
+  "kind_att",
+  "column_break_zibh",
+  "valid_date",
+  "kind_att_contact_no",
+  "column_break_hluv",
+  "sub_total",
+  "kind_att_email",
+  "column_break_tzcx",
+  "invoice_total",
+  "remarks",
+  "section_break_ajja",
+  "attachment",
+  "column_break_mcrt",
+  "status",
+  "column_break_yjzj",
+  "entry_by",
+  "column_break_pkme",
+  "auth_by",
+  "po_items_tab",
+  "table_jcwu",
+  "other_details_tab",
+  "table_mkdr"
+ ],
+ "fields": [
+  {
+   "fieldname": "voucher_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Voucher Type",
+   "options": "Voucher Type Master"
+  },
+  {
+   "fieldname": "column_break_latx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "tax_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tax Type",
+   "options": "Tax Class Master"
+  },
+  {
+   "fieldname": "column_break_ngah",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Data",
+   "label": "Branch Name"
+  },
+  {
+   "fieldname": "ref_no",
+   "fieldtype": "Data",
+   "label": "Ref No"
+  },
+  {
+   "fieldname": "column_break_gulh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Company Name"
+  },
+  {
+   "fieldname": "ref_date",
+   "fieldtype": "Data",
+   "label": "Ref Date"
+  },
+  {
+   "fieldname": "section_break_nrdr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "vendor_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Vendor Name",
+   "options": "Ledger Master"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Vendor Address",
+   "options": "Address Master"
+  },
+  {
+   "fieldname": "vendor_gst_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vendor GST No"
+  },
+  {
+   "fieldname": "column_break_mpca",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delivery_company_address",
+   "fieldtype": "Data",
+   "label": "Delivery Company Address"
+  },
+  {
+   "fieldname": "company_gst_no",
+   "fieldtype": "Data",
+   "label": "Company GST No"
+  },
+  {
+   "fieldname": "section_break_mtzw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "payment_term",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Payment Term",
+   "options": "Payment Terms Master"
+  },
+  {
+   "fieldname": "kind_att",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Kind Att."
+  },
+  {
+   "fieldname": "column_break_zibh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "valid_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Valid Date"
+  },
+  {
+   "fieldname": "kind_att_contact_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Kind Att. Contact No"
+  },
+  {
+   "fieldname": "column_break_hluv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sub_total",
+   "fieldtype": "Data",
+   "label": "Sub Total"
+  },
+  {
+   "fieldname": "kind_att_email",
+   "fieldtype": "Data",
+   "label": "Kind Att Email"
+  },
+  {
+   "fieldname": "column_break_tzcx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "invoice_total",
+   "fieldtype": "Data",
+   "label": "Invoice Total"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "section_break_ajja",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "column_break_mcrt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nDe Active"
+  },
+  {
+   "fieldname": "column_break_yjzj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Entry By"
+  },
+  {
+   "fieldname": "column_break_pkme",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auth_by",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Auth By"
+  },
+  {
+   "fieldname": "po_items_tab",
+   "fieldtype": "Tab Break",
+   "label": "PO Items"
+  },
+  {
+   "fieldname": "table_jcwu",
+   "fieldtype": "Table",
+   "options": "Order Item"
+  },
+  {
+   "fieldname": "other_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Other Details"
+  },
+  {
+   "fieldname": "table_mkdr",
+   "fieldtype": "Table",
+   "options": "Tax Class Child"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "options": "PO-.YYYY.-",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "section_break_ccyz",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-03 21:39:45.097342",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Purchase Order",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "vendor_name"
+}

@@ -1,0 +1,193 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-07 00:46:40.466863",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "series",
+  "column_break_uwyv",
+  "date",
+  "column_break_gaox",
+  "branch_name",
+  "column_break_xmku",
+  "company_name",
+  "section_break_qmzi",
+  "inquiry_no",
+  "column_break_wopq",
+  "vendor_name",
+  "column_break_mhrq",
+  "follow_up_status",
+  "column_break_cfuh",
+  "next_follow_up_date",
+  "column_break_ssbt",
+  "follow_up_remarks",
+  "section_break_hnyb",
+  "attachment",
+  "column_break_xziw",
+  "image1",
+  "column_break_ornl",
+  "status",
+  "column_break_cqln",
+  "entry_by",
+  "column_break_qcph",
+  "auth_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "IFN-.YYYY.-"
+  },
+  {
+   "fieldname": "column_break_uwyv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_gaox",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Link",
+   "label": "Branch Name",
+   "options": "Branch Master"
+  },
+  {
+   "fieldname": "column_break_xmku",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "label": "Company Name",
+   "options": "Company Master"
+  },
+  {
+   "fieldname": "section_break_qmzi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "inquiry_no",
+   "fieldtype": "Link",
+   "label": "Inquiry No.",
+   "options": "Inquiry"
+  },
+  {
+   "fieldname": "column_break_wopq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vendor_name",
+   "fieldtype": "Link",
+   "label": "Vendor Name",
+   "options": "Ledger Master"
+  },
+  {
+   "fieldname": "column_break_mhrq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "follow_up_status",
+   "fieldtype": "Select",
+   "label": "Follow up Status",
+   "options": "Select\nNext Follow-up\nActive\nCancel\nQuotation"
+  },
+  {
+   "fieldname": "column_break_cfuh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "next_follow_up_date",
+   "fieldtype": "Date",
+   "label": "Next Follow up Date"
+  },
+  {
+   "fieldname": "column_break_ssbt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "follow_up_remarks",
+   "fieldtype": "Data",
+   "label": "Follow up Remarks"
+  },
+  {
+   "fieldname": "section_break_hnyb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "column_break_xziw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image1",
+   "fieldtype": "Attach Image",
+   "label": "Image1"
+  },
+  {
+   "fieldname": "column_break_ornl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nDe Active"
+  },
+  {
+   "fieldname": "column_break_cqln",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Data",
+   "label": "Entry By"
+  },
+  {
+   "fieldname": "column_break_qcph",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auth_by",
+   "fieldtype": "Data",
+   "label": "Auth By"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-07 00:56:43.920842",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Inquiry Follow-up",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

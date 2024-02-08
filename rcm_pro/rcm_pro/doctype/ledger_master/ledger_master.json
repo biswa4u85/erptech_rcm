@@ -18,10 +18,9 @@
   "gst_suptyp",
   "column_break_auib",
   "group_name",
-  "use_in_taxclass",
-  "tax_type",
-  "tax_per",
+  "ledger_code",
   "pan_no",
+  "use_in_taxclass",
   "section_break_hmsv",
   "address",
   "contact_details_section",
@@ -321,11 +320,16 @@
    "options": "CUST-.YYYY.-",
    "reqd": 1,
    "set_only_once": 1
+  },
+  {
+   "fieldname": "ledger_code",
+   "fieldtype": "Data",
+   "label": "Ledger Code"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-30 11:01:50.456117",
+ "modified": "2024-02-05 16:12:57.290579",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Ledger Master",

@@ -1,0 +1,366 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-02-06 22:14:41.395665",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "vehicle_no",
+  "column_break_kygr",
+  "wb_type",
+  "item_name",
+  "column_break_zccf",
+  "date",
+  "ref_no",
+  "column_break_drec",
+  "branch_name",
+  "ref_date",
+  "column_break_jybk",
+  "company_name",
+  "royalty_pass_no",
+  "column_break_jjcq",
+  "grn_no",
+  "royalty_wt",
+  "section_break_rfrx",
+  "po_no",
+  "column_break_gcoo",
+  "vendor_name",
+  "column_break_htni",
+  "challan_no",
+  "column_break_kopr",
+  "party_name",
+  "column_break_ydah",
+  "transporter_name",
+  "section_break_snaq",
+  "column_break_lsea",
+  "reason",
+  "deduct_",
+  "deduct_weight_kg",
+  "column_break_trkq",
+  "first_weight_kg",
+  "second_weight_kg",
+  "net_weight_kg",
+  "column_break_neoj",
+  "first_weight_time",
+  "second_weight_time",
+  "grand_net_weight_kg",
+  "column_break_luxv",
+  "manual",
+  "pay",
+  "amount",
+  "section_break_nnbj",
+  "attachment",
+  "column_break_cwcs",
+  "image1",
+  "column_break_fztt",
+  "image2",
+  "column_break_ijnx",
+  "status",
+  "column_break_idui",
+  "entry_by",
+  "column_break_rxwe",
+  "auth_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "WB-.YYYY.-"
+  },
+  {
+   "fieldname": "wb_type",
+   "fieldtype": "Select",
+   "label": "WB Type",
+   "options": "Select\nInward\nOutward\nOther"
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Data",
+   "label": "Vehicle No"
+  },
+  {
+   "fieldname": "column_break_kygr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Link",
+   "label": "Item Name",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "ref_no",
+   "fieldtype": "Data",
+   "label": "Ref No."
+  },
+  {
+   "fieldname": "column_break_zccf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Link",
+   "label": "Branch Name",
+   "options": "Branch Master"
+  },
+  {
+   "fieldname": "royalty_pass_no",
+   "fieldtype": "Data",
+   "label": "Royalty Pass No"
+  },
+  {
+   "fieldname": "ref_date",
+   "fieldtype": "Date",
+   "label": "Ref Date"
+  },
+  {
+   "fieldname": "column_break_drec",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "label": "Company Name",
+   "options": "Company Master"
+  },
+  {
+   "fieldname": "royalty_wt",
+   "fieldtype": "Data",
+   "label": "Royalty Wt."
+  },
+  {
+   "fieldname": "grn_no",
+   "fieldtype": "Data",
+   "label": "GRN No."
+  },
+  {
+   "fieldname": "section_break_rfrx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "po_no",
+   "fieldtype": "Link",
+   "label": "PO No",
+   "options": "Purchase Order"
+  },
+  {
+   "fieldname": "vendor_name",
+   "fieldtype": "Link",
+   "label": "Vendor Name",
+   "options": "Ledger Master"
+  },
+  {
+   "fieldname": "column_break_htni",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "challan_no",
+   "fieldtype": "Link",
+   "label": "Challan No",
+   "options": "Delivery Challan"
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Link",
+   "label": "Party Name",
+   "options": "Ledger Master"
+  },
+  {
+   "fieldname": "transporter_name",
+   "fieldtype": "Data",
+   "label": "Transporter Name"
+  },
+  {
+   "fieldname": "section_break_snaq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "manual",
+   "fieldtype": "Button",
+   "label": "Manual"
+  },
+  {
+   "fieldname": "column_break_trkq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lsea",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Select",
+   "label": "Reason",
+   "options": "Select\nOk\nDust\nMoisture Sand\nNot as per standard"
+  },
+  {
+   "fieldname": "deduct_",
+   "fieldtype": "Float",
+   "label": "Deduct %"
+  },
+  {
+   "fieldname": "column_break_luxv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pay",
+   "fieldtype": "Select",
+   "label": "Pay",
+   "options": "Select\nCash\nCredit"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Data",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "section_break_nnbj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach Image",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "column_break_cwcs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image1",
+   "fieldtype": "Attach Image",
+   "label": "Image1"
+  },
+  {
+   "fieldname": "column_break_fztt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image2",
+   "fieldtype": "Attach Image",
+   "label": "Image2"
+  },
+  {
+   "fieldname": "column_break_ijnx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nDe Active"
+  },
+  {
+   "fieldname": "column_break_idui",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Data",
+   "label": "Entry By"
+  },
+  {
+   "fieldname": "column_break_rxwe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auth_by",
+   "fieldtype": "Data",
+   "label": "Auth By"
+  },
+  {
+   "fieldname": "column_break_jybk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jjcq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_neoj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gcoo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kopr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deduct_weight_kg",
+   "fieldtype": "Data",
+   "label": "Deduct Weight KG"
+  },
+  {
+   "fieldname": "first_weight_kg",
+   "fieldtype": "Data",
+   "label": "First Weight KG"
+  },
+  {
+   "fieldname": "second_weight_kg",
+   "fieldtype": "Data",
+   "label": "Second Weight KG"
+  },
+  {
+   "fieldname": "net_weight_kg",
+   "fieldtype": "Data",
+   "label": "Net Weight KG"
+  },
+  {
+   "fieldname": "grand_net_weight_kg",
+   "fieldtype": "Data",
+   "label": "Grand Net Weight KG"
+  },
+  {
+   "fieldname": "column_break_ydah",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "first_weight_time",
+   "fieldtype": "Time",
+   "label": "First Weight Time"
+  },
+  {
+   "fieldname": "second_weight_time",
+   "fieldtype": "Time",
+   "label": "Second Weight Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-06 23:36:40.579415",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Weigh Bridge",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -30,6 +30,8 @@
   "bank_date",
   "section_break_sqde",
   "narration",
+  "column_break_atua",
+  "remarks",
   "section_break_lrki",
   "attachment",
   "column_break_xhrd",
@@ -46,7 +48,7 @@
    "fieldname": "series",
    "fieldtype": "Select",
    "label": "Series",
-   "options": "CE-.YYYY.-"
+   "options": "CON-.YYYY.-"
   },
   {
    "fieldname": "ref_no",
@@ -78,9 +80,11 @@
    "label": "Branch Name"
   },
   {
+   "default": "Contra",
    "fieldname": "voucher_type",
    "fieldtype": "Select",
-   "label": "Voucher Type"
+   "label": "Voucher Type",
+   "options": "Select\nContra\nReceipt\nPayment"
   },
   {
    "fieldname": "column_break_aqul",
@@ -208,11 +212,20 @@
    "fieldname": "table_qyko",
    "fieldtype": "Table",
    "options": "AC Transaction child"
+  },
+  {
+   "fieldname": "column_break_atua",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-01 17:24:00.969833",
+ "modified": "2024-02-07 13:34:43.096165",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Contra Entry",

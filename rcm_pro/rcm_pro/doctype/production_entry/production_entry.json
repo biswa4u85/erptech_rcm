@@ -1,0 +1,175 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-02-06 23:55:37.187719",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "challan_no",
+  "column_break_luyp",
+  "date",
+  "voucher_type",
+  "column_break_yiol",
+  "branch_name",
+  "on_stock",
+  "column_break_jivj",
+  "company_name",
+  "remarks",
+  "section_break_lzhk",
+  "table_frbl",
+  "section_break_txfx",
+  "attachment",
+  "column_break_ovnt",
+  "image1",
+  "column_break_aehs",
+  "status",
+  "column_break_innj",
+  "entry_by",
+  "column_break_wsjm",
+  "auth_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PN-.YYYY.-"
+  },
+  {
+   "fieldname": "challan_no",
+   "fieldtype": "Data",
+   "label": "Challan No"
+  },
+  {
+   "fieldname": "column_break_luyp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "voucher_type",
+   "fieldtype": "Select",
+   "label": "Voucher Type",
+   "options": "Select\nProduction\nManual Production"
+  },
+  {
+   "fieldname": "column_break_yiol",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Link",
+   "label": "Branch Name",
+   "options": "Branch Master"
+  },
+  {
+   "default": "-1",
+   "fieldname": "on_stock",
+   "fieldtype": "Int",
+   "label": "On Stock",
+   "options": "Select\n0\n1\n-1"
+  },
+  {
+   "fieldname": "column_break_jivj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "label": "Company Name",
+   "options": "Company Master"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "section_break_lzhk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_frbl",
+   "fieldtype": "Table",
+   "options": "Order Item"
+  },
+  {
+   "fieldname": "section_break_txfx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "column_break_ovnt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image1",
+   "fieldtype": "Attach Image",
+   "label": "Image1"
+  },
+  {
+   "fieldname": "column_break_aehs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nDe Active"
+  },
+  {
+   "fieldname": "column_break_innj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Data",
+   "label": "Entry By"
+  },
+  {
+   "fieldname": "column_break_wsjm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auth_by",
+   "fieldtype": "Data",
+   "label": "Auth By"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-07 00:05:31.272589",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Production Entry",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

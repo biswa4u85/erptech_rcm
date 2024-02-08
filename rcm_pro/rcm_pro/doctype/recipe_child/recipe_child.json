@@ -6,23 +6,374 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "section_break_x080"
+  "agg1",
+  "agg2",
+  "agg3",
+  "agg4",
+  "agg5",
+  "agg6",
+  "cem1",
+  "cem2",
+  "cem3",
+  "cem4",
+  "cem5",
+  "wtr1",
+  "wtr2",
+  "wtr3",
+  "admix1",
+  "admix2",
+  "admix3",
+  "admix4",
+  "silica",
+  "column_break_ssjr",
+  "aggregate_gate1",
+  "aggregate_gate2",
+  "aggregate_gate3",
+  "aggregate_gate4",
+  "aggregate_gate5",
+  "aggregate_gate6",
+  "cement_gate1",
+  "cement_gate2",
+  "cement_gate3",
+  "cement_gate4",
+  "cement_gate5",
+  "water_gate1",
+  "water_gate2",
+  "water_gate3",
+  "admixture_gate1",
+  "admixture_gate2",
+  "admixture_gate3",
+  "admixture_gate4",
+  "manual_gate1",
+  "lft",
+  "rgt",
+  "is_group",
+  "old_parent",
+  "parent_recipe_child",
+  "amended_from"
  ],
  "fields": [
   {
-   "fieldname": "section_break_x080",
-   "fieldtype": "Section Break"
+   "fieldname": "column_break_ssjr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "aggregate_gate1",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Aggregate Gate1"
+  },
+  {
+   "fieldname": "aggregate_gate2",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Aggregate Gate2"
+  },
+  {
+   "fieldname": "aggregate_gate3",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Aggregate Gate3"
+  },
+  {
+   "fieldname": "aggregate_gate4",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Aggregate Gate4"
+  },
+  {
+   "fieldname": "aggregate_gate5",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Aggregate Gate5"
+  },
+  {
+   "fieldname": "aggregate_gate6",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Aggregate Gate6"
+  },
+  {
+   "fieldname": "cement_gate1",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Cement Gate1"
+  },
+  {
+   "fieldname": "cement_gate2",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Cement Gate2"
+  },
+  {
+   "fieldname": "cement_gate3",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Cement Gate3"
+  },
+  {
+   "fieldname": "cement_gate4",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Cement Gate4"
+  },
+  {
+   "fieldname": "cement_gate5",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Cement Gate5"
+  },
+  {
+   "fieldname": "agg1",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Agg1",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "agg2",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Agg2",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "agg3",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Agg3",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "agg4",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Agg4",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "agg5",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Agg5",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "agg6",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Agg6",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "cem1",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cem1",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "cem2",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cem2",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "cem3",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cem3",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "cem4",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cem4",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "cem5",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cem5",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "wtr1",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Wtr1",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "wtr2",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Wtr2",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "wtr3",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Wtr3",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "water_gate1",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Water Gate1"
+  },
+  {
+   "fieldname": "water_gate2",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Water Gate2"
+  },
+  {
+   "fieldname": "water_gate3",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Water Gate3"
+  },
+  {
+   "fieldname": "admix1",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Admix1",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "admix2",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Admix2",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "admix3",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Admix3",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "admix4",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Admix4",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "admixture_gate1",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Admixture Gate1"
+  },
+  {
+   "fieldname": "admixture_gate2",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Admixture Gate2"
+  },
+  {
+   "fieldname": "admixture_gate3",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Admixture Gate3"
+  },
+  {
+   "fieldname": "admixture_gate4",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Admixture Gate4"
+  },
+  {
+   "fieldname": "silica",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Silica",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "manual_gate1",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Manual Gate1"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "Old Parent",
+   "options": "Recipe Child"
+  },
+  {
+   "fieldname": "parent_recipe_child",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Parent Recipe Child",
+   "options": "Recipe Child"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Recipe Child",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "istable": 1,
+ "is_submittable": 1,
+ "is_tree": 1,
  "links": [],
- "modified": "2024-02-02 22:01:31.735855",
+ "modified": "2024-02-02 23:25:27.411515",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Recipe Child",
+ "nsm_parent_field": "parent_recipe_child",
  "owner": "Administrator",
- "permissions": [],
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

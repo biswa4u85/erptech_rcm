@@ -234,12 +234,12 @@
   {
    "fieldname": "table_heqf",
    "fieldtype": "Table",
-   "options": "Abstract Get Challan"
+   "options": "Abstract Get Details"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-26 23:48:51.825840",
+ "modified": "2024-02-03 13:43:45.244922",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Sales Abstract",

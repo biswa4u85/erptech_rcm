@@ -1,0 +1,243 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-02-06 16:53:01.083851",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "column_break_dnuz",
+  "date",
+  "column_break_bpfi",
+  "branch_name",
+  "column_break_gboy",
+  "company_name",
+  "section_break_blgq",
+  "vendor_name",
+  "supply_date",
+  "vehicle_no",
+  "column_break_witx",
+  "item_name",
+  "ref_no",
+  "sample_by",
+  "section_break_wkpt",
+  "a_capacity_of_measurment_v",
+  "c_wt_of_measurment_plus_loose_agg__sand_w2",
+  "e_loose_bulk_density_eq_w2_sub_w1v",
+  "p11",
+  "column_break_zpez",
+  "b_wt_of_measurment_w1",
+  "d_wt_of_measurment_plus_compacted_agg__sand_w3",
+  "f_random_bulk_density_eq_w3_sub_w1v",
+  "p12",
+  "section_break_aadk",
+  "attachment",
+  "column_break_ptmj",
+  "image1",
+  "column_break_exii",
+  "status",
+  "column_break_mdez",
+  "entry_by",
+  "column_break_bqjg",
+  "auth_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "BDT-.YYYY.-"
+  },
+  {
+   "fieldname": "column_break_dnuz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_bpfi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Link",
+   "label": "Branch Name",
+   "options": "Branch Master"
+  },
+  {
+   "fieldname": "column_break_gboy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "label": "Company Name",
+   "options": "Company Master"
+  },
+  {
+   "fieldname": "section_break_blgq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "vendor_name",
+   "fieldtype": "Link",
+   "label": "Vendor Name",
+   "options": "Ledger Master"
+  },
+  {
+   "fieldname": "supply_date",
+   "fieldtype": "Date",
+   "label": "Supply Date"
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Data",
+   "label": "Vehicle No."
+  },
+  {
+   "fieldname": "column_break_witx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Link",
+   "label": "Item Name",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "ref_no",
+   "fieldtype": "Data",
+   "label": "Ref No."
+  },
+  {
+   "fieldname": "sample_by",
+   "fieldtype": "Data",
+   "label": "Sample By"
+  },
+  {
+   "fieldname": "section_break_wkpt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "a_capacity_of_measurment_v",
+   "fieldtype": "Data",
+   "label": "A Capacity Of Measurment (V)"
+  },
+  {
+   "fieldname": "c_wt_of_measurment_plus_loose_agg__sand_w2",
+   "fieldtype": "Data",
+   "label": "C Wt. Of Measurment Plus Loose AGG. / SAND (W2)"
+  },
+  {
+   "fieldname": "e_loose_bulk_density_eq_w2_sub_w1v",
+   "fieldtype": "Data",
+   "label": "E Loose Bulk Density Eq. ({W2 sub W1}/V)"
+  },
+  {
+   "fieldname": "p11",
+   "fieldtype": "Data",
+   "label": "P11"
+  },
+  {
+   "fieldname": "column_break_zpez",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "b_wt_of_measurment_w1",
+   "fieldtype": "Data",
+   "label": "B Wt. OF Measurment (W1)"
+  },
+  {
+   "fieldname": "d_wt_of_measurment_plus_compacted_agg__sand_w3",
+   "fieldtype": "Data",
+   "label": "D Wt. Of Measurment Plus Compacted AGG. / SAND (W3)"
+  },
+  {
+   "fieldname": "p12",
+   "fieldtype": "Data",
+   "label": "P12"
+  },
+  {
+   "fieldname": "section_break_aadk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "column_break_ptmj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image1",
+   "fieldtype": "Attach Image",
+   "label": "Image1"
+  },
+  {
+   "fieldname": "column_break_exii",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nDe Active"
+  },
+  {
+   "fieldname": "column_break_mdez",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Data",
+   "label": "Entry By"
+  },
+  {
+   "fieldname": "column_break_bqjg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auth_by",
+   "fieldtype": "Data",
+   "label": "Auth By"
+  },
+  {
+   "fieldname": "f_random_bulk_density_eq_w3_sub_w1v",
+   "fieldtype": "Data",
+   "label": " F Random Bulk Density Eq. ({W3 Sub W1}/V)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-06 17:13:59.813566",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Bulk Density Test",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

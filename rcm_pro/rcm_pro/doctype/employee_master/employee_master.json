@@ -1,93 +1,91 @@
 {
  "actions": [],
- "autoname": "autoincrement",
+ "autoname": "naming_series:",
  "creation": "2024-01-25 11:14:31.007146",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "employee_entry_section",
-  "emp_code",
-  "title",
-  "short_name",
+  "naming_series",
+  "department",
   "email_id",
   "column_break_gufr",
+  "date",
   "designation",
-  "first_name",
-  "gender",
-  "person_email_id",
-  "column_break_zjfj",
-  "department",
-  "middle_name",
-  "birth_date",
   "mobile_no",
+  "column_break_zjfj",
+  "branch_name",
+  "full_name",
+  "gender",
   "column_break_ggjf",
-  "branch",
-  "last_name",
+  "company_name",
+  "birth_date",
   "join_date",
-  "phone_no",
+  "column_break_bcua",
+  "photo",
+  "short_name",
   "address_section",
+  "permanent_address",
   "address",
   "city",
   "state",
   "pin",
   "country",
   "column_break_jzil",
-  "address_2",
-  "city_2",
-  "state_2",
-  "pin_2",
-  "country_2",
+  "current_address",
+  "address2",
+  "city2",
+  "state2",
+  "pin2",
+  "country2",
   "section_break_luiz",
   "pan_no",
   "pf_no",
-  "pf_date",
-  "salary_code",
+  "esi_no",
   "column_break_pesw",
   "adhar_card_no",
-  "esi_no",
+  "pf_date",
   "esi_center",
-  "basic_amount",
   "column_break_lbhe",
-  "pf",
-  "esi",
-  "prof_tax",
   "remarks",
+  "salary_code",
   "ctc",
   "column_break_ywtp",
-  "bank_name",
-  "bank_branch",
-  "ac_no",
-  "ifsc_code",
+  "prof_tax",
+  "pf",
+  "esi",
+  "basic_amount",
   "section_break_bgnj",
+  "column_break_lgwp",
+  "bank_name",
+  "ac_no",
+  "column_break_tsmr",
+  "bank_branch",
+  "ifsc_code",
+  "column_break_ndty",
   "policy_name",
   "nominee_name",
-  "status",
   "column_break_cxsk",
   "policy_number",
   "nominee_relation",
-  "entry_by",
-  "column_break_lgwp",
-  "image",
+  "section_break_fony",
   "aadharcard",
-  "driving_lic"
+  "column_break_txzy",
+  "driving_lic",
+  "column_break_ynoi",
+  "image",
+  "column_break_wrvx",
+  "status",
+  "column_break_movy",
+  "entry_by",
+  "column_break_ewjx",
+  "auth_by"
  ],
  "fields": [
   {
    "fieldname": "employee_entry_section",
    "fieldtype": "Section Break",
    "label": "Employee Entry"
-  },
-  {
-   "fieldname": "emp_code",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "EMP Code"
-  },
-  {
-   "fieldname": "title",
-   "fieldtype": "Data",
-   "label": "Title"
   },
   {
    "fieldname": "short_name",
@@ -116,23 +114,10 @@
    "reqd": 1
   },
   {
-   "fieldname": "first_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "First Name",
-   "reqd": 1
-  },
-  {
    "fieldname": "gender",
    "fieldtype": "Select",
    "label": "Gender",
    "options": "--Select Gender--\nMale\nFemale\nOther"
-  },
-  {
-   "fieldname": "person_email_id",
-   "fieldtype": "Data",
-   "label": "Person Email ID"
   },
   {
    "fieldname": "column_break_zjfj",
@@ -146,11 +131,6 @@
    "label": "Department",
    "options": "--Select Department--\nAll\nAccounts\nPurchase\nSales\nStore\nProduction\nMarketing\nOperating",
    "reqd": 1
-  },
-  {
-   "fieldname": "middle_name",
-   "fieldtype": "Data",
-   "label": "Middle Name"
   },
   {
    "fieldname": "birth_date",
@@ -167,29 +147,11 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "branch",
-   "fieldtype": "Link",
-   "label": "Branch",
-   "options": "Branch Master"
-  },
-  {
-   "fieldname": "last_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Last Name"
-  },
-  {
    "fieldname": "join_date",
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Join Date"
-  },
-  {
-   "fieldname": "phone_no",
-   "fieldtype": "Date",
-   "label": "Phone No"
   },
   {
    "fieldname": "address_section",
@@ -208,8 +170,9 @@
   },
   {
    "fieldname": "state",
-   "fieldtype": "Data",
-   "label": " State"
+   "fieldtype": "Select",
+   "label": " State",
+   "options": "Select\nAndhra Pradesh\nArunachal Pradesh\nAssam\nBihar\nChhattisgarh\nGoa\nGujarat\nHaryana\nHimachal Pradesh\nJharkhand\nKarnataka\nKerala\nMadhya Pradesh\nMaharashtra\nManipur\nMeghalaya\nMizoram\nNagaland\nOdisha\nPunjab\nRajasthan\nSikkim\nTamil Nadu\nTelangana\nTripura\nUttarakhand\nUttar Pradesh\nWest Bengal"
   },
   {
    "fieldname": "pin",
@@ -217,38 +180,15 @@
    "label": "Pin"
   },
   {
+   "default": "India",
    "fieldname": "country",
-   "fieldtype": "Data",
-   "label": "Country"
+   "fieldtype": "Select",
+   "label": "Country",
+   "options": "Select\nIndia"
   },
   {
    "fieldname": "column_break_jzil",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "address_2",
-   "fieldtype": "Data",
-   "label": "Address 2"
-  },
-  {
-   "fieldname": "city_2",
-   "fieldtype": "Data",
-   "label": "City 2"
-  },
-  {
-   "fieldname": "state_2",
-   "fieldtype": "Data",
-   "label": "State 2"
-  },
-  {
-   "fieldname": "pin_2",
-   "fieldtype": "Data",
-   "label": "Pin 2"
-  },
-  {
-   "fieldname": "country_2",
-   "fieldtype": "Data",
-   "label": " Country 2"
   },
   {
    "fieldname": "section_break_luiz",
@@ -369,13 +309,6 @@
    "label": "Nominee Name"
   },
   {
-   "default": "Active",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "Active\nDe Active"
-  },
-  {
    "fieldname": "column_break_cxsk",
    "fieldtype": "Column Break"
   },
@@ -388,12 +321,6 @@
    "fieldname": "nominee_relation",
    "fieldtype": "Data",
    "label": "Nominee Relation"
-  },
-  {
-   "fieldname": "entry_by",
-   "fieldtype": "Link",
-   "label": "Entry By",
-   "options": "User Master"
   },
   {
    "fieldname": "column_break_lgwp",
@@ -413,15 +340,140 @@
    "fieldname": "driving_lic",
    "fieldtype": "Attach",
    "label": "Driving Lic."
+  },
+  {
+   "fieldname": "permanent_address",
+   "fieldtype": "Heading",
+   "label": "Permanent Address"
+  },
+  {
+   "fieldname": "current_address",
+   "fieldtype": "Heading",
+   "label": "Current Address"
+  },
+  {
+   "fieldname": "address2",
+   "fieldtype": "Data",
+   "label": "Address2"
+  },
+  {
+   "fieldname": "city2",
+   "fieldtype": "Data",
+   "label": "City2"
+  },
+  {
+   "fieldname": "state2",
+   "fieldtype": "Select",
+   "label": "State2",
+   "options": "Select\nAndhra Pradesh\nArunachal Pradesh\nAssam\nBihar\nChhattisgarh\nGoa\nGujarat\nHaryana\nHimachal Pradesh\nJharkhand\nKarnataka\nKerala\nMadhya Pradesh\nMaharashtra\nManipur\nMeghalaya\nMizoram\nNagaland\nOdisha\nPunjab\nRajasthan\nSikkim\nTamil Nadu\nTelangana\nTripura\nUttarakhand\nUttar Pradesh\nWest Bengal"
+  },
+  {
+   "fieldname": "pin2",
+   "fieldtype": "Data",
+   "label": "Pin2"
+  },
+  {
+   "default": "India",
+   "fieldname": "country2",
+   "fieldtype": "Select",
+   "label": " Country2",
+   "options": "Select\nIndia"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "EMP-.YYYY.-"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Link",
+   "label": "Branch Name",
+   "options": "Branch Master"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "label": "Company Name",
+   "options": "Company Master"
+  },
+  {
+   "fieldname": "column_break_bcua",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Image",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "section_break_fony",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_txzy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ynoi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wrvx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_movy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ewjx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tsmr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ndty",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nDe Active"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Data",
+   "label": "Entry By"
+  },
+  {
+   "fieldname": "auth_by",
+   "fieldtype": "Data",
+   "label": "Auth By"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-25 14:14:47.954919",
+ "modified": "2024-02-07 18:55:54.503969",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Employee Master",
- "naming_rule": "Autoincrement",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -437,9 +489,7 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "first_name"
+ "states": []
 }

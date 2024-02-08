@@ -40,18 +40,23 @@
   "section_break_dsno",
   "order_no",
   "vehicle_no",
+  "sub_total",
   "column_break_srkm",
   "schedule_no",
   "way_bill_no",
+  "tax_amount",
   "column_break_yhbp",
   "challan_no",
   "driver_name",
+  "invoice_total",
   "column_break_nnpj",
   "abstract_no",
   "remarks",
   "section_break_qjkc",
   "column_break_tluy",
   "attachment",
+  "column_break_qyal",
+  "image1",
   "column_break_eptd",
   "status",
   "column_break_boop",
@@ -63,7 +68,7 @@
   "invoice_item_tab",
   "table_msqh",
   "other_detail_tab",
-  "table_jiae"
+  "table_qtqj"
  ],
  "fields": [
   {
@@ -73,22 +78,25 @@
   },
   {
    "fieldname": "voucher_type",
-   "fieldtype": "Data",
-   "label": "Voucher Type"
+   "fieldtype": "Link",
+   "label": "Voucher Type",
+   "options": "Voucher Type Master"
   },
   {
    "fieldname": "column_break_doqf",
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "invoice_date",
    "fieldtype": "Date",
    "label": "Invoice Date"
   },
   {
    "fieldname": "tax_class",
-   "fieldtype": "Data",
-   "label": "Tax Class"
+   "fieldtype": "Link",
+   "label": "Tax Class",
+   "options": "Tax Class Master"
   },
   {
    "fieldname": "column_break_gxar",
@@ -133,8 +141,9 @@
   },
   {
    "fieldname": "sales_ledger",
-   "fieldtype": "Data",
-   "label": "Sales Ledger"
+   "fieldtype": "Link",
+   "label": "Sales Ledger",
+   "options": "Ledger Master"
   },
   {
    "fieldname": "section_break_xwsn",
@@ -142,13 +151,15 @@
   },
   {
    "fieldname": "party_name",
-   "fieldtype": "Data",
-   "label": "Party Name"
+   "fieldtype": "Link",
+   "label": "Party Name",
+   "options": "Ledger Master"
   },
   {
    "fieldname": "address",
-   "fieldtype": "Data",
-   "label": "Address"
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address Master"
   },
   {
    "fieldname": "party_gst_no",
@@ -161,13 +172,15 @@
   },
   {
    "fieldname": "buyer_name",
-   "fieldtype": "Data",
-   "label": "Buyer Name"
+   "fieldtype": "Link",
+   "label": "Buyer Name",
+   "options": "Ledger Master"
   },
   {
    "fieldname": "buyer_address",
-   "fieldtype": "Data",
-   "label": "Buyer Address"
+   "fieldtype": "Link",
+   "label": "Buyer Address",
+   "options": "Address Master"
   },
   {
    "fieldname": "buyer_gst_no",
@@ -180,8 +193,9 @@
   },
   {
    "fieldname": "job_site_address",
-   "fieldtype": "Data",
-   "label": "Job Site Address"
+   "fieldtype": "Link",
+   "label": "Job Site Address",
+   "options": "Address Master"
   },
   {
    "fieldname": "column_break_qyko",
@@ -203,8 +217,9 @@
   },
   {
    "fieldname": "po_no",
-   "fieldtype": "Data",
-   "label": "PO No"
+   "fieldtype": "Link",
+   "label": "PO No",
+   "options": "Rcm Sales Order"
   },
   {
    "fieldname": "po_date",
@@ -334,14 +349,10 @@
    "label": "Other Detail"
   },
   {
-   "fieldname": "table_jiae",
-   "fieldtype": "Table",
-   "options": "Business Term Master"
-  },
-  {
    "fieldname": "site_name",
-   "fieldtype": "Data",
-   "label": "Job Site Name"
+   "fieldtype": "Link",
+   "label": "Job Site Name",
+   "options": "Job Site Master"
   },
   {
    "fieldname": "naming_series",
@@ -353,11 +364,40 @@
    "print_hide": 1,
    "reqd": 1,
    "set_only_once": 1
+  },
+  {
+   "fieldname": "table_qtqj",
+   "fieldtype": "Table",
+   "options": "Tax Class Child"
+  },
+  {
+   "fieldname": "sub_total",
+   "fieldtype": "Data",
+   "label": "Sub Total"
+  },
+  {
+   "fieldname": "tax_amount",
+   "fieldtype": "Data",
+   "label": "Tax Amount"
+  },
+  {
+   "fieldname": "invoice_total",
+   "fieldtype": "Data",
+   "label": "Invoice Total"
+  },
+  {
+   "fieldname": "column_break_qyal",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image1",
+   "fieldtype": "Attach Image",
+   "label": "Image1"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-02 01:21:51.237028",
+ "modified": "2024-02-05 13:12:09.365518",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Sales Invoices",

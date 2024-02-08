@@ -25,7 +25,7 @@
   "qty",
   "remaining_qty",
   "vehicle",
-  "dispatchtime",
+  "dispatch_time",
   "column_break_qwzc",
   "batchno",
   "driver_name",
@@ -74,7 +74,8 @@
    "fieldtype": "Date",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Date"
+   "label": "Date",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_hamv",
@@ -106,7 +107,8 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Party Name",
-   "options": "Ledger Master"
+   "options": "Ledger Master",
+   "reqd": 1
   },
   {
    "fieldname": "grade_code",
@@ -121,7 +123,8 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Grade Name",
-   "options": "Grade Master"
+   "options": "Grade Master",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_spey",
@@ -165,13 +168,6 @@
    "fieldname": "percycle",
    "fieldtype": "Data",
    "label": "PerCycle"
-  },
-  {
-   "fieldname": "dispatchtime",
-   "fieldtype": "Time",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "DispatchTime"
   },
   {
    "fieldname": "section_break_rlnr",
@@ -283,7 +279,8 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Schedule No",
-   "options": "Schedule Master"
+   "options": "Schedule Master",
+   "reqd": 1
   },
   {
    "fieldname": "order_no",
@@ -291,7 +288,8 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Order No",
-   "options": "Rcm Sales Order"
+   "options": "Rcm Sales Order",
+   "reqd": 1
   },
   {
    "fieldname": "branch_name",
@@ -319,7 +317,8 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Job Site Name",
-   "options": "Job Site Master"
+   "options": "Job Site Master",
+   "reqd": 1
   },
   {
    "fieldname": "amended_from",
@@ -370,18 +369,26 @@
    "fieldtype": "Small Text",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Site Address"
+   "label": "Site Address",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "dispatch_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Dispatch Time"
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [
   {
    "link_doctype": "Sales Invoices",
    "link_fieldname": "naming_series"
   }
  ],
- "modified": "2024-02-02 21:45:45.159392",
+ "modified": "2024-02-03 12:27:05.856569",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Delivery Challan",
@@ -406,6 +413,5 @@
  "sort_order": "DESC",
  "states": [],
  "title_field": "party_name",
- "track_changes": 1,
- "track_seen": 1
+ "track_changes": 1
 }

@@ -1,0 +1,158 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-02-03 13:20:47.125055",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "po_no",
+  "pur_invoice_no",
+  "column_break_hqmh",
+  "date",
+  "from_date",
+  "ref_no",
+  "column_break_xkrq",
+  "branch_name",
+  "to_date",
+  "ref_date",
+  "column_break_xxyx",
+  "voucher_type",
+  "total_qty",
+  "section_break_skpg",
+  "vendor_name",
+  "column_break_jvnj",
+  "item_name",
+  "section_break_lsts",
+  "table_ijjz"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PA-.YYYY.-"
+  },
+  {
+   "fieldname": "po_no",
+   "fieldtype": "Link",
+   "label": "PO No",
+   "options": "Purchase Order"
+  },
+  {
+   "fieldname": "pur_invoice_no",
+   "fieldtype": "Data",
+   "label": "Pur. Invoice No"
+  },
+  {
+   "fieldname": "column_break_hqmh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "ref_no",
+   "fieldtype": "Data",
+   "label": "Ref No"
+  },
+  {
+   "fieldname": "column_break_xkrq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Data",
+   "label": "Branch Name"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "ref_date",
+   "fieldtype": "Date",
+   "label": "Ref Date"
+  },
+  {
+   "fieldname": "column_break_xxyx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "voucher_type",
+   "fieldtype": "Select",
+   "label": "Voucher Type",
+   "options": "Purchase Abstract"
+  },
+  {
+   "fieldname": "total_qty",
+   "fieldtype": "Float",
+   "label": "Total Qty"
+  },
+  {
+   "fieldname": "section_break_skpg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "vendor_name",
+   "fieldtype": "Link",
+   "label": "Vendor Name",
+   "options": "Ledger Master"
+  },
+  {
+   "fieldname": "column_break_jvnj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Link",
+   "label": "Item Name",
+   "options": "Item Master"
+  },
+  {
+   "fieldname": "section_break_lsts",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_ijjz",
+   "fieldtype": "Table",
+   "options": "Abstract Get Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-03 13:45:05.361409",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Purchase Abstract",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "vendor_name"
+}

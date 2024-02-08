@@ -1,0 +1,298 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-02-03 20:41:48.926155",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "tax_type",
+  "invoice_no",
+  "column_break_yrrm",
+  "date",
+  "tax_class",
+  "po_no",
+  "column_break_jmsd",
+  "branch_name",
+  "ref_no",
+  "pur_abstract_no",
+  "column_break_sthp",
+  "company_name",
+  "ref_date",
+  "tax_ledger",
+  "section_break_dnlq",
+  "vendor_name",
+  "vendor_address",
+  "vendor_gst_no",
+  "column_break_lqqm",
+  "delivery_address",
+  "payment_term",
+  "pay_date",
+  "section_break_olwg",
+  "sub_total",
+  "column_break_kmxa",
+  "tax_amount",
+  "column_break_zkjl",
+  "total_amount",
+  "section_break_advk",
+  "attachment",
+  "column_break_wcxf",
+  "image1",
+  "column_break_cojb",
+  "status",
+  "column_break_nvwt",
+  "entry_by",
+  "column_break_eaus",
+  "auth_by",
+  "purchase_items_tab",
+  "table_khyd",
+  "other_details_tab",
+  "table_qmgt"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "options": "PI-.YYYY.-",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "tax_type",
+   "fieldtype": "Link",
+   "label": "Tax Type",
+   "options": "Voucher Type Master"
+  },
+  {
+   "fieldname": "invoice_no",
+   "fieldtype": "Data",
+   "label": "Invoice No"
+  },
+  {
+   "fieldname": "column_break_yrrm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "tax_class",
+   "fieldtype": "Link",
+   "label": "Tax Class",
+   "options": "Tax Class Master"
+  },
+  {
+   "fieldname": "po_no",
+   "fieldtype": "Data",
+   "label": "PO No"
+  },
+  {
+   "fieldname": "column_break_jmsd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Data",
+   "label": "Branch Name"
+  },
+  {
+   "fieldname": "ref_no",
+   "fieldtype": "Data",
+   "label": "Ref No"
+  },
+  {
+   "fieldname": "pur_abstract_no",
+   "fieldtype": "Data",
+   "label": "Pur. Abstract No"
+  },
+  {
+   "fieldname": "column_break_sthp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Company Name"
+  },
+  {
+   "fieldname": "ref_date",
+   "fieldtype": "Date",
+   "label": "Ref Date"
+  },
+  {
+   "fieldname": "tax_ledger",
+   "fieldtype": "Link",
+   "label": "Tax Ledger",
+   "options": "Ledger Master"
+  },
+  {
+   "fieldname": "section_break_dnlq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "vendor_name",
+   "fieldtype": "Link",
+   "label": "Vendor Name",
+   "options": "Ledger Master"
+  },
+  {
+   "fieldname": "vendor_address",
+   "fieldtype": "Link",
+   "label": "Vendor Address",
+   "options": "Address Master"
+  },
+  {
+   "fieldname": "vendor_gst_no",
+   "fieldtype": "Data",
+   "label": "Vendor GST No"
+  },
+  {
+   "fieldname": "column_break_lqqm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delivery_address",
+   "fieldtype": "Link",
+   "label": "Delivery Address",
+   "options": "Company Master"
+  },
+  {
+   "fieldname": "payment_term",
+   "fieldtype": "Link",
+   "label": "Payment Term",
+   "options": "Payment Terms Master"
+  },
+  {
+   "fieldname": "pay_date",
+   "fieldtype": "Date",
+   "label": "Pay Date"
+  },
+  {
+   "fieldname": "section_break_olwg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sub_total",
+   "fieldtype": "Data",
+   "label": "Sub Total"
+  },
+  {
+   "fieldname": "column_break_kmxa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tax_amount",
+   "fieldtype": "Data",
+   "label": "Tax Amount"
+  },
+  {
+   "fieldname": "column_break_zkjl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Data",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "section_break_advk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "column_break_wcxf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image1",
+   "fieldtype": "Attach Image",
+   "label": "Image1"
+  },
+  {
+   "fieldname": "column_break_cojb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nDe Active"
+  },
+  {
+   "fieldname": "column_break_nvwt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Data",
+   "label": "Entry By"
+  },
+  {
+   "fieldname": "column_break_eaus",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auth_by",
+   "fieldtype": "Data",
+   "label": "Auth By"
+  },
+  {
+   "fieldname": "purchase_items_tab",
+   "fieldtype": "Tab Break",
+   "label": "Purchase Items"
+  },
+  {
+   "fieldname": "table_khyd",
+   "fieldtype": "Table",
+   "options": "Order Item"
+  },
+  {
+   "fieldname": "other_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Other Details"
+  },
+  {
+   "fieldname": "table_qmgt",
+   "fieldtype": "Table",
+   "options": "Tax Class Child"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-03 21:11:45.300553",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Purchase Invoice",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "vendor_name"
+}

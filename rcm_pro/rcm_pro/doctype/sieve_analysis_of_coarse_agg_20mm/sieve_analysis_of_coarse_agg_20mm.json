@@ -1,0 +1,425 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-02-06 15:18:06.386405",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "location",
+  "column_break_yeps",
+  "date",
+  "sample_source",
+  "remerks",
+  "column_break_qtok",
+  "branch_name",
+  "sample_date",
+  "item_name",
+  "column_break_pvkm",
+  "company_name",
+  "sample_by",
+  "party_name",
+  "section_break_mmis",
+  "sieve_sizewt_ret",
+  "25mm",
+  "20mm",
+  "16mm",
+  "125mm",
+  "10mm",
+  "475mm",
+  "pan",
+  "column_break_lvct",
+  "cummwtretained",
+  "float_utmg",
+  "float_mvij",
+  "float_zltw",
+  "float_clze",
+  "float_lpnl",
+  "float_zkac",
+  "float_krmi",
+  "column_break_aiui",
+  "_wt_retained",
+  "float_ofdw",
+  "float_exun",
+  "float_cerq",
+  "float_jmlb",
+  "float_kaub",
+  "float_onco",
+  "float_lbzo",
+  "column_break_oikx",
+  "_passing",
+  "float_svdo",
+  "float_ayct",
+  "float_mteh",
+  "float_dmfp",
+  "float_cyly",
+  "float_fjbf",
+  "float_qmev",
+  "column_break_ubtd",
+  "is_limits",
+  "select_ujhu",
+  "select_jzke",
+  "select_cruo",
+  "select_ghqg",
+  "select_pide",
+  "select_sfae",
+  "float_chda",
+  "section_break_rqsc",
+  "attachment",
+  "column_break_otaw",
+  "image1",
+  "column_break_valb",
+  "status",
+  "column_break_zrbr",
+  "entry_by",
+  "column_break_fdhl",
+  "auth_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "column_break_yeps",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "sample_source",
+   "fieldtype": "Data",
+   "label": "Sample Source"
+  },
+  {
+   "fieldname": "remerks",
+   "fieldtype": "Data",
+   "label": "Remerks"
+  },
+  {
+   "fieldname": "column_break_qtok",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Link",
+   "label": "Branch Name",
+   "options": "Branch Master"
+  },
+  {
+   "fieldname": "sample_date",
+   "fieldtype": "Date",
+   "label": "Sample Date"
+  },
+  {
+   "default": "20MM",
+   "fieldname": "item_name",
+   "fieldtype": "Select",
+   "label": "Item Name",
+   "options": "20MM"
+  },
+  {
+   "fieldname": "column_break_pvkm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "label": "Company Name",
+   "options": "Company Master"
+  },
+  {
+   "fieldname": "sample_by",
+   "fieldtype": "Date",
+   "label": "Sample By"
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Link",
+   "label": "Party Name",
+   "options": "Ledger Master"
+  },
+  {
+   "fieldname": "section_break_mmis",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sieve_sizewt_ret",
+   "fieldtype": "Heading",
+   "label": "Sieve Size/Wt. Ret"
+  },
+  {
+   "fieldname": "25mm",
+   "fieldtype": "Float",
+   "label": "25MM"
+  },
+  {
+   "fieldname": "20mm",
+   "fieldtype": "Float",
+   "label": "20MM"
+  },
+  {
+   "fieldname": "16mm",
+   "fieldtype": "Float",
+   "label": "16MM"
+  },
+  {
+   "fieldname": "125mm",
+   "fieldtype": "Float",
+   "label": "12.5MM"
+  },
+  {
+   "fieldname": "10mm",
+   "fieldtype": "Float",
+   "label": "10MM"
+  },
+  {
+   "fieldname": "475mm",
+   "fieldtype": "Float",
+   "label": "4.75MM"
+  },
+  {
+   "fieldname": "pan",
+   "fieldtype": "Float",
+   "label": "PAN"
+  },
+  {
+   "fieldname": "column_break_lvct",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cummwtretained",
+   "fieldtype": "Heading",
+   "label": "Cumm.Wt.Retained"
+  },
+  {
+   "fieldname": "float_utmg",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "float_mvij",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "float_zltw",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "float_clze",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "float_lpnl",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "float_zkac",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "float_krmi",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "column_break_aiui",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "_wt_retained",
+   "fieldtype": "Heading",
+   "label": "% Wt. Retained"
+  },
+  {
+   "fieldname": "float_ofdw",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "float_exun",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "float_cerq",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "float_jmlb",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "float_kaub",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "float_onco",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "float_lbzo",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "column_break_oikx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "_passing",
+   "fieldtype": "Heading",
+   "label": "% Passing"
+  },
+  {
+   "fieldname": "float_svdo",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "float_ayct",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "float_mteh",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "float_dmfp",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "float_cyly",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "float_fjbf",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "float_qmev",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "column_break_ubtd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_limits",
+   "fieldtype": "Heading",
+   "label": "IS Limits"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "label": "Series"
+  },
+  {
+   "fieldname": "select_ujhu",
+   "fieldtype": "Select"
+  },
+  {
+   "default": "85-100",
+   "fieldname": "select_jzke",
+   "fieldtype": "Select",
+   "options": "85-100"
+  },
+  {
+   "fieldname": "select_cruo",
+   "fieldtype": "Select"
+  },
+  {
+   "fieldname": "select_ghqg",
+   "fieldtype": "Select"
+  },
+  {
+   "default": "0-20",
+   "fieldname": "select_pide",
+   "fieldtype": "Select",
+   "options": "0-20"
+  },
+  {
+   "default": "0-5",
+   "fieldname": "select_sfae",
+   "fieldtype": "Select",
+   "options": "0-5"
+  },
+  {
+   "fieldname": "float_chda",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "section_break_rqsc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "column_break_otaw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image1",
+   "fieldtype": "Attach Image",
+   "label": "Image1"
+  },
+  {
+   "fieldname": "column_break_valb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nDe Active"
+  },
+  {
+   "fieldname": "column_break_zrbr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "entry_by",
+   "fieldtype": "Data",
+   "label": "Entry By"
+  },
+  {
+   "fieldname": "column_break_fdhl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auth_by",
+   "fieldtype": "Data",
+   "label": "Auth By"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-06 16:05:54.454606",
+ "modified_by": "Administrator",
+ "module": "Rcm Pro",
+ "name": "Sieve Analysis Of Coarse Agg-20MM",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "party_name"
+}
