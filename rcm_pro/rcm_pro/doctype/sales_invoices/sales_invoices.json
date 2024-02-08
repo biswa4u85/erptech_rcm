@@ -22,7 +22,7 @@
   "sales_ledger",
   "section_break_xwsn",
   "party_name",
-  "address",
+  "party_address",
   "party_gst_no",
   "column_break_qgxo",
   "buyer_name",
@@ -30,7 +30,7 @@
   "buyer_gst_no",
   "section_break_prjq",
   "site_name",
-  "job_site_address",
+  "site_address",
   "column_break_qyko",
   "payment_term",
   "pay_date",
@@ -156,12 +156,6 @@
    "options": "Ledger Master"
   },
   {
-   "fieldname": "address",
-   "fieldtype": "Link",
-   "label": "Address",
-   "options": "Address Master"
-  },
-  {
    "fieldname": "party_gst_no",
    "fieldtype": "Data",
    "label": "Party GST_No"
@@ -190,12 +184,6 @@
   {
    "fieldname": "section_break_prjq",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "job_site_address",
-   "fieldtype": "Link",
-   "label": "Job Site Address",
-   "options": "Address Master"
   },
   {
    "fieldname": "column_break_qyko",
@@ -393,11 +381,23 @@
    "fieldname": "image1",
    "fieldtype": "Attach Image",
    "label": "Image1"
+  },
+  {
+   "fieldname": "party_address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address Master"
+  },
+  {
+   "fieldname": "site_address",
+   "fieldtype": "Link",
+   "label": "Job Site Address",
+   "options": "Address Master"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-05 13:12:09.365518",
+ "modified": "2024-02-08 19:22:30.578831",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Sales Invoices",
