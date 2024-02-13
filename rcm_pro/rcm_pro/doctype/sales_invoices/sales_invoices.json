@@ -196,7 +196,7 @@
   },
   {
    "fieldname": "pay_date",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "Pay Date"
   },
   {
@@ -220,13 +220,15 @@
   },
   {
    "fieldname": "order_no",
-   "fieldtype": "Data",
-   "label": "Order No"
+   "fieldtype": "Link",
+   "label": "Order No",
+   "options": "Rcm Sales Order"
   },
   {
    "fieldname": "vehicle_no",
-   "fieldtype": "Data",
-   "label": "Vehicle No"
+   "fieldtype": "Link",
+   "label": "Vehicle No",
+   "options": "Cost Center Master"
   },
   {
    "fieldname": "column_break_srkm",
@@ -234,8 +236,9 @@
   },
   {
    "fieldname": "schedule_no",
-   "fieldtype": "Data",
-   "label": "Schedule No"
+   "fieldtype": "Link",
+   "label": "Schedule No",
+   "options": "Schedule Master"
   },
   {
    "fieldname": "way_bill_no",
@@ -248,8 +251,9 @@
   },
   {
    "fieldname": "challan_no",
-   "fieldtype": "Data",
-   "label": "Challan No"
+   "fieldtype": "Link",
+   "label": "Challan No",
+   "options": "Delivery Challan"
   },
   {
    "fieldname": "driver_name",
@@ -397,7 +401,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-08 19:22:30.578831",
+ "modified": "2024-02-14 00:44:10.681336",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Sales Invoices",
