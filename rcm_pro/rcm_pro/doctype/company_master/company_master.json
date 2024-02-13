@@ -7,40 +7,50 @@
  "field_order": [
   "company_entry_section",
   "company_name",
-  "state",
   "gst_no",
-  "gst_statecode",
-  "tinno",
-  "cst",
-  "servicetaxno",
-  "tanno",
-  "range",
-  "commisioner",
-  "ieccode",
-  "address",
-  "fullbank",
-  "certifydescription",
-  "col1",
-  "status",
-  "attachment",
+  "pan_no",
   "column_break_oixh",
-  "shortcode",
-  "currencycode",
-  "panno",
+  "short_code",
+  "gst_state_code",
+  "register_key",
+  "column_break_toqv",
+  "currency_code",
   "gst_date",
-  "tindt",
-  "cstdt",
-  "ssino",
-  "eccno",
-  "division",
-  "jurisdiction",
-  "authperson",
+  "section_break_wffx",
+  "address",
+  "column_break_bgqa",
   "bank",
+  "column_break_mras",
+  "certify_description",
+  "column_break_jxpd",
   "description",
-  "breifbank",
-  "taxdescription",
+  "section_break_uxlw",
+  "tin_no",
+  "service_tax_no",
+  "range",
+  "iec_code",
+  "column_break_cvpi",
+  "tin_date",
+  "ssi_no",
+  "division",
+  "auth_person",
+  "column_break_fdvu",
+  "cst_no",
+  "tan_no",
+  "commisioner",
   "declaration",
-  "registerkey",
+  "column_break_hzyb",
+  "cst_date",
+  "ecc_no",
+  "jurisdiction",
+  "taxdescription",
+  "section_break_qaju",
+  "attachment",
+  "column_break_erzy",
+  "image1",
+  "column_break_gopz",
+  "status",
+  "column_break_cssp",
   "entry_by"
  ],
  "fields": [
@@ -51,42 +61,11 @@
    "label": "Company Entry"
   },
   {
-   "fieldname": "state",
-   "fieldtype": "Data",
-   "label": "State"
-  },
-  {
    "fieldname": "gst_no",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "GST_No",
+   "label": "GST No",
    "reqd": 1
-  },
-  {
-   "fieldname": "gst_statecode",
-   "fieldtype": "Select",
-   "label": "GST_StateCode",
-   "options": "---Select State Code--\n01-JAMMU AND KASHMIR\n02-HIMACHAL PRADESH\n03-PUNJAB\n04-CHANDIGARH\n05-UTTARAKHAND\n06-HARYANA\n07-DELHI\n08-RAJASTHAN\n09-UTTAR PRADESH\n10-BIHAR\n11-SIKKIM\n12-ARUNACHAL PRADESH\n13-NAGALAND\n14-MANIPUR\n15-MIZORAM\n16-TRIPURA\n17-MEGHALAYA\n18-ASSAM\n19-WEST BENGAL\n20-JHARKHAND\n21-ODISHA\n22-CHATTISGARH\n23-MADHYA PRADESH\n24-GUJARAT\n26*-DADRA AND NAGAR HAVELI AND DAMAN AND DIU (NEWLY MERGED UT)\n27-MAHARASHTRA\n28-ANDHRA PRADESH(BEFORE DIVISION)\n29-KARNATAKA\n30-GOA\n31-LAKSHADWEEP\n32-KERALA\n33-TAMIL NADU\n34-PUDUCHERRY\n35-ANDAMAN AND NICOBAR ISLANDS\n36-TELANGANA\n37-ANDHRA PRADESH (NEWLY ADDED)\n38-LADAKH (NEWLY ADDED)\n97-OTHER TERRITORY\n99-CENTRE JURISDICTION"
-  },
-  {
-   "fieldname": "tinno",
-   "fieldtype": "Data",
-   "label": "TINNo"
-  },
-  {
-   "fieldname": "cst",
-   "fieldtype": "Data",
-   "label": "CST"
-  },
-  {
-   "fieldname": "servicetaxno",
-   "fieldtype": "Data",
-   "label": "ServiceTaxNo"
-  },
-  {
-   "fieldname": "tanno",
-   "fieldtype": "Data",
-   "label": "TANNO"
   },
   {
    "fieldname": "range",
@@ -99,34 +78,14 @@
    "label": "Commisioner"
   },
   {
-   "fieldname": "ieccode",
-   "fieldtype": "Data",
-   "label": "IECCode"
-  },
-  {
    "fieldname": "address",
    "fieldtype": "Small Text",
    "label": "Address"
   },
   {
-   "fieldname": "fullbank",
-   "fieldtype": "Small Text",
-   "label": "FullBank"
-  },
-  {
    "fieldname": "description",
    "fieldtype": "Small Text",
    "label": "Description"
-  },
-  {
-   "fieldname": "certifydescription",
-   "fieldtype": "Small Text",
-   "label": "CertifyDescription"
-  },
-  {
-   "fieldname": "col1",
-   "fieldtype": "Data",
-   "label": "Col1"
   },
   {
    "default": "Active",
@@ -147,51 +106,9 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "shortcode",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "ShortCode",
-   "reqd": 1
-  },
-  {
-   "fieldname": "currencycode",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "CurrencyCode",
-   "options": "INR",
-   "reqd": 1
-  },
-  {
-   "fieldname": "panno",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "PANNO",
-   "reqd": 1
-  },
-  {
    "fieldname": "gst_date",
    "fieldtype": "Date",
-   "label": "GST_Date"
-  },
-  {
-   "fieldname": "tindt",
-   "fieldtype": "Data",
-   "label": "TINDT"
-  },
-  {
-   "fieldname": "cstdt",
-   "fieldtype": "Data",
-   "label": "CSTDT"
-  },
-  {
-   "fieldname": "ssino",
-   "fieldtype": "Data",
-   "label": "SSINO"
-  },
-  {
-   "fieldname": "eccno",
-   "fieldtype": "Data",
-   "label": "ECCNo"
+   "label": "GST Date"
   },
   {
    "fieldname": "division",
@@ -204,34 +121,19 @@
    "label": "Jurisdiction"
   },
   {
-   "fieldname": "authperson",
-   "fieldtype": "Data",
-   "label": "AuthPerson"
-  },
-  {
    "fieldname": "bank",
    "fieldtype": "Small Text",
    "label": "Bank"
   },
   {
-   "fieldname": "breifbank",
-   "fieldtype": "Data",
-   "label": "BreifBank"
-  },
-  {
    "fieldname": "taxdescription",
    "fieldtype": "Data",
-   "label": "TaxDescription"
+   "label": "Tax Description"
   },
   {
    "fieldname": "declaration",
    "fieldtype": "Data",
    "label": "Declaration"
-  },
-  {
-   "fieldname": "registerkey",
-   "fieldtype": "Data",
-   "label": "RegisterKey"
   },
   {
    "fieldname": "entry_by",
@@ -249,11 +151,156 @@
    "in_standard_filter": 1,
    "label": "Company Name",
    "reqd": 1
+  },
+  {
+   "fieldname": "section_break_qaju",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_erzy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image1",
+   "fieldtype": "Attach Image",
+   "label": "Image1"
+  },
+  {
+   "fieldname": "column_break_gopz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_cssp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_uxlw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tin_no",
+   "fieldtype": "Data",
+   "label": "TIN No"
+  },
+  {
+   "fieldname": "column_break_cvpi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tin_date",
+   "fieldtype": "Data",
+   "label": "TIN Date"
+  },
+  {
+   "fieldname": "column_break_fdvu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cst_no",
+   "fieldtype": "Data",
+   "label": "CST No"
+  },
+  {
+   "fieldname": "column_break_hzyb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cst_date",
+   "fieldtype": "Data",
+   "label": "CST Date"
+  },
+  {
+   "fieldname": "service_tax_no",
+   "fieldtype": "Data",
+   "label": "Service Tax No"
+  },
+  {
+   "fieldname": "ssi_no",
+   "fieldtype": "Data",
+   "label": "SSI No"
+  },
+  {
+   "fieldname": "tan_no",
+   "fieldtype": "Data",
+   "label": "TAN No"
+  },
+  {
+   "fieldname": "ecc_no",
+   "fieldtype": "Data",
+   "label": "ECC No"
+  },
+  {
+   "fieldname": "iec_code",
+   "fieldtype": "Data",
+   "label": "IEC Code"
+  },
+  {
+   "fieldname": "auth_person",
+   "fieldtype": "Data",
+   "label": "Auth Person"
+  },
+  {
+   "fieldname": "pan_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PAN No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "short_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Short Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gst_state_code",
+   "fieldtype": "Select",
+   "label": "GST State Code",
+   "options": "---Select State Code--\n01-JAMMU AND KASHMIR\n02-HIMACHAL PRADESH\n03-PUNJAB\n04-CHANDIGARH\n05-UTTARAKHAND\n06-HARYANA\n07-DELHI\n08-RAJASTHAN\n09-UTTAR PRADESH\n10-BIHAR\n11-SIKKIM\n12-ARUNACHAL PRADESH\n13-NAGALAND\n14-MANIPUR\n15-MIZORAM\n16-TRIPURA\n17-MEGHALAYA\n18-ASSAM\n19-WEST BENGAL\n20-JHARKHAND\n21-ODISHA\n22-CHATTISGARH\n23-MADHYA PRADESH\n24-GUJARAT\n26*-DADRA AND NAGAR HAVELI AND DAMAN AND DIU (NEWLY MERGED UT)\n27-MAHARASHTRA\n28-ANDHRA PRADESH(BEFORE DIVISION)\n29-KARNATAKA\n30-GOA\n31-LAKSHADWEEP\n32-KERALA\n33-TAMIL NADU\n34-PUDUCHERRY\n35-ANDAMAN AND NICOBAR ISLANDS\n36-TELANGANA\n37-ANDHRA PRADESH (NEWLY ADDED)\n38-LADAKH (NEWLY ADDED)\n97-OTHER TERRITORY\n99-CENTRE JURISDICTION"
+  },
+  {
+   "fieldname": "column_break_toqv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "currency_code",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Currency Code",
+   "options": "INR",
+   "reqd": 1
+  },
+  {
+   "fieldname": "register_key",
+   "fieldtype": "Data",
+   "label": "Register Key"
+  },
+  {
+   "fieldname": "section_break_wffx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_bgqa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mras",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "certify_description",
+   "fieldtype": "Small Text",
+   "label": "Certify Description"
+  },
+  {
+   "fieldname": "column_break_jxpd",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-25 21:24:55.847476",
+ "modified": "2024-02-10 00:50:16.341457",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Company Master",

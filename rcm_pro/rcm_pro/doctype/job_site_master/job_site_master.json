@@ -5,18 +5,14 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "job_site_address_entry_section",
+  "job_site_entry_section",
   "ledger_name",
   "site_name",
   "address",
+  "site_distance_km",
   "status"
  ],
  "fields": [
-  {
-   "fieldname": "job_site_address_entry_section",
-   "fieldtype": "Section Break",
-   "label": "Job Site Address Entry"
-  },
   {
    "fieldname": "address",
    "fieldtype": "Link",
@@ -50,11 +46,21 @@
    "label": "Coustmor Name",
    "options": "Ledger Master",
    "reqd": 1
+  },
+  {
+   "fieldname": "site_distance_km",
+   "fieldtype": "Data",
+   "label": "Site Distance K.M"
+  },
+  {
+   "fieldname": "job_site_entry_section",
+   "fieldtype": "Section Break",
+   "label": "Job Site Entry"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-29 21:54:04.019458",
+ "modified": "2024-02-10 21:47:57.459119",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Job Site Master",

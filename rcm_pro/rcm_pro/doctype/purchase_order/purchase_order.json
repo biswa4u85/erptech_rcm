@@ -23,7 +23,7 @@
   "address",
   "vendor_gst_no",
   "column_break_mpca",
-  "delivery_company_address",
+  "branch_address",
   "company_gst_no",
   "section_break_mtzw",
   "payment_term",
@@ -39,6 +39,8 @@
   "remarks",
   "section_break_ajja",
   "attachment",
+  "column_break_xfmf",
+  "image1",
   "column_break_mcrt",
   "status",
   "column_break_yjzj",
@@ -130,17 +132,14 @@
   },
   {
    "fieldname": "column_break_mpca",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "delivery_company_address",
-   "fieldtype": "Data",
-   "label": "Delivery Company Address"
+   "fieldtype": "Column Break",
+   "label": "Delivery Details"
   },
   {
    "fieldname": "company_gst_no",
-   "fieldtype": "Data",
-   "label": "Company GST No"
+   "fieldtype": "Link",
+   "label": "Company GST No",
+   "options": "Company Master"
   },
   {
    "fieldname": "section_break_mtzw",
@@ -279,11 +278,26 @@
    "bold": 1,
    "fieldname": "section_break_ccyz",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_xfmf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image1",
+   "fieldtype": "Attach Image",
+   "label": "Image1"
+  },
+  {
+   "fieldname": "branch_address",
+   "fieldtype": "Link",
+   "label": "Branch Address",
+   "options": "Branch Master"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-03 21:39:45.097342",
+ "modified": "2024-02-10 01:28:43.371324",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Purchase Order",

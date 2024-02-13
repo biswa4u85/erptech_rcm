@@ -9,23 +9,28 @@
   "naming_series",
   "party_name",
   "schedule_qty",
-  "remaining_qty",
-  "pump",
+  "rmc_rate",
   "column_break_aqpl",
   "date",
   "site_name",
-  "rmc_rate",
-  "pumping_rate",
+  "remaining_qty",
+  "challan_qty",
   "column_break_brvj",
   "branch_name",
   "order_no",
   "start_time",
-  "pump_gang",
+  "pending_qty",
   "column_break_rars",
-  "type",
+  "company_name",
   "grade_name",
   "end_time",
+  "pump_gang",
+  "column_break_weuu",
+  "type",
   "challan_type",
+  "pumping_rate",
+  "pump_name",
+  "pump",
   "section_break_ncoc",
   "attachment",
   "column_break_gulr",
@@ -76,13 +81,14 @@
   },
   {
    "fieldname": "start_time",
-   "fieldtype": "Datetime",
+   "fieldtype": "Time",
    "label": "Start Time"
   },
   {
    "fieldname": "pump_gang",
-   "fieldtype": "Data",
-   "label": "Pump Gang"
+   "fieldtype": "Link",
+   "label": "Pump Gang",
+   "options": "Pump Gang Master"
   },
   {
    "fieldname": "column_break_brvj",
@@ -90,7 +96,7 @@
   },
   {
    "fieldname": "end_time",
-   "fieldtype": "Datetime",
+   "fieldtype": "Time",
    "label": "End Time"
   },
   {
@@ -246,6 +252,33 @@
    "print_hide": 1,
    "reqd": 1,
    "set_only_once": 1
+  },
+  {
+   "fieldname": "challan_qty",
+   "fieldtype": "Link",
+   "label": "Challan Qty",
+   "options": "Delivery Challan"
+  },
+  {
+   "fieldname": "pending_qty",
+   "fieldtype": "Data",
+   "label": "Pending Qty"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "label": "Company Name",
+   "options": "Company Master"
+  },
+  {
+   "fieldname": "column_break_weuu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pump_name",
+   "fieldtype": "Link",
+   "label": "Pump Name",
+   "options": "Cost Center Master"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -255,7 +288,7 @@
    "link_fieldname": "naming_series"
   }
  ],
- "modified": "2024-02-03 12:25:54.668186",
+ "modified": "2024-02-09 22:04:54.100731",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Schedule Master",
