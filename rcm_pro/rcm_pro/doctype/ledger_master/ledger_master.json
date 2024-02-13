@@ -8,45 +8,43 @@
  "field_order": [
   "customervendor_entry_section",
   "naming_series",
-  "gst_no",
-  "gst_statecode",
-  "gst_date",
-  "column_break_wlmj",
-  "ledger_name",
-  "allias",
-  "gst_nature",
-  "gst_suptyp",
-  "column_break_auib",
   "group_name",
   "ledger_code",
+  "payment_term",
+  "column_break_wlmj",
+  "gst_no",
+  "ledger_name",
+  "gst_statecode",
+  "credit_limit",
+  "column_break_auib",
+  "branch_name",
+  "allias",
+  "gst_suptyp",
+  "gst_date",
+  "column_break_otyj",
+  "company_name",
   "pan_no",
+  "gst_nature",
   "use_in_taxclass",
   "section_break_hmsv",
   "address",
   "contact_details_section",
   "column_break_xczq",
-  "payment_term",
-  "creditlimit",
-  "column_break_jvhb",
-  "contactperson",
+  "contact_person",
+  "mobile_no",
   "aadhar_no",
-  "column_break_erej",
-  "mobile",
+  "column_break_jvhb",
   "email_id",
-  "column_break_zvyx",
   "user_name",
   "password",
-  "creditbankgst_details_section",
-  "column_break_rpca",
+  "column_break_erej",
   "bank_name",
   "ac_no",
-  "column_break_urbz",
-  "ac_holder_name",
   "ifc_code",
-  "section_break_jogs",
-  "table_ptrt",
   "section_break_fvpr",
   "attachment",
+  "column_break_prvo",
+  "image1",
   "column_break_znps",
   "status",
   "column_break_zmhk",
@@ -54,18 +52,20 @@
   "column_break_ouxa",
   "entry_by",
   "column_break_qcrq",
-  "auth_by"
+  "auth_by",
+  "ac_tab",
+  "table_nfiq"
  ],
  "fields": [
   {
    "fieldname": "customervendor_entry_section",
-   "fieldtype": "Section Break",
-   "label": "Customer/Vendor Entry"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "gst_no",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "GST_No"
   },
   {
@@ -107,22 +107,7 @@
   },
   {
    "fieldname": "contact_details_section",
-   "fieldtype": "Section Break",
-   "label": "Contact Details"
-  },
-  {
-   "fieldname": "contactperson",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "ContactPerson"
-  },
-  {
-   "fieldname": "mobile",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Mobile"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "column_break_erej",
@@ -139,11 +124,6 @@
    "label": "Password"
   },
   {
-   "fieldname": "creditbankgst_details_section",
-   "fieldtype": "Section Break",
-   "label": "Bank Details"
-  },
-  {
    "fieldname": "payment_term",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -152,28 +132,14 @@
    "options": "Payment Terms Master"
   },
   {
-   "fieldname": "creditlimit",
-   "fieldtype": "Int",
-   "label": "CreditLimit"
-  },
-  {
    "fieldname": "aadhar_no",
    "fieldtype": "Data",
    "label": "Aadhar No"
   },
   {
-   "fieldname": "column_break_urbz",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "bank_name",
    "fieldtype": "Data",
    "label": "Bank Name"
-  },
-  {
-   "fieldname": "ac_holder_name",
-   "fieldtype": "Data",
-   "label": "A/C Holder Name"
   },
   {
    "fieldname": "ac_no",
@@ -199,7 +165,7 @@
   },
   {
    "fieldname": "gst_date",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "GST Date"
   },
   {
@@ -249,29 +215,13 @@
    "label": "Email ID"
   },
   {
-   "fieldname": "section_break_jogs",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "table_ptrt",
-   "fieldtype": "Table",
-   "options": "LedgerWiseCrDr"
-  },
-  {
-   "fieldname": "column_break_zvyx",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "gst_nature",
    "fieldtype": "Select",
-   "label": "GST Nature"
+   "label": "GST Nature",
+   "options": "-Select-\nComposition\nConsumer\nRegular\nUnknown\nUnregistered"
   },
   {
    "fieldname": "column_break_xczq",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_rpca",
    "fieldtype": "Column Break"
   },
   {
@@ -282,6 +232,7 @@
    "fieldname": "pan_no",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "PAN No"
   },
   {
@@ -325,11 +276,66 @@
    "fieldname": "ledger_code",
    "fieldtype": "Data",
    "label": "Ledger Code"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Link",
+   "label": "Branch Name",
+   "options": "Branch Master"
+  },
+  {
+   "fieldname": "column_break_otyj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "label": "Company Name",
+   "options": "Company Master"
+  },
+  {
+   "fieldname": "credit_limit",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Credit Limit"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Contact Person"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mobile No"
+  },
+  {
+   "fieldname": "ac_tab",
+   "fieldtype": "Tab Break",
+   "label": "A/C"
+  },
+  {
+   "fieldname": "table_nfiq",
+   "fieldtype": "Table",
+   "options": "LedgerWiseCrDr"
+  },
+  {
+   "fieldname": "column_break_prvo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image1",
+   "fieldtype": "Attach Image",
+   "label": "Image1"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-05 16:12:57.290579",
+ "modified": "2024-02-09 23:53:36.189712",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Ledger Master",

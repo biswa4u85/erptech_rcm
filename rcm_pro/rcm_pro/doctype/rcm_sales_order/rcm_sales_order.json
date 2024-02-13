@@ -8,35 +8,38 @@
   "sales_order_entry_section",
   "naming_series",
   "tax_type",
-  "valid_date",
   "column_break_kajr",
   "date",
-  "quotation_no",
-  "payment_term",
+  "valid_date",
   "column_break_ehjp",
   "branch_name",
-  "ref_no",
-  "currencycode",
+  "quotation_no",
   "column_break_myfq",
   "company_name",
-  "ref_date",
+  "po_no",
+  "column_break_ebof",
+  "currency_code",
+  "po_date",
+  "column_break_xtsc",
+  "payment_term",
+  "ref",
   "section_break_kwiv",
   "party_name",
   "party_address",
+  "column_break_apew",
+  "site_name",
+  "site_address",
   "column_break_uuqh",
   "buyer_name",
   "buyer_address",
-  "section_break_tcmy",
-  "site_name",
-  "site_address",
-  "column_break_rdjo",
-  "remarks",
   "section_break_socr",
   "sub_total_amount",
   "column_break_efft",
   "tax_amount",
   "column_break_cgae",
   "total_amount",
+  "column_break_dbac",
+  "remarks",
   "section_break_gkxh",
   "attachment",
   "column_break_rkhi",
@@ -50,10 +53,11 @@
   "order_items_tab",
   "table_zqjd",
   "other_detail_tab",
-  "table_cdxj",
-  "amended_from",
   "section_break_bxjx",
-  "table_zsql"
+  "table_zsql",
+  "section_break_eyeh",
+  "table_cdxj",
+  "amended_from"
  ],
  "fields": [
   {
@@ -124,10 +128,6 @@
    "label": "Buyer Address"
   },
   {
-   "fieldname": "section_break_tcmy",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "tax_type",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -141,16 +141,6 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Quotation No"
-  },
-  {
-   "fieldname": "ref_no",
-   "fieldtype": "Data",
-   "label": "Ref No"
-  },
-  {
-   "fieldname": "ref_date",
-   "fieldtype": "Date",
-   "label": "Ref Date"
   },
   {
    "fieldname": "payment_term",
@@ -167,13 +157,6 @@
    "in_standard_filter": 1,
    "label": "Valid Date",
    "reqd": 1
-  },
-  {
-   "default": "1",
-   "fieldname": "currencycode",
-   "fieldtype": "Select",
-   "label": "CurrencyCode",
-   "options": "1"
   },
   {
    "fieldname": "remarks",
@@ -256,10 +239,6 @@
    "label": "Site Address"
   },
   {
-   "fieldname": "column_break_rdjo",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "column_break_lvue",
    "fieldtype": "Column Break"
   },
@@ -340,6 +319,48 @@
    "fieldname": "table_zsql",
    "fieldtype": "Table",
    "options": "Tax Class Child"
+  },
+  {
+   "fieldname": "column_break_apew",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_dbac",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "po_no",
+   "fieldtype": "Data",
+   "label": "PO No"
+  },
+  {
+   "fieldname": "po_date",
+   "fieldtype": "Date",
+   "label": "PO Date"
+  },
+  {
+   "fieldname": "column_break_ebof",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "INR",
+   "fieldname": "currency_code",
+   "fieldtype": "Select",
+   "label": "Currency Code",
+   "options": "INR"
+  },
+  {
+   "fieldname": "column_break_xtsc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ref",
+   "fieldtype": "Data",
+   "label": "Ref."
+  },
+  {
+   "fieldname": "section_break_eyeh",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -350,7 +371,7 @@
    "link_fieldname": "naming_series"
   }
  ],
- "modified": "2024-02-02 10:56:27.374229",
+ "modified": "2024-02-09 23:10:50.976494",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Rcm Sales Order",

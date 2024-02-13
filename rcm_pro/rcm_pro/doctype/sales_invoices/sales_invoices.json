@@ -13,13 +13,13 @@
   "tax_class",
   "column_break_gxar",
   "issue_dt",
-  "branch_name",
-  "column_break_bkjr",
-  "removal_dt",
-  "company_name",
-  "column_break_hkmh",
-  "currency",
   "sales_ledger",
+  "column_break_bkjr",
+  "branch_name",
+  "removal_dt",
+  "column_break_hkmh",
+  "company_name",
+  "currency",
   "section_break_xwsn",
   "party_name",
   "party_address",
@@ -103,6 +103,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "issue_dt",
    "fieldtype": "Date",
    "label": "Issue Dt"
@@ -157,8 +158,9 @@
   },
   {
    "fieldname": "party_gst_no",
-   "fieldtype": "Data",
-   "label": "Party GST_No"
+   "fieldtype": "Link",
+   "label": "Party GST_No",
+   "options": "Ledger Master"
   },
   {
    "fieldname": "column_break_qgxo",
@@ -178,8 +180,9 @@
   },
   {
    "fieldname": "buyer_gst_no",
-   "fieldtype": "Data",
-   "label": "Buyer GST_No"
+   "fieldtype": "Link",
+   "label": "Buyer GST_No",
+   "options": "Ledger Master"
   },
   {
    "fieldname": "section_break_prjq",
@@ -191,8 +194,9 @@
   },
   {
    "fieldname": "payment_term",
-   "fieldtype": "Data",
-   "label": "Payment Term"
+   "fieldtype": "Link",
+   "label": "Payment Term",
+   "options": "Payment Terms Master"
   },
   {
    "fieldname": "pay_date",
@@ -211,8 +215,9 @@
   },
   {
    "fieldname": "po_date",
-   "fieldtype": "Data",
-   "label": "PO Date"
+   "fieldtype": "Link",
+   "label": "PO Date",
+   "options": "Rcm Sales Order"
   },
   {
    "fieldname": "section_break_dsno",
@@ -257,8 +262,9 @@
   },
   {
    "fieldname": "driver_name",
-   "fieldtype": "Data",
-   "label": "Driver Name"
+   "fieldtype": "Link",
+   "label": "Driver Name",
+   "options": "Employee Master"
   },
   {
    "fieldname": "column_break_nnpj",
@@ -266,8 +272,9 @@
   },
   {
    "fieldname": "abstract_no",
-   "fieldtype": "Data",
-   "label": "Abstract No"
+   "fieldtype": "Link",
+   "label": "Abstract No",
+   "options": "Sales Abstract"
   },
   {
    "fieldname": "remarks",
@@ -291,8 +298,9 @@
   },
   {
    "fieldname": "mkt_by",
-   "fieldtype": "Data",
-   "label": "Mkt. By"
+   "fieldtype": "Link",
+   "label": "Mkt. By",
+   "options": "Employee Master"
   },
   {
    "fieldname": "column_break_qpee",

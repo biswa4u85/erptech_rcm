@@ -8,46 +8,55 @@
   "delivery_challan_entry_section",
   "naming_series",
   "schedule_no",
-  "grade_code",
   "column_break_aprc",
   "date",
   "order_no",
-  "grade_name",
   "column_break_hamv",
-  "plant",
-  "percycle",
-  "pumping",
-  "column_break_vdhp",
-  "type",
   "branch_name",
-  "pump_gang_name",
+  "grade_name",
+  "column_break_vdhp",
+  "company_name",
+  "grade_code",
+  "column_break_oxgn",
+  "type",
+  "site_distance_km",
+  "column_break_ubuw",
+  "pump_name",
+  "pumping",
   "section_break_qzby",
   "qty",
-  "remaining_qty",
   "vehicle",
-  "dispatch_time",
+  "batch_no",
   "column_break_qwzc",
-  "batchno",
+  "remaining_qty",
   "driver_name",
-  "helper_name",
+  "per_cycle",
   "column_break_spey",
-  "party_name",
-  "site_name",
-  "site_address",
-  "section_break_ecrc",
-  "lastkm",
-  "currkm",
+  "dispatch_time",
+  "helper_name",
+  "plant",
+  "column_break_metb",
+  "serial_no",
+  "total_opening",
+  "grand_total_qty",
+  "column_break_ugdq",
+  "last_km",
+  "curr_km",
   "distance",
   "column_break_rcsm",
   "last_hrh",
   "curr_hrh",
   "hrs",
+  "section_break_ecrc",
   "column_break_isrc",
-  "serial_no",
-  "total_opening",
-  "grand_total_qty",
+  "party_name",
+  "site_name",
+  "column_break_ppbj",
+  "site_address",
   "section_break_rlnr",
-  "attach_image",
+  "attachment",
+  "column_break_arvz",
+  "image1",
   "column_break_enkv",
   "supervisor",
   "column_break_uebk",
@@ -158,18 +167,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "batchno",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "BatchNo"
-  },
-  {
-   "fieldname": "percycle",
-   "fieldtype": "Data",
-   "label": "PerCycle"
-  },
-  {
    "fieldname": "section_break_rlnr",
    "fieldtype": "Section Break"
   },
@@ -187,18 +184,6 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Helper Name"
-  },
-  {
-   "fieldname": "lastkm",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Last.KM"
-  },
-  {
-   "fieldname": "currkm",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Curr.KM"
   },
   {
    "fieldname": "distance",
@@ -303,11 +288,6 @@
    "label": "Serial No"
   },
   {
-   "fieldname": "attach_image",
-   "fieldtype": "Attach Image",
-   "label": "Attach Image"
-  },
-  {
    "fieldname": "column_break_qwzc",
    "fieldtype": "Column Break"
   },
@@ -346,12 +326,6 @@
    "label": "Pumping"
   },
   {
-   "fieldname": "pump_gang_name",
-   "fieldtype": "Link",
-   "label": "Pump Gang Name",
-   "options": "Pump Gang Master"
-  },
-  {
    "fieldname": "driver_name",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -379,6 +353,82 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Dispatch Time"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "label": "Company Name",
+   "options": "Company Master"
+  },
+  {
+   "fieldname": "column_break_ppbj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pump_name",
+   "fieldtype": "Link",
+   "label": "Pump Name",
+   "options": "Cost Center Master"
+  },
+  {
+   "fieldname": "column_break_metb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "site_distance_km",
+   "fieldtype": "Link",
+   "label": "Site Distance K.M",
+   "options": "Job Site Master"
+  },
+  {
+   "fieldname": "column_break_oxgn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Batch No"
+  },
+  {
+   "fieldname": "per_cycle",
+   "fieldtype": "Data",
+   "label": "Per Cycle"
+  },
+  {
+   "fieldname": "last_km",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Last K.M"
+  },
+  {
+   "fieldname": "curr_km",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Curr. K.M"
+  },
+  {
+   "fieldname": "column_break_ugdq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ubuw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "column_break_arvz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image1",
+   "fieldtype": "Attach Image",
+   "label": "Image1"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -388,7 +438,7 @@
    "link_fieldname": "naming_series"
   }
  ],
- "modified": "2024-02-03 12:27:05.856569",
+ "modified": "2024-02-10 21:48:37.541909",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Delivery Challan",
