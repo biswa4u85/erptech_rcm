@@ -71,8 +71,9 @@
   },
   {
    "fieldname": "branch_name",
-   "fieldtype": "Data",
-   "label": "Branch Name"
+   "fieldtype": "Link",
+   "label": "Branch Name",
+   "options": "Branch Master"
   },
   {
    "default": "Issue",
@@ -87,8 +88,9 @@
   },
   {
    "fieldname": "company_name",
-   "fieldtype": "Data",
-   "label": "Company Name"
+   "fieldtype": "Link",
+   "label": "Company Name",
+   "options": "Company Master"
   },
   {
    "default": "-1",
@@ -168,7 +170,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-01 16:58:39.750442",
+ "modified": "2024-02-15 19:32:16.402520",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Issue Entry",

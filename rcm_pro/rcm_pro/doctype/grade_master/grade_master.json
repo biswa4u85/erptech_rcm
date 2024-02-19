@@ -14,6 +14,9 @@
   "column_break_ybno",
   "branch_name",
   "a_density",
+  "column_break_xzpq",
+  "company_name",
+  "remarks",
   "section_break_erez",
   "20mm",
   "sand",
@@ -514,11 +517,26 @@
    "fieldname": "a_density",
    "fieldtype": "Int",
    "label": "A_Density"
+  },
+  {
+   "fieldname": "column_break_xzpq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "label": "Company Name",
+   "options": "Company Master"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-01 10:49:51.280146",
+ "modified": "2024-02-14 17:51:52.832035",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Grade Master",

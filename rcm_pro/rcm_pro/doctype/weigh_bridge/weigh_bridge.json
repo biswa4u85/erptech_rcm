@@ -31,8 +31,6 @@
   "challan_no",
   "column_break_kopr",
   "party_name",
-  "column_break_ydah",
-  "transporter_name",
   "section_break_snaq",
   "column_break_lsea",
   "reason",
@@ -47,9 +45,12 @@
   "second_weight_time",
   "grand_net_weight_kg",
   "column_break_luxv",
-  "manual",
   "pay",
   "amount",
+  "transporter_name",
+  "column_break_aoqe",
+  "auto",
+  "manual",
   "section_break_nnbj",
   "attachment",
   "column_break_cwcs",
@@ -324,10 +325,6 @@
    "label": "Grand Net Weight KG"
   },
   {
-   "fieldname": "column_break_ydah",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "first_weight_time",
    "fieldtype": "Time",
    "label": "First Weight Time"
@@ -336,11 +333,20 @@
    "fieldname": "second_weight_time",
    "fieldtype": "Time",
    "label": "Second Weight Time"
+  },
+  {
+   "fieldname": "column_break_aoqe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auto",
+   "fieldtype": "Button",
+   "label": "Auto"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-06 23:36:40.579415",
+ "modified": "2024-02-15 19:41:13.305190",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Weigh Bridge",
