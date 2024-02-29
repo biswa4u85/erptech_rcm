@@ -10,8 +10,8 @@ $(document).ready(async function () {
   let observer = new MutationObserver(function (mutations) {
     mutations.forEach(function (mutation) {
       if ($(mutation.target).find(".list-sidebar").length > 0) {
-        $(".list-sidebar").empty();
-        renderTree(treeData, $(".list-sidebar"));
+        // $(".list-sidebar").empty();
+        // renderTree(treeData, $(".list-sidebar"));
       }
     });
   });

@@ -39,82 +39,90 @@ frappe.ui.form.on("Schedule Master", {
     });
   },
   party_name: async function (frm) {
-    frm.set_value("site_name", null);
-    let orders = await frappe.db.get_list("Rcm Sales Order", {
-      fields: ["party_name", "site_name"],
-      filters: {
-        valid_date: [">=", frm.doc.date],
-        party_name: frm.doc.party_name,
-      },
-      limit: 100,
-    });
-    let field = frm.get_field("site_name");
-    field.$input.prop("readonly", false);
-    let siteIds = orders.map((obj) => obj.site_name);
-    frm.set_query("site_name", function () {
-      return {
-        filters: {
-          ledger_name: frm.doc.party_name,
-          name: ["in", siteIds],
-        },
-      };
-    });
-  },
-  site_name: async function (frm) {
-    frm.set_value("order_no", null);
-    let field = frm.get_field("order_no");
-    field.$input.prop("readonly", false);
-    frm.set_query("order_no", function () {
-      return {
+    if (frm.doc.party_name) {
+      frm.set_value("site_name", null);
+      let orders = await frappe.db.get_list("Rcm Sales Order", {
+        fields: ["party_name", "site_name"],
         filters: {
           valid_date: [">=", frm.doc.date],
           party_name: frm.doc.party_name,
-          site_name: frm.doc.site_name,
         },
-      };
-    });
+        limit: 100,
+      });
+      let field = frm.get_field("site_name");
+      field.$input.prop("readonly", false);
+      let siteIds = orders.map((obj) => obj.site_name);
+      frm.set_query("site_name", function () {
+        return {
+          filters: {
+            ledger_name: frm.doc.party_name,
+            name: ["in", siteIds],
+          },
+        };
+      });
+    }
+  },
+  site_name: async function (frm) {
+    if (frm.doc.site_name) {
+      frm.set_value("order_no", null);
+      let field = frm.get_field("order_no");
+      field.$input.prop("readonly", false);
+      frm.set_query("order_no", function () {
+        return {
+          filters: {
+            valid_date: [">=", frm.doc.date],
+            party_name: frm.doc.party_name,
+            site_name: frm.doc.site_name,
+          },
+        };
+      });
+    }
   },
   order_no: async function (frm) {
-    frm.set_value("grade_name", null);
-    frappe.call({
-      method:
-        "rcm_pro.rcm_pro.doctype.schedule_master.schedule_master.get_items",
-      args: {
-        doc: frm.doc,
-      },
-      callback: function (r) {
-        if (r.message) {
-          let field = frm.get_field("grade_name");
-          field.$input.prop("readonly", false);
-          let orderIds = r.message.map((obj) => obj.grade_name);
-          frm.set_query("grade_name", function () {
-            return {
-              filters: {
-                name: ["in", orderIds],
-              },
-            };
-          });
-        }
-      },
-    });
+    if (frm.doc.order_no) {
+      frm.set_value("grade_name", null);
+      frappe.call({
+        method:
+          "rcm_pro.rcm_pro.doctype.schedule_master.schedule_master.get_items",
+        args: {
+          doc: frm.doc,
+        },
+        callback: function (r) {
+          if (r.message) {
+            let field = frm.get_field("grade_name");
+            field.$input.prop("readonly", false);
+            let orderIds = r.message.map((obj) => obj.grade_name);
+            frm.set_query("grade_name", function () {
+              return {
+                filters: {
+                  name: ["in", orderIds],
+                },
+              };
+            });
+          }
+        },
+      });
+    }
   },
   grade_name: async function (frm) {
-    frappe.call({
-      method:
-        "rcm_pro.rcm_pro.doctype.schedule_master.schedule_master.get_item",
-      args: {
-        doc: frm.doc,
-      },
-      callback: function (r) {
-        if (r.message && r.message && r.message[0] && r.message[1]) {
-          const totalQty = r.message[1].reduce((accumulator, currentObject) => {
-            return accumulator + currentObject.schedule_qty;
-          }, 0);
-          frm.set_value("rmc_rate", r.message[0].rate);
-          frm.set_value("remaining_qty", Number(r.message[0].qty) - totalQty);
-        }
-      },
-    });
+    if (frm.doc.grade_name) {
+      frappe.call({
+        method:
+          "rcm_pro.rcm_pro.doctype.schedule_master.schedule_master.get_item",
+        args: {
+          doc: frm.doc,
+        },
+        callback: function (r) {
+          if (r.message && r.message && r.message[0] && r.message[1]) {
+            const totalQty = r.message[1].reduce((accumulator, currentObject) => {
+              return accumulator + currentObject.schedule_qty;
+            }, 0);
+            frm.set_value("rmc_rate", r.message[0].rate);
+            frm.set_value("remaining_qty", Number(r.message[0].qty) - totalQty);
+          }
+        },
+      });
+    }
   },
   validate: function (frm) {
     if (frm.doc.remaining_qty < frm.doc.schedule_qty) {

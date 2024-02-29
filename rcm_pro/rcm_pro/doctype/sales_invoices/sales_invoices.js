@@ -56,35 +56,37 @@ frappe.ui.form.on("Sales Invoices", {
     frm.set_value("pay_date", invoiceDate);
   },
   party_name: async function (frm) {
-    // Set Address
-    let addressName = await frappe.db.get_value(
-      "Ledger Master",
-      frm.doc.party_name,
-      ["address", "gst_no"]
-    );
-    if (addressName && addressName?.message?.address) {
-      frm.set_value("party_address", addressName?.message?.address);
-    }
-    if (addressName && addressName?.message?.gst_no) {
-      frm.set_value("party_gst_no", addressName?.message?.gst_no);
-    }
+    if (frm.doc.party_name) {
+      // Set Address
+      let addressName = await frappe.db.get_value(
+        "Ledger Master",
+        frm.doc.party_name,
+        ["address", "gst_no"]
+      );
+      if (addressName && addressName?.message?.address) {
+        frm.set_value("party_address", addressName?.message?.address);
+      }
+      if (addressName && addressName?.message?.gst_no) {
+        frm.set_value("party_gst_no", addressName?.message?.gst_no);
+      }
 
-    // Set Buyer Name
-    frm.set_value("buyer_name", frm.doc.party_name);
+      // Set Buyer Name
+      frm.set_value("buyer_name", frm.doc.party_name);
 
-    // Set Job Sites
-    frm.set_value("site_name", null);
-    frm.set_value("site_address", null);
-    frm.set_query("site_name", function () {
-      return {
-        filters: {
-          ledger_name: frm.doc.party_name,
-        },
-      };
-    });
+      // Set Job Sites
+      frm.set_value("site_name", null);
+      frm.set_value("site_address", null);
+      frm.set_query("site_name", function () {
+        return {
+          filters: {
+            ledger_name: frm.doc.party_name,
+          },
+        };
+      });
+    }
   },
   buyer_name: async function (frm) {
-    if(frm.doc.buyer_name){
+    if (frm.doc.buyer_name) {
       // Set Address
       let addressName = await frappe.db.get_value(
         "Ledger Master",
@@ -92,7 +94,7 @@ frappe.ui.form.on("Sales Invoices", {
         ["address", "gst_no"]
       );
       if (addressName && addressName?.message?.address) {
-          frm.set_value("buyer_address", addressName?.message?.address);
+        frm.set_value("buyer_address", addressName?.message?.address);
       }
       if (addressName && addressName?.message?.gst_no) {
         frm.set_value("buyer_gst_no", addressName?.message?.gst_no);
@@ -100,30 +102,30 @@ frappe.ui.form.on("Sales Invoices", {
     }
   },
   site_name: async function (frm) {
-    if(frm.doc.site_name){
-    // Set Address
-    let addressName = await frappe.db.get_value(
-      "Job Site Master",
-      frm.doc.site_name,
-      "address"
-    );
-    if (addressName && addressName?.message?.address) {
+    if (frm.doc.site_name) {
+      // Set Address
+      let addressName = await frappe.db.get_value(
+        "Job Site Master",
+        frm.doc.site_name,
+        "address"
+      );
+      if (addressName && addressName?.message?.address) {
         frm.set_value("site_address", addressName?.message?.address);
+      }
+      // Set Job Sites
+      frm.set_value("order_no", null);
+      frm.set_query("order_no", function () {
+        return {
+          filters: {
+            party_name: frm.doc.party_name,
+            site_name: frm.doc.site_name,
+          },
+        };
+      });
     }
-    // Set Job Sites
-    frm.set_value("order_no", null);
-    frm.set_query("order_no", function () {
-      return {
-        filters: {
-          party_name: frm.doc.party_name,
-          site_name: frm.doc.site_name,
-        },
-      };
-    });
-  }
   },
   order_no: async function (frm) {
-    if(frm.doc.order_no){
+    if (frm.doc.order_no) {
       // Set Job Sites
       frm.set_value("schedule_no", null);
       frm.set_query("schedule_no", function () {
@@ -136,7 +138,7 @@ frappe.ui.form.on("Sales Invoices", {
     }
   },
   schedule_no: async function (frm) {
-    if(frm.doc.schedule_no){
+    if (frm.doc.schedule_no) {
       // Set Job Sites vehicle
       frm.set_value("challan_no", null);
       frm.set_query("challan_no", function () {
@@ -149,7 +151,7 @@ frappe.ui.form.on("Sales Invoices", {
     }
   },
   challan_no: async function (frm) {
-    if(frm.doc.challan_no){
+    if (frm.doc.challan_no) {
       // Set Vehicle No
       let challan = await frappe.db.get_value(
         "Delivery Challan",

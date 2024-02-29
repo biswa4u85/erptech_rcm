@@ -1,8 +1,12 @@
 {
  "actions": [],
+ "allow_auto_repeat": 1,
+ "allow_import": 1,
  "autoname": "naming_series:",
  "creation": "2024-01-26 20:33:08.679925",
  "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "quotation_entry_section",
@@ -41,6 +45,16 @@
   "auth_by",
   "quotation_item_tab",
   "table_cvns",
+  "section_break_zxhg",
+  "total_qty",
+  "column_break_slgp",
+  "total",
+  "taxes_and_charges_section",
+  "tax_category",
+  "column_break_tfwt",
+  "taxes_and_charges",
+  "section_break_axfo",
+  "taxes",
   "quotation_terms_tab",
   "link_chnc",
   "amended_from"
@@ -86,7 +100,7 @@
    "fieldname": "ref_no",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": " Ref By"
+   "label": "Ref By"
   },
   {
    "fieldname": "column_break_tipg",
@@ -199,6 +213,7 @@
   {
    "fieldname": "table_cvns",
    "fieldtype": "Table",
+   "label": "Items",
    "options": "Order Item"
   },
   {
@@ -266,6 +281,58 @@
    "print_hide": 1,
    "reqd": 1,
    "set_only_once": 1
+  },
+  {
+   "fieldname": "taxes",
+   "fieldtype": "Table",
+   "label": "Sales Taxes and Charges",
+   "options": "Sales Taxes and Charges"
+  },
+  {
+   "fieldname": "section_break_zxhg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_qty",
+   "fieldtype": "Float",
+   "label": "Total Quantity",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_slgp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_axfo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "taxes_and_charges_section",
+   "fieldtype": "Section Break",
+   "label": "Taxes and Charges"
+  },
+  {
+   "fieldname": "tax_category",
+   "fieldtype": "Link",
+   "label": "Tax Category",
+   "options": "Tax Category"
+  },
+  {
+   "fieldname": "column_break_tfwt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "taxes_and_charges",
+   "fieldtype": "Link",
+   "label": "Sales Taxes and Charges Template",
+   "options": "Sales Taxes and Charges Template"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -276,7 +343,7 @@
    "link_fieldname": "naming_series"
   }
  ],
- "modified": "2024-02-02 01:14:36.855419",
+ "modified": "2024-02-19 10:22:47.583939",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Quotation Entry",

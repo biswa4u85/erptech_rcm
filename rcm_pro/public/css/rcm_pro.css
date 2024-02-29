@@ -2,7 +2,7 @@ ul.customMenu>li>a,
 .sidebar-menu,
 .desk-sidebar,
 .hidden {
-  display: none !important;
+  /* display: none !important; */
 }
 
 .form-sidebar {
