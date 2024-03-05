@@ -6,21 +6,20 @@
  "engine": "InnoDB",
  "field_order": [
   "mix_design_entry_section",
+  "customer",
   "grade_name",
-  "party_name",
   "column_break_pqyl",
   "design_code",
-  "density",
   "column_break_ybno",
-  "branch_name",
-  "a_density",
+  "branch",
   "column_break_xzpq",
   "company_name",
   "remarks",
   "section_break_erez",
+  "item_column",
   "20mm",
   "sand",
-  "sand2",
+  "agg3",
   "10mm",
   "agg5",
   "agg6",
@@ -57,6 +56,7 @@
   "admixture3",
   "admixture4",
   "int_wity",
+  "density",
   "column_break_iuqf",
   "a_gate1",
   "a_gate2",
@@ -77,6 +77,7 @@
   "a_admixture3",
   "a_admixture4",
   "int_syhb",
+  "a_density",
   "section_break_xrpm",
   "attachment",
   "column_break_orxu",
@@ -95,14 +96,6 @@
    "label": "Recipe Code"
   },
   {
-   "fieldname": "party_name",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Party Name",
-   "options": "Ledger Master"
-  },
-  {
    "fieldname": "density",
    "fieldtype": "Data",
    "label": "Density"
@@ -110,12 +103,6 @@
   {
    "fieldname": "column_break_pqyl",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "branch_name",
-   "fieldtype": "Link",
-   "label": "Branch Name",
-   "options": "Branch Master"
   },
   {
    "default": "Active",
@@ -132,7 +119,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Entry By",
-   "options": "User Master"
+   "options": "User"
   },
   {
    "fieldname": "mix_design_entry_section",
@@ -144,141 +131,117 @@
    "fieldtype": "Section Break"
   },
   {
-   "default": "Cem1",
    "fieldname": "cem1",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Cem1",
-   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+   "options": "Item"
   },
   {
-   "default": "Cem2",
    "fieldname": "cem2",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Cem2",
-   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+   "options": "Item"
   },
   {
-   "default": "Cem3",
    "fieldname": "cem3",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Cem3",
-   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+   "options": "Item"
   },
   {
-   "default": "Cem4",
    "fieldname": "cem4",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Cem4",
-   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+   "options": "Item"
   },
   {
-   "default": "Cem5",
    "fieldname": "cem5",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Cem5",
-   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+   "options": "Item"
   },
   {
-   "default": "Wtr1",
    "fieldname": "wtr1",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Wtr1",
-   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+   "options": "Item"
   },
   {
-   "default": "Wtr2",
    "fieldname": "wtr2",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Wtr2",
-   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+   "options": "Item"
   },
   {
-   "default": "Wtr3",
    "fieldname": "wtr3",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Wtr3",
-   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+   "options": "Item"
   },
   {
-   "default": "Admix1",
    "fieldname": "admix1",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Admix1",
-   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+   "options": "Item"
   },
   {
-   "default": "Admix2",
    "fieldname": "admix2",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Admix2",
-   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+   "options": "Item"
   },
   {
-   "default": "Admix3",
    "fieldname": "admix3",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Admix3",
-   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+   "options": "Item"
   },
   {
-   "default": "Admix4",
    "fieldname": "admix4",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Admix4",
-   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+   "options": "Item"
   },
   {
-   "default": "Silica",
    "fieldname": "silica",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Silica",
-   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+   "options": "Item"
   },
   {
-   "default": "20MM",
    "fieldname": "20mm",
-   "fieldtype": "Select",
-   "label": "20MM",
-   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+   "fieldtype": "Link",
+   "label": "Agg1",
+   "options": "Item"
   },
   {
-   "default": "SAND",
    "fieldname": "sand",
-   "fieldtype": "Select",
-   "label": "SAND",
-   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+   "fieldtype": "Link",
+   "label": "Agg2",
+   "options": "Item"
   },
   {
-   "default": "10MM",
    "fieldname": "10mm",
-   "fieldtype": "Select",
-   "label": "10MM",
-   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+   "fieldtype": "Link",
+   "label": "Agg4",
+   "options": "Item"
   },
   {
-   "default": "Agg5",
    "fieldname": "agg5",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Agg5",
-   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+   "options": "Item"
   },
   {
-   "default": "Agg6",
    "fieldname": "agg6",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Agg6",
-   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+   "options": "Item"
   },
   {
    "fieldname": "column_break_xxca",
-   "fieldtype": "Column Break"
-  },
-  {
-   "default": "SAND",
-   "fieldname": "sand2",
-   "fieldtype": "Select",
-   "label": "SAND",
-   "options": "20MM\n10MM\nSAND\nAgg5\nAgg6\nCem1\nCem2\nCem3\nCem4\nCem5\nWtr1\nWtr2\nWtr3\nAdmix1\nAdmix2\nAdmix3\nAdmix4\nSilica"
+   "fieldtype": "Column Break",
+   "label": "Print"
   },
   {
    "fieldname": "gate1",
@@ -372,11 +335,13 @@
   },
   {
    "fieldname": "int_wity",
-   "fieldtype": "Int"
+   "fieldtype": "Int",
+   "label": "Silica1"
   },
   {
    "fieldname": "column_break_iuqf",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "label": "Loading"
   },
   {
    "fieldname": "a_gate1",
@@ -470,7 +435,8 @@
   },
   {
    "fieldname": "int_syhb",
-   "fieldtype": "Int"
+   "fieldtype": "Int",
+   "label": "A_Silica"
   },
   {
    "fieldname": "grade_name",
@@ -478,7 +444,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Grade Name",
-   "options": "Item Master",
+   "options": "Item",
    "reqd": 1
   },
   {
@@ -508,10 +474,11 @@
   },
   {
    "fieldname": "auth_by",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Auth By"
+   "label": "Auth By",
+   "options": "User"
   },
   {
    "fieldname": "a_density",
@@ -525,18 +492,43 @@
   {
    "fieldname": "company_name",
    "fieldtype": "Link",
-   "label": "Company Name",
-   "options": "Company Master"
+   "label": "Company",
+   "options": "Company"
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Data",
    "label": "Remarks"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "item_column",
+   "fieldtype": "Column Break",
+   "label": "Item"
+  },
+  {
+   "fieldname": "agg3",
+   "fieldtype": "Link",
+   "label": "Agg3",
+   "options": "Item"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-14 17:51:52.832035",
+ "modified": "2024-03-05 23:23:41.180273",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Grade Master",

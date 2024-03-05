@@ -56,7 +56,11 @@
   "column_break_mhez",
   "entry_by",
   "column_break_vxwr",
-  "auth_by"
+  "auth_by",
+  "tab_2_tab",
+  "table_revv",
+  "table_duog",
+  "admixture"
  ],
  "fields": [
   {
@@ -64,14 +68,14 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Agg1",
-   "options": "Item Master"
+   "options": "Item"
   },
   {
    "fieldname": "agg2",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Agg2",
-   "options": "Item Master"
+   "options": "Item"
   },
   {
    "fieldname": "agg3",
@@ -365,11 +369,34 @@
    "fieldtype": "Float",
    "in_list_view": 1,
    "label": "Silica Gate1"
+  },
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tab 2"
+  },
+  {
+   "fieldname": "table_revv",
+   "fieldtype": "Table",
+   "label": "Aggregate",
+   "options": "Recipe Child"
+  },
+  {
+   "fieldname": "table_duog",
+   "fieldtype": "Table",
+   "label": "Cement",
+   "options": "Recipe Child"
+  },
+  {
+   "fieldname": "admixture",
+   "fieldtype": "Table",
+   "label": "Admixture",
+   "options": "Recipe Child"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-06 18:36:25.817346",
+ "modified": "2024-03-05 22:36:05.457374",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Recipe Master",
