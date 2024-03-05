@@ -1,0 +1,13 @@
+[
+    {
+        "docstatus": 0,
+        "doctype": "Client Script",
+        "dt": "Sales Order",
+        "enabled": 1,
+        "modified": "2024-03-06 00:01:04.767299",
+        "module": "Rcm Pro",
+        "name": "Sales Order",
+        "script": "frappe.ui.form.on('Sales Order', {\n\trefresh(frm) {\n\t\t// your code here\n\t}\n})",
+        "view": "Form"
+    }
+]
