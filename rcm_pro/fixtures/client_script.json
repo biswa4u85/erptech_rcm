@@ -1,13 +1,24 @@
 [
-    {
-        "docstatus": 0,
-        "doctype": "Client Script",
-        "dt": "Sales Order",
-        "enabled": 1,
-        "modified": "2024-03-06 00:01:04.767299",
-        "module": "Rcm Pro",
-        "name": "Sales Order",
-        "script": "frappe.ui.form.on('Sales Order', {\n\trefresh(frm) {\n\t\t// your code here\n\t}\n})",
-        "view": "Form"
-    }
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Schedule Master",
+  "enabled": 1,
+  "modified": "2024-03-07 23:05:58.556622",
+  "module": "Rcm Pro",
+  "name": "Schedule Master",
+  "script": "frappe.ui.form.on('Schedule Master', {\n    \n    onload(frm) {\n         if (frm.doc.docstatus === 0) {\n        frm.set_value(\"entry_by\", frappe.session.user);\n         }\n   },\n\t\n\t order_no: async function(frm) {\n\t     \n\t      let orderDetail = await frappe.db.get_value(\"Sales Order\", frm.doc.order_no, [\"customer\", \"custom_site_name\"]);\n\t      if(orderDetail.message){\n\t            frm.set_value('party_name', orderDetail.message.customer);\n\t            frm.set_value('site_name',  orderDetail.message.custom_site_name);\n\t            frm.set_value('grade_name', frm.doc.customer);\n\t            frm.set_value('rmc_rate', frm.doc.customer);\n\t      }\n\t    \n    }\n\t\n\t\n\t\n\t\n\t\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Sales Order",
+  "enabled": 1,
+  "modified": "2024-03-06 00:01:04.767299",
+  "module": "Rcm Pro",
+  "name": "Sales Order",
+  "script": "frappe.ui.form.on('Sales Order', {\n\trefresh(frm) {\n\t\t// your code here\n\t}\n})",
+  "view": "Form"
+ }
 ]
