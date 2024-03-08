@@ -219,7 +219,7 @@ app_include_js = "/assets/rcm_pro/js/rcm_pro.js"
 # auth_hooks = [
 #	"rcm_pro.auth.validate"
 # ]
-fixtures = ['Address', 'Customer', 'Item',  'Packed Item', 'Quotation', 'Quotation Item', 'Sales Order', 'Sales Order Item', 'Custom Field', 'Client Script']
+fixtures = ['Address', 'Customer', 'Item',  'Packed Item', 'Quotation', 'Quotation Item', 'Sales Order', 'Sales Order Item', 'Delivery Note', 'Custom Field', 'Client Script']
 override_whitelisted_methods = {
 	# "frappe.desk.desktop.get_workspace_sidebar_items": "rcm_pro.api.get_workspace_sidebar_items"
 }
