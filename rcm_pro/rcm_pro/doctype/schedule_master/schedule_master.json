@@ -16,12 +16,12 @@
   "remaining_qty",
   "challan_qty",
   "column_break_brvj",
-  "branch_name",
+  "branch",
   "order_no",
   "start_time",
   "pending_qty",
   "column_break_rars",
-  "company_name",
+  "company",
   "grade_name",
   "end_time",
   "pump_gang",
@@ -39,8 +39,6 @@
   "mkt_by",
   "column_break_yfay",
   "supervisor",
-  "column_break_enju",
-  "auth_by",
   "column_break_rufo",
   "entry_by",
   "amended_from"
@@ -73,6 +71,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "date",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -156,15 +155,10 @@
   },
   {
    "fieldname": "rmc_rate",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "RMC Rate"
-  },
-  {
-   "fieldname": "branch_name",
    "fieldtype": "Link",
-   "label": "Branch Name",
-   "options": "Branch Master"
+   "in_list_view": 1,
+   "label": "RMC Rate",
+   "options": "Sales Order"
   },
   {
    "fieldname": "pumping_rate",
@@ -192,17 +186,6 @@
   {
    "fieldname": "column_break_yfay",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_enju",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "auth_by",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Auth By"
   },
   {
    "fieldname": "column_break_rufo",
@@ -257,18 +240,12 @@
    "fieldname": "challan_qty",
    "fieldtype": "Link",
    "label": "Challan Qty",
-   "options": "Delivery Challan"
+   "options": "Delivery Note"
   },
   {
    "fieldname": "pending_qty",
    "fieldtype": "Data",
    "label": "Pending Qty"
-  },
-  {
-   "fieldname": "company_name",
-   "fieldtype": "Link",
-   "label": "Company Name",
-   "options": "Company Master"
   },
   {
    "fieldname": "column_break_weuu",
@@ -279,16 +256,28 @@
    "fieldtype": "Link",
    "label": "Pump Name",
    "options": "Cost Center Master"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [
   {
-   "link_doctype": "Delivery Challan",
+   "link_doctype": "Delivery Note",
    "link_fieldname": "naming_series"
   }
  ],
- "modified": "2024-03-04 21:30:15.444940",
+ "modified": "2024-03-08 12:48:53.200292",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Schedule Master",
