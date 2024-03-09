@@ -8,23 +8,23 @@
   "sec1_section",
   "vehicle_no",
   "make",
-  "activedate",
-  "pucdate",
-  "fitnessdate",
-  "permitdate",
+  "active_date",
+  "puc_date",
+  "fitness_date",
+  "permit_date",
   "column_break_bpyj",
   "vehicle_type",
   "tare_weight",
-  "registrationno",
-  "insurancedate",
-  "emidate",
+  "registration_no",
+  "insurance_date",
+  "emi_date",
   "emicompleted_date",
   "column_break_rzjq",
   "branch",
   "operateby",
-  "contactno",
-  "purchasedate",
-  "rtodate",
+  "contact_no",
+  "purchase_date",
+  "rto_date",
   "remarks",
   "section_break_xbuy",
   "attach",
@@ -45,7 +45,7 @@
    "fieldname": "branch",
    "fieldtype": "Link",
    "label": "Branch",
-   "options": "Branch Master"
+   "options": "Branch"
   },
   {
    "fieldname": "vehicle_no",
@@ -88,29 +88,9 @@
    "label": "OperateBy"
   },
   {
-   "fieldname": "contactno",
-   "fieldtype": "Data",
-   "label": "ContactNo"
-  },
-  {
    "fieldname": "tare_weight",
    "fieldtype": "Data",
    "label": "Tare Weight"
-  },
-  {
-   "fieldname": "activedate",
-   "fieldtype": "Date",
-   "label": "ActiveDate"
-  },
-  {
-   "fieldname": "pucdate",
-   "fieldtype": "Date",
-   "label": "PUCDate"
-  },
-  {
-   "fieldname": "fitnessdate",
-   "fieldtype": "Date",
-   "label": "FitnessDate"
   },
   {
    "default": "Active",
@@ -120,40 +100,10 @@
    "options": "Active\nDe Active"
   },
   {
-   "fieldname": "registrationno",
-   "fieldtype": "Data",
-   "label": "RegistrationNo"
-  },
-  {
-   "fieldname": "insurancedate",
-   "fieldtype": "Date",
-   "label": "InsuranceDate"
-  },
-  {
-   "fieldname": "emidate",
-   "fieldtype": "Date",
-   "label": "EMIDate"
-  },
-  {
-   "fieldname": "permitdate",
-   "fieldtype": "Date",
-   "label": "PermitDate"
-  },
-  {
    "fieldname": "entry_by",
    "fieldtype": "Link",
    "label": "Entry By",
-   "options": "User Master"
-  },
-  {
-   "fieldname": "purchasedate",
-   "fieldtype": "Date",
-   "label": "PurchaseDate"
-  },
-  {
-   "fieldname": "rtodate",
-   "fieldtype": "Date",
-   "label": "RTODate"
+   "options": "User"
   },
   {
    "fieldname": "emicompleted_date",
@@ -190,11 +140,61 @@
   {
    "fieldname": "column_break_bxft",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "active_date",
+   "fieldtype": "Date",
+   "label": "Active Date"
+  },
+  {
+   "fieldname": "puc_date",
+   "fieldtype": "Date",
+   "label": "PUC Date"
+  },
+  {
+   "fieldname": "fitness_date",
+   "fieldtype": "Date",
+   "label": "Fitness Date"
+  },
+  {
+   "fieldname": "permit_date",
+   "fieldtype": "Date",
+   "label": "Permit Date"
+  },
+  {
+   "fieldname": "registration_no",
+   "fieldtype": "Data",
+   "label": "Registration No"
+  },
+  {
+   "fieldname": "insurance_date",
+   "fieldtype": "Date",
+   "label": "Insurance Date"
+  },
+  {
+   "fieldname": "emi_date",
+   "fieldtype": "Date",
+   "label": "EMI Date"
+  },
+  {
+   "fieldname": "contact_no",
+   "fieldtype": "Data",
+   "label": "Contact No"
+  },
+  {
+   "fieldname": "purchase_date",
+   "fieldtype": "Date",
+   "label": "Purchase Date"
+  },
+  {
+   "fieldname": "rto_date",
+   "fieldtype": "Date",
+   "label": "RTO Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-29 02:50:45.086617",
+ "modified": "2024-03-08 22:43:22.399630",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Cost Center Master",

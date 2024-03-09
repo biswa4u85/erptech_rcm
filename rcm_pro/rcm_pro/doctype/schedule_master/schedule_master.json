@@ -155,7 +155,7 @@
   },
   {
    "fieldname": "rmc_rate",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "RMC Rate",
    "options": "Sales Order"
@@ -277,7 +277,7 @@
    "link_fieldname": "naming_series"
   }
  ],
- "modified": "2024-03-08 12:48:53.200292",
+ "modified": "2024-03-08 19:42:55.546064",
  "modified_by": "Administrator",
  "module": "Rcm Pro",
  "name": "Schedule Master",
