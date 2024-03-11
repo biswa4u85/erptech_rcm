@@ -11,7 +11,7 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/erptech_rcm/css/erptech_rcm.css"
-# app_include_js = "/assets/erptech_rcm/js/erptech_rcm.js"
+app_include_js = "/assets/erptech_rcm/js/erptech_rcm.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/erptech_rcm/css/erptech_rcm.css"
