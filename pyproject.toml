@@ -1,9 +1,9 @@
 [project]
-name = "rcm_pro"
+name = "erptech_rcm"
 authors = [
-    { name = "erptechin", email = "erptechin@gmail.com"}
+    { name = "sadf", email = "sdaf@asdfad.com"}
 ]
-description = "Rcm Pro"
+description = "sdf"
 requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]
