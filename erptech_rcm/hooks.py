@@ -9,6 +9,10 @@ app_license = "mit"
 # Includes in <head>
 # ------------------
 
+doctype_js = {
+	"Purchase Invoice": "public/js/purchase_invoice.js",
+}
+
 # include js, css files in header of desk.html
 # app_include_css = "/assets/erptech_rcm/css/erptech_rcm.css"
 app_include_js = "/assets/erptech_rcm/js/erptech_rcm.js"
