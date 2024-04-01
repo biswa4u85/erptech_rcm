@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"VWMniDidnf\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Spindex</span>\",\"col\":12}},{\"id\":\"S9Cf0XfbTy\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Main</b></span>\",\"col\":12}},{\"id\":\"1kmmdXaBva\",\"type\":\"onboarding\",\"data\":{\"onboarding_name\":\"Selling\",\"col\":12}},{\"id\":\"G0mYinkdum\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"account\",\"col\":3}},{\"id\":\"sPgBtkhKxw\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Activity Cost\",\"col\":4}}]",
+ "content": "[{\"id\":\"VWMniDidnf\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Spindex</span>\",\"col\":12}},{\"id\":\"S9Cf0XfbTy\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Main</b></span>\",\"col\":12}},{\"id\":\"1kmmdXaBva\",\"type\":\"onboarding\",\"data\":{\"onboarding_name\":\"Selling\",\"col\":12}},{\"id\":\"G0mYinkdum\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"account\",\"col\":3}},{\"id\":\"sPgBtkhKxw\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Activity Cost\",\"col\":4}},{\"id\":\"JqN7j05QOf\",\"type\":\"card\",\"data\":{\"card_name\":\"DO\",\"col\":4}}]",
  "creation": "2024-03-12 00:20:56.016182",
  "custom_blocks": [],
  "docstatus": 0,
@@ -12,9 +12,19 @@
  "indicator_color": "green",
  "is_hidden": 0,
  "label": "Spindex",
- "links": [],
- "modified": "2024-03-12 00:24:51.778058",
- "modified_by": "test@admin.com",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "DO",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  }
+ ],
+ "modified": "2024-03-22 17:35:39.126971",
+ "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "Spindex",
  "number_cards": [],
