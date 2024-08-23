@@ -10,6 +10,8 @@ app_license = "mit"
 # ------------------
 
 doctype_js = {
+	"BOM": "public/js/bom.js",
+	"Production Plan": "public/js/production_plan.js",
 	"Purchase Invoice": "public/js/purchase_invoice.js",
 }
 
