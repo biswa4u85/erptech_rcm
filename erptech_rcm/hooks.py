@@ -13,6 +13,9 @@ doctype_js = {
 	"BOM": "public/js/bom.js",
 	"Production Plan": "public/js/production_plan.js",
 	"Purchase Invoice": "public/js/purchase_invoice.js",
+	"Address": "public/js/address.js",
+	"Customer": "public/js/customer.js",
+	"Supplier": "public/js/supplier.js",
 }
 
 # include js, css files in header of desk.html
