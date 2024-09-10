@@ -16,16 +16,12 @@ doctype_js = {
 	"Address": "public/js/address.js",
 	"Customer": "public/js/customer.js",
 	"Supplier": "public/js/supplier.js",
+	"Weight Bridge Master": "public/js/weight_bridge_master.js",
 }
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/erptech_rcm/css/erptech_rcm.css"
-app_include_js = [
-                  "/assets/erptech_rcm/js/erptech_rcm.js",
-                  "/form-raw.min.bundle.js", 
-                  "https://js.stripe.com/terminal/v1/", 
-				  "/assets/erptech_rcm/js/jsrsasign-all-min.js"
-                  ]
+app_include_js = "/assets/erptech_rcm/js/erptech_rcm.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/erptech_rcm/css/erptech_rcm.css"

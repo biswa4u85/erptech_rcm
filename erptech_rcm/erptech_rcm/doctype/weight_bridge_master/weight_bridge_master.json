@@ -1,0 +1,118 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "creation": "2024-09-11 00:13:30.005595",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "series",
+        "wbslipno",
+        "column_break_utzl",
+        "date",
+        "wbslip_type",
+        "column_break_bwnp",
+        "company",
+        "amended_from",
+        "grosstare",
+        "suppliercustomer_details_section",
+        "purchase_order",
+        "column_break_woxk",
+        "column_break_bxie"
+    ],
+    "fields": [
+        {
+            "fieldname": "series",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Series",
+            "no_copy": 1,
+            "options": "-.YY.-",
+            "reqd": 1
+        },
+        {
+            "fieldname": "wbslipno",
+            "fieldtype": "Data",
+            "label": "WBSlipNo"
+        },
+        {
+            "fieldname": "column_break_utzl",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "date",
+            "fieldtype": "Date",
+            "label": "Date"
+        },
+        {
+            "fieldname": "wbslip_type",
+            "fieldtype": "Select",
+            "label": "WBSlip Type",
+            "options": "Select\nIn-Ward\nOut-Ward\nOther"
+        },
+        {
+            "fieldname": "column_break_bwnp",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "company",
+            "fieldtype": "Link",
+            "label": "Company",
+            "options": "Company"
+        },
+        {
+            "fieldname": "amended_from",
+            "fieldtype": "Link",
+            "label": "Amended From",
+            "options": "Weight Bridge Master"
+        },
+        {
+            "fieldname": "suppliercustomer_details_section",
+            "fieldtype": "Section Break",
+            "label": "Supplier/Customer Details"
+        },
+        {
+            "fieldname": "purchase_order",
+            "fieldtype": "Link",
+            "label": "Purchase Order",
+            "options": "Purchase Order"
+        },
+        {
+            "fieldname": "column_break_woxk",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "column_break_bxie",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "grosstare",
+            "fieldtype": "Select",
+            "label": "Gross/Tare",
+            "options": "Select\nGross\nTare"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2024-09-11 00:13:30.005595",
+    "modified_by": "Administrator",
+    "module": "Erptech Rcm",
+    "name": "Weight Bridge Master",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+}
