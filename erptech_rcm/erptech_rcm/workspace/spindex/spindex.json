@@ -23,7 +23,7 @@
    "type": "Card Break"
   }
  ],
- "modified": "2024-03-22 17:35:39.126971",
+ "modified": "2024-09-10 11:31:31.581096",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "Spindex",
@@ -47,6 +47,12 @@
    "label": "account",
    "link_to": "Account",
    "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "QZ Tray Settings",
+   "link_to": "QZ Tray Settings",
    "type": "DocType"
   }
  ],
