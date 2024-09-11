@@ -15,8 +15,7 @@ doctype_js = {
 	"Purchase Invoice": "public/js/purchase_invoice.js",
 	"Address": "public/js/address.js",
 	"Customer": "public/js/customer.js",
-	"Supplier": "public/js/supplier.js",
-	"Weight Bridge Master": "public/js/weight_bridge_master.js",
+	"Supplier": "public/js/supplier.js"
 }
 
 # include js, css files in header of desk.html
@@ -36,14 +35,12 @@ app_include_js = "/assets/erptech_rcm/js/erptech_rcm.js"
 
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
-page_js = {"point-of-sale" : "custom_scripts/point_of_sale/point_of_sale.js"}
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
-doctype_js = {"pos_profile" : "custom_scripts/pos_profile/pos_profile.js"}
 
 # Svg Icons
 # ------------------
@@ -141,11 +138,6 @@ doctype_js = {"pos_profile" : "custom_scripts/pos_profile/pos_profile.js"}
 #		"on_trash": "method"
 #	}
 # }
-doc_events = {
-	"AccountsController": {
-		"validate": "erptech_rcm.custom_scripts.amount_in_words.validate"
-	},
-}
 
 # Scheduled Tasks
 # ---------------
@@ -179,10 +171,6 @@ doc_events = {
 # override_whitelisted_methods = {
 #	"frappe.desk.doctype.event.event.get_events": "erptech_rcm.event.get_events"
 # }
-override_whitelisted_methods = {
-	#"frappe.desk.doctype.event.event.get_events": "stripe_terminal.event.get_events"
-	"erpnext.accounts.doctype.pos_invoice.pos_invoice.make_sales_return": "erptech_rcm.custom_scripts.controllers.sales_and_purchase_return.make_sales_return"
-}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
@@ -234,37 +222,9 @@ override_whitelisted_methods = {
 #	}
 # ]
 
-user_data_fields = [
-	{
-		"doctype": "{doctype_1}",
-		"filter_by": "{filter_by}",
-		"redact_fields": ["{field_1}", "{field_2}"],
-		"partial": 1,
-	},
-	{
-		"doctype": "{doctype_2}",
-		"filter_by": "{filter_by}",
-		"partial": 1,
-	},
-	{
-		"doctype": "{doctype_3}",
-		"strict": False,
-	},
-	{
-		"doctype": "{doctype_4}"
-	}
-]
-
 # Authentication and authorization
 # --------------------------------
 
 # auth_hooks = [
 #	"erptech_rcm.auth.validate"
 # ]
-
-#For jinja printing
-jenv = {
-	"methods": [
-		"money_in_words:erptech_rcm.custom_scripts.amount_in_words.money_in_words",
-	]
-}
