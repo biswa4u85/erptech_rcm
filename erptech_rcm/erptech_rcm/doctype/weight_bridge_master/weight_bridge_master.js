@@ -6,21 +6,22 @@ frappe.ui.form.on("Weight Bridge Master", {
         doc = await frappe.db.get_doc('RCM Settings', 'enable_weigh_scale')
         if (doc.enable_weigh_scale == 1) {
             if ("serial" in navigator) {
-                var ports = await navigator.serial.getPorts();
-                if (ports.length == 0) {
-                    frappe.confirm(
-                        'Please provide permission to connect to the weigh device',
-                        async function () {
-                            ports = await navigator.serial.requestPort();
-                            await listenToPort(ports);
-                        },
-                        function () {
+                // var ports = await navigator.serial.getPorts();
+                // if (ports.length == 0) {
+                frappe.confirm(
+                    'Please provide permission to connect to the weigh device',
+                    async function () {
+                        let port = await navigator.serial.requestPort();
+                        console.log('port 1', port)
+                        await port.open({ baudRate: 9600 });
+                        await listenToPort(port);
+                    },
 
-                        }
-                    );
-                } else {
-                    await listenToPort(ports);
-                }
+                );
+                // } else {
+                //     await ports[0].open({ baudRate: 9600 });
+                //     await listenToPort(ports[0]);
+                // }
             }
             else {
                 frappe.msgprint("Your browser does not support serial device connection. Please switch to a supported browser to connect to your weigh device");
@@ -30,10 +31,10 @@ frappe.ui.form.on("Weight Bridge Master", {
     }
 });
 
-async function listenToPort(ports) {
-    console.log('start..', ports);
+async function listenToPort(port) {
+    console.log('port 2', port)
     const textDecoder = new TextDecoderStream();
-    // const readableStreamClosed = ports.readable.pipeTo(textDecoder.writable);
+    const readableStreamClosed = port.readable.pipeTo(textDecoder.writable);
     const reader = textDecoder.readable.getReader();
 
     // Listen to data coming from the serial device.
@@ -46,6 +47,6 @@ async function listenToPort(ports) {
             break;
         }
         // value is a string.
-        console.log('value', value);
+        console.log(value);
     }
 }
