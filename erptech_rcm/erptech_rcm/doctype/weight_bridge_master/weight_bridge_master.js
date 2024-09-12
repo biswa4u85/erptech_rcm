@@ -12,13 +12,13 @@ frappe.ui.form.on("Weight Bridge Master", {
                         'Please provide permission to connect to the weigh device',
                         async function () {
                             let port = await navigator.serial.requestPort();
-                            await port.open({ baudRate: 9600 });
+                            await port.open({ baudRate: Number(doc.baud_rate) });
                             await listenToPort(port, doc);
                         },
 
                     );
                 } else {
-                    await ports[0].open({ baudRate: 9600 });
+                    await ports[0].open({ baudRate: Number(doc.baud_rate) });
                     await listenToPort(ports[0], doc);
                 }
             }
@@ -31,7 +31,7 @@ frappe.ui.form.on("Weight Bridge Master", {
 });
 
 async function listenToPort(port, settings) {
-    console.log('port 2', port, settings)
+    console.log('port', port, settings)
     const textDecoder = new TextDecoderStream();
     const readableStreamClosed = port.readable.pipeTo(textDecoder.writable);
     const reader = textDecoder.readable.getReader();
