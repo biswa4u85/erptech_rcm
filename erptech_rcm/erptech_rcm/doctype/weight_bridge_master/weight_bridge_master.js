@@ -32,6 +32,8 @@ frappe.ui.form.on("Weight Bridge Master", {
 
 async function listenToPort(port, settings) {
     console.log('port', port, settings)
+
+    const outputDiv = document.querySelector('input[data-fieldname="net_weight"]');
     const textDecoder = new TextDecoderStream();
     const readableStreamClosed = port.readable.pipeTo(textDecoder.writable);
     const reader = textDecoder.readable.getReader();
@@ -40,12 +42,11 @@ async function listenToPort(port, settings) {
     while (true) {
         const { value, done } = await reader.read();
         if (done) {
-            // Allow the serial port to be closed later.
-            console.log('[readLoop] DONE', done);
             reader.releaseLock();
             break;
         }
         // value is a string.
+        outputDiv.value = value
         console.log(value);
     }
 }
