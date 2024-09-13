@@ -47,8 +47,6 @@ async function listenToPort(port, settings) {
             break;
         }
         // value is a string.
-
-        console.log(value);
         let newValue = String(value).includes("k") ? String(value).replace("k", "") : String(value)
         if (tempValue != Number(newValue)) {
             tempValue = Number(newValue)
