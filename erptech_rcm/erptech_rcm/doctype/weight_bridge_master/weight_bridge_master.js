@@ -46,7 +46,7 @@ async function listenToPort(port, settings) {
             break;
         }
         // value is a string.
-        outputDiv.value = value
         console.log(value);
+        outputDiv.value = value ?? ""
     }
 }
