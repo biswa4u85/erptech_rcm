@@ -39,6 +39,7 @@ async function listenToPort(port, settings) {
     const reader = textDecoder.readable.getReader();
 
     // Listen to data coming from the serial device.
+    let tempValue = 0
     while (true) {
         const { value, done } = await reader.read();
         if (done) {
@@ -46,7 +47,12 @@ async function listenToPort(port, settings) {
             break;
         }
         // value is a string.
+
         console.log(value);
-        outputDiv.value = String(value)
+        let newValue = String(value).includes("k") ? String(value).replace("k", "") : String(value)
+        if (tempValue != Number(newValue)) {
+            tempValue = Number(newValue)
+            outputDiv.value = String(Number(newValue))
+        }
     }
 }
