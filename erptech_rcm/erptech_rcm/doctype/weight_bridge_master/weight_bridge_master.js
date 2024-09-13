@@ -33,7 +33,7 @@ frappe.ui.form.on("Weight Bridge Master", {
 async function listenToPort(port, settings) {
     console.log('port', port, settings)
 
-    
+    const outputDiv = document.querySelector('input[data-fieldname="display_data"]');
     const textDecoder = new TextDecoderStream();
     const readableStreamClosed = port.readable.pipeTo(textDecoder.writable);
     const reader = textDecoder.readable.getReader();
@@ -47,7 +47,6 @@ async function listenToPort(port, settings) {
         }
         // value is a string.
         console.log(value);
-        const outputDiv = document.querySelector('input[data-fieldname="display_data"]');
         outputDiv.value = String(value)
     }
 }
