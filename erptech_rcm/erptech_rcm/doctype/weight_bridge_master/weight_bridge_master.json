@@ -64,6 +64,11 @@
    "label": "Date"
   },
   {
+   "fieldname": "display_data",
+   "fieldtype": "Data",
+   "label": "Display Data"
+  },
+  {
    "fieldname": "wbslip_type",
    "fieldtype": "Select",
    "label": "WBSlip Type",
@@ -210,14 +215,13 @@
    "label": "Tare"
   },
   {
-   "fieldname": "display_data",
-   "fieldtype": "Data",
-   "label": "Display Data"
+   "fieldname": "column_break_omeb",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-13 16:08:49.701847",
+ "modified": "2024-09-18 11:05:20.978034",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "Weight Bridge Master",
@@ -238,5 +242,8 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }
