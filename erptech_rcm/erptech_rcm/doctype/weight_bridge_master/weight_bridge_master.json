@@ -1,11 +1,12 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2024-09-11 00:13:30.005595",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "series",
+  "naming_series",
   "column_break_utzl",
   "date",
   "column_break_ewwb",
@@ -16,17 +17,18 @@
   "company",
   "suppliercustomer_details_section",
   "purchase_order",
-  "delivery_note",
-  "deduct_reason",
-  "column_break_woxk",
   "supplier_name",
+  "vehicle_no",
+  "refno",
+  "column_break_woxk",
+  "delivery_note",
   "customer_name",
-  "deduct_",
-  "column_break_bxie",
-  "wbslipno",
-  "transporter",
   "vehicle",
+  "column_break_bxie",
   "item",
+  "transporter",
+  "deduct_reason",
+  "deduct_",
   "section_break_ypif",
   "gross_weight_date_time",
   "tare_weight_date_time",
@@ -41,24 +43,11 @@
  ],
  "fields": [
   {
-   "fieldname": "series",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Series",
-   "no_copy": 1,
-   "options": "-.YY.-",
-   "reqd": 1
-  },
-  {
-   "fieldname": "wbslipno",
-   "fieldtype": "Data",
-   "label": "WBSlipNo"
-  },
-  {
    "fieldname": "column_break_utzl",
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "date",
    "fieldtype": "Date",
    "label": "Date"
@@ -72,7 +61,7 @@
    "fieldname": "wbslip_type",
    "fieldtype": "Select",
    "label": "WBSlip Type",
-   "options": "Select\nIn-Ward\nOut-Ward\nOther"
+   "options": "Inward\nOutward\nOther"
   },
   {
    "fieldname": "column_break_bwnp",
@@ -155,7 +144,7 @@
    "fieldname": "deduct_reason",
    "fieldtype": "Select",
    "label": "Deduct Reason",
-   "options": "Select\nGross\nTare"
+   "options": "Select\nMoisture\nBad Quality"
   },
   {
    "fieldname": "deduct_",
@@ -168,12 +157,12 @@
   },
   {
    "fieldname": "gross_weight_date_time",
-   "fieldtype": "Date",
+   "fieldtype": "Datetime",
    "label": "Gross Weight Date Time"
   },
   {
    "fieldname": "tare_weight_date_time",
-   "fieldtype": "Date",
+   "fieldtype": "Datetime",
    "label": "Tare Weight Date Time"
   },
   {
@@ -188,16 +177,19 @@
   {
    "fieldname": "gross_weight",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Gross Weight"
   },
   {
    "fieldname": "tare_weight",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Tare Weight"
   },
   {
    "fieldname": "net_weight",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Net Weight"
   },
   {
@@ -217,14 +209,34 @@
   {
    "fieldname": "column_break_omeb",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "options": "WB",
+   "reqd": 1
+  },
+  {
+   "fieldname": "refno",
+   "fieldtype": "Data",
+   "label": "RefNo"
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Data",
+   "label": "Vehicle No"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-18 11:05:20.978034",
+ "modified": "2024-09-21 14:57:55.180601",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "Weight Bridge Master",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

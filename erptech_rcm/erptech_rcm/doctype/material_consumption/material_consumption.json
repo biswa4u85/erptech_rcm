@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-19 20:41:48.290154",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "data_section",
+  "date",
+  "start",
+  "end",
+  "column_break_ybgh",
+  "batch_no",
+  "rec_id",
+  "rec_name",
+  "section_break_aovj",
+  "table_vphz"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "start",
+   "fieldtype": "Data",
+   "label": "Start"
+  },
+  {
+   "fieldname": "end",
+   "fieldtype": "Data",
+   "label": "End"
+  },
+  {
+   "fieldname": "column_break_ybgh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Date",
+   "label": "Batch No"
+  },
+  {
+   "fieldname": "rec_id",
+   "fieldtype": "Data",
+   "label": "Rec Id"
+  },
+  {
+   "fieldname": "rec_name",
+   "fieldtype": "Data",
+   "label": "Rec Name"
+  },
+  {
+   "fieldname": "section_break_aovj",
+   "fieldtype": "Section Break",
+   "label": "Mat"
+  },
+  {
+   "fieldname": "table_vphz",
+   "fieldtype": "Table",
+   "options": "Material Consumption Item"
+  },
+  {
+   "fieldname": "data_section",
+   "fieldtype": "Section Break",
+   "label": "Data"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-19 21:02:12.274792",
+ "modified_by": "Administrator",
+ "module": "Erptech Rcm",
+ "name": "Material Consumption",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
