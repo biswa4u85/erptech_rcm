@@ -207,10 +207,6 @@
    "label": "Tare"
   },
   {
-   "fieldname": "column_break_omeb",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "in_list_view": 1,
@@ -231,8 +227,9 @@
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-09-21 14:57:55.180601",
+ "modified": "2024-10-04 07:33:33.090354",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "Weight Bridge Master",
