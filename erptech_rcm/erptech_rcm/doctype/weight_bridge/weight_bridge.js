@@ -8,10 +8,10 @@ frappe.ui.form.on("Weight Bridge", {
         document.querySelector('input[data-fieldname="tare_weight"]').readOnly = true;
         document.querySelector('button[data-fieldname="gross"]').disabled = true;
         document.querySelector('button[data-fieldname="tare"]').disabled = true;
-        if (frm.doc.wbslip_type === "In-Ward") {
+        if (frm.doc.wbslip_type === "Inward") {
             document.querySelector('button[data-fieldname="tare"]').disabled = false;
         }
-        if (frm.doc.wbslip_type === "Out-Ward") {
+        if (frm.doc.wbslip_type === "Outward") {
             document.querySelector('button[data-fieldname="gross"]').disabled = false;
         }
         if (frm.doc.wbslip_type === "Other") {
@@ -48,14 +48,14 @@ frappe.ui.form.on("Weight Bridge", {
         if (frm.doc.wbslip_type) {
             document.querySelector('button[data-fieldname="gross"]').disabled = true;
             document.querySelector('button[data-fieldname="tare"]').disabled = true;
-            if (frm.doc.wbslip_type === "In-Ward") {
+            if (frm.doc.wbslip_type === "Inward") {
                 if (frm.doc.name.includes("new-weight-bridge-maste")) {
                     document.querySelector('button[data-fieldname="gross"]').disabled = false;
                 } else {
                     document.querySelector('button[data-fieldname="tare"]').disabled = false;
                 }
             }
-            if (frm.doc.wbslip_type === "Out-Ward") {
+            if (frm.doc.wbslip_type === "Outward") {
                 if (frm.doc.name.includes("new-weight-bridge-maste")) {
                     document.querySelector('button[data-fieldname="tare"]').disabled = false;
                 } else {
