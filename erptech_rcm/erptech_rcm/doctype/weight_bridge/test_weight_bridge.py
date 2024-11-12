@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestWeightBridgeMaster(FrappeTestCase):
+class TestWeightBridge(FrappeTestCase):
 	pass

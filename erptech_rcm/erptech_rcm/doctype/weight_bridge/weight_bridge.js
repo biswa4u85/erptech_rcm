@@ -1,7 +1,7 @@
 // Copyright (c) 2024, erptech and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on("Weight Bridge Master", {
+frappe.ui.form.on("Weight Bridge", {
     async refresh(frm) {
         document.querySelector('input[data-fieldname="display_data"]').readOnly = true;
         document.querySelector('input[data-fieldname="gross_weight"]').readOnly = true;

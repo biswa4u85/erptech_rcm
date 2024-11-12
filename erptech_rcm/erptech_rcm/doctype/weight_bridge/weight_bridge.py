@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class WeightBridgeMaster(Document):
+class WeightBridge(Document):
 	pass
