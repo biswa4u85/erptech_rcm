@@ -11,7 +11,6 @@
   "date",
   "column_break_ewwb",
   "display_data",
-  "amended_from",
   "column_break_bwnp",
   "wbslip_type",
   "company",
@@ -73,12 +72,6 @@
    "hidden": 1,
    "label": "Company",
    "options": "Company"
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "options": "Weight Bridge Master"
   },
   {
    "collapsible": 1,
