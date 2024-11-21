@@ -13,7 +13,6 @@ frappe.ui.form.on('Quotation', {
     party_name: function (frm) {
         if (frm.doc.party_name) {
             frm.set_value('custom_site', null);
-            frm.set_value('shipping_address_name', null);
             frappe.call({
                 method: 'erptech_rcm.custom_api.get_customer_address',
                 args: {
@@ -29,6 +28,7 @@ frappe.ui.form.on('Quotation', {
                             };
                         });
                     }
+                    frm.set_value('shipping_address_name', null);
                 }
             })
         }
