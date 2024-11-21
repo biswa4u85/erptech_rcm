@@ -22,6 +22,54 @@ function isValidGST(gstin) {
 }
 
 frappe.ui.form.on('Customer', {
+    refresh: function (frm) {
+        frm.add_custom_button(__('Unlink Address'), function () {
+            frappe.call({
+                method: 'erptech_rcm.custom_api.get_customer_address',
+                args: {
+                    'customer_name': frm.docname,
+                },
+                callback: async (r) => {
+                    if (r.message) {
+                        frappe.prompt({
+                            label: __('Address Name'),
+                            fieldname: 'address_name',
+                            fieldtype: 'Link',
+                            options: 'Address',
+                            reqd: 1,
+                            get_query: function () {
+                                return {
+                                    filters: {
+                                        'name': ['in', (r.message).map(item => item.name)]
+                                    }
+                                };
+                            }
+                        }, function (values) {
+                            frappe.confirm(
+                                __('Are you sure you want to unlink the Address {0} from Customer {1}?', [values.address_name, frm.doc.name]),
+                                function () {
+                                    frappe.call({
+                                        method: 'erptech_rcm.custom_api.unlink_customer_address',
+                                        args: {
+                                            'customer_name': frm.docname,
+                                            'address_name': values.address_name,
+                                        },
+                                        callback: function (response) {
+                                            if (response.message) {
+                                                frappe.msgprint(__(response.message));
+                                                frm.reload_doc();
+                                            }
+                                        }
+                                    });
+                                }
+                            );
+                        }, __('Unlink Address'), __('Unlink'));
+                    }
+                }
+            })
+
+        }, __('Actions'));
+    },
     gstin: async function (frm) {
         if (frm.doc.gstin && isValidGST(frm.doc.gstin)) {
             let gstin = frm.doc.gstin;

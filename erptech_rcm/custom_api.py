@@ -27,3 +27,23 @@ def get_customer_address(customer_name):
             link.link_doctype = 'Customer' AND link.link_name = %s
     """, (customer_name), as_dict=True)
 	return addresses
+
+@frappe.whitelist()
+def unlink_customer_address(customer_name, address_name):
+    dynamic_links = frappe.get_all(
+        "Dynamic Link",
+        filters={
+            "link_doctype": "Customer",
+            "link_name": customer_name,
+            "parenttype": "Address",
+            "parent": address_name,
+        }
+    )
+    if dynamic_links:
+        for link in dynamic_links:
+            frappe.delete_doc("Dynamic Link", link.name)
+            frappe.db.commit()
+            
+        return f"Address '{address_name}' has been removed from Customer '{customer_name}'."
+    else:
+        return f"No address found linked to Customer '{customer_name}' with the name '{address_name}'."

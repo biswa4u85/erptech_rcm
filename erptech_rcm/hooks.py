@@ -16,7 +16,10 @@ doctype_js = {
 	"Address": "public/js/address.js",
 	"Customer": "public/js/customer.js",
 	"Supplier": "public/js/supplier.js",
-	"Quotation": "public/js/quotation.js"
+	"Quotation": "public/js/quotation.js",
+	"Sales Order": "public/js/sales_order.js",
+	"Delivery Note": "public/js/delivery_note.js",
+	"Sales Invoice": "public/js/sales_invoice.js"
 }
 
 # include js, css files in header of desk.html
