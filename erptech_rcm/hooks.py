@@ -234,7 +234,5 @@ app_include_js = "/assets/erptech_rcm/js/erptech_rcm.js"
 # ]
 
 fixtures = [
-    "Custom Field",
-    "Property Setter",
-    "Custom Script"
+    "Custom Field"
 ]
