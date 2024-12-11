@@ -39,17 +39,6 @@
  ],
  "fields": [
   {
-   "fieldname": "item_code",
-   "fieldtype": "Link",
-   "label": "Item Code",
-   "options": "Item"
-  },
-  {
-   "fieldname": "item_name",
-   "fieldtype": "Data",
-   "label": "Item Name"
-  },
-  {
    "fieldname": "item_operation",
    "fieldtype": "Link",
    "label": "Item operation",
@@ -94,11 +83,7 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "qty",
-   "fieldtype": "Float",
-   "label": "Qty"
-  },
-  {
+   "allow_on_submit": 1,
    "fieldname": "uom",
    "fieldtype": "Link",
    "label": "UOM",
@@ -199,15 +184,35 @@
    "fieldname": "sourced_by_supplier",
    "fieldtype": "Check",
    "label": "Sourced by Supplier"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "item_name",
+   "fieldtype": "Link",
+   "label": "Item Name",
+   "options": "Item"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "label": "Qty"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-10-20 19:43:26.015226",
+ "modified": "2024-11-21 20:54:27.495367",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
- "name": "BOM Recipe",
+ "name": "BOM Item 2",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

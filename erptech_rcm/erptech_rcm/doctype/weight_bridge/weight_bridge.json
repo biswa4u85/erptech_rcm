@@ -14,21 +14,23 @@
   "column_break_bwnp",
   "wbslip_type",
   "company",
-  "suppliercustomer_details_section",
+  "section_break_sdaw",
   "purchase_order",
   "supplier_name",
+  "column_break_gupk",
   "vehicle_no",
-  "refno",
+  "ref_no",
   "column_break_woxk",
   "delivery_note",
   "customer_name",
-  "vehicle",
   "column_break_bxie",
-  "item",
   "transporter",
+  "vehicle",
+  "section_break_ypif",
+  "item",
   "deduct_reason",
   "deduct_",
-  "section_break_ypif",
+  "column_break_java",
   "gross_weight_date_time",
   "tare_weight_date_time",
   "grand_net_weight",
@@ -38,7 +40,8 @@
   "net_weight",
   "column_break_omeb",
   "gross",
-  "tare"
+  "tare",
+  "amended_from"
  ],
  "fields": [
   {
@@ -72,12 +75,6 @@
    "hidden": 1,
    "label": "Company",
    "options": "Company"
-  },
-  {
-   "collapsible": 1,
-   "fieldname": "suppliercustomer_details_section",
-   "fieldtype": "Section Break",
-   "label": "Supplier/Customer Details"
   },
   {
    "fieldname": "purchase_order",
@@ -209,20 +206,42 @@
    "reqd": 1
   },
   {
-   "fieldname": "refno",
-   "fieldtype": "Data",
-   "label": "RefNo"
-  },
-  {
    "fieldname": "vehicle_no",
    "fieldtype": "Data",
    "label": "Vehicle No"
+  },
+  {
+   "fieldname": "column_break_gupk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ref_no",
+   "fieldtype": "Data",
+   "label": "Ref No"
+  },
+  {
+   "fieldname": "column_break_java",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Weight Bridge",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_sdaw",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-10-04 07:33:33.090354",
+ "modified": "2024-11-24 01:02:20.320691",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "Weight Bridge",

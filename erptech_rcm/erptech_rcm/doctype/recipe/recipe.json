@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-30 11:07:05.918145",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "recipe_code",
+  "column_break_bfmt",
+  "recipe_name",
+  "section_break_phce",
+  "recipe_items"
+ ],
+ "fields": [
+  {
+   "fieldname": "recipe_code",
+   "fieldtype": "Data",
+   "label": "Recipe Code"
+  },
+  {
+   "fieldname": "column_break_bfmt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "recipe_name",
+   "fieldtype": "Link",
+   "label": "Recipe Name",
+   "options": "Item"
+  },
+  {
+   "fieldname": "section_break_phce",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "recipe_items",
+   "fieldtype": "Table",
+   "label": "Recipe Items",
+   "options": "Recipe Items"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-30 11:15:39.678052",
+ "modified_by": "Administrator",
+ "module": "Erptech Rcm",
+ "name": "Recipe",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

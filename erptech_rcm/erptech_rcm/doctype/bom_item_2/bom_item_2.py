@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class MixDesignItem(Document):
+class BOMItem2(Document):
 	pass
