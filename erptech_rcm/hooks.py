@@ -233,6 +233,4 @@ app_include_js = "/assets/erptech_rcm/js/erptech_rcm.js"
 #	"erptech_rcm.auth.validate"
 # ]
 
-fixtures = [
-    "Custom Field"
-]
+fixtures = ["Custom Field"]
