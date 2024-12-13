@@ -16,28 +16,33 @@
   "company",
   "section_break_sdaw",
   "purchase_order",
-  "supplier_name",
   "column_break_gupk",
-  "vehicle_no",
-  "ref_no",
-  "column_break_woxk",
-  "delivery_note",
-  "customer_name",
+  "supplier_name",
   "column_break_bxie",
+  "vehicle_no",
+  "column_break_ghlr",
   "transporter",
+  "column_break_axhz",
+  "ref_no",
+  "section_break_hyaa",
+  "delivery_note",
+  "column_break_woxk",
+  "customer_name",
+  "column_break_siis",
   "vehicle",
   "section_break_ypif",
   "item",
   "deduct_reason",
-  "deduct_",
   "column_break_java",
   "gross_weight_date_time",
   "tare_weight_date_time",
-  "grand_net_weight",
   "column_break_alwr",
   "gross_weight",
   "tare_weight",
   "net_weight",
+  "column_break_tdxc",
+  "deduct_",
+  "grand_net_weight",
   "column_break_omeb",
   "gross",
   "tare",
@@ -235,13 +240,35 @@
   },
   {
    "fieldname": "section_break_sdaw",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Inward"
+  },
+  {
+   "fieldname": "section_break_hyaa",
+   "fieldtype": "Section Break",
+   "label": "Outward"
+  },
+  {
+   "fieldname": "column_break_siis",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tdxc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ghlr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_axhz",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-24 01:02:20.320691",
+ "modified": "2024-12-11 21:56:49.080507",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "Weight Bridge",
