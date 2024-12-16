@@ -26,7 +26,7 @@ frappe.ui.form.on('Supplier', {
         if (frm.doc.gstin && isValidGST(frm.doc.gstin)) {
             let gstin = frm.doc.gstin;
             frappe.call({
-                method: 'erptech_rcm.custom_api.gst_info',
+                method: 'erptech_rcm.api.custom.gst_info',
                 args: {
                     'keyword': gstin,
                     'uniqueId': "CFk1mgVfd8Dx2bcTuRuILOE4DAV169",

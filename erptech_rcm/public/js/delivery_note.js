@@ -1,7 +1,9 @@
 frappe.ui.form.on('Delivery Note', {
     setup: function (frm) {
-        frm.set_value('custom_site', null);
-        // frm.set_value('shipping_address_name', null);
+        if (!frm.doc.docstatus) {
+            frm.set_value('custom_site', null);
+            // frm.set_value('shipping_address_name', null);
+        }
         frm.set_query('custom_site', function () {
             return {
                 filters: {
@@ -14,7 +16,7 @@ frappe.ui.form.on('Delivery Note', {
         if (frm.doc.customer) {
             frm.set_value('custom_site', null);
             frappe.call({
-                method: 'erptech_rcm.custom_api.get_customer_address',
+                method: 'erptech_rcm.api.custom.get_customer_address',
                 args: {
                     'customer_name': frm.doc.customer,
                 },

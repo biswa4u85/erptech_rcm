@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"VWMniDidnf\",\"type\":\"header\",\"data\":{\"text\":\"<span style=\\\"font-size: 18px; letter-spacing: 0.18px;\\\"><b>ERP TECH</b></span>\",\"col\":12}},{\"id\":\"S9Cf0XfbTy\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Main</b></span>\",\"col\":12}},{\"id\":\"1kmmdXaBva\",\"type\":\"onboarding\",\"data\":{\"onboarding_name\":\"Selling\",\"col\":12}},{\"id\":\"G0mYinkdum\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"account\",\"col\":3}},{\"id\":\"sPgBtkhKxw\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Activity Cost\",\"col\":4}}]",
+ "content": "[{\"id\":\"VWMniDidnf\",\"type\":\"header\",\"data\":{\"text\":\"<span style=\\\"font-size: 18px; letter-spacing: 0.18px;\\\"><b>RMC</b></span>\",\"col\":12}},{\"id\":\"S9Cf0XfbTy\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Main</b></span>\",\"col\":12}},{\"id\":\"1kmmdXaBva\",\"type\":\"onboarding\",\"data\":{\"onboarding_name\":\"Selling\",\"col\":12}},{\"id\":\"G0mYinkdum\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"account\",\"col\":3}},{\"id\":\"sPgBtkhKxw\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Activity Cost\",\"col\":4}}]",
  "creation": "2024-03-12 00:20:56.016182",
  "custom_blocks": [],
  "docstatus": 0,
@@ -11,12 +11,12 @@
  "idx": 0,
  "indicator_color": "",
  "is_hidden": 0,
- "label": "ERP TECH",
+ "label": "RMC",
  "links": [],
  "modified": "2024-11-22 00:14:26.004678",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
- "name": "ERP TECH",
+ "name": "RMC",
  "number_cards": [],
  "owner": "test@admin.com",
  "parent_page": "",
@@ -29,7 +29,7 @@
   }
  ],
  "roles": [],
- "sequence_id": 3.0,
+ "sequence_id": 0.0,
  "shortcuts": [
   {
    "color": "Green",
@@ -40,5 +40,5 @@
    "type": "DocType"
   }
  ],
- "title": "ERP TECH"
+ "title": "RMC"
 }

@@ -25,7 +25,7 @@ frappe.ui.form.on('Customer', {
     refresh: function (frm) {
         frm.add_custom_button(__('Unlink Address'), function () {
             frappe.call({
-                method: 'erptech_rcm.custom_api.get_customer_address',
+                method: 'erptech_rcm.api.custom.get_customer_address',
                 args: {
                     'customer_name': frm.docname,
                 },
@@ -49,7 +49,7 @@ frappe.ui.form.on('Customer', {
                                 __('Are you sure you want to unlink the Address {0} from Customer {1}?', [values.address_name, frm.doc.name]),
                                 function () {
                                     frappe.call({
-                                        method: 'erptech_rcm.custom_api.unlink_customer_address',
+                                        method: 'erptech_rcm.api.custom.unlink_customer_address',
                                         args: {
                                             'customer_name': frm.docname,
                                             'address_name': values.address_name,
@@ -74,7 +74,7 @@ frappe.ui.form.on('Customer', {
         if (frm.doc.gstin && isValidGST(frm.doc.gstin)) {
             let gstin = frm.doc.gstin;
             frappe.call({
-                method: 'erptech_rcm.custom_api.gst_info',
+                method: 'erptech_rcm.api.custom.gst_info',
                 args: {
                     'keyword': gstin,
                     'uniqueId': "CFk1mgVfd8Dx2bcTuRuILOE4DAV169",
