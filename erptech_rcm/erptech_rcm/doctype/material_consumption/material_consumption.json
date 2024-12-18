@@ -1,78 +1,62 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:batch_no",
  "creation": "2024-09-19 20:41:48.290154",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "data_section",
-  "date",
-  "start",
-  "end",
-  "column_break_ybgh",
   "batch_no",
-  "rec_id",
-  "rec_name",
-  "section_break_aovj",
-  "table_vphz"
+  "column_break_ybgh",
+  "batch_no_serial",
+  "section_break_jlpc",
+  "items"
  ],
  "fields": [
-  {
-   "fieldname": "date",
-   "fieldtype": "Date",
-   "label": "Date"
-  },
-  {
-   "fieldname": "start",
-   "fieldtype": "Data",
-   "label": "Start"
-  },
-  {
-   "fieldname": "end",
-   "fieldtype": "Data",
-   "label": "End"
-  },
   {
    "fieldname": "column_break_ybgh",
    "fieldtype": "Column Break"
   },
   {
    "fieldname": "batch_no",
-   "fieldtype": "Date",
-   "label": "Batch No"
-  },
-  {
-   "fieldname": "rec_id",
-   "fieldtype": "Data",
-   "label": "Rec Id"
-  },
-  {
-   "fieldname": "rec_name",
-   "fieldtype": "Data",
-   "label": "Rec Name"
-  },
-  {
-   "fieldname": "section_break_aovj",
-   "fieldtype": "Section Break",
-   "label": "Mat"
-  },
-  {
-   "fieldname": "table_vphz",
-   "fieldtype": "Table",
-   "options": "Material Consumption Item"
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Batch No",
+   "options": "DO Data",
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "data_section",
    "fieldtype": "Section Break",
    "label": "Data"
+  },
+  {
+   "fieldname": "batch_no_serial",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Batch No Serial",
+   "reqd": 1
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Material Consumption Item"
+  },
+  {
+   "fieldname": "section_break_jlpc",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-19 21:02:12.274792",
+ "modified": "2024-12-18 15:24:29.877519",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "Material Consumption",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
