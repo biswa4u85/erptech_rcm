@@ -1,0 +1,28 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-18 18:57:17.566021",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ugag"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ugag",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-18 18:57:25.724398",
+ "modified_by": "Administrator",
+ "module": "Erptech Rcm",
+ "name": "BOM Recipe",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
