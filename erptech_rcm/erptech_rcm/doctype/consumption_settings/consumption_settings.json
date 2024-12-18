@@ -8,7 +8,10 @@
   "db_host",
   "db_user",
   "db_password",
-  "database"
+  "database",
+  "column_break_xceu",
+  "do_table",
+  "consumption_table"
  ],
  "fields": [
   {
@@ -30,12 +33,26 @@
    "fieldname": "database",
    "fieldtype": "Data",
    "label": "Database"
+  },
+  {
+   "fieldname": "column_break_xceu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "do_table",
+   "fieldtype": "Data",
+   "label": "DO Table"
+  },
+  {
+   "fieldname": "consumption_table",
+   "fieldtype": "Data",
+   "label": "Consumption Table"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-12-18 12:43:26.757885",
+ "modified": "2024-12-18 18:54:52.848002",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "Consumption Settings",

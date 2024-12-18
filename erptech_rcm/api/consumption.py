@@ -20,10 +20,10 @@ def fetch_do_data(type):
 
         # Example: Query the database
         if(type == "all"):
-            cursor.execute("SELECT * FROM Batch_Trans1") 
+            cursor.execute(f"SELECT * FROM {consumptionSettings.do_table}") 
         else:
             count = frappe.db.count(db_name)
-            cursor.execute("SELECT * FROM Batch_Trans1 WHERE Batch_No > %s", (count,))
+            cursor.execute(f"SELECT * FROM {consumptionSettings.do_table} WHERE Batch_No > {count}")
 
         # Fetch and print the results
         results = cursor.fetchall()
@@ -108,10 +108,10 @@ def fetch_consumption_data(type):
 
         # Example: Query the database
         if(type == "all"):
-            cursor.execute("SELECT * FROM Batch_trans2") 
+            cursor.execute(f"SELECT * FROM {consumptionSettings.consumption_table}") 
         else:
             count = frappe.db.count(db_name)
-            cursor.execute("SELECT * FROM Batch_trans2 WHERE Batch_No > %s", (count,))
+            cursor.execute(f"SELECT * FROM {consumptionSettings.consumption_table} WHERE Batch_No > {count}")
 
         # Fetch and print the results
         results = cursor.fetchall()
