@@ -1,12 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:batch_no",
  "creation": "2024-09-19 21:08:56.645710",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "do_no",
   "batch_no",
+  "batch_no_serial",
   "truck_id",
   "rec_id",
   "rec_name",
@@ -20,18 +21,23 @@
  ],
  "fields": [
   {
-   "fieldname": "do_no",
-   "fieldtype": "Data",
-   "label": "DO No"
-  },
-  {
    "fieldname": "batch_no",
    "fieldtype": "Data",
-   "label": "Batch No"
+   "label": "Batch No",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "batch_no_serial",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Batch No Serial",
+   "reqd": 1
   },
   {
    "fieldname": "truck_id",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Truck Id"
   },
   {
@@ -42,11 +48,13 @@
   {
    "fieldname": "rec_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Rec Name"
   },
   {
    "fieldname": "qty",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Qty"
   },
   {
@@ -81,10 +89,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-19 21:16:15.778590",
+ "modified": "2024-12-18 13:27:18.276434",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "DO Data",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
