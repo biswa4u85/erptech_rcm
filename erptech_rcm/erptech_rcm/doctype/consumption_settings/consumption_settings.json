@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-18 12:41:58.305193",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "db_host",
+  "db_user",
+  "db_password",
+  "database"
+ ],
+ "fields": [
+  {
+   "fieldname": "db_host",
+   "fieldtype": "Data",
+   "label": "DB Host"
+  },
+  {
+   "fieldname": "db_user",
+   "fieldtype": "Data",
+   "label": "DB User"
+  },
+  {
+   "fieldname": "db_password",
+   "fieldtype": "Data",
+   "label": "DB Password"
+  },
+  {
+   "fieldname": "database",
+   "fieldtype": "Data",
+   "label": "Database"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-12-18 12:43:26.757885",
+ "modified_by": "Administrator",
+ "module": "Erptech Rcm",
+ "name": "Consumption Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
