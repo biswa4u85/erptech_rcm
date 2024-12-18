@@ -1,97 +1,15 @@
 {
-<<<<<<< HEAD
- "charts": [
-  {
-   "chart_name": "Outgoing Bills (Sales Invoice)",
-   "label": "Sales Invoice"
-  },
-  {
-   "chart_name": "Sales Order Trends",
-   "label": "Sales Order"
-  }
- ],
- "content": "[{\"id\":\"5AzoscOc1I\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Quotation\",\"col\":3}},{\"id\":\"Lb3o9D9e0w\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Order\",\"col\":3}},{\"id\":\"r3kQHf_7dL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Delivery Note\",\"col\":3}},{\"id\":\"EA-YZAKCXq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"id\":\"fzZ4C8HGzu\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sales Order\",\"col\":6}},{\"id\":\"VK0MKFTx97\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sales Invoice\",\"col\":6}},{\"id\":\"3REzzKu2NQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Weight Bridge\",\"col\":3}},{\"id\":\"rdPrEyRqGu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"DO Data\",\"col\":3}},{\"id\":\"u597eIJ3YB\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Material Consumption\",\"col\":3}}]",
- "creation": "2024-03-12 00:20:56.016182",
- "custom_blocks": [],
- "docstatus": 0,
- "doctype": "Workspace",
- "for_user": "",
- "hide_custom": 0,
- "icon": "color-energy-points",
- "idx": 0,
- "indicator_color": "",
- "is_hidden": 0,
- "label": "RMC",
- "links": [],
- "modified": "2024-12-17 14:20:11.026504",
- "modified_by": "Administrator",
- "module": "Erptech Rcm",
- "name": "RMC",
- "number_cards": [],
- "owner": "test@admin.com",
- "parent_page": "",
- "public": 1,
- "quick_lists": [],
- "roles": [],
- "sequence_id": 0.0,
- "shortcuts": [
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Sales Invoice",
-   "link_to": "Sales Invoice",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Material Consumption",
-   "link_to": "Material Consumption",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "DO Data",
-   "link_to": "DO Data",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Weight Bridge",
-   "link_to": "Weight Bridge",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Sales Order",
-   "link_to": "Sales Order",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Delivery Note",
-   "link_to": "Delivery Note",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Quotation",
-   "link_to": "Quotation",
-   "type": "DocType"
-  }
- ],
- "title": "RMC"
-=======
-    "charts": [],
-    "content": "[{\"id\":\"VWMniDidnf\",\"type\":\"header\",\"data\":{\"text\":\"<span style=\\\"font-size: 18px; letter-spacing: 0.18px;\\\"><b>RMC</b></span>\",\"col\":12}},{\"id\":\"S9Cf0XfbTy\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Main</b></span>\",\"col\":12}},{\"id\":\"1kmmdXaBva\",\"type\":\"onboarding\",\"data\":{\"onboarding_name\":\"Selling\",\"col\":12}},{\"id\":\"G0mYinkdum\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"account\",\"col\":3}},{\"id\":\"sPgBtkhKxw\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Activity Cost\",\"col\":4}}]",
+    "charts": [
+        {
+            "chart_name": "Outgoing Bills (Sales Invoice)",
+            "label": "Sales Invoice"
+        },
+        {
+            "chart_name": "Sales Order Trends",
+            "label": "Sales Order"
+        }
+    ],
+    "content": "[{\"id\":\"5AzoscOc1I\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Quotation\",\"col\":3}},{\"id\":\"Lb3o9D9e0w\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Order\",\"col\":3}},{\"id\":\"r3kQHf_7dL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Delivery Note\",\"col\":3}},{\"id\":\"EA-YZAKCXq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"id\":\"fzZ4C8HGzu\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sales Order\",\"col\":6}},{\"id\":\"VK0MKFTx97\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sales Invoice\",\"col\":6}},{\"id\":\"3REzzKu2NQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Weight Bridge\",\"col\":3}},{\"id\":\"rdPrEyRqGu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"DO Data\",\"col\":3}},{\"id\":\"u597eIJ3YB\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Material Consumption\",\"col\":3}}]",
     "creation": "2024-03-12 00:20:56.016182",
     "custom_blocks": [],
     "docstatus": 0,
@@ -104,7 +22,7 @@
     "is_hidden": 0,
     "label": "RMC",
     "links": [],
-    "modified": "2024-11-22 00:14:26.004678",
+    "modified": "2024-12-17 14:20:11.026504",
     "modified_by": "Administrator",
     "module": "Erptech Rcm",
     "name": "RMC",
@@ -112,25 +30,62 @@
     "owner": "test@admin.com",
     "parent_page": "",
     "public": 1,
-    "quick_lists": [
-        {
-            "document_type": "Activity Cost",
-            "label": "Activity Cost",
-            "quick_list_filter": "[]"
-        }
-    ],
+    "quick_lists": [],
     "roles": [],
     "sequence_id": 0.0,
     "shortcuts": [
         {
-            "color": "Green",
+            "color": "Grey",
             "doc_view": "List",
-            "label": "account",
-            "link_to": "Account",
+            "label": "Sales Invoice",
+            "link_to": "Sales Invoice",
+            "type": "DocType"
+        },
+        {
+            "color": "Grey",
+            "doc_view": "List",
+            "label": "Material Consumption",
+            "link_to": "Material Consumption",
             "stats_filter": "[]",
+            "type": "DocType"
+        },
+        {
+            "color": "Grey",
+            "doc_view": "List",
+            "label": "DO Data",
+            "link_to": "DO Data",
+            "stats_filter": "[]",
+            "type": "DocType"
+        },
+        {
+            "color": "Grey",
+            "doc_view": "List",
+            "label": "Weight Bridge",
+            "link_to": "Weight Bridge",
+            "stats_filter": "[]",
+            "type": "DocType"
+        },
+        {
+            "color": "Grey",
+            "doc_view": "List",
+            "label": "Sales Order",
+            "link_to": "Sales Order",
+            "type": "DocType"
+        },
+        {
+            "color": "Grey",
+            "doc_view": "List",
+            "label": "Delivery Note",
+            "link_to": "Delivery Note",
+            "type": "DocType"
+        },
+        {
+            "color": "Grey",
+            "doc_view": "List",
+            "label": "Quotation",
+            "link_to": "Quotation",
             "type": "DocType"
         }
     ],
     "title": "RMC"
->>>>>>> 51d518029faac3f803f8eaa561e2136432195646
 }

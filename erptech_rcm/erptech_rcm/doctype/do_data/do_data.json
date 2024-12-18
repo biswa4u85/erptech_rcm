@@ -1,115 +1,115 @@
 {
- "actions": [],
- "allow_rename": 1,
- "autoname": "field:batch_no",
- "creation": "2024-09-19 21:08:56.645710",
- "doctype": "DocType",
- "engine": "InnoDB",
- "field_order": [
-  "batch_no",
-  "batch_no_serial",
-  "truck_id",
-  "rec_id",
-  "rec_name",
-  "qty",
-  "column_break_rjpd",
-  "cust_id",
-  "site_id",
-  "driver",
-  "start",
-  "end"
- ],
- "fields": [
-  {
-   "fieldname": "batch_no",
-   "fieldtype": "Data",
-   "label": "Batch No",
-   "reqd": 1,
-   "unique": 1
-  },
-  {
-   "fieldname": "batch_no_serial",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Batch No Serial",
-   "reqd": 1
-  },
-  {
-   "fieldname": "truck_id",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Truck Id"
-  },
-  {
-   "fieldname": "rec_id",
-   "fieldtype": "Data",
-   "label": "Rec Id"
-  },
-  {
-   "fieldname": "rec_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Rec Name"
-  },
-  {
-   "fieldname": "qty",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Qty"
-  },
-  {
-   "fieldname": "column_break_rjpd",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "cust_id",
-   "fieldtype": "Data",
-   "label": "Cust Id"
-  },
-  {
-   "fieldname": "site_id",
-   "fieldtype": "Data",
-   "label": "Site Id"
-  },
-  {
-   "fieldname": "driver",
-   "fieldtype": "Data",
-   "label": "Driver"
-  },
-  {
-   "fieldname": "start",
-   "fieldtype": "Datetime",
-   "label": "Start"
-  },
-  {
-   "fieldname": "end",
-   "fieldtype": "Datetime",
-   "label": "End"
-  }
- ],
- "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-12-18 13:27:18.276434",
- "modified_by": "Administrator",
- "module": "Erptech Rcm",
- "name": "DO Data",
- "naming_rule": "By fieldname",
- "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  }
- ],
- "sort_field": "modified",
- "sort_order": "DESC",
- "states": []
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "field:batch_no",
+    "creation": "2024-09-19 21:08:56.645710",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "batch_no",
+        "batch_no_serial",
+        "truck_id",
+        "rec_id",
+        "rec_name",
+        "qty",
+        "column_break_rjpd",
+        "cust_id",
+        "site_id",
+        "driver",
+        "start",
+        "end"
+    ],
+    "fields": [
+        {
+            "fieldname": "batch_no",
+            "fieldtype": "Data",
+            "label": "Batch No",
+            "reqd": 1,
+            "unique": 1
+        },
+        {
+            "fieldname": "batch_no_serial",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Batch No Serial",
+            "reqd": 1
+        },
+        {
+            "fieldname": "truck_id",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Truck Id"
+        },
+        {
+            "fieldname": "rec_id",
+            "fieldtype": "Data",
+            "label": "Rec Id"
+        },
+        {
+            "fieldname": "rec_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Rec Name"
+        },
+        {
+            "fieldname": "qty",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Qty"
+        },
+        {
+            "fieldname": "column_break_rjpd",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "cust_id",
+            "fieldtype": "Data",
+            "label": "Cust Id"
+        },
+        {
+            "fieldname": "site_id",
+            "fieldtype": "Data",
+            "label": "Site Id"
+        },
+        {
+            "fieldname": "driver",
+            "fieldtype": "Data",
+            "label": "Driver"
+        },
+        {
+            "fieldname": "start",
+            "fieldtype": "Datetime",
+            "label": "Start"
+        },
+        {
+            "fieldname": "end",
+            "fieldtype": "Datetime",
+            "label": "End"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2024-12-18 13:27:18.276434",
+    "modified_by": "Administrator",
+    "module": "Erptech Rcm",
+    "name": "DO Data",
+    "naming_rule": "By fieldname",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
 }
