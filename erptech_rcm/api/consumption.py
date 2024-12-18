@@ -29,7 +29,7 @@ def fetch_do_data(type):
         results = cursor.fetchall()
 
         for result in results:
-
+            # TO DO
             data = {
                     "batch_no": result["Batch_No"],
                     "batch_no_serial" :result["batch_no_serial"],
@@ -112,6 +112,7 @@ def fetch_consumption_data(type):
 
             items = []
             for item in group:
+                # TO DO
                 items.append({
                     "item": item['Prod1_Agg_Name'], 
                     "tar": item['Prod1_Agg_Stwt'], 
