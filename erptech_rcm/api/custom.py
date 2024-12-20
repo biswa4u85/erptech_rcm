@@ -29,6 +29,21 @@ def get_customer_address(customer_name):
 	return addresses
 
 @frappe.whitelist()
+def get_recipe_items(parent_doc_name):
+	
+    # SQL query to fetch data from parent and child tables
+    query = """
+        SELECT ri.item_code, ri.item_name, ri.qty, ri.rate, ri.uom, ri.amount
+        FROM `tabRecipe Items` ri
+        INNER JOIN `tabRecipe` r ON ri.parent = r.name
+        WHERE r.name = %s
+    """
+  
+    # Execute the query
+    results = frappe.db.sql(query, (parent_doc_name,), as_dict=True)
+    return results
+
+@frappe.whitelist()
 def unlink_customer_address(customer_name, address_name):
     dynamic_links = frappe.get_all(
         "Dynamic Link",

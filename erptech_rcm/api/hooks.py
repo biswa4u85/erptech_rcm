@@ -3,29 +3,32 @@ import frappe
 import requests
 
 @frappe.whitelist()
-def create_purchase_receipt(self):
-	print("aaa")
-    print(self)
-    # Create a new Purchase Receipt
-    purchase_receipt = frappe.get_doc({
-        "doctype": "Purchase Receipt",
-        "supplier": self.supplier,  # Assuming your custom doctype has a supplier field
-        "posting_date": frappe.utils.nowdate(),
-        "items": []
-    })
-
-    # Copy items from the custom doctype to the Purchase Receipt
-    for item in self.items:  # Assuming your custom doctype has an 'items' child table
-        purchase_receipt.append("items", {
+def create_stock_entry(doc, method):
+	# Check some conditions or add any custom validation logic before creating a Stock Entry
+    if not doc.docstatus == 1:
+        frappe.throw("Some field is missing, cannot proceed with the Stock Entry creation.")
+    
+    # Create Stock Entry document
+    stock_entry = frappe.new_doc("Stock Entry")
+    
+    # Populate the fields of the Stock Entry document
+    stock_entry.stock_entry_type = "Material Issue"  # Example, use appropriate entry type
+    stock_entry.company = doc.company  # Assume the custom doctype has a company field
+    stock_entry.from_bom = True
+    stock_entry.use_multi_level_bom = True
+    
+    # Assuming you have child table "items" in the custom doctype and need to transfer items to stock
+    for item in doc.items:
+        stock_entry.append("items", {
             "item_code": item.item_code,
             "qty": item.qty,
             "rate": item.rate,
-            "warehouse": item.warehouse  # Ensure warehouse is set
+            "s_warehouse": item.warehouse
         })
-
-    # Save and submit the new Purchase Receipt
-    purchase_receipt.insert()
-    purchase_receipt.submit()
-
-    # Notify the user
-    frappe.msgprint(_("Purchase Receipt {0} created successfully.").format(purchase_receipt.name))
+    
+    # Submit the Stock Entry document to record the transaction
+    stock_entry.submit()
+    
+    # Optional: Log or add any more business logic here
+    
+    frappe.msgprint(f"Stock Entry {stock_entry.name} has been created successfully.")

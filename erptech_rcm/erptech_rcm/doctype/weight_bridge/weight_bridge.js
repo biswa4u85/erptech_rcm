@@ -121,12 +121,6 @@ frappe.ui.form.on("Weight Bridge", {
                 frm.set_value('vehicle', deliveryNote?.message.vehicle_no);
             }
         }
-    },
-    before_submit: function (frm) {
-        // Check if the required field is not empty
-        if (!frm.doc.gross_weight || !frm.doc.tare_weight) {
-            frappe.throw(__('The gross weight and tare weight must be filled before submission.'));
-        }
     }
 });
 
