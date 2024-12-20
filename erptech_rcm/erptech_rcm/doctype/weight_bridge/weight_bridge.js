@@ -3,66 +3,81 @@
 
 frappe.ui.form.on("Weight Bridge", {
     async refresh(frm) {
-        document.querySelector('input[data-fieldname="display_data"]').readOnly = true;
-        document.querySelector('input[data-fieldname="gross_weight"]').readOnly = true;
-        document.querySelector('input[data-fieldname="tare_weight"]').readOnly = true;
-        document.querySelector('button[data-fieldname="gross"]').disabled = true;
-        document.querySelector('button[data-fieldname="tare"]').disabled = true;
-        if (frm.doc.wbslip_type === "Inward") {
-            document.querySelector('button[data-fieldname="tare"]').disabled = false;
-        }
-        if (frm.doc.wbslip_type === "Outward") {
-            document.querySelector('button[data-fieldname="gross"]').disabled = false;
-        }
-        if (frm.doc.wbslip_type === "Other") {
-            document.querySelector('button[data-fieldname="gross"]').disabled = false;
-            document.querySelector('button[data-fieldname="tare"]').disabled = false;
-        }
+        if (!frm.doc.docstatus) {
+            document.querySelector('input[data-fieldname="display_data"]').readOnly = true;
+            document.querySelector('input[data-fieldname="gross_weight"]').readOnly = true;
+            document.querySelector('input[data-fieldname="tare_weight"]').readOnly = true;
 
-        doc = await frappe.db.get_doc('RCM Settings', 'enable_weigh_scale')
-        if (doc.enable_weigh_scale == 1) {
-            if ("serial" in navigator) {
-                var ports = await navigator.serial.getPorts();
-                if (ports.length == 0) {
-                    frappe.confirm(
-                        'Please provide permission to connect to the weigh device',
-                        async function () {
-                            let port = await navigator.serial.requestPort();
-                            await port.open({ baudRate: Number(doc.baud_rate) });
-                            await listenToPort(port, doc);
-                        },
-
-                    );
-                } else {
-                    await ports[0].open({ baudRate: Number(doc.baud_rate) });
-                    await listenToPort(ports[0], doc);
+            if (frm.doc.name.includes("new-weight-bridge")) {
+                document.querySelector('div[data-fieldname="section_break_outward"]').style.display = 'none';
+                document.querySelector('button[data-fieldname="tare"]').disabled = true;
+            } else {
+                document.querySelector('select[data-fieldname="wbslip_type"]').disabled = true;
+                if (frm.doc.gross_weight) {
+                    document.querySelector('button[data-fieldname="gross"]').disabled = true;
+                }
+                if (frm.doc.tare_weight) {
+                    document.querySelector('button[data-fieldname="tare"]').disabled = true;
+                }
+                if (frm.doc.wbslip_type === "Inward") {
+                    document.querySelector('div[data-fieldname="section_break_outward"]').style.display = 'none';
+                }
+                if (frm.doc.wbslip_type === "Outward") {
+                    document.querySelector('div[data-fieldname="section_break_inward"]').style.display = 'none';
                 }
             }
-            else {
-                frappe.msgprint("Your browser does not support serial device connection. Please switch to a supported browser to connect to your weigh device");
-            }
 
+            doc = await frappe.db.get_doc('RCM Settings', 'enable_weigh_scale')
+            if (doc.enable_weigh_scale == 1) {
+
+                // TEST START
+                const outputDiv = document.querySelector('input[data-fieldname="display_data"]');
+                setInterval(() => {
+                    outputDiv.value = Math.floor(Math.random() * (900 - 100 + 1)) + 100;
+                }, 5000)
+                // TEST END
+
+                if ("serial" in navigator) {
+                    var ports = await navigator.serial.getPorts();
+                    if (ports.length == 0) {
+                        frappe.confirm(
+                            'Please provide permission to connect to the weigh device',
+                            async function () {
+                                let port = await navigator.serial.requestPort();
+                                await port.open({ baudRate: Number(doc.baud_rate) });
+                                await listenToPort(port, doc);
+                            },
+
+                        );
+                    } else {
+                        await ports[0].open({ baudRate: Number(doc.baud_rate) });
+                        await listenToPort(ports[0], doc);
+                    }
+                }
+                else {
+                    frappe.msgprint("Your browser does not support serial device connection. Please switch to a supported browser to connect to your weigh device");
+                }
+
+            }
         }
     },
     wbslip_type: async function (frm) {
         if (frm.doc.wbslip_type) {
-            document.querySelector('button[data-fieldname="gross"]').disabled = true;
-            document.querySelector('button[data-fieldname="tare"]').disabled = true;
             if (frm.doc.wbslip_type === "Inward") {
-                if (frm.doc.name.includes("new-weight-bridge-maste")) {
-                    document.querySelector('button[data-fieldname="gross"]').disabled = false;
-                } else {
-                    document.querySelector('button[data-fieldname="tare"]').disabled = false;
-                }
+                document.querySelector('div[data-fieldname="section_break_inward"]').style.display = 'block';
+                document.querySelector('div[data-fieldname="section_break_outward"]').style.display = 'none';
+                document.querySelector('button[data-fieldname="gross"]').disabled = false;
+                document.querySelector('button[data-fieldname="tare"]').disabled = true;
             }
             if (frm.doc.wbslip_type === "Outward") {
-                if (frm.doc.name.includes("new-weight-bridge-maste")) {
-                    document.querySelector('button[data-fieldname="tare"]').disabled = false;
-                } else {
-                    document.querySelector('button[data-fieldname="gross"]').disabled = false;
-                }
+                document.querySelector('div[data-fieldname="section_break_inward"]').style.display = 'none';
+                document.querySelector('div[data-fieldname="section_break_outward"]').style.display = 'block';
+                document.querySelector('button[data-fieldname="gross"]').disabled = true;
+                document.querySelector('button[data-fieldname="tare"]').disabled = false;
             }
             if (frm.doc.wbslip_type === "Other") {
+                document.querySelector('div[data-fieldname="section_break_inward"]').style.display = 'block';
+                document.querySelector('div[data-fieldname="section_break_outward"]').style.display = 'block';
                 document.querySelector('button[data-fieldname="gross"]').disabled = false;
                 document.querySelector('button[data-fieldname="tare"]').disabled = false;
             }
@@ -71,12 +86,58 @@ frappe.ui.form.on("Weight Bridge", {
     gross: async function (frm) {
         let value = document.querySelector('input[data-fieldname="display_data"]').value;
         frm.set_value('gross_weight', value);
+        frm.set_value('gross_weight_date_time', frappe.datetime.now_date());
     },
     tare: async function (frm) {
         let value = document.querySelector('input[data-fieldname="display_data"]').value;
         frm.set_value('tare_weight', value);
+        frm.set_value('tare_weight_date_time', frappe.datetime.now_date());
     },
+    gross_weight: async function (frm) {
+        calculateWeight(frm)
+    },
+    tare_weight: async function (frm) {
+        calculateWeight(frm)
+    },
+    deduct: async function (frm) {
+        calculateWeight(frm)
+    },
+    purchase_order: async function (frm) {
+        if (frm.doc.purchase_order) {
+            let purchaseOrder = await frappe.db.get_value("Purchase Order", frm.doc.purchase_order, ["supplier_name"]);
+            if (purchaseOrder?.message) {
+                frm.set_value('supplier_name', purchaseOrder?.message.supplier_name);
+                // frm.set_value('vehicle_no', purchaseOrder?.message.supplier_name);
+                // frm.set_value('transporter', purchaseOrder?.message.supplier_name);
+                // frm.set_value('ref_no', purchaseOrder?.message.supplier_name);
+            }
+        }
+    },
+    delivery_note: async function (frm) {
+        if (frm.doc.delivery_note) {
+            let deliveryNote = await frappe.db.get_value("Delivery Note", frm.doc.delivery_note, ["*"]);
+            if (deliveryNote?.message) {
+                frm.set_value('customer_name', deliveryNote?.message.customer);
+                frm.set_value('vehicle', deliveryNote?.message.vehicle_no);
+            }
+        }
+    },
+    before_submit: function (frm) {
+        // Check if the required field is not empty
+        if (!frm.doc.gross_weight || !frm.doc.tare_weight) {
+            frappe.throw(__('The gross weight and tare weight must be filled before submission.'));
+        }
+    }
 });
+
+function calculateWeight(frm) {
+    if (frm.doc.gross_weight && frm.doc.tare_weight) {
+        let netWeight = Number(frm.doc.gross_weight) - Number(frm.doc.tare_weight)
+        frm.set_value('net_weight', netWeight);
+        let grandNetDeduct = Number(frm.doc.deduct ?? 0) / 100 * netWeight
+        frm.set_value('grand_net_weight', netWeight - grandNetDeduct);
+    }
+}
 
 async function listenToPort(port, settings) {
     const outputDiv = document.querySelector('input[data-fieldname="display_data"]');

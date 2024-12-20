@@ -14,7 +14,7 @@
   "column_break_bwnp",
   "wbslip_type",
   "company",
-  "section_break_sdaw",
+  "section_break_inward",
   "purchase_order",
   "column_break_gupk",
   "supplier_name",
@@ -24,7 +24,7 @@
   "transporter",
   "column_break_axhz",
   "ref_no",
-  "section_break_hyaa",
+  "section_break_outward",
   "delivery_note",
   "column_break_woxk",
   "customer_name",
@@ -41,7 +41,7 @@
   "tare_weight",
   "net_weight",
   "column_break_tdxc",
-  "deduct_",
+  "deduct",
   "grand_net_weight",
   "column_break_omeb",
   "gross",
@@ -142,11 +142,6 @@
    "options": "Select\nMoisture\nBad Quality"
   },
   {
-   "fieldname": "deduct_",
-   "fieldtype": "Float",
-   "label": "Deduct %"
-  },
-  {
    "fieldname": "section_break_ypif",
    "fieldtype": "Section Break"
   },
@@ -239,16 +234,6 @@
    "search_index": 1
   },
   {
-   "fieldname": "section_break_sdaw",
-   "fieldtype": "Section Break",
-   "label": "Inward"
-  },
-  {
-   "fieldname": "section_break_hyaa",
-   "fieldtype": "Section Break",
-   "label": "Outward"
-  },
-  {
    "fieldname": "column_break_siis",
    "fieldtype": "Column Break"
   },
@@ -263,12 +248,27 @@
   {
    "fieldname": "column_break_axhz",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_inward",
+   "fieldtype": "Section Break",
+   "label": "Inward"
+  },
+  {
+   "fieldname": "section_break_outward",
+   "fieldtype": "Section Break",
+   "label": "Outward"
+  },
+  {
+   "fieldname": "deduct",
+   "fieldtype": "Float",
+   "label": "Deduct %"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-11 21:56:49.080507",
+ "modified": "2024-12-19 19:13:35.438182",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "Weight Bridge",

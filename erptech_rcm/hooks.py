@@ -233,4 +233,10 @@ app_include_js = "/assets/erptech_rcm/js/erptech_rcm.js"
 #	"erptech_rcm.auth.validate"
 # ]
 
+doc_events = {
+    "Weight Bridge": {
+        "after_submit": "erptech_rcm.api.hooks.create_purchase_receipt"
+    }
+}
+
 fixtures = ["Custom Field"]
