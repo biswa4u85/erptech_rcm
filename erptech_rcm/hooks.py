@@ -19,6 +19,7 @@ doctype_js = {
 	"Quotation": "public/js/quotation.js",
 	"Sales Order": "public/js/sales_order.js",
 	"Delivery Note": "public/js/delivery_note.js",
+	"Delivery Note Item": "public/js/delivery_note_items.js",
 	"Sales Invoice": "public/js/sales_invoice.js"
 }
 
@@ -232,5 +233,11 @@ app_include_js = "/assets/erptech_rcm/js/erptech_rcm.js"
 # auth_hooks = [
 #	"erptech_rcm.auth.validate"
 # ]
+
+doc_events = {
+    "Delivery Note": {
+        "before_submit": "erptech_rcm.api.hooks.create_stock_entry"
+    }
+}
 
 fixtures = ["Custom Field"]

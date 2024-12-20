@@ -34,13 +34,14 @@
   {
    "fieldname": "recipe_items",
    "fieldtype": "Table",
+   "ignore_user_permissions": 1,
    "label": "Recipe Items",
    "options": "Recipe Items"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-30 11:15:39.678052",
+ "modified": "2024-12-20 11:04:50.653159",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "Recipe",
