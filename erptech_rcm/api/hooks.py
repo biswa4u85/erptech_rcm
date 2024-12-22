@@ -18,6 +18,7 @@ def create_stock_entry(doc, method):
     stock_entry.from_bom = True
     stock_entry.use_multi_level_bom = True
     stock_entry.bom_no = doc.items[0].custom_bom_no
+    stock_entry.fg_completed_qty = doc.items[0].qty
     
     # Assuming you have child table "items" in the custom doctype and need to transfer items to stock
     if(doc.items[0].custom_bom_no):
