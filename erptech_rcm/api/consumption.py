@@ -1,19 +1,24 @@
 import frappe
 import requests
 import pymysql
+import pyodbc
 
 @frappe.whitelist()
 def fetch_do_data(type):
     db_name = "DO Data"
     try:
         consumptionSettings = frappe.get_cached_doc('Consumption Settings')
-        connection = pymysql.connect(
-            host=consumptionSettings.db_host,
-            user=consumptionSettings.db_user,
-            password=consumptionSettings.db_password,
-            database=consumptionSettings.database,
-            cursorclass=pymysql.cursors.DictCursor 
-        )
+        connection = None
+        if (consumptionSettings.sql_server == 1) :
+            connection = pymysql.connect(
+                host=consumptionSettings.db_host,
+                user=consumptionSettings.db_user,
+                password=consumptionSettings.db_password,
+                database=consumptionSettings.database,
+                cursorclass=pymysql.cursors.DictCursor 
+            )
+        else:
+            connection = pyodbc.connect(f"DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={consumptionSettings.db_host};DATABASE={consumptionSettings.database};UID={consumptionSettings.db_user};PWD={consumptionSettings.db_password}")
 
         # Create a cursor object to interact with the database
         cursor = connection.cursor()

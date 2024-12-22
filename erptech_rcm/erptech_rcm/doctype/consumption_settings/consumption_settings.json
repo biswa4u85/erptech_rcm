@@ -5,6 +5,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "sql_server",
   "db_host",
   "db_user",
   "db_password",
@@ -47,12 +48,18 @@
    "fieldname": "consumption_table",
    "fieldtype": "Data",
    "label": "Consumption Table"
+  },
+  {
+   "default": "0",
+   "fieldname": "sql_server",
+   "fieldtype": "Check",
+   "label": "SQL Server"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-12-18 18:54:52.848002",
+ "modified": "2024-12-22 12:14:33.703376",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "Consumption Settings",
