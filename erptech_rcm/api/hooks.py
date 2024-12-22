@@ -1,6 +1,7 @@
 
 import frappe
 import requests
+from erptech_rcm.api.custom import get_child_items
 
 @frappe.whitelist()
 def create_stock_entry(doc, method):
@@ -16,15 +17,18 @@ def create_stock_entry(doc, method):
     stock_entry.company = doc.company  # Assume the custom doctype has a company field
     stock_entry.from_bom = True
     stock_entry.use_multi_level_bom = True
+    stock_entry.bom_no = doc.items[0].custom_bom_no
     
     # Assuming you have child table "items" in the custom doctype and need to transfer items to stock
-    for item in doc.items:
-        stock_entry.append("items", {
-            "item_code": item.item_code,
-            "qty": item.qty,
-            "rate": item.rate,
-            "s_warehouse": item.warehouse
-        })
+    if(doc.items[0].custom_bom_no):
+        items = get_child_items(doc.items[0].custom_bom_no, "BOM", "BOM Item")
+        for item in items:
+            stock_entry.append("items", {
+                "item_code": item.item_code,
+                "qty": item.qty,
+                "rate": item.rate,
+                "s_warehouse": item.source_warehouse
+            })
     
     # Submit the Stock Entry document to record the transaction
     stock_entry.submit()
