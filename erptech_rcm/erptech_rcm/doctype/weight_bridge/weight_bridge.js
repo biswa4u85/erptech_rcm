@@ -31,10 +31,10 @@ frappe.ui.form.on("Weight Bridge", {
             if (doc.enable_weigh_scale == 1) {
 
                 // TEST START
-                const outputDiv = document.querySelector('input[data-fieldname="display_data"]');
-                setInterval(() => {
-                    outputDiv.value = Math.floor(Math.random() * (900 - 100 + 1)) + 100;
-                }, 5000)
+                // const outputDiv = document.querySelector('input[data-fieldname="display_data"]');
+                // setInterval(() => {
+                //     outputDiv.value = Math.floor(Math.random() * (900 - 100 + 1)) + 100;
+                // }, 5000)
                 // TEST END
 
                 if ("serial" in navigator) {
@@ -107,19 +107,46 @@ frappe.ui.form.on("Weight Bridge", {
             let purchaseOrder = await frappe.db.get_value("Purchase Order", frm.doc.purchase_order, ["supplier_name"]);
             if (purchaseOrder?.message) {
                 frm.set_value('supplier_name', purchaseOrder?.message.supplier_name);
-                // frm.set_value('vehicle_no', purchaseOrder?.message.supplier_name);
-                // frm.set_value('transporter', purchaseOrder?.message.supplier_name);
-                // frm.set_value('ref_no', purchaseOrder?.message.supplier_name);
+                frappe.call({
+                    method: 'erptech_rcm.api.custom.get_child_items',
+                    args: {
+                        parent: "Purchase Order",
+                        child: "Purchase Order Item",
+                        parent_name: frm.doc.purchase_order,
+                    },
+                    callback: function (res) {
+                        frm.set_query('item', function () {
+                            return {
+                                filters: {
+                                    'item_code': ['in', (res.message).map(item => item.item_code)]
+                                }
+                            };
+                        });
+                    }
+                });
             }
         }
     },
     delivery_note: async function (frm) {
         if (frm.doc.delivery_note) {
-            let deliveryNote = await frappe.db.get_value("Delivery Note", frm.doc.delivery_note, ["*"]);
+            let deliveryNote = await frappe.db.get_value("Delivery Note", frm.doc.delivery_note, ["customer", "custom_vehicle"]);
             if (deliveryNote?.message) {
                 frm.set_value('customer_name', deliveryNote?.message.customer);
-                frm.set_value('vehicle', deliveryNote?.message.vehicle_no);
+                frm.set_value('vehicle', deliveryNote?.message.custom_vehicle);
             }
+            frappe.call({
+                method: 'erptech_rcm.api.custom.get_child_items',
+                args: {
+                    parent: "Delivery Note",
+                    child: "Delivery Note Item",
+                    parent_name: frm.doc.delivery_note,
+                },
+                callback: function (res) {
+                    res.message.forEach((item) => {
+                        frm.set_value('item', item.item_code);
+                    });
+                }
+            });
         }
     }
 });
