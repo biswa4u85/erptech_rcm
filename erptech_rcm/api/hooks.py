@@ -27,6 +27,7 @@ def create_stock_entry(doc, method):
                 "item_code": item.item_code,
                 "qty": item.qty,
                 "rate": item.rate,
+                "uom": item.uom,
                 "s_warehouse": item.source_warehouse
             })
     
