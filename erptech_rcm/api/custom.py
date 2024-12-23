@@ -35,7 +35,7 @@ def get_child_items(parent_name, parent, child):
     # SQL query to fetch data from parent and child tables
     query = f"""
         SELECT 
-           *
+           ri.*
         FROM 
             `tab{child}` ri
         INNER JOIN 

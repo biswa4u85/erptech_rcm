@@ -16,7 +16,7 @@ frappe.ui.form.on('Sales Order', {
         if (frm.doc.customer) {
             frm.set_value('custom_site', null);
             frappe.call({
-                method: 'erptech_rcm.custom_api.get_customer_address',
+                method: 'erptech_rcm.api.custom.get_customer_address',
                 args: {
                     'customer_name': frm.doc.customer,
                 },

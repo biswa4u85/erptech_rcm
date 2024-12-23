@@ -12,6 +12,23 @@ frappe.ui.form.on('Delivery Note', {
             };
         });
     },
+    refresh: function (frm) {
+        if (frm.doc.items[0] && frm.doc.items[0].against_sales_order) {
+            frappe.call({
+                method: "frappe.client.get",
+                args: {
+                    doctype: "Sales Order",
+                    name: frm.doc.items[0].against_sales_order
+                },
+                callback: function (res) {
+                    if (res.message) {
+                        frm.doc.items[0]['custom_bom_no'] = res.message.items[0] ? res.message.items[0].bom_no : ""
+                        frm.refresh_field('items');
+                    }
+                }
+            });
+        }
+    },
     customer: function (frm) {
         if (frm.doc.customer) {
             frm.set_value('custom_site', null);
@@ -37,5 +54,5 @@ frappe.ui.form.on('Delivery Note', {
     },
     custom_site: function (frm) {
         // frm.set_value('shipping_address_name', frm.doc.custom_site);
-    }
+    },
 })

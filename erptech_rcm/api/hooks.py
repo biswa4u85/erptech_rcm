@@ -23,15 +23,14 @@ def create_stock_entry(doc, method):
     # Assuming you have child table "items" in the custom doctype and need to transfer items to stock
     if(doc.items[0].custom_bom_no):
         items = get_child_items(doc.items[0].custom_bom_no, "BOM", "BOM Item")
-        for item in items:
+        for item in items:            
             stock_entry.append("items", {
                 "item_code": item.item_code,
                 "qty": item.qty,
                 "rate": item.rate,
                 "uom": item.uom,
-                "allow_zero_valuation_rate": 1 if item["item_name"] == "Water" else 0,
-                "s_warehouse": item.source_warehouse,
-                "t_warehouse": item.source_warehouse
+                "allow_zero_valuation_rate": 1 if item["item_code"] == "Water" else 0,
+                "s_warehouse": item.source_warehouse
             })
     
     # Submit the Stock Entry document to record the transaction

@@ -19,7 +19,7 @@ doctype_js = {
 	"Quotation": "public/js/quotation.js",
 	"Sales Order": "public/js/sales_order.js",
 	"Delivery Note": "public/js/delivery_note.js",
-	"Delivery Note Item": "public/js/delivery_note_items.js",
+	"Delivery Note Item": "public/js/delivery_note_item.js",
 	"Sales Invoice": "public/js/sales_invoice.js"
 }
 
