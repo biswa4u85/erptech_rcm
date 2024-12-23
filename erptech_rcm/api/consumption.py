@@ -1,7 +1,7 @@
 import frappe
 import requests
 import pymysql
-import pyodbc
+import pymssql
 
 @frappe.whitelist()
 def fetch_do_data(type):
@@ -10,7 +10,7 @@ def fetch_do_data(type):
         consumptionSettings = frappe.get_cached_doc('Consumption Settings')
         connection = None
         if(consumptionSettings.sql_server == 1):
-            connection = pyodbc.connect(f"DRIVER={{ODB}};SERVER={consumptionSettings.db_host};DATABASE={consumptionSettings.database};UID={consumptionSettings.db_user};PWD={consumptionSettings.db_password}")
+            connection = pymssql.connect(f"server={consumptionSettings.db_host};database={consumptionSettings.database};user={consumptionSettings.db_user};password={consumptionSettings.db_password}")
         else:
             connection = pymysql.connect(host=consumptionSettings.db_host,user=consumptionSettings.db_user,password=consumptionSettings.db_password,database=consumptionSettings.database,cursorclass=pymysql.cursors.DictCursor)
 
