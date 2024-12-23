@@ -1,6 +1,6 @@
 frappe.ui.form.on('Quotation', {
     setup: function (frm) {
-        if (!frm.doc.docstatus) {
+        if (frm.doc.name.includes("new-quotation")) {
             frm.set_value('custom_site', null);
             frm.set_value('shipping_address_name', null);
         }

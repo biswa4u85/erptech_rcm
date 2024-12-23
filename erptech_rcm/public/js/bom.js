@@ -11,9 +11,11 @@ frappe.ui.form.on('BOM', {
     custom_recipe_code: async function (frm, cdt, cdn) {
         if (frm.doc.custom_recipe_code) {
             frappe.call({
-                method: 'erptech_rcm.api.custom.get_recipe_items',
+                method: 'erptech_rcm.api.custom.get_child_items',
                 args: {
-                    parent_doc_name: frm.doc.custom_recipe_code,
+                    parent: "Recipe",
+                    child: "Recipe Items",
+                    parent_name: frm.doc.custom_recipe_code,
                 },
                 callback: function (res) {
                     frm.doc.items = []

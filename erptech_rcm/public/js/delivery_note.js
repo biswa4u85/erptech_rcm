@@ -1,16 +1,16 @@
 frappe.ui.form.on('Delivery Note', {
     setup: function (frm) {
-        if (!frm.doc.docstatus) {
+        if (frm.doc.name.includes("new-delivery-note")) {
             frm.set_value('custom_site', null);
             // frm.set_value('shipping_address_name', null);
-            frm.set_query('custom_site', function () {
-                return {
-                    filters: {
-                        'address_type': ''
-                    }
-                };
-            });
         }
+        frm.set_query('custom_site', function () {
+            return {
+                filters: {
+                    'address_type': ''
+                }
+            };
+        });
     },
     customer: function (frm) {
         if (frm.doc.customer) {

@@ -29,7 +29,9 @@ def create_stock_entry(doc, method):
                 "qty": item.qty,
                 "rate": item.rate,
                 "uom": item.uom,
-                "s_warehouse": item.source_warehouse
+                "allow_zero_valuation_rate": 1 if item["item_name"] == "Water" else 0,
+                "s_warehouse": item.source_warehouse,
+                "t_warehouse": item.source_warehouse
             })
     
     # Submit the Stock Entry document to record the transaction

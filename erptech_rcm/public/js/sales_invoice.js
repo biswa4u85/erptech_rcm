@@ -1,6 +1,6 @@
 frappe.ui.form.on('Sales Invoice', {
     setup: function (frm) {
-        if (!frm.doc.docstatus) {
+        if (frm.doc.name.includes("new-sales-invoice")) {
             frm.set_value('custom_site', null);
             // frm.set_value('shipping_address_name', null);
         }
