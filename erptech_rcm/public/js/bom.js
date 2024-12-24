@@ -7,6 +7,13 @@ frappe.ui.form.on('BOM', {
                 }
             };
         });
+        frm.set_query('custom_recipe_name', function () {
+            return {
+                filters: {
+                    'item_group': 'Products'
+                }
+            };
+        });
     },
     custom_recipe_code: async function (frm, cdt, cdn) {
         if (frm.doc.custom_recipe_code) {
