@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2024-11-30 11:07:05.918145",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -8,6 +9,8 @@
   "recipe_code",
   "column_break_bfmt",
   "recipe_name",
+  "column_break_nnvp",
+  "naming_series",
   "section_break_phce",
   "recipe_items"
  ],
@@ -37,14 +40,27 @@
    "ignore_user_permissions": 1,
    "label": "Recipe Items",
    "options": "Recipe Items"
+  },
+  {
+   "fieldname": "column_break_nnvp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "REC-.YYYY.-",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-20 11:04:50.653159",
+ "modified": "2024-12-25 00:27:40.549553",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "Recipe",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
