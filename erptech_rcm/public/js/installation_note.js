@@ -25,18 +25,18 @@ frappe.ui.form.on('Installation Note', {
                                     name: res.message.items[0].custom_bom_no
                                 },
                                 callback: function (res) {
-                                    frm.doc.custom_bom_recipe_items = []
+                                    frm.doc.custom_installation_note_recipe = []
                                     res.message.custom_items_2.forEach((item) => {
-                                        let custom_bom_recipe_items = frm.add_child("custom_bom_recipe_items");
-                                        custom_bom_recipe_items.item_code = item.item_code;
-                                        custom_bom_recipe_items.item_name = item.item_name;
-                                        custom_bom_recipe_items.qty = item.qty;
-                                        custom_bom_recipe_items.rate = item.rate;
-                                        custom_bom_recipe_items.uom = item.uom;
-                                        custom_bom_recipe_items.amount = item.amount;
-                                        custom_bom_recipe_items.source_warehouse = item.source_warehouse;
+                                        let custom_installation_note_recipe = frm.add_child("custom_installation_note_recipe");
+                                        custom_installation_note_recipe.item_code = item.item_code;
+                                        custom_installation_note_recipe.item_name = item.item_name;
+                                        custom_installation_note_recipe.qty = item.qty;
+                                        custom_installation_note_recipe.rate = item.rate;
+                                        custom_installation_note_recipe.uom = item.uom;
+                                        custom_installation_note_recipe.amount = item.amount;
+                                        custom_installation_note_recipe.source_warehouse = item.source_warehouse;
                                     });
-                                    frm.refresh_field('custom_bom_recipe_items');
+                                    frm.refresh_field('custom_installation_note_recipe');
                                 }
                             });
                         }
