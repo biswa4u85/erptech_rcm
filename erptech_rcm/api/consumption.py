@@ -1,16 +1,16 @@
 import frappe
 import requests
 import pymysql
-import pymssql
+# import pymssql
 
 @frappe.whitelist()
-def fetch_do_data(type):
-    db_name = "DO Data"
+def fetch_table_01(type):
+    db_name = "Material Consumption"
     try:
         consumptionSettings = frappe.get_cached_doc('Consumption Settings')
         connection = None
         if(consumptionSettings.sql_server == 1):
-            connection = pymssql.connect(f"server={consumptionSettings.db_host};database={consumptionSettings.database};user={consumptionSettings.db_user};password={consumptionSettings.db_password}")
+            connection = pymysql.connect(f"server={consumptionSettings.db_host};database={consumptionSettings.database};user={consumptionSettings.db_user};password={consumptionSettings.db_password}")
         else:
             connection = pymysql.connect(host=consumptionSettings.db_host,user=consumptionSettings.db_user,password=consumptionSettings.db_password,database=consumptionSettings.database,cursorclass=pymysql.cursors.DictCursor)
 
@@ -90,7 +90,7 @@ def fetch_do_data(type):
         return {"message":e}
 
 @frappe.whitelist()
-def fetch_consumption_data(type):
+def fetch_table_02(type):
     db_name = "Material Consumption"
     try:
         consumptionSettings = frappe.get_cached_doc('Consumption Settings')
@@ -266,3 +266,8 @@ def fetch_consumption_data(type):
         connection.close()
     except pymysql.MySQLError as e:
         return {"message":e}
+
+@frappe.whitelist()
+def fetch_consumption_data(type):
+    fetch_table_01(type)
+    fetch_table_02(type)
