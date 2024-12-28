@@ -183,6 +183,8 @@ def consumption_set_data():
 
             # Create a new doc object
             doc = frappe.get_doc({**{'doctype': db_name}, **data})
+            for item in data['items']:
+                doc.append('items', item)
 
             doc.insert(ignore_permissions=True)
 
@@ -213,7 +215,6 @@ def fetch_consumption_data(type):
             # Make connection
             connection = None
             if(settings['sql_server'] == 1):
-                pass
                 connection = pyodbc.connect(f"Driver={{{settings['db_driver']}}};Server={settings['db_host']};Database={settings['database']};UID={settings['db_user']};PWD={settings['db_password']};")
             else:
                 connection = pymysql.connect(host=settings['db_host'],user=settings['db_user'],password=settings['db_password'],database=settings['database'],cursorclass=pymysql.cursors.DictCursor)
