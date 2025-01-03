@@ -34,7 +34,6 @@ frappe.ui.form.on('Installation Note', {
                                     name: res.message.items[0].custom_bom_no
                                 },
                                 callback: function (res) {
-                                    const diffVal = Math.floor(Math.random() * (6 + 5 + 1)) - 5;
                                     frm.doc.custom_installation_note_recipe = []
                                     frm.doc.custom_installation_note_data = []
                                     frm.doc.custom_installation_note_data_totals = []
@@ -52,6 +51,7 @@ frappe.ui.form.on('Installation Note', {
                                         let tars = 0
                                         let acts = 0
                                         for (let i = 1; i <= customNoOfBatch; i++) {
+                                            const diffVal = Math.floor(Math.random() * (6 + 5 + 1)) - 5;
                                             let custom_installation_note_data = frm.add_child("custom_installation_note_data");
                                             custom_installation_note_data.batch_no = InstallationCount + 1
                                             custom_installation_note_data.item = item.item_code;
@@ -82,3 +82,12 @@ frappe.ui.form.on('Installation Note', {
     },
 
 })
+frappe.ui.form.on("BOM Item 2", "cor", function (frm) {
+    for (let item of frm.doc.custom_installation_note_recipe) {
+        for (let note of frm.doc.custom_installation_note_data) {
+            if(item.item_code === note.item){
+                frappe.model.set_value("Installation Note Data", note.name, "cor", item.cor)
+            }
+        }
+    }
+});

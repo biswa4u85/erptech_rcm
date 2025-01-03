@@ -1,7 +1,7 @@
 {
     "actions": [],
     "allow_rename": 1,
-    "creation": "2024-12-04 02:29:41.615016",
+    "creation": "2025-01-03 21:05:30.359356",
     "doctype": "DocType",
     "engine": "InnoDB",
     "field_order": [
@@ -35,23 +35,23 @@
             "label": "act"
         },
         {
-            "fieldname": "cor",
-            "fieldtype": "Float",
-            "label": "cor"
-        },
-        {
             "fieldname": "diff",
             "fieldtype": "Float",
             "label": "Diff"
+        },
+        {
+            "fieldname": "cor",
+            "fieldtype": "Float",
+            "label": "cor"
         }
     ],
     "index_web_pages_for_search": 1,
     "istable": 1,
     "links": [],
-    "modified": "2025-01-03 11:29:07.307510",
+    "modified": "2025-01-03 21:05:30.359356",
     "modified_by": "Administrator",
     "module": "Erptech Rcm",
-    "name": "Installation Note Data",
+    "name": "Installation Note Data Total",
     "owner": "Administrator",
     "permissions": [],
     "sort_field": "modified",
