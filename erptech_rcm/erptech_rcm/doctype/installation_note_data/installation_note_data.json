@@ -9,6 +9,7 @@
   "item",
   "tar",
   "act",
+  "diff",
   "cor"
  ],
  "fields": [
@@ -37,12 +38,17 @@
    "fieldname": "cor",
    "fieldtype": "Float",
    "label": "cor"
+  },
+  {
+   "fieldname": "diff",
+   "fieldtype": "Float",
+   "label": "Diff"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-12-22 23:40:05.565999",
+ "modified": "2025-01-03 11:29:07.307510",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "Installation Note Data",
