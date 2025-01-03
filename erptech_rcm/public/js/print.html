@@ -7,7 +7,7 @@
             <td nowrap><strong>Batch Start Time</strong></td>
             <td><span>{{ doc.get_formatted("custom_start_time") }}</span></td>
             <td nowrap><strong>Batch End Time</strong></td>
-            <td><span>{{ doc.get_formatted("custom_end_time") }}</span></td>
+            <td><span>{{ doc.get_formatted("inst_time") }}</span></td>
         </tr>
         <tr>
             <td nowrap><strong>Batch Number</strong></td>
@@ -17,21 +17,21 @@
                 {% endif %}
             </td>
             <td nowrap><strong>Recipe Code</strong></td>
-            <td><span>{{ doc.custom_recipe_code }}</span></td>
+            <td><span>{{doc.items[0].custom_recipe_code}}</span></td>
             <td nowrap><strong>Ordered Qty</strong></td>
-            <td><span>{{ doc.custom_order_qty }}</span></td>
+            <td><span>{{doc.items[0].qty}}</span></td>
         </tr>
         <tr>
             <td nowrap><strong>Batch Name</strong></td>
-            <td><span></span></td>
+            <td><span>{{doc.items[0].description}}</span></td>
             <td nowrap><strong>Recipe Name</strong></td>
             <td><span>{{ doc.custom_recipe_name }}</span></td>
             <td nowrap><strong>Production Qty</strong></td>
-            <td><span></span></td>
+            <td><span>{{doc.items[0].custom_count}}</span></td>
         </tr>
         <tr>
             <td nowrap><strong>Order Number</strong></td>
-            <td><span></span></td>
+            <td><span>{{doc.items[0].custom_sales_order_no}}</span></td>
             <td nowrap><strong>Truck Number</strong></td>
             <td><span>{{ doc.custom_vehicle_no }}</span></td>
             <td nowrap><strong>Adj/Manual Qty</strong></td>
@@ -49,7 +49,7 @@
             <td nowrap><strong>Site</strong></td>
             <td><span>{{ doc.custom_site }}</span></td>
             <td nowrap><strong>Batch size</strong></td>
-            <td><span></span></td>
+            <td><span>{{doc.items[0].custom_batch_size}}</span></td>
             <td nowrap><strong>Mixer capacity</strong></td>
             <td><span>{{ doc.custom_batch_size }}</span></td>
         </tr>
@@ -69,39 +69,31 @@
     </table>
 
     <table>
-
         <tr>
             {%- for row in doc.custom_installation_note_recipe -%}
             <td><b>{{ row.item_name }}</b></td>
             {%- endfor -%}
         </tr>
-
         <tr>
             {%- for row in doc.custom_installation_note_recipe -%}
             <td>{{ row.qty }}</td>
             {%- endfor -%}
         </tr>
-
         <tr>
             <td colspan="{{ doc.custom_installation_note_recipe | length -1 }}"> <b>Mass of Recipe Targets in Kgs.</b>
             </td>
             <td class="text-center" style="border:2px solid black;"><b>{{ doc.custom_installation_note_recipe |
                     sum(attribute='qty') }}</b></td>
         </tr>
-
     </table>
 
     <table>
-
-
         <tr>
-            <td colspan="{{ doc.custom_installation_note_recipe | length  }}"><b>Target and Actual Value with moisture correction/absorption in % and other Corrections in Kgs.</b></td>
+            <td colspan="{{ doc.custom_installation_note_recipe | length  }}"><b>Target and Actual Value with moisture
+                    correction/absorption in % and other Corrections in Kgs.</b></td>
         </tr>
 
-
-
         {% set customNoOfBatch = (doc.items[0].custom_no_of_batch) | int %}
-        {% set diffVal = (range(-5, 7) | random) %}
 
         {% for i in range(1, customNoOfBatch + 1) %}
         <tr>
@@ -111,6 +103,7 @@
             {% endfor %}
         </tr>
         <tr>
+            {% set diffVal = (range(-5, 7) | random) %}
             {%- for row in doc.custom_installation_note_recipe -%}
             {% set tar = ((row.qty / doc.items[0].custom_count) * doc.items[0].qty) | int %}
             {% set act = tar + diffVal %}
@@ -119,128 +112,63 @@
         </tr>
 
         <tr>
-            <td colspan="{{ doc.custom_installation_note_recipe | length  }}" style="border-bottom: 1.0px solid #80808073; padding: 0.1em;"></td>
+            <td colspan="{{ doc.custom_installation_note_recipe | length  }}"
+                style="border-bottom: 1.0px solid #80808073; padding: 0.1em;"></td>
         </tr>
         {%- endfor -%}
-
-
     </table>
 
 
     <table>
-
-        <td colspan="{{ doc.custom_installation_note_data_totals | length -1 }}" class="text-left no-left-border"><b>Total Set Weight in Kgs.</b></td>
-
         <tr>
-            {%- for row in doc.custom_installation_note_data_totals -%}
-            <td><b>{{ row.batch_no }}</b></td>
-            {%- endfor -%}
+            <td colspan="{{ doc.custom_installation_note_data_totals | length }}" class="text-left no-left-border">
+                <b>Total Set Weight in Kgs.</b>
+            </td>
         </tr>
-
         <tr>
             {%- for row in doc.custom_installation_note_data_totals -%}
             <td>{{ row.tar }}</td>
             {%- endfor -%}
         </tr>
-
         <tr>
-            <td colspan="{{ doc.custom_installation_note_data_totals | length -1 }}"> <b>Mass of Total Set Weight in Kgs.</b>
+            <td colspan="{{ doc.custom_installation_note_data_totals | length -1 }}"> <b>Mass of Total Set Weight in
+                    Kgs.</b>
             </td>
             <td class="text-center" style="border:2px solid black;"><b>{{ doc.custom_installation_note_data_totals |
                     sum(attribute='tar') }}</b></td>
         </tr>
-
     </table>
 
-
-  
     <table>
-
         <tr>
-            <td colspan="19" class="text-left no-left-border"><b>Total Actual Weight in Kgs.</b>
+            <td colspan="{{ doc.custom_installation_note_data_totals | length }}" class="text-left no-left-border">
+                <b>Total Actual Weight in Kgs.</b>
             </td>
-
-
-        </tr>
-
-
-        <tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <td>4709</td>
-            <td>5200</td>
-            <td>0</td>
-            <td>3123</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td>2660</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td>1260</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td>15.47</td>
-            <td>0.00</td>
-            <td>0</td>
-            <td>0.00</td>
-            <td>0.00</td>
-
-
-
-
         </tr>
         <tr>
-            <td colspan="17" class="text-right" style="border-right:1.5px solid black;"><b>Mass of
-                    Total Actual Weight in Kgs.</b></td>
-            <td class="text-center" style="border:2px solid black;"><b>16967.47</b></td>
-
+            {%- for row in doc.custom_installation_note_data_totals -%}
+            <td>{{ row.act }}</td>
+            {%- endfor -%}
+        </tr>
+        <tr>
+            <td colspan="{{ doc.custom_installation_note_data_totals | length -1 }}"> <b>Mass of Total Actual Weight in
+                    Kgs.</b>
+            </td>
+            <td class="text-center" style="border:2px solid black;"><b>{{ doc.custom_installation_note_data_totals |
+                    sum(attribute='act') }}</b></td>
         </tr>
     </table>
 
     <table>
         <tr>
-            <td colspan="19" class="text-left no-left-border"><b>Difference in Percentage</b></td>
-
+            <td colspan="{{ doc.custom_installation_note_data_totals | length }}" class="text-left no-left-border">
+                <b>Difference in Percentage</b>
+            </td>
         </tr>
-
-
         <tr>
-
-            <td style="border: 1.0px solid #80808073" class="text-center">0.255</td>
-            <td style="border: 1.0px solid #80808073" class="text-center">0.251</td>
-            <td style="border: 1.0px solid #80808073" class="text-center">0.000</td>
-            <td style="border: 1.0px solid #80808073" class="text-center">-0.192</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td style="border: 1.0px solid #80808073" class="text-center">0.000</td>
-            <td style="border: 1.0px solid #80808073" class="text-center">0.000</td>
-            <td style="border: 1.0px solid #80808073" class="text-center">0.000</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td style="border: 1.0px solid #80808073" class="text-center">0.000</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td style="border: 1.0px solid #80808073" class="text-center">0.000</td>
-            <td style="border: 1.0px solid #80808073" class="text-center">0.000</td>
-            <td style="border: 1.0px solid #80808073" class="text-center">0.000</td>
-            <td>0.00</td>
-            <td>0.00</td>
-
+            {%- for row in doc.custom_installation_note_data_totals -%}
+            <td>{{ "%.2f"|format(row.diff) }}</td>
+            {%- endfor -%}
         </tr>
     </table>
 
