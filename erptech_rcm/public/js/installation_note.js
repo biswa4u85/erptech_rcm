@@ -18,10 +18,13 @@ frappe.ui.form.on('Installation Note', {
                         frm.doc.items[0]['custom_bom_no'] = res.message.items[0].custom_bom_no
                         frm.doc.items[0]['custom_recipe_code'] = bom.message.custom_recipe_code
                         frm.doc.items[0]['custom_sales_order_no'] = res.message.items[0].against_sales_order
-                        frm.doc.items[0]['custom_count'] = Number(frm.doc.items[0]['qty'] / frm.doc.items[0]['custom_batch_size']).toFixed(0)
+                        let qty = frm.doc.items[0]['qty']
+                        let customCount = Number(qty / frm.doc.items[0]['custom_batch_size']).toFixed(0)
+                        frm.doc.items[0]['custom_count'] = customCount
                         frm.doc.items[0]['custom_percycle'] = frm.doc.items[0]['qty'] / frm.doc.items[0]['custom_count']
                         let customNoOfBatch = frm.doc.items[0]['qty'] / frm.doc.items[0]['custom_percycle']
                         frm.doc.items[0]['custom_no_of_batch'] = customNoOfBatch
+                        let cor = frm.doc.items[0]['cor'] ?? 0
                         frm.refresh_field('items');
                         if (res.message.items[0].custom_bom_no) {
                             frappe.call({
@@ -48,23 +51,30 @@ frappe.ui.form.on('Installation Note', {
                                     frm.doc.custom_data = []
                                     frm.doc.custom_installation_note_data_total = []
                                     res.message.custom_items_2.forEach((item) => {
-                                        let tar = 0
-                                        let act = 0
+                                        let tars = 0
+                                        let acts = 0
+                                        let cors = 0
                                         for (let i = 1; i <= customNoOfBatch; i++) {
                                             let custom_data = frm.add_child("custom_data");
                                             custom_data.batch_no = InstallationCount + 1
                                             custom_data.item = item.item_code;
-                                            custom_data.tar = item.qty;
-                                            tar = tar + Number(item.qty)
+                                            let tar = (item.qty / customCount) * Number(qty);
+                                            custom_data.tar = tar
+                                            tars = tars + Number(tar)
                                             const diffVal = Math.floor(Math.random() * (6 + 5 + 1)) - 5;
-                                            custom_data.act = Number(item.qty) + diffVal;
-                                            act = act + Number(item.qty) + diffVal
+                                            let act = Number(tar) + diffVal;
+                                            custom_data.act = act
+                                            acts = acts + act
+                                            custom_data.cor = cor
+                                            cors = cors + cor
                                         }
                                         let custom_installation_note_data_total = frm.add_child("custom_installation_note_data_total");
                                         custom_installation_note_data_total.batch_no = InstallationCount + 1
                                         custom_installation_note_data_total.item = item.item_code;
-                                        custom_installation_note_data_total.tar = tar
-                                        custom_installation_note_data_total.act = act
+                                        custom_installation_note_data_total.tar = tars
+                                        custom_installation_note_data_total.act = acts
+                                        custom_installation_note_data_total.diff = (tars - acts) / tars * 100
+                                        custom_installation_note_data_total.cor = cors
                                     })
                                     frm.refresh_field('custom_data');
                                     frm.refresh_field('custom_installation_note_data_total');
