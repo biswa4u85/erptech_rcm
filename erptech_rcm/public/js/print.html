@@ -12,8 +12,8 @@
         <tr>
             <td nowrap><strong>Batch Number</strong></td>
             <td>
-                {% if doc.custom_data and doc.custom_data[0].batch_no %}
-                <span>{{doc.custom_data[0].batch_no}}</span>
+                {% if doc.custom_installation_note_data and doc.custom_installation_note_data[0].batch_no %}
+                <span>{{doc.custom_installation_note_data[0].batch_no}}</span>
                 {% endif %}
             </td>
             <td nowrap><strong>Recipe Code</strong></td>
@@ -129,24 +129,24 @@
 
     <table>
 
-        <td colspan="{{ doc.custom_installation_note_data_total | length -1 }}" class="text-left no-left-border"><b>Total Set Weight in Kgs.</b></td>
+        <td colspan="{{ doc.custom_installation_note_data_totals | length -1 }}" class="text-left no-left-border"><b>Total Set Weight in Kgs.</b></td>
 
         <tr>
-            {%- for row in doc.custom_installation_note_data_total -%}
+            {%- for row in doc.custom_installation_note_data_totals -%}
             <td><b>{{ row.batch_no }}</b></td>
             {%- endfor -%}
         </tr>
 
         <tr>
-            {%- for row in doc.custom_installation_note_data_total -%}
+            {%- for row in doc.custom_installation_note_data_totals -%}
             <td>{{ row.tar }}</td>
             {%- endfor -%}
         </tr>
 
         <tr>
-            <td colspan="{{ doc.custom_installation_note_data_total | length -1 }}"> <b>Mass of Total Set Weight in Kgs.</b>
+            <td colspan="{{ doc.custom_installation_note_data_totals | length -1 }}"> <b>Mass of Total Set Weight in Kgs.</b>
             </td>
-            <td class="text-center" style="border:2px solid black;"><b>{{ doc.custom_installation_note_data_total |
+            <td class="text-center" style="border:2px solid black;"><b>{{ doc.custom_installation_note_data_totals |
                     sum(attribute='tar') }}</b></td>
         </tr>
 

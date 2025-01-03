@@ -240,5 +240,4 @@ doc_events = {
         "before_submit": "erptech_rcm.api.hooks.create_stock_entry"
     }
 }
-
-fixtures = ["Custom Field"]
+# fixtures = ["Custom Field"]

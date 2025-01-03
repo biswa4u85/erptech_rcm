@@ -36,10 +36,11 @@ frappe.ui.form.on('Installation Note', {
                                 callback: function (res) {
                                     const diffVal = Math.floor(Math.random() * (6 + 5 + 1)) - 5;
                                     frm.doc.custom_installation_note_recipe = []
-                                    frm.doc.custom_data = []
-                                    frm.doc.custom_installation_note_data_total = []
+                                    frm.doc.custom_installation_note_data = []
+                                    frm.doc.custom_installation_note_data_totals = []
                                     res.message.custom_items_2.forEach((item) => {
                                         let custom_installation_note_recipe = frm.add_child("custom_installation_note_recipe");
+                                        let custom_installation_note_data_totals = frm.add_child("custom_installation_note_data_totals");
                                         custom_installation_note_recipe.item_code = item.item_code;
                                         custom_installation_note_recipe.item_name = item.item_name;
                                         custom_installation_note_recipe.qty = item.qty;
@@ -51,56 +52,26 @@ frappe.ui.form.on('Installation Note', {
                                         let tars = 0
                                         let acts = 0
                                         for (let i = 1; i <= customNoOfBatch; i++) {
-                                            let custom_data = frm.add_child("custom_data");
-                                            custom_data.batch_no = InstallationCount + 1
-                                            custom_data.item = item.item_code;
+                                            let custom_installation_note_data = frm.add_child("custom_installation_note_data");
+                                            custom_installation_note_data.batch_no = InstallationCount + 1
+                                            custom_installation_note_data.item = item.item_code;
                                             let tar = (item.qty / customCount) * Number(qty);
-                                            custom_data.tar = tar
+                                            custom_installation_note_data.tar = tar
                                             tars = tars + Number(tar)
                                             let act = Number(tar) + diffVal;
-                                            custom_data.act = act
+                                            custom_installation_note_data.act = act
                                             acts = acts + act
                                         }
-                                        let custom_installation_note_data_total = frm.add_child("custom_installation_note_data_total");
-                                        custom_installation_note_data_total.batch_no = InstallationCount + 1
-                                        custom_installation_note_data_total.item = item.item_code;
-                                        custom_installation_note_data_total.tar = tars
-                                        custom_installation_note_data_total.act = acts
-                                        custom_installation_note_data_total.diff = (tars - acts) / tars * (uom == "Liter" ? 1000 : 100)
 
-
+                                        custom_installation_note_data_totals.batch_no = InstallationCount + 1
+                                        custom_installation_note_data_totals.item = item.item_code;
+                                        custom_installation_note_data_totals.tar = tars
+                                        custom_installation_note_data_totals.act = acts
+                                        custom_installation_note_data_totals.diff = (tars - acts) / tars * (uom == "Liter" ? 1000 : 100)
                                     });
                                     frm.refresh_field('custom_installation_note_recipe');
-                                    frm.refresh_field('custom_data');
-                                    frm.refresh_field('custom_installation_note_data_total');
-
-                                    // Generate Data
-                                    // frm.doc.custom_data = []
-                                    // frm.doc.custom_installation_note_data_total = []
-                                    // const diffVal = Math.floor(Math.random() * (6 + 5 + 1)) - 5;
-                                    // res.message.custom_items_2.forEach((item) => {
-                                    // let tars = 0
-                                    // let acts = 0
-                                    // for (let i = 1; i <= customNoOfBatch; i++) {
-                                    //     let custom_data = frm.add_child("custom_data");
-                                    //     custom_data.batch_no = InstallationCount + 1
-                                    //     custom_data.item = item.item_code;
-                                    //     let tar = (item.qty / customCount) * Number(qty);
-                                    //     custom_data.tar = tar
-                                    //     tars = tars + Number(tar)
-                                    //     let act = Number(tar) + diffVal;
-                                    //     custom_data.act = act
-                                    //     acts = acts + act
-                                    // }
-                                    // let custom_installation_note_data_total = frm.add_child("custom_installation_note_data_total");
-                                    // custom_installation_note_data_total.batch_no = InstallationCount + 1
-                                    // custom_installation_note_data_total.item = item.item_code;
-                                    // custom_installation_note_data_total.tar = tars
-                                    // custom_installation_note_data_total.act = acts
-                                    // custom_installation_note_data_total.diff = (tars - acts) / tars * (uom == "Liter" ? 1000 : 100)
-                                    // })
-                                    // frm.refresh_field('custom_data');
-                                    // frm.refresh_field('custom_installation_note_data_total');
+                                    frm.refresh_field('custom_installation_note_data');
+                                    frm.refresh_field('custom_installation_note_data_totals');
                                 }
                             });
                         }
