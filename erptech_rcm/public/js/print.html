@@ -97,20 +97,15 @@
 
         {% for i in range(1, customNoOfBatch + 1) %}
         <tr>
-            {%- for row in doc.custom_installation_note_recipe -%}
-            {% set tar = ((row.qty / doc.items[0].custom_count) * doc.items[0].qty) | int %}
-            <td>{{ tar }}</td>
+            {%- for i in range(0, doc.custom_installation_note_data|length, customNoOfBatch) -%}
+            <td>{{ doc.custom_installation_note_data[i].tar }}</td>
             {% endfor %}
         </tr>
         <tr>
-            {% set diffVal = (range(-5, 7) | random) %}
-            {%- for row in doc.custom_installation_note_recipe -%}
-            {% set tar = ((row.qty / doc.items[0].custom_count) * doc.items[0].qty) | int %}
-            {% set act = tar + diffVal %}
-            <td>{{ act }}</td>
+            {%- for p in range(i - 1, doc.custom_installation_note_data|length, customNoOfBatch) -%}
+            <td>{{ doc.custom_installation_note_data[p].act }}</td>
             {% endfor %}
         </tr>
-
         <tr>
             <td colspan="{{ doc.custom_installation_note_recipe | length  }}"
                 style="border-bottom: 1.0px solid #80808073; padding: 0.1em;"></td>
