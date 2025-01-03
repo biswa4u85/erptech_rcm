@@ -128,7 +128,7 @@
   },
   {
    "fieldname": "prod_adj",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod_Adj"
   },
   {
@@ -138,17 +138,17 @@
   },
   {
    "fieldname": "prod1_agg_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod1_Agg_Stwt"
   },
   {
    "fieldname": "prod1_agg_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod1_Agg_Atwt"
   },
   {
    "fieldname": "prod1_agg_moi",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod1_Agg_Moi"
   },
   {
@@ -158,17 +158,17 @@
   },
   {
    "fieldname": "prod2_agg_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod2_Agg_Stwt"
   },
   {
    "fieldname": "prod2_agg_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod2_Agg_Atwt"
   },
   {
    "fieldname": "prod2_agg_moi",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod2_Agg_Moi"
   },
   {
@@ -178,17 +178,17 @@
   },
   {
    "fieldname": "prod3_agg_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod3_Agg_Stwt"
   },
   {
    "fieldname": "prod3_agg_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod3_Agg_Atwt"
   },
   {
    "fieldname": "prod3_agg_moi",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod3_Agg_Moi"
   },
   {
@@ -198,17 +198,17 @@
   },
   {
    "fieldname": "prod4_agg_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod4_Agg_Stwt"
   },
   {
    "fieldname": "prod4_agg_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod4_Agg_Atwt"
   },
   {
    "fieldname": "prod4_agg_moi",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod4_Agg_Moi"
   },
   {
@@ -218,17 +218,17 @@
   },
   {
    "fieldname": "prod5_agg_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod5_Agg_Stwt"
   },
   {
    "fieldname": "prod5_agg_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod5_Agg_Atwt"
   },
   {
    "fieldname": "prod5_agg_moi",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod5_Agg_Moi"
   },
   {
@@ -238,17 +238,17 @@
   },
   {
    "fieldname": "prod6_agg_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod6_Agg_Stwt"
   },
   {
    "fieldname": "prod6_agg_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod6_Agg_Atwt"
   },
   {
    "fieldname": "prod6_agg_moi",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod6_Agg_Moi"
   },
   {
@@ -258,17 +258,17 @@
   },
   {
    "fieldname": "prod7_cem_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod7_Cem_Stwt"
   },
   {
    "fieldname": "prod7_cem_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod7_Cem_Atwt"
   },
   {
    "fieldname": "prod7_cem_corr",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod7_Cem_Corr"
   },
   {
@@ -278,17 +278,17 @@
   },
   {
    "fieldname": "prod8_cem_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod8_Cem_Stwt"
   },
   {
    "fieldname": "prod8_cem_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod8_Cem_Atwt"
   },
   {
    "fieldname": "prod8_cem_corr",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod8_Cem_Corr"
   },
   {
@@ -298,17 +298,17 @@
   },
   {
    "fieldname": "prod9_cem_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod9_Cem_Stwt"
   },
   {
    "fieldname": "prod9_cem_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod9_Cem_Atwt"
   },
   {
    "fieldname": "prod9_cem_corr",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod9_Cem_Corr"
   },
   {
@@ -318,17 +318,17 @@
   },
   {
    "fieldname": "prod10_cem_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod10_Cem_Stwt"
   },
   {
    "fieldname": "prod10_cem_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod10_Cem_Atwt"
   },
   {
    "fieldname": "prod10_cem_corr",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod10_Cem_Corr"
   },
   {
@@ -338,17 +338,17 @@
   },
   {
    "fieldname": "prod11_cem_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod11_Cem_Stwt"
   },
   {
    "fieldname": "prod11_cem_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod11_Cem_Atwt"
   },
   {
    "fieldname": "prod11_cem_corr",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod11_Cem_Corr"
   },
   {
@@ -358,17 +358,17 @@
   },
   {
    "fieldname": "prod12_wtr_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod12_Wtr_Stwt"
   },
   {
    "fieldname": "prod12_wtr_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod12_Wtr_Atwt"
   },
   {
    "fieldname": "prod12_wtr_corr",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod12_Wtr_Corr"
   },
   {
@@ -378,17 +378,17 @@
   },
   {
    "fieldname": "prod13_wtr_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod13_Wtr_Stwt"
   },
   {
    "fieldname": "prod13_wtr_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod13_Wtr_Atwt"
   },
   {
    "fieldname": "prod13_wtr_corr",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod13_Wtr_Corr"
   },
   {
@@ -398,12 +398,12 @@
   },
   {
    "fieldname": "prod14_wtr_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod14_Wtr_Stwt"
   },
   {
    "fieldname": "prod14_wtr_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod14_Wtr_Atwt"
   },
   {
@@ -413,17 +413,17 @@
   },
   {
    "fieldname": "prod15_adm_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod15_Adm_Stwt"
   },
   {
    "fieldname": "prod15_adm_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod15_Adm_Atwt"
   },
   {
    "fieldname": "prod15_adm_corr",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod15_Adm_Corr"
   },
   {
@@ -433,17 +433,17 @@
   },
   {
    "fieldname": "prod16_adm_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod16_Adm_Stwt"
   },
   {
    "fieldname": "prod16_adm_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod16_Adm_Atwt"
   },
   {
    "fieldname": "prod16_adm_corr",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod16_Adm_Corr"
   },
   {
@@ -453,17 +453,17 @@
   },
   {
    "fieldname": "prod17_adm_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod17_Adm_Stwt"
   },
   {
    "fieldname": "prod17_adm_agwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod17_Adm_Agwt"
   },
   {
    "fieldname": "prod17_adm_corr",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod17_Adm_Corr"
   },
   {
@@ -473,17 +473,17 @@
   },
   {
    "fieldname": "prod18_adm_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod18_Adm_Stwt"
   },
   {
    "fieldname": "prod18_adm_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod18_Adm_Atwt"
   },
   {
    "fieldname": "prod18_adm_corr",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod18_Adm_Corr"
   },
   {
@@ -493,17 +493,17 @@
   },
   {
    "fieldname": "prod19_sil_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod19_Sil_Stwt"
   },
   {
    "fieldname": "prod19_sil_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod19_Sil_Atwt"
   },
   {
    "fieldname": "prod19_sil_corr",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod19_Sil_Corr"
   },
   {
@@ -513,12 +513,12 @@
   },
   {
    "fieldname": "prod20_add_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod20_Add_Stwt"
   },
   {
    "fieldname": "prod20_add_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod20_Add_Atwt"
   },
   {
@@ -528,12 +528,12 @@
   },
   {
    "fieldname": "prod21_add_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod21_Add_Stwt"
   },
   {
    "fieldname": "prod21_add_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod21_Add_Atwt"
   },
   {
@@ -543,12 +543,12 @@
   },
   {
    "fieldname": "prod22_add_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod22_Add_Stwt"
   },
   {
    "fieldname": "prod22_add_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod22_Add_Atwt"
   },
   {
@@ -558,17 +558,17 @@
   },
   {
    "fieldname": "prod23_add_stwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod23_Add_Stwt"
   },
   {
    "fieldname": "prod23_add_atwt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Prod23_Add_Atwt"
   },
   {
    "fieldname": "truck_trip",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Truck_Trip"
   },
   {
@@ -623,7 +623,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-12-18 18:23:07.772919",
+ "modified": "2024-12-28 20:53:04.853951",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "Material Consumption Item",
