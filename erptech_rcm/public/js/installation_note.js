@@ -24,7 +24,7 @@ frappe.ui.form.on('Installation Note', {
                         frm.doc.items[0]['custom_percycle'] = frm.doc.items[0]['qty'] / frm.doc.items[0]['custom_count']
                         let customNoOfBatch = frm.doc.items[0]['qty'] / frm.doc.items[0]['custom_percycle']
                         frm.doc.items[0]['custom_no_of_batch'] = customNoOfBatch
-                        let cor = frm.doc.items[0]['cor'] ?? 0
+                        let uom = frm.doc.items[0]['uom']
                         frm.refresh_field('items');
                         if (res.message.items[0].custom_bom_no) {
                             frappe.call({
@@ -53,7 +53,6 @@ frappe.ui.form.on('Installation Note', {
                                     res.message.custom_items_2.forEach((item) => {
                                         let tars = 0
                                         let acts = 0
-                                        let cors = 0
                                         for (let i = 1; i <= customNoOfBatch; i++) {
                                             let custom_data = frm.add_child("custom_data");
                                             custom_data.batch_no = InstallationCount + 1
@@ -65,16 +64,13 @@ frappe.ui.form.on('Installation Note', {
                                             let act = Number(tar) + diffVal;
                                             custom_data.act = act
                                             acts = acts + act
-                                            custom_data.cor = cor
-                                            cors = cors + cor
                                         }
                                         let custom_installation_note_data_total = frm.add_child("custom_installation_note_data_total");
                                         custom_installation_note_data_total.batch_no = InstallationCount + 1
                                         custom_installation_note_data_total.item = item.item_code;
                                         custom_installation_note_data_total.tar = tars
                                         custom_installation_note_data_total.act = acts
-                                        custom_installation_note_data_total.diff = (tars - acts) / tars * 100
-                                        custom_installation_note_data_total.cor = cors
+                                        custom_installation_note_data_total.diff = (tars - acts) / tars * (uom == "Liter" ? 1000 : 100)
                                     })
                                     frm.refresh_field('custom_data');
                                     frm.refresh_field('custom_installation_note_data_total');
@@ -86,4 +82,5 @@ frappe.ui.form.on('Installation Note', {
             });
         }
     },
+    
 })
