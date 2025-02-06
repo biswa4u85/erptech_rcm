@@ -196,7 +196,7 @@ def consumption_set_data():
 def fetch_consumption_data(type):
     """Function to make an API call and handle the response."""
     # Replace with your API endpoint and API key if required
-    url = "https://rmc.azureerptech.com/api/method/"
+    url = "https://myhome.erptech.in/api/method/"
     headers = {
         # "Authorization": "Bearer YOUR_API_KEY",  # Replace with your API key if needed
         "Content-Type": "application/json"
