@@ -5,14 +5,24 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "type",
   "sql_server",
+  "db_driver",
+  "column_break_xceu",
   "db_host",
+  "database",
   "db_user",
   "db_password",
-  "database",
-  "column_break_xceu",
-  "do_table",
-  "consumption_table"
+  "section_break_ausr",
+  "consumption_table_from",
+  "consumption_item_table_from",
+  "column_break_rjys",
+  "consumption_table_to",
+  "section_break_mexu",
+  "from_date",
+  "fetch_latest",
+  "column_break_kxxr",
+  "to_date"
  ],
  "fields": [
   {
@@ -40,26 +50,80 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "do_table",
-   "fieldtype": "Data",
-   "label": "DO Table"
-  },
-  {
-   "fieldname": "consumption_table",
-   "fieldtype": "Data",
-   "label": "Consumption Table"
-  },
-  {
    "default": "0",
    "fieldname": "sql_server",
    "fieldtype": "Check",
    "label": "SQL Server"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Stetter\nKYB",
+   "reqd": 1
+  },
+  {
+   "fieldname": "db_driver",
+   "fieldtype": "Data",
+   "label": "DB Driver"
+  },
+  {
+   "fieldname": "section_break_ausr",
+   "fieldtype": "Section Break",
+   "label": "Table Settings"
+  },
+  {
+   "fieldname": "column_break_rjys",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consumption_table_from",
+   "fieldtype": "Data",
+   "label": "Consumption Table From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "consumption_table_to",
+   "fieldtype": "Data",
+   "label": "Consumption Table To",
+   "reqd": 1
+  },
+  {
+   "fieldname": "consumption_item_table_from",
+   "fieldtype": "Data",
+   "label": "Consumption Item Table From"
+  },
+  {
+   "fieldname": "section_break_mexu",
+   "fieldtype": "Section Break",
+   "label": "Filters"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "column_break_kxxr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "fetch_latest",
+   "fieldtype": "Check",
+   "label": "Fetch Latest "
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-12-22 12:14:33.703376",
+ "modified": "2025-02-08 13:05:59.039645",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "Consumption Settings",

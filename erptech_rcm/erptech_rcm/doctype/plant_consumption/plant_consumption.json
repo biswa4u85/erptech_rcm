@@ -10,6 +10,8 @@
   "timestamp",
   "plant_address_val0",
   "plant_no_val0",
+  "deliery_no_val0",
+  "addinfo23",
   "column_break_gbbw",
   "customer_name_val0",
   "customer_address_val0",
@@ -17,6 +19,7 @@
   "site_address_val0",
   "tm_no_val0",
   "driver_name_val0",
+  "ticket_id_val0",
   "column_break_bvqo",
   "order_qty_val0",
   "batch_size_val0",
@@ -636,11 +639,26 @@
    "fieldname": "customer_address_val0",
    "fieldtype": "Data",
    "label": "CUSTOMER_ADDRESS_VAL0"
+  },
+  {
+   "fieldname": "deliery_no_val0",
+   "fieldtype": "Data",
+   "label": "DELIERY_NO_VAL0"
+  },
+  {
+   "fieldname": "addinfo23",
+   "fieldtype": "Data",
+   "label": "AddInfo23"
+  },
+  {
+   "fieldname": "ticket_id_val0",
+   "fieldtype": "Data",
+   "label": "TICKET_ID_VAL0"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-02 19:27:29.231472",
+ "modified": "2025-02-07 09:55:52.093785",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "Plant Consumption",
