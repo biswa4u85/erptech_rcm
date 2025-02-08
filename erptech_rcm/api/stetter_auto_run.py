@@ -41,8 +41,8 @@ def make_api_call(type):
             consumption_data = consumption_connection.cursor()
 
             # Example: Query the database
-            do_table = settings['do_table']
-            consumption_table = settings['consumption_table']
+            do_table = settings['consumption_table_from']
+            consumption_table = settings['consumption_item_table_from']
             if(type == "all"):
                 do_data.execute(f"SELECT * FROM {do_table}") 
                 consumption_data.execute(f"SELECT * FROM {consumption_table}") 
