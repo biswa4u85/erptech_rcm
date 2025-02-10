@@ -93,7 +93,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Series",
-   "options": "REC-.YYYY.-",
+   "options": "REC-",
    "reqd": 1
   },
   {
@@ -101,24 +101,28 @@
    "fieldtype": "Section Break"
   },
   {
+   "bold": 1,
    "fieldname": "agg1_name",
    "fieldtype": "Link",
    "label": "Agg1_Name",
    "options": "Item"
   },
   {
+   "bold": 1,
    "fieldname": "agg2_name",
    "fieldtype": "Link",
    "label": "Agg2_Name",
    "options": "Item"
   },
   {
+   "bold": 1,
    "fieldname": "agg3_name",
    "fieldtype": "Link",
    "label": "Agg3_Name",
    "options": "Item"
   },
   {
+   "bold": 1,
    "fieldname": "agg4_name",
    "fieldtype": "Link",
    "label": "Agg4_Name",
@@ -137,21 +141,25 @@
    "options": "Item"
   },
   {
+   "bold": 1,
    "fieldname": "agg1_qty",
    "fieldtype": "Float",
    "label": "Agg1_Qty"
   },
   {
+   "bold": 1,
    "fieldname": "agg2_qty",
    "fieldtype": "Float",
    "label": "Agg2_Qty"
   },
   {
+   "bold": 1,
    "fieldname": "agg3_qty",
    "fieldtype": "Float",
    "label": "Agg3_Qty"
   },
   {
+   "bold": 1,
    "fieldname": "agg4_qty",
    "fieldtype": "Float",
    "label": "Agg4_Qty"
@@ -175,12 +183,14 @@
    "fieldtype": "Column Break"
   },
   {
+   "bold": 1,
    "fieldname": "cem1_name",
    "fieldtype": "Link",
    "label": "Cem1_Name",
    "options": "Item"
   },
   {
+   "bold": 1,
    "fieldname": "cem1_qty",
    "fieldtype": "Float",
    "label": "Cem1_Qty"
@@ -249,12 +259,14 @@
    "label": "Sil1_Qty"
   },
   {
+   "bold": 1,
    "fieldname": "wtr1_name",
    "fieldtype": "Link",
    "label": "Wtr1_Name",
    "options": "Item"
   },
   {
+   "bold": 1,
    "fieldname": "wtr1_qty",
    "fieldtype": "Float",
    "label": "Wtr1_Qty"
@@ -282,12 +294,14 @@
    "label": "Wtr3_Qty"
   },
   {
+   "bold": 1,
    "fieldname": "adm1_name",
    "fieldtype": "Link",
    "label": "Adm1_Name",
    "options": "Item"
   },
   {
+   "bold": 1,
    "fieldname": "adm1_qty",
    "fieldtype": "Float",
    "label": "Adm1_Qty"
@@ -328,7 +342,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-31 18:22:47.849936",
+ "modified": "2025-02-09 23:29:14.252928",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "Recipe",
