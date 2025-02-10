@@ -27,6 +27,7 @@
   "recipe_grade_val0",
   "recipe_name_val0",
   "recipe_density_val0",
+  "device",
   "section_break_ubtz",
   "agg_1_name_val0",
   "agg_1_val0",
@@ -654,11 +655,16 @@
    "fieldname": "ticket_id_val0",
    "fieldtype": "Data",
    "label": "TICKET_ID_VAL0"
+  },
+  {
+   "fieldname": "device",
+   "fieldtype": "Data",
+   "label": "Device"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-07 09:55:52.093785",
+ "modified": "2025-02-10 10:36:44.923907",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "Plant Consumption",
