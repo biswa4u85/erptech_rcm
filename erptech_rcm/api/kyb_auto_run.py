@@ -73,7 +73,7 @@ def make_api_call(type):
 
             results = []
             for do_result in do_results:
-                do_result["device"] = 1
+                do_result["batching_plant"] = "APAS-BP1"
                 filtered_result = {
                     key: (
                         value.strftime("%Y-%m-%d")

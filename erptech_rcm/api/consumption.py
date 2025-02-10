@@ -1,12 +1,14 @@
 import frappe
 import json
 
+
 @frappe.whitelist(allow_guest=True)
 def consumption_settings():
     settings = frappe.get_cached_doc("Consumption Settings").as_dict()
     count = frappe.db.count(settings.consumption_table_to)
     settings["count"] = count
     return settings
+
 
 # Stetter
 @frappe.whitelist(allow_guest=True)
@@ -190,6 +192,7 @@ def consumption_set_data_stetter():
     frappe.db.commit()
     return {"status": "success", "message": "Data fetched successfully"}
 
+
 # KYB
 @frappe.whitelist(allow_guest=True)
 def consumption_set_data_kyb():
@@ -208,7 +211,7 @@ def consumption_set_data_kyb():
             "timestamp": result["timestamp"],
             "plant_address_val0": result["PLANT_ADDRESS_VAL0"],
             "plant_no_val0": result["PLANT_NO_VAL0"],
-            "customer_name_val0": result["CUSTOMER_NAME_VAL0"],
+            # "customer_name_val0": result["CUSTOMER_NAME_VAL0"],
             "customer_address_val0": result["CUSTOMER_ADDRESS_VAL0"],
             "site_name_val0": result["SITE_NAME_VAL0"],
             "site_address_val0": result["SITE_ADDRESS_VAL0"],
@@ -306,7 +309,7 @@ def consumption_set_data_kyb():
             "deliery_no_val0": result["DELIERY_NO_VAL0"],
             "addinfo23": result["AddInfo23"],
             "ticket_id_val0": result["TICKET_ID_VAL0"],
-            "batching_plant": result["batching_plant"],
+            "batching_plant": result["batching_plant"]
         }
         exists = frappe.db.exists(
             db_name, {"sequence_number": result["sequence_number"]}
