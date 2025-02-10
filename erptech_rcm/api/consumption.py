@@ -1,11 +1,5 @@
-from decimal import Decimal
 import frappe
-import requests
-import pymysql
 import json
-from datetime import datetime, timedelta
-import pyodbc
-
 
 @frappe.whitelist(allow_guest=True)
 def consumption_settings():
@@ -14,9 +8,9 @@ def consumption_settings():
     settings["count"] = count
     return settings
 
-
+# Stetter
 @frappe.whitelist(allow_guest=True)
-def consumption_set_data():
+def consumption_set_data_stetter():
     settings = frappe.get_cached_doc("Consumption Settings").as_dict()
     db_name = settings.consumption_table_to
     stringified_data = frappe.local.form_dict.get("payload")
@@ -196,142 +190,6 @@ def consumption_set_data():
     frappe.db.commit()
     return {"status": "success", "message": "Data fetched successfully"}
 
-
-@frappe.whitelist()
-def fetch_consumption_data(type):
-    """Function to make an API call and handle the response."""
-    # Replace with your API endpoint and API key if required
-    url = "https://myhome.erptech.in/api/method/"
-    headers = {
-        # "Authorization": "Bearer YOUR_API_KEY",  # Replace with your API key if needed
-        "Content-Type": "application/json"
-    }
-
-    try:
-        # Make the GET request
-        consumption_settings = requests.get(
-            url + "erptech_rcm.api.consumption.consumption_settings", headers=headers
-        )
-        consumption_settings.raise_for_status()  # Raise an HTTPError for bad responses (4xx and 5xx)
-
-        # Process the response
-        consumption = consumption_settings.json()  # Assuming the API returns JSON
-        settings = consumption["message"]
-        if settings:
-
-            # Make connection
-            do_connection = None
-            consumption_connection = None
-            do_columns = None
-            consumption_columns = None
-            if settings["sql_server"] == 1:
-                do_connection = pyodbc.connect(
-                    f"Driver={{{settings['db_driver']}}};Server={settings['db_host']};Database={settings['database']};UID={settings['db_user']};PWD={settings['db_password']};MARS_Connection=Yes;"
-                )
-                consumption_connection = pyodbc.connect(
-                    f"Driver={{{settings['db_driver']}}};Server={settings['db_host']};Database={settings['database']};UID={settings['db_user']};PWD={settings['db_password']};MARS_Connection=Yes;"
-                )
-            else:
-                do_connection = pymysql.connect(
-                    host=settings["db_host"],
-                    user=settings["db_user"],
-                    password=settings["db_password"],
-                    database=settings["database"],
-                    cursorclass=pymysql.cursors.DictCursor,
-                )
-                consumption_connection = pymysql.connect(
-                    host=settings["db_host"],
-                    user=settings["db_user"],
-                    password=settings["db_password"],
-                    database=settings["database"],
-                    cursorclass=pymysql.cursors.DictCursor,
-                )
-
-            # Create a cursor object to interact with the database
-            do_data = do_connection.cursor()
-            consumption_data = consumption_connection.cursor()
-
-            # Example: Query the database
-            do_table = settings["consumption_table_from"]
-            consumption_table = settings["consumption_item_table_from"]
-            if type == "all":
-                do_data.execute(f"SELECT * FROM {do_table}")
-                consumption_data.execute(f"SELECT * FROM {consumption_table}")
-            else:
-                do_data.execute(
-                    f"SELECT * FROM {do_table} WHERE Batch_No > {settings['count']}"
-                )
-                consumption_data.execute(
-                    f"SELECT * FROM {consumption_table} WHERE Batch_No > {settings['count']}"
-                )
-
-            if settings["sql_server"] == 1:
-                do_columns = [column[0] for column in do_data.description]
-                consumption_columns = [
-                    column[0] for column in consumption_data.description
-                ]
-
-            do_results = do_data.fetchall()
-            consumption_results = consumption_data.fetchall()
-
-            if settings["sql_server"] == 1:
-                do_results = [dict(zip(do_columns, row)) for row in do_results]
-                consumption_results = [
-                    dict(zip(consumption_columns, row)) for row in consumption_results
-                ]
-
-            # Loop through each record in data
-            grouped = {}
-            for item in consumption_results:
-                if item["Batch_No"] not in grouped:
-                    grouped[item["Batch_No"]] = []
-                filtered_item = {
-                    key: (
-                        value.strftime("%Y-%m-%d")
-                        if isinstance(value, datetime)
-                        else float(value) if isinstance(value, Decimal) else value
-                    )
-                    for key, value in item.items()
-                }
-                grouped[item["Batch_No"]].append(filtered_item)
-
-            results = []
-            for do_result in do_results:
-                do_result["items"] = []
-                for key, group in grouped.items():
-                    if do_result["Batch_No"] == group[0]["Batch_No"]:
-                        do_result["items"] = group
-                filtered_result = {
-                    key: (
-                        value.strftime("%Y-%m-%d")
-                        if isinstance(value, datetime)
-                        else float(value) if isinstance(value, Decimal) else value
-                    )
-                    for key, value in do_result.items()
-                }
-                results.append(filtered_result)
-
-            # Make the POST request
-            consumption_set_data = requests.post(
-                url + "erptech_rcm.api.consumption.consumption_set_data",
-                json={"payload": json.dumps(results)},
-                headers=headers,
-            )
-            consumption_set_data.raise_for_status()  # Raise an HTTPError for bad responses (4xx and 5xx)
-
-            # Process the response
-            consumption = consumption_set_data.json()  # Assuming the API returns JSON
-
-            if consumption["message"]["status"] == "success":
-                frappe.msgprint(consumption["message"]["message"])
-                # print(consumption['message']['message'])
-            do_data.close()
-            consumption_data.close()
-    except requests.exceptions.RequestException as e:
-        # Handle any exceptions
-        print("An error occurred:", e)
-
-
 # KYB
 @frappe.whitelist(allow_guest=True)
 def consumption_set_data_kyb():
@@ -447,7 +305,8 @@ def consumption_set_data_kyb():
             "wtr_adj_log_val0": result["WTR_ADJ_LOG_VAL0"],
             "deliery_no_val0": result["DELIERY_NO_VAL0"],
             "addinfo23": result["AddInfo23"],
-            "ticket_id_val0": result["TICKET_ID_VAL0"]
+            "ticket_id_val0": result["TICKET_ID_VAL0"],
+            "device": result["device"],
         }
         exists = frappe.db.exists(
             db_name, {"sequence_number": result["sequence_number"]}
@@ -470,104 +329,3 @@ def consumption_set_data_kyb():
     # Commit the changes to save the records
     frappe.db.commit()
     return {"status": "success", "message": "Data fetched successfully"}
-
-
-@frappe.whitelist()
-def fetch_consumption_data_kyb(type):
-    """Function to make an API call and handle the response."""
-    # Replace with your API endpoint and API key if required
-    url = "https://myhome.erptech.in/api/method/"
-    headers = {
-        # "Authorization": "Bearer YOUR_API_KEY",  # Replace with your API key if needed
-        "Content-Type": "application/json"
-    }
-
-    try:
-        # Make the GET request
-        consumption_settings = requests.get(
-            url + "erptech_rcm.api.consumption.consumption_settings", headers=headers
-        )
-        consumption_settings.raise_for_status()  # Raise an HTTPError for bad responses (4xx and 5xx)
-
-        # Process the response
-        consumption = consumption_settings.json()  # Assuming the API returns JSON
-        settings = consumption["message"]
-        print(settings)
-        if settings:
-
-            # Make connection
-            do_connection = None
-            do_columns = None
-            if settings["sql_server"] == 1:
-                do_connection = pyodbc.connect(
-                    f"Driver={{{settings['db_driver']}}};Server={settings['db_host']};Database={settings['database']};UID={settings['db_user']};PWD={settings['db_password']};MARS_Connection=Yes;"
-                )
-            else:
-                do_connection = pymysql.connect(
-                    host=settings["db_host"],
-                    user=settings["db_user"],
-                    password=settings["db_password"],
-                    database=settings["database"],
-                    cursorclass=pymysql.cursors.DictCursor,
-                )
-
-            # Create a cursor object to interact with the database
-            do_data = do_connection.cursor()
-
-            # Example: Query the database
-            current_date = datetime.now().strftime("%Y-%m-%d")
-            currentDate = datetime.now()
-            date_before_20_days = currentDate - timedelta(days=20)
-            formatted_date = date_before_20_days.strftime("%Y-%m-%d")
-
-            do_table = settings["consumption_table_from"]
-            fetchLatest = settings["fetch_latest"]
-            from_date = formatted_date if fetchLatest else settings["from_date"]
-            to_date = current_date if fetchLatest else settings["to_date"]
-            if type == "all":
-                do_data.execute(
-                    f"SELECT * FROM {do_table} WHERE timestamp BETWEEN '{from_date}' AND '{to_date}'"
-                )
-            else:
-                do_data.execute(
-                    f"SELECT * FROM {do_table} WHERE Batch_No > {settings['count']}"
-                )
-
-            if settings["sql_server"] == 1:
-                do_columns = [column[0] for column in do_data.description]
-
-            do_results = do_data.fetchall()
-
-            if settings["sql_server"] == 1:
-                do_results = [dict(zip(do_columns, row)) for row in do_results]
-
-            results = []
-            for do_result in do_results:
-                filtered_result = {
-                    key: (
-                        value.strftime("%Y-%m-%d")
-                        if isinstance(value, datetime)
-                        else float(value) if isinstance(value, Decimal) else value
-                    )
-                    for key, value in do_result.items()
-                }
-                results.append(filtered_result)
-
-            # Make the POST request
-            consumption_set_data = requests.post(
-                url + "erptech_rcm.api.consumption.consumption_set_data",
-                json={"payload": json.dumps(results)},
-                headers=headers,
-            )
-            consumption_set_data.raise_for_status()  # Raise an HTTPError for bad responses (4xx and 5xx)
-
-            # Process the response
-            consumption = consumption_set_data.json()  # Assuming the API returns JSON
-
-            if consumption["message"]["status"] == "success":
-                frappe.msgprint(consumption["message"]["message"])
-                # print(consumption['message']['message'])
-            do_data.close()
-    except requests.exceptions.RequestException as e:
-        # Handle any exceptions
-        print("An error occurred:", e)
