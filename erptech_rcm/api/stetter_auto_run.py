@@ -10,7 +10,6 @@ def make_api_call(type):
     # Replace with your API endpoint and API key if required
     url = "https://rmc.azureerptech.com/api/method/"
     headers = {
-        # "Authorization": "Bearer YOUR_API_KEY",  # Replace with your API key if needed
         "Content-Type": "application/json"
     }
 
@@ -93,14 +92,13 @@ def make_api_call(type):
                 results.append(filtered_result)
                 
             # Make the POST request
-            consumption_set_data = requests.post(url+"erptech_rcm.api.consumption.consumption_set_data", json={"payload": json.dumps(results)}, headers=headers)
+            consumption_set_data = requests.post(url+"erptech_rcm.api.consumption.consumption_set_data_stetter", json={"payload": json.dumps(results)}, headers=headers)
             consumption_set_data.raise_for_status()  # Raise an HTTPError for bad responses (4xx and 5xx)
             
             # Process the response
             consumption = consumption_set_data.json()  # Assuming the API returns JSON
 
             if(consumption['message']['status'] == "success"):
-                # frappe.msgprint(consumption['message']['message'])
                 print(consumption['message']['message'])
             do_data.close()
             consumption_data.close()

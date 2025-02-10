@@ -8,7 +8,6 @@ import pyodbc
 
 def make_api_call(type):
     """Function to make an API call and handle the response."""
-    # Replace with your API endpoint and API key if required
     url = "https://myhome.erptech.in/api/method/"
     headers = {"Content-Type": "application/json"}
 
@@ -74,6 +73,7 @@ def make_api_call(type):
 
             results = []
             for do_result in do_results:
+                do_result["device"] = 1
                 filtered_result = {
                     key: (
                         value.strftime("%Y-%m-%d")
@@ -96,7 +96,6 @@ def make_api_call(type):
             consumption = consumption_set_data.json()  # Assuming the API returns JSON
 
             if consumption["message"]["status"] == "success":
-                # frappe.msgprint(consumption['message']['message'])
                 print(consumption["message"]["message"])
             do_data.close()
     except requests.exceptions.RequestException as e:
