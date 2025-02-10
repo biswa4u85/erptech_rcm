@@ -306,7 +306,7 @@ def consumption_set_data_kyb():
             "deliery_no_val0": result["DELIERY_NO_VAL0"],
             "addinfo23": result["AddInfo23"],
             "ticket_id_val0": result["TICKET_ID_VAL0"],
-            "device": result["device"],
+            "batching_plant": result["batching_plant"],
         }
         exists = frappe.db.exists(
             db_name, {"sequence_number": result["sequence_number"]}
