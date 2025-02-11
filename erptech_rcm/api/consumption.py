@@ -205,13 +205,19 @@ def consumption_set_data_kyb():
         return {"status": "error", "message": "No data received"}
     results = json.loads(stringified_data)
     for result in results:
+        # Filter customers by customer_name
+        customers = frappe.get_all(
+            "Customer",
+            filters={"customer_name": result["CUSTOMER_NAME_VAL0"]},
+            fields=["name"],
+        )
         data = {
+            "customer_name_val0": customers[0].name if customers else None,
             "sequence_number": result["sequence_number"],
             "timestamp_utc": result["timestamp_utc"],
             "timestamp": result["timestamp"],
             "plant_address_val0": result["PLANT_ADDRESS_VAL0"],
             "plant_no_val0": result["PLANT_NO_VAL0"],
-            # "customer_name_val0": result["CUSTOMER_NAME_VAL0"],
             "customer_address_val0": result["CUSTOMER_ADDRESS_VAL0"],
             "site_name_val0": result["SITE_NAME_VAL0"],
             "site_address_val0": result["SITE_ADDRESS_VAL0"],
@@ -309,7 +315,7 @@ def consumption_set_data_kyb():
             "deliery_no_val0": result["DELIERY_NO_VAL0"],
             "addinfo23": result["AddInfo23"],
             "ticket_id_val0": result["TICKET_ID_VAL0"],
-            "batching_plant": result["batching_plant"]
+            "batching_plant": result["batching_plant"],
         }
         exists = frappe.db.exists(
             db_name, {"sequence_number": result["sequence_number"]}
