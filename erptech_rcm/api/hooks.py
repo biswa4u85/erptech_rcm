@@ -49,15 +49,15 @@ def create_stock_entry(doc, method):
         for item in doc.custom_consumed_raw_material:
             items_data = frappe.get_all(
                 "Item",
-                filters={"item_name": item["item_name"]},
+                filters={"item_name": item.item_name},
                 fields=["*"],
             )
-            if items_data and item["act_qty"] and items_data[0].is_stock_item == 1:
+            if items_data and item.act_qty and items_data[0].is_stock_item == 1:
                 stock_entry.append(
                     "items",
                     {
                         "item_code": items_data[0].item_code,
-                        "qty": item["act_qty"],
+                        "qty": item.act_qty,
                         "rate": items_data[0].rate,
                         "uom": items_data[0].uom,
                         "allow_zero_valuation_rate": (
