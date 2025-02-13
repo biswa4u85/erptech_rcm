@@ -52,7 +52,7 @@ def create_stock_entry(doc, method):
                 filters={"item_name": item["item_name"]},
                 fields=["*"],
             )
-            if items_data and items_data[0].is_stock_item == 1:
+            if items_data and item["act_qty"] and items_data[0].is_stock_item == 1:
                 stock_entry.append(
                     "items",
                     {
