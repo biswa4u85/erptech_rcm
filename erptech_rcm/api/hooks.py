@@ -59,7 +59,7 @@ def create_stock_entry(doc, method):
                         "item_code": items_data[0].item_code,
                         "qty": item.act_qty,
                         "rate": items_data[0].rate,
-                        "uom": items_data[0].uom,
+                        "uom": items_data[0].stock_uom,
                         "allow_zero_valuation_rate": (
                             1 if items_data[0]["item_code"] == "Water" else 0
                         ),
