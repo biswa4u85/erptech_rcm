@@ -63,7 +63,7 @@ def create_stock_entry(doc, method):
                         "allow_zero_valuation_rate": (
                             1 if items_data[0]["item_code"] == "Water" else 0
                         ),
-                        "s_warehouse": items_data[0].source_warehouse,
+                        "s_warehouse": items_data[0].item_defaults[0].default_warehouse,
                     },
                 )
 
