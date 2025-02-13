@@ -622,7 +622,8 @@ def consumption_set_data_kyb():
                     ]
 
                     for result in results:
-                        doc.append("custom_consumed_raw_material", result)
+                        if result["item_name"]:
+                            doc.append("custom_consumed_raw_material", result)
 
                     doc.append(
                         "items",
@@ -639,7 +640,7 @@ def consumption_set_data_kyb():
                             ),
                         },
                     )
-                    
+
                     doc.insert(ignore_permissions=True)
 
     # Commit the changes to save the records
