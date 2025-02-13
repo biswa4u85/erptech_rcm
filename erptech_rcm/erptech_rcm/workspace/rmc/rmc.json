@@ -1,15 +1,6 @@
 {
- "charts": [
-  {
-   "chart_name": "Outgoing Bills (Sales Invoice)",
-   "label": "Sales Invoice"
-  },
-  {
-   "chart_name": "Sales Order Trends",
-   "label": "Sales Order"
-  }
- ],
- "content": "[{\"id\":\"5AzoscOc1I\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Quotation\",\"col\":3}},{\"id\":\"Lb3o9D9e0w\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Order\",\"col\":3}},{\"id\":\"r3kQHf_7dL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Delivery Note\",\"col\":3}},{\"id\":\"EA-YZAKCXq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"id\":\"fzZ4C8HGzu\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sales Order\",\"col\":6}},{\"id\":\"VK0MKFTx97\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Sales Invoice\",\"col\":6}},{\"id\":\"3REzzKu2NQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Weight Bridge\",\"col\":3}},{\"id\":\"wIZwSpG5Ri\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Consumption Settings\",\"col\":3}},{\"id\":\"u597eIJ3YB\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Material Consumption\",\"col\":3}}]",
+ "charts": [],
+ "content": "[{\"id\":\"Lb3o9D9e0w\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pour Card\",\"col\":3}},{\"id\":\"r3kQHf_7dL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Delivery Challan\",\"col\":3}},{\"id\":\"dYIGXYuIz3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Plant Consumption\",\"col\":3}},{\"id\":\"qv0YWHKW6P\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Weight Bridge\",\"col\":3}},{\"id\":\"cRsLuZXAtT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Batching Plant-1</b></span>\",\"col\":12}},{\"id\":\"MrM3N_GvFR\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Yesterday Dispatch\",\"col\":3}},{\"id\":\"u7YId5z4pg\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Today Dispatch\",\"col\":3}},{\"id\":\"hLXw3xMNdd\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"This Month Dispatch\",\"col\":3}},{\"id\":\"key3MSMtvB\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"This Year Dispatch\",\"col\":3}}]",
  "creation": "2024-03-12 00:20:56.016182",
  "custom_blocks": [],
  "docstatus": 0,
@@ -22,11 +13,28 @@
  "is_hidden": 0,
  "label": "RMC",
  "links": [],
- "modified": "2025-02-10 10:22:42.751407",
+ "modified": "2025-02-12 20:53:40.720544",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "RMC",
- "number_cards": [],
+ "number_cards": [
+  {
+   "label": "Today Dispatch",
+   "number_card_name": "Today Dispatch"
+  },
+  {
+   "label": "Yesterday Dispatch",
+   "number_card_name": "Yesterday Dispatch"
+  },
+  {
+   "label": "This Month Dispatch",
+   "number_card_name": "This Month Dispatch"
+  },
+  {
+   "label": "This Year Dispatch",
+   "number_card_name": "This Year Dispatch"
+  }
+ ],
  "owner": "test@admin.com",
  "parent_page": "",
  "public": 1,
@@ -37,15 +45,24 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Sales Invoice",
-   "link_to": "Sales Invoice",
+   "label": "Pour Card",
+   "link_to": "Sales Order",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "Report Builder",
+   "label": "Plant Consumption",
+   "link_to": "Plant Consumption",
+   "stats_filter": "[]",
    "type": "DocType"
   },
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Material Consumption",
-   "link_to": "Plant Consumption",
+   "label": "Delivery Challan",
+   "link_to": "Delivery Note",
    "stats_filter": "[]",
    "type": "DocType"
   },
@@ -55,34 +72,6 @@
    "label": "Weight Bridge",
    "link_to": "Weight Bridge",
    "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Consumption Settings",
-   "link_to": "Consumption Settings",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Sales Order",
-   "link_to": "Sales Order",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Delivery Note",
-   "link_to": "Delivery Note",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Quotation",
-   "link_to": "Quotation",
    "type": "DocType"
   }
  ],

@@ -1,27 +1,27 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:block",
- "creation": "2025-02-03 20:01:40.944686",
+ "autoname": "field:pump_name",
+ "creation": "2025-02-13 01:49:50.520093",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "block"
+  "pump_name"
  ],
  "fields": [
   {
-   "fieldname": "block",
+   "fieldname": "pump_name",
    "fieldtype": "Data",
-   "label": "Block",
+   "label": "Pump Name",
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-13 09:54:26.298845",
+ "modified": "2025-02-13 01:51:44.400717",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
- "name": "Block",
+ "name": "Pump Name",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
@@ -38,9 +38,9 @@
    "write": 1
   }
  ],
- "search_fields": "block",
+ "search_fields": "pump_name",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "block"
+ "title_field": "pump_name"
 }

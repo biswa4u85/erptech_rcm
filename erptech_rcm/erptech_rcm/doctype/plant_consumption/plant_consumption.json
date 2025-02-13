@@ -5,13 +5,12 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "sequence_number",
-  "timestamp_utc",
+  "addinfo23",
   "timestamp",
+  "timestamp_utc",
   "plant_address_val0",
   "plant_no_val0",
   "deliery_no_val0",
-  "addinfo23",
   "column_break_gbbw",
   "customer_name_val0",
   "customer_address_val0",
@@ -19,109 +18,17 @@
   "site_address_val0",
   "tm_no_val0",
   "driver_name_val0",
-  "ticket_id_val0",
   "column_break_bvqo",
   "order_qty_val0",
-  "batch_size_val0",
   "pro_qty_val0",
   "recipe_grade_val0",
   "recipe_name_val0",
   "recipe_density_val0",
   "batching_plant",
-  "section_break_ubtz",
-  "agg_1_name_val0",
-  "agg_1_val0",
-  "agg1_act_log_val0",
-  "agg1_mos_log_val0",
-  "agg1_set_log_val0",
-  "agg_2_name_val0",
-  "agg_2_val0",
-  "agg2_act_log_val0",
-  "agg2_mos_log_val0",
-  "agg2_set_log_val0",
-  "agg_3_name_val0",
-  "agg_3_val0",
-  "agg3_act_log_val0",
-  "agg3_mos_log_val0",
-  "agg3_set_log_val0",
-  "agg_4_name_val0",
-  "agg_4_val0",
-  "agg4_act_log_val0",
-  "agg4_mos_log_val0",
-  "agg4_set_log_val0",
-  "agg_5_name_val0",
-  "agg_5_val0",
-  "agg5_act_log_val0",
-  "agg5_mos_log_val0",
-  "agg5_set_log_val0",
-  "agg_6_name_val0",
-  "agg_6_val0",
-  "agg6_act_log_val0",
-  "agg6_mos_log_val0",
-  "agg6_set_log_val0",
-  "column_break_ieiw",
-  "cmt_1_name_val0",
-  "cement_1_val0",
-  "cmt1_act_log_val0",
-  "cmt1_set_log_val0",
-  "cmt_2_name_val0",
-  "cement_2_val0",
-  "cmt2_act_log_val0",
-  "cmt2_set_log_val0",
-  "cmt_3_name_val0",
-  "cement_3_val0",
-  "cmt3_act_log_val0",
-  "cmt3_set_log_val0",
-  "cmt_4_name_val0",
-  "cement_4_val0",
-  "cmt4_act_log_val0",
-  "cmt4_set_log_val0",
-  "cmt_5_name_val0",
-  "cement_5_val0",
-  "cmt5_act_log_val0",
-  "cmt5_set_log_val0",
-  "cmt_6_name_val0",
-  "cement_6_val0",
-  "cmt6_act_log_val0",
-  "cmt6_set_log_val0",
-  "column_break_nifp",
-  "adm_1_name_val0",
-  "admixer_1_val0",
-  "adm1_act_log_val0",
-  "adm1_set_log_val0",
-  "adm_2_name_val0",
-  "admixer_2_val0",
-  "adm2_act_log_val0",
-  "adm2_set_log_val0",
-  "adm_3_name_val0",
-  "admixer_3_val0",
-  "adm3_act_log_val0",
-  "adm3_set_log_val0",
-  "adm_4_name_val0",
-  "admixer_4_val0",
-  "adm4_act_log_val0",
-  "adm4_set_log_val0",
-  "adm_5_name_val0",
-  "admixer_5_val0",
-  "adm5_act_log_val0",
-  "adm5_set_log_val0",
-  "column_break_qjwb",
-  "wtr_1_name_val0",
-  "water_1_val0",
-  "wtr1_act_log_val0",
-  "wtr1_set_log_val0",
-  "wtr_2_name_val0",
-  "water_2_val0",
-  "wtr2_act_log_val0",
-  "wtr2_set_log_val0",
-  "wtr_adj_log_val0"
+  "section_break_stqx",
+  "table_hbmh"
  ],
  "fields": [
-  {
-   "fieldname": "sequence_number",
-   "fieldtype": "Data",
-   "label": "sequence_number"
-  },
   {
    "fieldname": "timestamp_utc",
    "fieldtype": "Datetime",
@@ -133,390 +40,8 @@
    "label": "timestamp"
   },
   {
-   "fieldname": "section_break_ubtz",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "agg_1_name_val0",
-   "fieldtype": "Data",
-   "label": "AGG_1_NAME_VAL0"
-  },
-  {
-   "fieldname": "agg_1_val0",
-   "fieldtype": "Float",
-   "label": "AGG_1_VAL0"
-  },
-  {
-   "fieldname": "agg1_act_log_val0",
-   "fieldtype": "Float",
-   "label": "AGG1_ACT_LOG_VAL0"
-  },
-  {
-   "fieldname": "agg1_mos_log_val0",
-   "fieldtype": "Float",
-   "label": "AGG1_MOS_LOG_VAL0"
-  },
-  {
-   "fieldname": "agg1_set_log_val0",
-   "fieldtype": "Float",
-   "label": "AGG1_SET_LOG_VAL0"
-  },
-  {
-   "fieldname": "agg_2_name_val0",
-   "fieldtype": "Data",
-   "label": "AGG_2_NAME_VAL0"
-  },
-  {
-   "fieldname": "agg_2_val0",
-   "fieldtype": "Float",
-   "label": "AGG_2_VAL0"
-  },
-  {
-   "fieldname": "agg2_act_log_val0",
-   "fieldtype": "Float",
-   "label": "AGG2_ACT_LOG_VAL0"
-  },
-  {
-   "fieldname": "agg2_mos_log_val0",
-   "fieldtype": "Float",
-   "label": "AGG2_MOS_LOG_VAL0"
-  },
-  {
-   "fieldname": "agg2_set_log_val0",
-   "fieldtype": "Float",
-   "label": "AGG2_SET_LOG_VAL0"
-  },
-  {
-   "fieldname": "agg_3_name_val0",
-   "fieldtype": "Data",
-   "label": "AGG_3_NAME_VAL0"
-  },
-  {
-   "fieldname": "agg_3_val0",
-   "fieldtype": "Float",
-   "label": "AGG_3_VAL0"
-  },
-  {
-   "fieldname": "agg3_act_log_val0",
-   "fieldtype": "Float",
-   "label": "AGG3_ACT_LOG_VAL0"
-  },
-  {
-   "fieldname": "agg3_mos_log_val0",
-   "fieldtype": "Float",
-   "label": "AGG3_MOS_LOG_VAL0"
-  },
-  {
-   "fieldname": "agg3_set_log_val0",
-   "fieldtype": "Float",
-   "label": "AGG3_SET_LOG_VAL0"
-  },
-  {
-   "fieldname": "agg_4_name_val0",
-   "fieldtype": "Data",
-   "label": "AGG_4_NAME_VAL0"
-  },
-  {
-   "fieldname": "agg_4_val0",
-   "fieldtype": "Float",
-   "label": "AGG_4_VAL0"
-  },
-  {
-   "fieldname": "agg4_act_log_val0",
-   "fieldtype": "Float",
-   "label": "AGG4_ACT_LOG_VAL0"
-  },
-  {
-   "fieldname": "agg4_mos_log_val0",
-   "fieldtype": "Float",
-   "label": "AGG4_MOS_LOG_VAL0"
-  },
-  {
-   "fieldname": "agg4_set_log_val0",
-   "fieldtype": "Float",
-   "label": "AGG4_SET_LOG_VAL0"
-  },
-  {
-   "fieldname": "agg_5_name_val0",
-   "fieldtype": "Data",
-   "label": "AGG_5_NAME_VAL0"
-  },
-  {
-   "fieldname": "agg_5_val0",
-   "fieldtype": "Float",
-   "label": "AGG_5_VAL0"
-  },
-  {
-   "fieldname": "agg5_act_log_val0",
-   "fieldtype": "Float",
-   "label": "AGG5_ACT_LOG_VAL0"
-  },
-  {
-   "fieldname": "agg5_mos_log_val0",
-   "fieldtype": "Float",
-   "label": "AGG5_MOS_LOG_VAL0"
-  },
-  {
-   "fieldname": "agg5_set_log_val0",
-   "fieldtype": "Float",
-   "label": "AGG5_SET_LOG_VAL0"
-  },
-  {
-   "fieldname": "agg_6_name_val0",
-   "fieldtype": "Data",
-   "label": "AGG_6_NAME_VAL0"
-  },
-  {
-   "fieldname": "agg_6_val0",
-   "fieldtype": "Float",
-   "label": "AGG_6_VAL0"
-  },
-  {
-   "fieldname": "agg6_act_log_val0",
-   "fieldtype": "Float",
-   "label": "AGG6_ACT_LOG_VAL0"
-  },
-  {
-   "fieldname": "agg6_mos_log_val0",
-   "fieldtype": "Float",
-   "label": "AGG6_MOS_LOG_VAL0"
-  },
-  {
-   "fieldname": "agg6_set_log_val0",
-   "fieldtype": "Float",
-   "label": "AGG6_SET_LOG_VAL0"
-  },
-  {
-   "fieldname": "column_break_ieiw",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "cmt_1_name_val0",
-   "fieldtype": "Data",
-   "label": "CMT_1_NAME_VAL0"
-  },
-  {
-   "fieldname": "cement_1_val0",
-   "fieldtype": "Float",
-   "label": "CEMENT_1_VAL0"
-  },
-  {
-   "fieldname": "cmt1_act_log_val0",
-   "fieldtype": "Float",
-   "label": "CMT1_ACT_LOG_VAL0"
-  },
-  {
-   "fieldname": "cmt1_set_log_val0",
-   "fieldtype": "Float",
-   "label": "CMT1_SET_LOG_VAL0"
-  },
-  {
-   "fieldname": "cmt_2_name_val0",
-   "fieldtype": "Data",
-   "label": "CMT_2_NAME_VAL0"
-  },
-  {
-   "fieldname": "cement_2_val0",
-   "fieldtype": "Float",
-   "label": "CEMENT_2_VAL0"
-  },
-  {
-   "fieldname": "cmt2_act_log_val0",
-   "fieldtype": "Float",
-   "label": "CMT2_ACT_LOG_VAL0"
-  },
-  {
-   "fieldname": "cmt2_set_log_val0",
-   "fieldtype": "Float",
-   "label": "CMT2_SET_LOG_VAL0"
-  },
-  {
-   "fieldname": "cmt_3_name_val0",
-   "fieldtype": "Data",
-   "label": "CMT_3_NAME_VAL0"
-  },
-  {
-   "fieldname": "cement_3_val0",
-   "fieldtype": "Float",
-   "label": "CEMENT_3_VAL0"
-  },
-  {
-   "fieldname": "cmt3_act_log_val0",
-   "fieldtype": "Float",
-   "label": "CMT3_ACT_LOG_VAL0"
-  },
-  {
-   "fieldname": "cmt3_set_log_val0",
-   "fieldtype": "Float",
-   "label": "CMT3_SET_LOG_VAL0"
-  },
-  {
-   "fieldname": "cmt_4_name_val0",
-   "fieldtype": "Data",
-   "label": "CMT_4_NAME_VAL0"
-  },
-  {
-   "fieldname": "cement_4_val0",
-   "fieldtype": "Float",
-   "label": "CEMENT_4_VAL0"
-  },
-  {
-   "fieldname": "cmt4_act_log_val0",
-   "fieldtype": "Float",
-   "label": "CMT4_ACT_LOG_VAL0"
-  },
-  {
-   "fieldname": "cmt4_set_log_val0",
-   "fieldtype": "Float",
-   "label": "CMT4_SET_LOG_VAL0"
-  },
-  {
-   "fieldname": "cmt_5_name_val0",
-   "fieldtype": "Data",
-   "label": "CMT_5_NAME_VAL0"
-  },
-  {
-   "fieldname": "cement_5_val0",
-   "fieldtype": "Float",
-   "label": "CEMENT_5_VAL0"
-  },
-  {
-   "fieldname": "cmt5_act_log_val0",
-   "fieldtype": "Float",
-   "label": "CMT5_ACT_LOG_VAL0"
-  },
-  {
-   "fieldname": "cmt5_set_log_val0",
-   "fieldtype": "Float",
-   "label": "CMT5_SET_LOG_VAL0"
-  },
-  {
-   "fieldname": "cmt_6_name_val0",
-   "fieldtype": "Data",
-   "label": "CMT_6_NAME_VAL0"
-  },
-  {
-   "fieldname": "cement_6_val0",
-   "fieldtype": "Float",
-   "label": "CEMENT_6_VAL0"
-  },
-  {
-   "fieldname": "cmt6_act_log_val0",
-   "fieldtype": "Float",
-   "label": "CMT6_ACT_LOG_VAL0"
-  },
-  {
-   "fieldname": "cmt6_set_log_val0",
-   "fieldtype": "Float",
-   "label": "CMT6_SET_LOG_VAL0"
-  },
-  {
    "fieldname": "column_break_bvqo",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "batch_size_val0",
-   "fieldtype": "Float",
-   "label": "BATCH_SIZE_VAL0"
-  },
-  {
-   "fieldname": "column_break_nifp",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "adm_1_name_val0",
-   "fieldtype": "Data",
-   "label": "ADM_1_NAME_VAL0"
-  },
-  {
-   "fieldname": "admixer_1_val0",
-   "fieldtype": "Float",
-   "label": "ADMIXER_1_VAL0"
-  },
-  {
-   "fieldname": "adm1_act_log_val0",
-   "fieldtype": "Float",
-   "label": "ADM1_ACT_LOG_VAL0"
-  },
-  {
-   "fieldname": "adm1_set_log_val0",
-   "fieldtype": "Float",
-   "label": "ADM1_SET_LOG_VAL0"
-  },
-  {
-   "fieldname": "adm_2_name_val0",
-   "fieldtype": "Data",
-   "label": "ADM_2_NAME_VAL0"
-  },
-  {
-   "fieldname": "admixer_2_val0",
-   "fieldtype": "Float",
-   "label": "ADMIXER_2_VAL0"
-  },
-  {
-   "fieldname": "adm2_act_log_val0",
-   "fieldtype": "Float",
-   "label": "ADM2_ACT_LOG_VAL0"
-  },
-  {
-   "fieldname": "adm2_set_log_val0",
-   "fieldtype": "Float",
-   "label": "ADM2_SET_LOG_VAL0"
-  },
-  {
-   "fieldname": "adm_3_name_val0",
-   "fieldtype": "Data",
-   "label": "ADM_3_NAME_VAL0"
-  },
-  {
-   "fieldname": "adm3_act_log_val0",
-   "fieldtype": "Float",
-   "label": "ADM3_ACT_LOG_VAL0"
-  },
-  {
-   "fieldname": "adm3_set_log_val0",
-   "fieldtype": "Float",
-   "label": "ADM3_SET_LOG_VAL0"
-  },
-  {
-   "fieldname": "adm_4_name_val0",
-   "fieldtype": "Data",
-   "label": "ADM_4_NAME_VAL0"
-  },
-  {
-   "fieldname": "admixer_4_val0",
-   "fieldtype": "Float",
-   "label": "ADMIXER_4_VAL0"
-  },
-  {
-   "fieldname": "adm4_act_log_val0",
-   "fieldtype": "Float",
-   "label": "ADM4_ACT_LOG_VAL0"
-  },
-  {
-   "fieldname": "adm4_set_log_val0",
-   "fieldtype": "Float",
-   "label": "ADM4_SET_LOG_VAL0"
-  },
-  {
-   "fieldname": "adm_5_name_val0",
-   "fieldtype": "Data",
-   "label": "ADM_5_NAME_VAL0"
-  },
-  {
-   "fieldname": "admixer_5_val0",
-   "fieldtype": "Float",
-   "label": "ADMIXER_5_VAL0"
-  },
-  {
-   "fieldname": "adm5_act_log_val0",
-   "fieldtype": "Float",
-   "label": "ADM5_ACT_LOG_VAL0"
-  },
-  {
-   "fieldname": "adm5_set_log_val0",
-   "fieldtype": "Float",
-   "label": "ADM5_SET_LOG_VAL0"
   },
   {
    "fieldname": "column_break_gbbw",
@@ -524,8 +49,9 @@
   },
   {
    "fieldname": "customer_name_val0",
-   "fieldtype": "Data",
-   "label": "CUSTOMER_NAME_VAL0"
+   "fieldtype": "Link",
+   "label": "CUSTOMER_NAME_VAL0",
+   "options": "Customer"
   },
   {
    "fieldname": "site_name_val0",
@@ -558,55 +84,6 @@
    "label": "PRO_QTY_VAL0"
   },
   {
-   "fieldname": "column_break_qjwb",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "wtr_1_name_val0",
-   "fieldtype": "Data",
-   "label": "WTR_1_NAME_VAL0"
-  },
-  {
-   "fieldname": "water_1_val0",
-   "fieldtype": "Float",
-   "label": "WATER_1_VAL0"
-  },
-  {
-   "fieldname": "wtr1_act_log_val0",
-   "fieldtype": "Float",
-   "label": "WTR1_ACT_LOG_VAL0"
-  },
-  {
-   "fieldname": "wtr1_set_log_val0",
-   "fieldtype": "Float",
-   "label": "WTR1_SET_LOG_VAL0"
-  },
-  {
-   "fieldname": "wtr_2_name_val0",
-   "fieldtype": "Data",
-   "label": "WTR_2_NAME_VAL0"
-  },
-  {
-   "fieldname": "water_2_val0",
-   "fieldtype": "Float",
-   "label": "WATER_2_VAL0"
-  },
-  {
-   "fieldname": "wtr2_act_log_val0",
-   "fieldtype": "Float",
-   "label": "WTR2_ACT_LOG_VAL0"
-  },
-  {
-   "fieldname": "wtr2_set_log_val0",
-   "fieldtype": "Float",
-   "label": "WTR2_SET_LOG_VAL0"
-  },
-  {
-   "fieldname": "admixer_3_val0",
-   "fieldtype": "Float",
-   "label": "ADMIXER_3_VAL0"
-  },
-  {
    "fieldname": "recipe_name_val0",
    "fieldtype": "Data",
    "label": "RECIPE_NAME_VAL0"
@@ -615,11 +92,6 @@
    "fieldname": "recipe_density_val0",
    "fieldtype": "Data",
    "label": "RECIPE_DENSITY_VAL0"
-  },
-  {
-   "fieldname": "wtr_adj_log_val0",
-   "fieldtype": "Float",
-   "label": "WTR_ADJ_LOG_VAL0"
   },
   {
    "fieldname": "site_address_val0",
@@ -652,20 +124,24 @@
    "label": "AddInfo23"
   },
   {
-   "fieldname": "ticket_id_val0",
-   "fieldtype": "Data",
-   "label": "TICKET_ID_VAL0"
-  },
-  {
    "fieldname": "batching_plant",
    "fieldtype": "Link",
    "label": "Batching Plant",
    "options": "Branch"
+  },
+  {
+   "fieldname": "section_break_stqx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_hbmh",
+   "fieldtype": "Table",
+   "options": "Plant Consumption Item"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-10 10:59:02.734670",
+ "modified": "2025-02-12 13:07:43.198371",
  "modified_by": "Administrator",
  "module": "Erptech Rcm",
  "name": "Plant Consumption",
