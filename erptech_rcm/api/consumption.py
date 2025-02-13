@@ -554,28 +554,6 @@ def consumption_set_data_kyb():
             "batching_plant": result["batching_plant"],
             "items": items,
         }
-<<<<<<< HEAD
-
-        # data delivery note
-        data_delivery_note = {
-            "customer": customers[0].name if customers else None,
-            "custom_site": sites[0].name if sites else None,
-            "shipping_address_name": result["SITE_ADDRESS_VAL0"],
-            "custom_vehicle": vehicles[0].name if vehicles else None,
-            "driver_name": result["DRIVER_NAME_VAL0"],
-            "custom_pro_qty_val0": result["PRO_QTY_VAL0"],
-            "custom_recipe_grade_val0": result["RECIPE_GRADE_VAL0"],
-            "custom_ticket_id_val0": result["TICKET_ID_VAL0"],
-            "custom_batching_plant": result["batching_plant"],
-            "custom_addinfo23": result["AddInfo23"],
-            "custom_batch_date": result["timestamp"],
-            "delivery_items": items_delivery_note,
-        }
-        exists = frappe.db.exists(db_name, {"addinfo23": result["AddInfo23"]})
-        if exists:
-            batch = frappe.get_doc(db_name, {"addinfo23": result["AddInfo23"]})
-=======
->>>>>>> 2ea176298ceb707fa10fee87ad66ad016c52715a
 
         # data delivery note
         data_delivery_note = {
@@ -661,10 +639,7 @@ def consumption_set_data_kyb():
                             ),
                         },
                     )
-<<<<<<< HEAD
-=======
                     
->>>>>>> 2ea176298ceb707fa10fee87ad66ad016c52715a
                     doc.insert(ignore_permissions=True)
 
     # Commit the changes to save the records
