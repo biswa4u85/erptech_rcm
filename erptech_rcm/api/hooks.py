@@ -44,22 +44,26 @@ def create_stock_entry(doc, method):
                         "s_warehouse": item.source_warehouse,
                     },
                 )
-                
+
     if doc.custom_consumed_raw_material:
         for item in doc.custom_consumed_raw_material:
-            checkItem = frappe.get_doc("Item", item.item_code)
-            if checkItem.is_stock_item == 1:
+            items_data = frappe.get_all(
+                "Item",
+                filters={"item_name": item.item_name},
+                fields=["*"],
+            )
+            if items_data and items_data[0].is_stock_item == 1:
                 stock_entry.append(
                     "items",
                     {
-                        "item_code": item.item_code,
-                        "qty": item.qty,
-                        "rate": item.rate,
-                        "uom": item.uom,
+                        "item_code": items_data[0].item_code,
+                        "qty": items_data[0].qty,
+                        "rate": items_data[0].rate,
+                        "uom": items_data[0].uom,
                         "allow_zero_valuation_rate": (
-                            1 if item["item_code"] == "Water" else 0
+                            1 if items_data[0]["item_code"] == "Water" else 0
                         ),
-                        "s_warehouse": item.source_warehouse,
+                        "s_warehouse": items_data[0].source_warehouse,
                     },
                 )
 
