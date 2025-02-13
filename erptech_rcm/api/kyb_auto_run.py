@@ -1,3 +1,4 @@
+from collections import defaultdict
 import requests
 import pymysql
 import json
@@ -76,7 +77,7 @@ def make_api_call(type):
                 do_result["batching_plant"] = "APAS-BP1"
                 filtered_result = {
                     key: (
-                        value.strftime("%Y-%m-%d")
+                        value.strftime("%Y-%m-%d %H:%M:%S.%f")
                         if isinstance(value, datetime)
                         else float(value) if isinstance(value, Decimal) else value
                     )
@@ -84,10 +85,27 @@ def make_api_call(type):
                 }
                 results.append(filtered_result)
 
+            # Grouping by 'addinfo23'
+            grouped_data = defaultdict(list)
+            for item in results:
+                grouped_data[item["AddInfo23"]].append(item)
+
+            new_results = []
+            for key, items in grouped_data.items():
+                grouped_entry = {"AddInfo23": key, "items": items}
+
+                # Dynamically add keys except 'AddInfo23'
+                for k in items[0]:
+                    if k != "AddInfo23":
+                        grouped_entry[k] = items[0][k]
+
+                new_results.append(grouped_entry)
+
             # Make the POST request
+            print(new_results)
             consumption_set_data = requests.post(
                 url + "erptech_rcm.api.consumption.consumption_set_data_kyb",
-                json={"payload": json.dumps(results)},
+                json={"payload": json.dumps(new_results)},
                 headers=headers,
             )
             consumption_set_data.raise_for_status()  # Raise an HTTPError for bad responses (4xx and 5xx)

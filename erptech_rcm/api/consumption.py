@@ -1,3 +1,5 @@
+from collections import defaultdict
+from datetime import datetime
 import frappe
 import json
 
@@ -198,6 +200,7 @@ def consumption_set_data_stetter():
 def consumption_set_data_kyb():
     settings = frappe.get_cached_doc("Consumption Settings").as_dict()
     db_name = settings.consumption_table_to
+    db_name_delivery_note = "Delivery Note"
     stringified_data = frappe.local.form_dict.get("payload")
 
     # stringified_data
@@ -211,129 +214,433 @@ def consumption_set_data_kyb():
             filters={"customer_name": result["CUSTOMER_NAME_VAL0"]},
             fields=["name"],
         )
+        vehicles = frappe.get_all(
+            "Vehicle",
+            filters={"name": result["TM_NO_VAL0"]},
+            fields=["name"],
+        )
+        sites = frappe.get_all(
+            "Address",
+            filters={"address_title": result["SITE_NAME_VAL0"]},
+            fields=["name"],
+        )
+
+        items = []
+        items_delivery_note = []
+        for item in result["items"]:
+            items.append(
+                {
+                    "sequence_number": item["sequence_number"],
+                    "batch_size_val0": item["BATCH_SIZE_VAL0"],
+                    "ticket_id_val0": item["TICKET_ID_VAL0"],
+                    "agg_1_name_val0": item["AGG_1_NAME_VAL0"],
+                    "agg1_set_log_val0": item["AGG1_SET_LOG_VAL0"],
+                    "agg1_act_log_val0": item["AGG1_ACT_LOG_VAL0"],
+                    "agg_2_name_val0": item["AGG_2_NAME_VAL0"],
+                    "agg2_set_log_val0": item["AGG2_SET_LOG_VAL0"],
+                    "agg2_act_log_val0": item["AGG2_ACT_LOG_VAL0"],
+                    "adm_1_name_val0": item["ADM_1_NAME_VAL0"],
+                    "adm_2_name_val0": item["ADM_2_NAME_VAL0"],
+                    "adm_3_name_val0": item["ADM_3_NAME_VAL0"],
+                    "adm_4_name_val0": item["ADM_4_NAME_VAL0"],
+                    "adm_5_name_val0": item["ADM_5_NAME_VAL0"],
+                    "admixer_1_val0": item["ADMIXER_1_VAL0"],
+                    "admixer_2_val0": item["ADMIXER_2_VAL0"],
+                    "admixer_3_val0": item["ADMIXER_3_VAL0"],
+                    "admixer_4_val0": item["ADMIXER_4_VAL0"],
+                    "admixer_5_val0": item["ADMIXER_5_VAL0"],
+                    "adm1_act_log_val0": item["ADM1_ACT_LOG_VAL0"],
+                    "adm1_set_log_val0": item["ADM1_SET_LOG_VAL0"],
+                    "adm2_act_log_val0": item["ADM2_ACT_LOG_VAL0"],
+                    "adm2_set_log_val0": item["ADM2_SET_LOG_VAL0"],
+                    "adm3_act_log_val0": item["ADM3_ACT_LOG_VAL0"],
+                    "adm3_set_log_val0": item["ADM3_SET_LOG_VAL0"],
+                    "adm4_act_log_val0": item["ADM4_ACT_LOG_VAL0"],
+                    "adm4_set_log_val0": item["ADM4_SET_LOG_VAL0"],
+                    "adm5_act_log_val0": item["ADM5_ACT_LOG_VAL0"],
+                    "adm5_set_log_val0": item["ADM5_SET_LOG_VAL0"],
+                    "agg_1_val0": item["AGG_1_VAL0"],
+                    "agg_2_val0": item["AGG_2_VAL0"],
+                    "agg_3_name_val0": item["AGG_3_NAME_VAL0"],
+                    "agg_3_val0": item["AGG_3_VAL0"],
+                    "agg_4_name_val0": item["AGG_4_NAME_VAL0"],
+                    "agg_4_val0": item["AGG_4_VAL0"],
+                    "agg_5_name_val0": item["AGG_5_NAME_VAL0"],
+                    "agg_5_val0": item["AGG_5_VAL0"],
+                    "agg_6_name_val0": item["AGG_6_NAME_VAL0"],
+                    "agg_6_val0": item["AGG_6_VAL0"],
+                    "agg1_mos_log_val0": item["AGG1_MOS_LOG_VAL0"],
+                    "agg2_mos_log_val0": item["AGG2_MOS_LOG_VAL0"],
+                    "agg3_act_log_val0": item["AGG3_ACT_LOG_VAL0"],
+                    "agg3_mos_log_val0": item["AGG3_MOS_LOG_VAL0"],
+                    "agg3_set_log_val0": item["AGG3_SET_LOG_VAL0"],
+                    "agg4_act_log_val0": item["AGG4_ACT_LOG_VAL0"],
+                    "agg4_mos_log_val0": item["AGG4_MOS_LOG_VAL0"],
+                    "agg4_set_log_val0": item["AGG4_SET_LOG_VAL0"],
+                    "agg5_act_log_val0": item["AGG5_ACT_LOG_VAL0"],
+                    "agg5_mos_log_val0": item["AGG5_MOS_LOG_VAL0"],
+                    "agg5_set_log_val0": item["AGG5_SET_LOG_VAL0"],
+                    "agg6_act_log_val0": item["AGG6_ACT_LOG_VAL0"],
+                    "agg6_mos_log_val0": item["AGG6_MOS_LOG_VAL0"],
+                    "agg6_set_log_val0": item["AGG6_SET_LOG_VAL0"],
+                    "cmt_1_name_val0": item["CMT_1_NAME_VAL0"],
+                    "cmt_2_name_val0": item["CMT_2_NAME_VAL0"],
+                    "cmt_3_name_val0": item["CMT_3_NAME_VAL0"],
+                    "cmt_4_name_val0": item["CMT_4_NAME_VAL0"],
+                    "cmt_5_name_val0": item["CMT_5_NAME_VAL0"],
+                    "cmt_6_name_val0": item["CMT_6_NAME_VAL0"],
+                    "cement_1_val0": item["CEMENT_1_VAL0"],
+                    "cement_2_val0": item["CEMENT_2_VAL0"],
+                    "cement_3_val0": item["CEMENT_3_VAL0"],
+                    "cement_4_val0": item["CEMENT_4_VAL0"],
+                    "cement_5_val0": item["CEMENT_5_VAL0"],
+                    "cement_6_val0": item["CEMENT_6_VAL0"],
+                    "cmt1_act_log_val0": item["CMT1_ACT_LOG_VAL0"],
+                    "cmt1_set_log_val0": item["CMT1_SET_LOG_VAL0"],
+                    "cmt2_act_log_val0": item["CMT2_ACT_LOG_VAL0"],
+                    "cmt2_set_log_val0": item["CMT2_SET_LOG_VAL0"],
+                    "cmt3_act_log_val0": item["CMT3_ACT_LOG_VAL0"],
+                    "cmt3_set_log_val0": item["CMT3_SET_LOG_VAL0"],
+                    "cmt4_act_log_val0": item["CMT4_ACT_LOG_VAL0"],
+                    "cmt4_set_log_val0": item["CMT4_SET_LOG_VAL0"],
+                    "cmt5_act_log_val0": item["CMT5_ACT_LOG_VAL0"],
+                    "cmt5_set_log_val0": item["CMT5_SET_LOG_VAL0"],
+                    "cmt6_act_log_val0": item["CMT6_ACT_LOG_VAL0"],
+                    "cmt6_set_log_val0": item["CMT6_SET_LOG_VAL0"],
+                    "wtr_1_name_val0": item["WTR_1_NAME_VAL0"],
+                    "wtr_2_name_val0": item["WTR_2_NAME_VAL0"],
+                    "water_1_val0": item["WATER_1_VAL0"],
+                    "water_1_val0": item["WATER_2_VAL0"],
+                    "wtr1_act_log_val0": item["WTR1_ACT_LOG_VAL0"],
+                    "wtr1_set_log_val0": item["WTR1_SET_LOG_VAL0"],
+                    "wtr2_act_log_val0": item["WTR2_ACT_LOG_VAL0"],
+                    "wtr2_set_log_val0": item["WTR2_SET_LOG_VAL0"],
+                    "wtr_adj_log_val0": item["WTR_ADJ_LOG_VAL0"],
+                }
+            )
+
+            # AGG
+            items_data1 = frappe.get_all(
+                "Item",
+                filters={"item_name": item["AGG_1_NAME_VAL0"]},
+                fields=["name"],
+            )
+            items_delivery_note.append(
+                {
+                    "item_name": items_data1[0].name if items_data1 else None,
+                    "act_qty": item["AGG1_ACT_LOG_VAL0"],
+                }
+            )
+            items_data2 = frappe.get_all(
+                "Item",
+                filters={"item_name": item["AGG_2_NAME_VAL0"]},
+                fields=["name"],
+            )
+            items_delivery_note.append(
+                {
+                    "item_name": items_data2[0].name if items_data2 else None,
+                    "act_qty": item["AGG2_ACT_LOG_VAL0"],
+                }
+            )
+            items_data3 = frappe.get_all(
+                "Item",
+                filters={"item_name": item["AGG_3_NAME_VAL0"]},
+                fields=["name"],
+            )
+            items_delivery_note.append(
+                {
+                    "item_name": items_data3[0].name if items_data3 else None,
+                    "act_qty": item["AGG3_ACT_LOG_VAL0"],
+                }
+            )
+            items_data4 = frappe.get_all(
+                "Item",
+                filters={"item_name": item["AGG_4_NAME_VAL0"]},
+                fields=["name"],
+            )
+            items_delivery_note.append(
+                {
+                    "item_name": items_data4[0].name if items_data4 else None,
+                    "act_qty": item["AGG4_ACT_LOG_VAL0"],
+                }
+            )
+            items_data5 = frappe.get_all(
+                "Item",
+                filters={"item_name": item["AGG_5_NAME_VAL0"]},
+                fields=["name"],
+            )
+            items_delivery_note.append(
+                {
+                    "item_name": items_data5[0].name if items_data5 else None,
+                    "act_qty": item["AGG5_ACT_LOG_VAL0"],
+                }
+            )
+            items_data6 = frappe.get_all(
+                "Item",
+                filters={"item_name": item["AGG_6_NAME_VAL0"]},
+                fields=["name"],
+            )
+            items_delivery_note.append(
+                {
+                    "item_name": items_data6[0].name if items_data6 else None,
+                    "act_qty": item["AGG6_ACT_LOG_VAL0"],
+                }
+            )
+            # CMT
+            items_data_cmt1 = frappe.get_all(
+                "Item",
+                filters={"item_name": item["CMT_1_NAME_VAL0"]},
+                fields=["name"],
+            )
+            items_delivery_note.append(
+                {
+                    "item_name": items_data_cmt1[0].name if items_data_cmt1 else None,
+                    "act_qty": item["CMT1_SET_LOG_VAL0"],
+                }
+            )
+            items_data_cmt2 = frappe.get_all(
+                "Item",
+                filters={"item_name": item["CMT_2_NAME_VAL0"]},
+                fields=["name"],
+            )
+            items_delivery_note.append(
+                {
+                    "item_name": items_data_cmt2[0].name if items_data_cmt2 else None,
+                    "act_qty": item["CMT2_SET_LOG_VAL0"],
+                }
+            )
+            items_data_cmt3 = frappe.get_all(
+                "Item",
+                filters={"item_name": item["CMT_3_NAME_VAL0"]},
+                fields=["name"],
+            )
+            items_delivery_note.append(
+                {
+                    "item_name": items_data_cmt3[0].name if items_data_cmt3 else None,
+                    "act_qty": item["CMT3_SET_LOG_VAL0"],
+                }
+            )
+            items_data_cmt4 = frappe.get_all(
+                "Item",
+                filters={"item_name": item["CMT_4_NAME_VAL0"]},
+                fields=["name"],
+            )
+            items_delivery_note.append(
+                {
+                    "item_name": items_data_cmt4[0].name if items_data_cmt4 else None,
+                    "act_qty": item["CMT4_SET_LOG_VAL0"],
+                }
+            )
+            items_data_cmt5 = frappe.get_all(
+                "Item",
+                filters={"item_name": item["CMT_5_NAME_VAL0"]},
+                fields=["name"],
+            )
+            items_delivery_note.append(
+                {
+                    "item_name": items_data_cmt5[0].name if items_data_cmt5 else None,
+                    "act_qty": item["CMT5_SET_LOG_VAL0"],
+                }
+            )
+            items_data_cmt6 = frappe.get_all(
+                "Item",
+                filters={"item_name": item["CMT_6_NAME_VAL0"]},
+                fields=["name"],
+            )
+            items_delivery_note.append(
+                {
+                    "item_name": items_data_cmt6[0].name if items_data_cmt6 else None,
+                    "act_qty": item["CMT6_SET_LOG_VAL0"],
+                }
+            )
+            # ADM
+            items_data_adm1 = frappe.get_all(
+                "Item",
+                filters={"item_name": item["ADM_1_NAME_VAL0"]},
+                fields=["name"],
+            )
+            items_delivery_note.append(
+                {
+                    "item_name": items_data_adm1[0].name if items_data_adm1 else None,
+                    "act_qty": item["ADM1_SET_LOG_VAL0"],
+                }
+            )
+            items_data_adm2 = frappe.get_all(
+                "Item",
+                filters={"item_name": item["ADM_2_NAME_VAL0"]},
+                fields=["name"],
+            )
+            items_delivery_note.append(
+                {
+                    "item_name": items_data_adm2[0].name if items_data_adm2 else None,
+                    "act_qty": item["ADM2_SET_LOG_VAL0"],
+                }
+            )
+            items_data_adm3 = frappe.get_all(
+                "Item",
+                filters={"item_name": item["ADM_3_NAME_VAL0"]},
+                fields=["name"],
+            )
+            items_delivery_note.append(
+                {
+                    "item_name": items_data_adm3[0].name if items_data_adm3 else None,
+                    "act_qty": item["ADM3_SET_LOG_VAL0"],
+                }
+            )
+            items_data_adm4 = frappe.get_all(
+                "Item",
+                filters={"item_name": item["ADM_4_NAME_VAL0"]},
+                fields=["name"],
+            )
+            items_delivery_note.append(
+                {
+                    "item_name": items_data_adm4[0].name if items_data_adm4 else None,
+                    "act_qty": item["ADM4_SET_LOG_VAL0"],
+                }
+            )
+            items_data_adm5 = frappe.get_all(
+                "Item",
+                filters={"item_name": item["ADM_5_NAME_VAL0"]},
+                fields=["name"],
+            )
+            items_delivery_note.append(
+                {
+                    "item_name": items_data_adm5[0].name if items_data_adm5 else None,
+                    "act_qty": item["ADM5_SET_LOG_VAL0"],
+                }
+            )
+            # WTR
+            items_data_wtr1 = frappe.get_all(
+                "Item",
+                filters={"item_name": item["WTR_1_NAME_VAL0"]},
+                fields=["name"],
+            )
+            items_delivery_note.append(
+                {
+                    "item_name": items_data_wtr1[0].name if items_data_wtr1 else None,
+                    "act_qty": item["WTR1_SET_LOG_VAL0"],
+                }
+            )
+            items_data_wtr2 = frappe.get_all(
+                "Item",
+                filters={"item_name": item["WTR_2_NAME_VAL0"]},
+                fields=["name"],
+            )
+            items_delivery_note.append(
+                {
+                    "item_name": items_data_wtr2[0].name if items_data_wtr2 else None,
+                    "act_qty": item["WTR2_SET_LOG_VAL0"],
+                }
+            )
+
         data = {
-            "customer_name_val0": customers[0].name if customers else None,
-            "sequence_number": result["sequence_number"],
+            "addinfo23": result["AddInfo23"],
             "timestamp_utc": result["timestamp_utc"],
             "timestamp": result["timestamp"],
             "plant_address_val0": result["PLANT_ADDRESS_VAL0"],
             "plant_no_val0": result["PLANT_NO_VAL0"],
+            "deliery_no_val0": result["DELIERY_NO_VAL0"],
+            "customer_name_val0": customers[0].name if customers else None,
             "customer_address_val0": result["CUSTOMER_ADDRESS_VAL0"],
             "site_name_val0": result["SITE_NAME_VAL0"],
             "site_address_val0": result["SITE_ADDRESS_VAL0"],
             "tm_no_val0": result["TM_NO_VAL0"],
             "driver_name_val0": result["DRIVER_NAME_VAL0"],
             "order_qty_val0": result["ORDER_QTY_VAL0"],
-            "batch_size_val0": result["BATCH_SIZE_VAL0"],
             "pro_qty_val0": result["PRO_QTY_VAL0"],
-            "recipe_name_val0": result["RECIPE_NAME_VAL0"],
             "recipe_grade_val0": result["RECIPE_GRADE_VAL0"],
+            "recipe_name_val0": result["RECIPE_NAME_VAL0"],
             "recipe_density_val0": result["RECIPE_DENSITY_VAL0"],
-            "adm_1_name_val0": result["ADM_1_NAME_VAL0"],
-            "adm_2_name_val0": result["ADM_2_NAME_VAL0"],
-            "adm_3_name_val0": result["ADM_3_NAME_VAL0"],
-            "adm_4_name_val0": result["ADM_4_NAME_VAL0"],
-            "adm_5_name_val0": result["ADM_5_NAME_VAL0"],
-            "admixer_1_val0": result["ADMIXER_1_VAL0"],
-            "admixer_2_val0": result["ADMIXER_2_VAL0"],
-            "admixer_3_val0": result["ADMIXER_3_VAL0"],
-            "admixer_4_val0": result["ADMIXER_4_VAL0"],
-            "admixer_5_val0": result["ADMIXER_5_VAL0"],
-            "adm1_act_log_val0": result["ADM1_ACT_LOG_VAL0"],
-            "adm1_set_log_val0": result["ADM1_SET_LOG_VAL0"],
-            "adm2_act_log_val0": result["ADM2_ACT_LOG_VAL0"],
-            "adm2_set_log_val0": result["ADM2_SET_LOG_VAL0"],
-            "adm3_act_log_val0": result["ADM3_ACT_LOG_VAL0"],
-            "adm3_set_log_val0": result["ADM3_SET_LOG_VAL0"],
-            "adm4_act_log_val0": result["ADM4_ACT_LOG_VAL0"],
-            "adm4_set_log_val0": result["ADM4_SET_LOG_VAL0"],
-            "adm5_act_log_val0": result["ADM5_ACT_LOG_VAL0"],
-            "adm5_set_log_val0": result["ADM5_SET_LOG_VAL0"],
-            "agg_1_name_val0": result["AGG_1_NAME_VAL0"],
-            "agg_1_val0": result["AGG_1_VAL0"],
-            "agg_2_name_val0": result["AGG_2_NAME_VAL0"],
-            "agg_2_val0": result["AGG_2_VAL0"],
-            "agg_3_name_val0": result["AGG_3_NAME_VAL0"],
-            "agg_3_val0": result["AGG_3_VAL0"],
-            "agg_4_name_val0": result["AGG_4_NAME_VAL0"],
-            "agg_4_val0": result["AGG_4_VAL0"],
-            "agg_5_name_val0": result["AGG_5_NAME_VAL0"],
-            "agg_5_val0": result["AGG_5_VAL0"],
-            "agg_6_name_val0": result["AGG_6_NAME_VAL0"],
-            "agg_6_val0": result["AGG_6_VAL0"],
-            "agg1_act_log_val0": result["AGG1_ACT_LOG_VAL0"],
-            "agg1_mos_log_val0": result["AGG1_MOS_LOG_VAL0"],
-            "agg1_set_log_val0": result["AGG1_SET_LOG_VAL0"],
-            "agg2_act_log_val0": result["AGG2_ACT_LOG_VAL0"],
-            "agg2_mos_log_val0": result["AGG2_MOS_LOG_VAL0"],
-            "agg2_set_log_val0": result["AGG2_SET_LOG_VAL0"],
-            "agg3_act_log_val0": result["AGG3_ACT_LOG_VAL0"],
-            "agg3_mos_log_val0": result["AGG3_MOS_LOG_VAL0"],
-            "agg3_set_log_val0": result["AGG3_SET_LOG_VAL0"],
-            "agg4_act_log_val0": result["AGG4_ACT_LOG_VAL0"],
-            "agg4_mos_log_val0": result["AGG4_MOS_LOG_VAL0"],
-            "agg4_set_log_val0": result["AGG4_SET_LOG_VAL0"],
-            "agg5_act_log_val0": result["AGG5_ACT_LOG_VAL0"],
-            "agg5_mos_log_val0": result["AGG5_MOS_LOG_VAL0"],
-            "agg5_set_log_val0": result["AGG5_SET_LOG_VAL0"],
-            "agg6_act_log_val0": result["AGG6_ACT_LOG_VAL0"],
-            "agg6_mos_log_val0": result["AGG6_MOS_LOG_VAL0"],
-            "agg6_set_log_val0": result["AGG6_SET_LOG_VAL0"],
-            "cmt_1_name_val0": result["CMT_1_NAME_VAL0"],
-            "cmt_2_name_val0": result["CMT_2_NAME_VAL0"],
-            "cmt_3_name_val0": result["CMT_3_NAME_VAL0"],
-            "cmt_4_name_val0": result["CMT_4_NAME_VAL0"],
-            "cmt_5_name_val0": result["CMT_5_NAME_VAL0"],
-            "cmt_6_name_val0": result["CMT_6_NAME_VAL0"],
-            "cement_1_val0": result["CEMENT_1_VAL0"],
-            "cement_2_val0": result["CEMENT_2_VAL0"],
-            "cement_3_val0": result["CEMENT_3_VAL0"],
-            "cement_4_val0": result["CEMENT_4_VAL0"],
-            "cement_5_val0": result["CEMENT_5_VAL0"],
-            "cement_6_val0": result["CEMENT_6_VAL0"],
-            "cmt1_act_log_val0": result["CMT1_ACT_LOG_VAL0"],
-            "cmt1_set_log_val0": result["CMT1_SET_LOG_VAL0"],
-            "cmt2_act_log_val0": result["CMT2_ACT_LOG_VAL0"],
-            "cmt2_set_log_val0": result["CMT2_SET_LOG_VAL0"],
-            "cmt3_act_log_val0": result["CMT3_ACT_LOG_VAL0"],
-            "cmt3_set_log_val0": result["CMT3_SET_LOG_VAL0"],
-            "cmt4_act_log_val0": result["CMT4_ACT_LOG_VAL0"],
-            "cmt4_set_log_val0": result["CMT4_SET_LOG_VAL0"],
-            "cmt5_act_log_val0": result["CMT5_ACT_LOG_VAL0"],
-            "cmt5_set_log_val0": result["CMT5_SET_LOG_VAL0"],
-            "cmt6_act_log_val0": result["CMT6_ACT_LOG_VAL0"],
-            "cmt6_set_log_val0": result["CMT6_SET_LOG_VAL0"],
-            "wtr_1_name_val0": result["WTR_1_NAME_VAL0"],
-            "wtr_2_name_val0": result["WTR_2_NAME_VAL0"],
-            "water_1_val0": result["WATER_1_VAL0"],
-            "water_1_val0": result["WATER_2_VAL0"],
-            "wtr1_act_log_val0": result["WTR1_ACT_LOG_VAL0"],
-            "wtr1_set_log_val0": result["WTR1_SET_LOG_VAL0"],
-            "wtr2_act_log_val0": result["WTR2_ACT_LOG_VAL0"],
-            "wtr2_set_log_val0": result["WTR2_SET_LOG_VAL0"],
-            "wtr_adj_log_val0": result["WTR_ADJ_LOG_VAL0"],
-            "deliery_no_val0": result["DELIERY_NO_VAL0"],
-            "addinfo23": result["AddInfo23"],
-            "ticket_id_val0": result["TICKET_ID_VAL0"],
             "batching_plant": result["batching_plant"],
+            "items": items,
         }
-        exists = frappe.db.exists(
-            db_name, {"sequence_number": result["sequence_number"]}
-        )
-        if exists:
-            batch = frappe.get_doc(
-                db_name, {"sequence_number": result["sequence_number"]}
-            )
 
+        # data delivery note
+        data_delivery_note = {
+            "customer": customers[0].name if customers else None,
+            "custom_site": sites[0].name if sites else None,
+            "shipping_address_name": result["SITE_ADDRESS_VAL0"],
+            "custom_vehicle": vehicles[0].name if vehicles else None,
+            "driver_name": result["DRIVER_NAME_VAL0"],
+            "custom_pro_qty_val0": result["PRO_QTY_VAL0"],
+            "custom_recipe_grade_val0": result["RECIPE_GRADE_VAL0"],
+            "custom_ticket_id_val0": result["TICKET_ID_VAL0"],
+            "custom_batching_plant": result["batching_plant"],
+            "custom_addinfo23": result["AddInfo23"],
+            "posting_date": result["timestamp"],
+            "posting_time": result["timestamp"],
+            "custom_batch_date": result["timestamp"],
+            "delivery_items": items_delivery_note,
+        }
+        exists = frappe.db.exists(db_name, {"addinfo23": result["AddInfo23"]})
+        if exists:
+            batch = frappe.get_doc(db_name, {"addinfo23": result["AddInfo23"]})
             # Updtae doc object
-            for field, value in data.items():
-                batch.set(field, value)
-            batch.save(ignore_permissions=True)
+            # for field, value in data.items():
+            #     if field != "items":
+            #         batch.set(field, value)
+
+            #     # Updtae child doc object
+            #     if "items" in data:
+            #         batch.table_hbmh.clear()
+            #         for child_item in data["items"]:
+            #             batch.append("table_hbmh", child_item)
+
+            # batch.save(ignore_permissions=True)
         else:
 
             # Create a new doc object
             doc = frappe.get_doc({**{"doctype": db_name}, **data})
+            for item in data["items"]:
+                doc.append("table_hbmh", item)
             doc.insert(ignore_permissions=True)
+
+            # Create a new doc object Delivery Note
+            if (
+                data_delivery_note["customer"]
+                and data_delivery_note["custom_recipe_grade_val0"]
+            ):
+                item_data = frappe.get_all(
+                    "Item",
+                    filters={
+                        "item_name": data_delivery_note["custom_recipe_grade_val0"]
+                    },
+                    fields=["item_code", "item_name"],
+                )
+                if item_data:
+                    doc = frappe.get_doc(
+                        {**{"doctype": db_name_delivery_note}, **data_delivery_note}
+                    )
+                    aggregated_data = defaultdict(int)
+                    for delivery_item in data_delivery_note["delivery_items"]:
+                        aggregated_data[delivery_item["item_name"]] += delivery_item[
+                            "act_qty"
+                        ]
+                    results = [
+                        {"item_name": item_name, "act_qty": act_qty}
+                        for item_name, act_qty in aggregated_data.items()
+                    ]
+
+                    for result in results:
+                        doc.append("custom_consumed_raw_material", result)
+
+                    doc.append(
+                        "items",
+                        {
+                            "item_code": item_data[0].item_code,
+                            "item_name": item_data[0].item_name,
+                            "qty": (
+                                data_delivery_note["custom_pro_qty_val0"]
+                                if (
+                                    data_delivery_note["custom_pro_qty_val0"]
+                                    and data_delivery_note["custom_pro_qty_val0"] != 0
+                                )
+                                else 1
+                            ),
+                        },
+                    )
+                    
+                    doc.insert(ignore_permissions=True)
 
     # Commit the changes to save the records
     frappe.db.commit()
